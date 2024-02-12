@@ -1,0 +1,192 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://richcanvas.io/act#"
+     xml:base="http://richcanvas.io/act"
+     xmlns:ns="http://richcanvas.io/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:per="http://richcanvas.io/per#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://richcanvas.io/act">
+        <owl:imports rdf:resource="http://richcanvas.io/per"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://richcanvas.io/ns#generated -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#generated"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#hadBehavior -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hadBehavior"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#qualifiedAssociation -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#qualifiedAssociation"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#used -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#used"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#wasAssociatedWith -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#wasAssociatedWith"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#wasInformedBy -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#wasInformedBy"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#withAgent -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#withAgent"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://richcanvas.io/ns#Activity -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Activity"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#Association -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Association"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#Entity -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Entity"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://richcanvas.io/act#AdviceRequest -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/act#AdviceRequest">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#Entity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/act#AdviceResponse -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/act#AdviceResponse">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#Entity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/act#JaneRequestedAdviceActivity -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/act#JaneRequestedAdviceActivity">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#Activity"/>
+        <ns:qualifiedAssociation rdf:resource="http://richcanvas.io/act#JaneRequestedAdviceAssociation"/>
+        <ns:wasAssociatedWith rdf:resource="http://richcanvas.io/per#JaneAdams"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/act#JaneRequestedAdviceAssociation -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/act#JaneRequestedAdviceAssociation">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#Association"/>
+        <ns:hadBehavior rdf:resource="http://richcanvas.io/ns#RequestAdvice"/>
+        <ns:withAgent rdf:resource="http://richcanvas.io/per#JaneAdams"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/act#PeteGaveAdviceActivity -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/act#PeteGaveAdviceActivity">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#Activity"/>
+        <ns:generated rdf:resource="http://richcanvas.io/act#AdviceResponse"/>
+        <ns:qualifiedAssociation rdf:resource="http://richcanvas.io/act#PeteGaveAdviceAssociation"/>
+        <ns:used rdf:resource="http://richcanvas.io/act#AdviceRequest"/>
+        <ns:wasAssociatedWith rdf:resource="http://richcanvas.io/per#PeteJones"/>
+        <ns:wasInformedBy rdf:resource="http://richcanvas.io/act#JaneRequestedAdviceActivity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/act#PeteGaveAdviceAssociation -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/act#PeteGaveAdviceAssociation">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#Association"/>
+        <ns:hadBehavior rdf:resource="http://richcanvas.io/ns#GiveAdvice"/>
+        <ns:withAgent rdf:resource="http://richcanvas.io/per#PeteJones"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/ns#GiveAdvice -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/ns#GiveAdvice"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#RequestAdvice -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/ns#RequestAdvice"/>
+    
+
+
+    <!-- http://richcanvas.io/per#PeteJones -->
+
+    <rdf:Description rdf:about="http://richcanvas.io/per#PeteJones">
+        <ns:generated rdf:resource="http://richcanvas.io/act#AdviceRequest"/>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
