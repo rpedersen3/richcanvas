@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://richcanvas.io/per#"
+     xml:base="http://richcanvas.io/per"
+     xmlns:ns="http://richcanvas.io/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:per="http://richcanvas.io/per#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://richcanvas.io/per">
+        <owl:imports rdf:resource="http://richcanvas.io/ns"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://richcanvas.io/per#JaneAdams -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/per#JaneAdams">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/per#JoeSmith -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/per#JoeSmith">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#Person"/>
+        <ns:hasContacts rdf:resource="http://richcanvas.io/per#JoeSmithsContacts"/>
+        <ns:hasEmail rdf:resource="http://richcanvas.io/per#JoeSmithsPrivateEmail"/>
+        <ns:hasEmail rdf:resource="http://richcanvas.io/per#JoeSmithsProfessionalEmail"/>
+        <ns:hasFriend rdf:resource="http://richcanvas.io/per#JaneAdams"/>
+        <ns:hasFriend rdf:resource="http://richcanvas.io/per#PeteJones"/>
+        <ns:hasFriends rdf:resource="http://richcanvas.io/per#JoeSmithsFriends"/>
+        <ns:hasFriendship rdf:resource="http://richcanvas.io/per#JoeSmithsFriendshipWithJaneAdams"/>
+        <ns:hasFriendship rdf:resource="http://richcanvas.io/per#JoeSmithsFriendshipWithPeteJones"/>
+        <ns:hasHomeAddress rdf:resource="http://richcanvas.io/per#JoeSmithsHomeAddress"/>
+        <ns:birthday rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1998-01-03T00:00:00</ns:birthday>
+        <ns:firstName>Joe</ns:firstName>
+        <ns:gender>male</ns:gender>
+        <ns:lastName>Smith</ns:lastName>
+        <ns:name>Joe Smith</ns:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/per#JoeSmithsContacts -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/per#JoeSmithsContacts">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#Contacts"/>
+        <ns:includes rdf:resource="http://richcanvas.io/per#JaneAdams"/>
+        <ns:includes rdf:resource="http://richcanvas.io/per#PeteJones"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/per#JoeSmithsFriends -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/per#JoeSmithsFriends">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#Friends"/>
+        <ns:includes rdf:resource="http://richcanvas.io/per#JaneAdams"/>
+        <ns:includes rdf:resource="http://richcanvas.io/per#PeteJones"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/per#JoeSmithsFriendshipWithJaneAdams -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/per#JoeSmithsFriendshipWithJaneAdams">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#Friendship"/>
+        <ns:hasFriendType rdf:resource="http://richcanvas.io/ns#CloseFriend"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/per#JoeSmithsFriendshipWithPeteJones -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/per#JoeSmithsFriendshipWithPeteJones">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#Friendship"/>
+        <ns:hasFriendType rdf:resource="http://richcanvas.io/ns#BestFriend"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/per#JoeSmithsHomeAddress -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/per#JoeSmithsHomeAddress">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#PostalAddress"/>
+        <ns:addressCountry>USA</ns:addressCountry>
+        <ns:addressLocality>Anytown</ns:addressLocality>
+        <ns:addressRegion>CO</ns:addressRegion>
+        <ns:name>Joe Smiths Home Address</ns:name>
+        <ns:postalCode>12345</ns:postalCode>
+        <ns:streetAddress>123 Main St.</ns:streetAddress>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/per#JoeSmithsPrivateEmail -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/per#JoeSmithsPrivateEmail">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#Email"/>
+        <ns:hasPersonalContext rdf:resource="http://richcanvas.io/ns#Private"/>
+        <ns:email>joesmith@gmail.com</ns:email>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/per#JoeSmithsProfessionalEmail -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/per#JoeSmithsProfessionalEmail">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#Email"/>
+        <ns:hasPersonalContext rdf:resource="http://richcanvas.io/ns#Professional"/>
+        <ns:email>joesmith@richcanvas.io</ns:email>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/per#PeteJones -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/per#PeteJones">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#Person"/>
+        <ns:hasFriendType rdf:resource="http://richcanvas.io/ns#BestFriend"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+

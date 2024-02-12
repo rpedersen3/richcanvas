@@ -4,7 +4,6 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @base <http://richcanvas.io/ns#> .
 
@@ -15,7 +14,7 @@
 #################################################################
 
 ###  http://www.w3.org/ns/prov#hadRole
-prov:hadRole rdf:type owl:AnnotationProperty .
+<http://www.w3.org/ns/prov#hadRole> rdf:type owl:AnnotationProperty .
 
 
 #################################################################
@@ -352,8 +351,7 @@ rc:Address rdf:type owl:Class .
 
 
 ###  http://richcanvas.io/ns#Agent
-rc:Agent rdf:type owl:Class ;
-         owl:equivalentClass prov:Agent .
+rc:Agent rdf:type owl:Class .
 
 
 ###  http://richcanvas.io/ns#Association
@@ -453,10 +451,6 @@ rc:SoftwareAgent rdf:type owl:Class ;
 
 ###  http://richcanvas.io/ns#Type
 rc:Type rdf:type owl:Class .
-
-
-###  http://www.w3.org/ns/prov#Agent
-prov:Agent rdf:type owl:Class .
 
 
 #################################################################
