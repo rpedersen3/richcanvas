@@ -9,9 +9,6 @@
 
 <http://richcanvas.io/ns> rdf:type owl:Ontology .
 
-
-
-
 #################################################################
 #    Annotation properties
 #################################################################
@@ -26,7 +23,6 @@ rc:basedOn rdf:type owl:AnnotationProperty .
 
 ###  http://richcanvas.io/ns#contains
 rc:contains rdf:type owl:ObjectProperty ;
-	     
             rdfs:domain rc:Collection ;
             rdfs:range rc:Entity .
 
@@ -72,12 +68,6 @@ rc:hasFriend rdf:type owl:ObjectProperty ;
              rdfs:range rc:Person .
 
 
-###  http://richcanvas.io/ns#hasFriendType
-rc:hasFriendType rdf:type owl:ObjectProperty ;
-                 rdfs:domain rc:Friendship ;
-                 rdfs:range rc:FriendshipType .
-
-
 ###  http://richcanvas.io/ns#hasFriends
 rc:hasFriends rdf:type owl:ObjectProperty ;
               rdfs:domain rc:Person ;
@@ -114,6 +104,12 @@ rc:hasMembership rdf:type owl:ObjectProperty ;
                  rdfs:range rc:Membership .
 
 
+###  http://richcanvas.io/ns#hasMembershipRole
+rc:hasMembershipRole rdf:type owl:ObjectProperty ;
+                     rdfs:domain rc:Membership ;
+                     rdfs:range rc:MembershipRole .
+
+
 ###  http://richcanvas.io/ns#hasPersonalContext
 rc:hasPersonalContext rdf:type owl:ObjectProperty ;
                       rdfs:domain rc:Email ,
@@ -126,19 +122,45 @@ rc:hasPhoneNumber rdf:type owl:ObjectProperty ;
                   rdfs:range rc:PhoneNumber .
 
 
+###  http://richcanvas.io/ns#hasPost
+rc:hasPost rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:domain rc:Organization ;
+           rdfs:range rc:Post .
+
+
+###  http://richcanvas.io/ns#hasPrimarySite
+rc:hasPrimarySite rdf:type owl:ObjectProperty ;
+                  rdfs:domain rc:Organization ;
+                  rdfs:range rc:Site .
+
+
 ###  http://richcanvas.io/ns#hasRelationship
 rc:hasRelationship rdf:type owl:ObjectProperty ;
                    rdfs:domain rc:Agent ;
                    rdfs:range rc:Relationship .
 
 
-###  http://richcanvas.io/ns#hasRole
-rc:hasRole rdf:type owl:ObjectProperty ;
-           rdfs:range rc:Role .
+###  http://richcanvas.io/ns#hasSiteAddress
+rc:hasSiteAddress rdf:type owl:ObjectProperty ;
+                  rdfs:domain rc:Site ;
+                  rdfs:range rc:PostalAddress .
+
+
+###  http://richcanvas.io/ns#hasSubOrganization
+rc:hasSubOrganization rdf:type owl:ObjectProperty ;
+                      rdfs:domain rc:Organization ;
+                      rdfs:range rc:Organization .
 
 
 ###  http://richcanvas.io/ns#hasWorkAddress
 rc:hasWorkAddress rdf:type owl:ObjectProperty .
+
+
+###  http://richcanvas.io/ns#holdsPost
+rc:holdsPost rdf:type owl:ObjectProperty ;
+             rdfs:domain rc:Person ;
+             rdfs:range rc:Post .
 
 
 ###  http://richcanvas.io/ns#includes
@@ -151,10 +173,28 @@ rc:includes rdf:type owl:ObjectProperty ;
 rc:influenced rdf:type owl:ObjectProperty .
 
 
+###  http://richcanvas.io/ns#isBasedAt
+rc:isBasedAt rdf:type owl:ObjectProperty ;
+             rdfs:domain rc:Organization ;
+             rdfs:range rc:Site .
+
+
 ###  http://richcanvas.io/ns#isFriendOf
 rc:isFriendOf rdf:type owl:ObjectProperty ;
               rdfs:domain rc:Person ;
               rdfs:range rc:Person .
+
+
+###  http://richcanvas.io/ns#isFriendshipClassification
+rc:isFriendshipClassification rdf:type owl:ObjectProperty ;
+                              rdfs:domain rc:Friendship ;
+                              rdfs:range rc:FriendshipClassification .
+
+
+###  http://richcanvas.io/ns#isHeldBy
+rc:isHeldBy rdf:type owl:ObjectProperty ;
+            rdfs:domain rc:Post ;
+            rdfs:range rc:Person .
 
 
 ###  http://richcanvas.io/ns#isMemberOf
@@ -163,9 +203,28 @@ rc:isMemberOf rdf:type owl:ObjectProperty ;
               rdfs:range rc:Organization .
 
 
+###  http://richcanvas.io/ns#isOrganizationClassification
+rc:isOrganizationClassification rdf:type owl:ObjectProperty ;
+                                rdfs:domain rc:Organization ;
+                                rdfs:range rc:OrganizationClassification .
+
+
 ###  http://richcanvas.io/ns#isPartOf
 rc:isPartOf rdf:type owl:ObjectProperty ;
             rdfs:range rc:Collection .
+
+
+###  http://richcanvas.io/ns#isPostOf
+rc:isPostOf rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:domain rc:Post ;
+            rdfs:range rc:Organization .
+
+
+###  http://richcanvas.io/ns#isSiteOf
+rc:isSiteOf rdf:type owl:ObjectProperty ;
+            rdfs:domain rc:Site ;
+            rdfs:range rc:Organization .
 
 
 ###  http://richcanvas.io/ns#qualifiedAssociation
@@ -238,7 +297,8 @@ rc:withOrganization rdf:type owl:ObjectProperty ;
 ###  http://richcanvas.io/ns#withPerson
 rc:withPerson rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf rc:withAgent ;
-              rdfs:domain rc:Friendship .
+              rdfs:domain rc:Friendship ;
+              rdfs:range rc:Person .
 
 
 #################################################################
@@ -348,7 +408,7 @@ rc:title rdf:type owl:DatatypeProperty ;
 
 ###  http://richcanvas.io/ns#Activity
 rc:Activity rdf:type owl:Class ;
-	rc:basedOn "W3 prov:Activity" .
+            rc:basedOn "W3 prov:Activity" .
 
 
 ###  http://richcanvas.io/ns#Address
@@ -357,16 +417,20 @@ rc:Address rdf:type owl:Class .
 
 ###  http://richcanvas.io/ns#Agent
 rc:Agent rdf:type owl:Class ;
-	rc:basedOn "W3 prov:Agent" .
+         rc:basedOn "W3 prov:Agent" .
 
 
 ###  http://richcanvas.io/ns#Association
 rc:Association rdf:type owl:Class ;
-	rc:basedOn "W3 prov:Association" .
+               rc:basedOn "W3 prov:Association" .
 
 
 ###  http://richcanvas.io/ns#Behavior
 rc:Behavior rdf:type owl:Class .
+
+
+###  http://richcanvas.io/ns#Classification
+rc:Classification rdf:type owl:Class .
 
 
 ###  http://richcanvas.io/ns#Collection
@@ -388,8 +452,7 @@ rc:Email rdf:type owl:Class .
 
 ###  http://richcanvas.io/ns#Entity
 rc:Entity rdf:type owl:Class ;
-	rc:basedOn "W3 prov:Entity" .
-
+          rc:basedOn "W3 prov:Entity" .
 
 
 ###  http://richcanvas.io/ns#Friends
@@ -402,9 +465,9 @@ rc:Friendship rdf:type owl:Class ;
               rdfs:subClassOf rc:Relationship .
 
 
-###  http://richcanvas.io/ns#FriendshipType
-rc:FriendshipType rdf:type owl:Class ;
-                  rdfs:subClassOf rc:Type .
+###  http://richcanvas.io/ns#FriendshipClassification
+rc:FriendshipClassification rdf:type owl:Class ;
+                            rdfs:subClassOf rc:Classification .
 
 
 ###  http://richcanvas.io/ns#Group
@@ -418,19 +481,37 @@ rc:Members rdf:type owl:Class ;
 
 
 ###  http://richcanvas.io/ns#Membership
-rc:Membership rdf:type owl:Class .
+rc:Membership rdf:type owl:Class ;
+              rc:basedOn "W3 org:Membership" ;
+              rdfs:comment "Relation between an Agent, an Organization and  Role" .
+
+
+###  http://richcanvas.io/ns#MembershipRole
+rc:MembershipRole rdf:type owl:Class ;
+                  rdfs:subClassOf rc:Role ;
+                  rdfs:comment "Indicaes the Role the Agent plays in a Membership relationship with an Organzation" .
 
 
 ###  http://richcanvas.io/ns#Organization
 rc:Organization rdf:type owl:Class ;
-                rdfs:subClassOf rc:Agent .
+                rdfs:subClassOf rc:Agent ;
+                rc:basedOn "W3 org:Organization" ,
+                           "W3 prov:Organization" ,
+                           "foaf:Organization" ;
+                rdfs:comment "Has identity and definining purpose" .
+
+
+###  http://richcanvas.io/ns#OrganizationClassification
+rc:OrganizationClassification rdf:type owl:Class ;
+                              rdfs:subClassOf rc:Classification .
 
 
 ###  http://richcanvas.io/ns#Person
 rc:Person rdf:type owl:Class ;
           rdfs:subClassOf rc:Agent ;
-	rc:basedOn "W3 prov:Person" .
-
+          rc:basedOn "W3 org:Person" ,
+                     "W3 prov:Person" ,
+                     "foaf:Person" .
 
 
 ###  http://richcanvas.io/ns#PersonalContext
@@ -440,6 +521,12 @@ rc:PersonalContext rdf:type owl:Class ;
 
 ###  http://richcanvas.io/ns#PhoneNumber
 rc:PhoneNumber rdf:type owl:Class .
+
+
+###  http://richcanvas.io/ns#Post
+rc:Post rdf:type owl:Class ;
+        rc:basedOn "W3 org:Post" ;
+        rdfs:comment "A Post represents some position within an organization that exists independently of the person or persons filling it. Posts may be used to represent situations where a person is a member of an organization ex officio (for example the Secretary of State for Scotland is part of UK Cabinet by virtue of being Secretary of State for Scotland, not as an individual person). A post can be held by multiple people and hence can be treated as a organization in its own right." .
 
 
 ###  http://richcanvas.io/ns#PostalAddress
@@ -453,16 +540,19 @@ rc:Relationship rdf:type owl:Class .
 
 ###  http://richcanvas.io/ns#Role
 rc:Role rdf:type owl:Class ;
-	rc:basedOn "W3 prov:Role" .
+        rc:basedOn "W3 prov:Role" ,
+                   "skos:Concept" .
+
+
+###  http://richcanvas.io/ns#Site
+rc:Site rdf:type owl:Class ;
+        rc:basedOn "W3 org:Site" ;
+        rdfs:comment "An office or other premise at which the organization is located" .
 
 
 ###  http://richcanvas.io/ns#SoftwareAgent
 rc:SoftwareAgent rdf:type owl:Class ;
                  rdfs:subClassOf rc:Agent .
-
-
-###  http://richcanvas.io/ns#Type
-rc:Type rdf:type owl:Class .
 
 
 #################################################################
@@ -471,12 +561,12 @@ rc:Type rdf:type owl:Class .
 
 ###  http://richcanvas.io/ns#BestFriend
 rc:BestFriend rdf:type owl:NamedIndividual ,
-                       rc:FriendshipType .
+                       rc:FriendshipClassification .
 
 
 ###  http://richcanvas.io/ns#CloseFriend
 rc:CloseFriend rdf:type owl:NamedIndividual ,
-                        rc:FriendshipType .
+                        rc:FriendshipClassification .
 
 
 ###  http://richcanvas.io/ns#GiveAdvice
@@ -504,4 +594,4 @@ rc:TakeAdvice rdf:type owl:NamedIndividual ,
                        rc:Behavior .
 
 
-###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
