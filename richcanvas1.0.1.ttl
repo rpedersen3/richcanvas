@@ -13,8 +13,8 @@
 #    Annotation properties
 #################################################################
 
-###  http://www.w3.org/ns/prov#hadRole
-<http://www.w3.org/ns/prov#hadRole> rdf:type owl:AnnotationProperty .
+###  http://richcanvas.io/ns#basedOn
+rc:basedOn rdf:type owl:AnnotationProperty .
 
 
 #################################################################
@@ -23,6 +23,7 @@
 
 ###  http://richcanvas.io/ns#contains
 rc:contains rdf:type owl:ObjectProperty ;
+	     
             rdfs:domain rc:Collection ;
             rdfs:range rc:Entity .
 
@@ -343,7 +344,8 @@ rc:title rdf:type owl:DatatypeProperty ;
 #################################################################
 
 ###  http://richcanvas.io/ns#Activity
-rc:Activity rdf:type owl:Class .
+rc:Activity rdf:type owl:Class ;
+	rc:basedOn "W3 prov:Activity" .
 
 
 ###  http://richcanvas.io/ns#Address
@@ -351,11 +353,13 @@ rc:Address rdf:type owl:Class .
 
 
 ###  http://richcanvas.io/ns#Agent
-rc:Agent rdf:type owl:Class .
+rc:Agent rdf:type owl:Class ;
+	rc:basedOn "W3 prov:Agent" .
 
 
 ###  http://richcanvas.io/ns#Association
-rc:Association rdf:type owl:Class .
+rc:Association rdf:type owl:Class ;
+	rc:basedOn "W3 prov:Association" .
 
 
 ###  http://richcanvas.io/ns#Behavior
@@ -380,7 +384,9 @@ rc:Email rdf:type owl:Class .
 
 
 ###  http://richcanvas.io/ns#Entity
-rc:Entity rdf:type owl:Class .
+rc:Entity rdf:type owl:Class ;
+	rc:basedOn "W3 prov:Entity" .
+
 
 
 ###  http://richcanvas.io/ns#Friends
@@ -419,7 +425,9 @@ rc:Organization rdf:type owl:Class ;
 
 ###  http://richcanvas.io/ns#Person
 rc:Person rdf:type owl:Class ;
-          rdfs:subClassOf rc:Agent .
+          rdfs:subClassOf rc:Agent ;
+	rc:basedOn "W3 prov:Person" .
+
 
 
 ###  http://richcanvas.io/ns#PersonalContext
@@ -441,7 +449,8 @@ rc:Relationship rdf:type owl:Class .
 
 
 ###  http://richcanvas.io/ns#Role
-rc:Role rdf:type owl:Class .
+rc:Role rdf:type owl:Class ;
+	rc:basedOn "W3 prov:Role" .
 
 
 ###  http://richcanvas.io/ns#SoftwareAgent
