@@ -46,6 +46,25 @@ rc:hadRole rdf:type owl:ObjectProperty ;
            rdfs:range rc:Role .
 
 
+###  http://richcanvas.io/ns#hasAunt
+rc:hasAunt rdf:type owl:ObjectProperty ;
+           rdfs:domain rc:Person ;
+           rdfs:range rc:Person .
+
+
+###  http://richcanvas.io/ns#hasBrother
+rc:hasBrother rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdfs:domain rc:Person ;
+              rdfs:range rc:Person .
+
+
+###  http://richcanvas.io/ns#hasChild
+rc:hasChild rdf:type owl:ObjectProperty ;
+            rdfs:domain rc:Person ;
+            rdfs:range rc:Person .
+
+
 ###  http://richcanvas.io/ns#hasContacts
 rc:hasContacts rdf:type owl:ObjectProperty ;
                rdfs:domain rc:Person ;
@@ -56,10 +75,28 @@ rc:hasContacts rdf:type owl:ObjectProperty ;
 rc:hasContext rdf:type owl:ObjectProperty .
 
 
+###  http://richcanvas.io/ns#hasCousin
+rc:hasCousin rdf:type owl:ObjectProperty ;
+             rdfs:domain rc:Person ;
+             rdfs:range rc:Person .
+
+
+###  http://richcanvas.io/ns#hasDaughter
+rc:hasDaughter rdf:type owl:ObjectProperty ;
+               rdfs:domain rc:Person ;
+               rdfs:range rc:Person .
+
+
 ###  http://richcanvas.io/ns#hasEmail
 rc:hasEmail rdf:type owl:ObjectProperty ;
             rdfs:domain rc:Person ;
             rdfs:range rc:Email .
+
+
+###  http://richcanvas.io/ns#hasFamily
+rc:hasFamily rdf:type owl:ObjectProperty ;
+             rdfs:domain rc:Person ;
+             rdfs:range rc:Family .
 
 
 ###  http://richcanvas.io/ns#hasFriend
@@ -86,6 +123,12 @@ rc:hasHomeAddress rdf:type owl:ObjectProperty ;
                   rdfs:range rc:PostalAddress .
 
 
+###  http://richcanvas.io/ns#hasHusband
+rc:hasHusband rdf:type owl:ObjectProperty ;
+              rdfs:domain rc:Person ;
+              rdfs:range rc:Person .
+
+
 ###  http://richcanvas.io/ns#hasMember
 rc:hasMember rdf:type owl:ObjectProperty ;
              rdfs:domain rc:Organization ;
@@ -108,6 +151,20 @@ rc:hasMembership rdf:type owl:ObjectProperty ;
 rc:hasMembershipRole rdf:type owl:ObjectProperty ;
                      rdfs:domain rc:Membership ;
                      rdfs:range rc:MembershipRole .
+
+
+###  http://richcanvas.io/ns#hasNice
+rc:hasNice rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:domain rc:Person ;
+           rdfs:range rc:Person .
+
+
+###  http://richcanvas.io/ns#hasParent
+rc:hasParent rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             rdfs:domain rc:Person ;
+             rdfs:range rc:Person .
 
 
 ###  http://richcanvas.io/ns#hasPersonalContext
@@ -141,16 +198,53 @@ rc:hasRelationship rdf:type owl:ObjectProperty ;
                    rdfs:range rc:Relationship .
 
 
+###  http://richcanvas.io/ns#hasRelative
+rc:hasRelative rdf:type owl:ObjectProperty ;
+               rdfs:domain rc:Person ;
+               rdfs:range rc:Person .
+
+
+###  http://richcanvas.io/ns#hasSister
+rc:hasSister rdf:type owl:ObjectProperty ;
+             rdfs:domain rc:Person ;
+             rdfs:range rc:Person .
+
+
 ###  http://richcanvas.io/ns#hasSiteAddress
 rc:hasSiteAddress rdf:type owl:ObjectProperty ;
                   rdfs:domain rc:Site ;
                   rdfs:range rc:PostalAddress .
 
 
+###  http://richcanvas.io/ns#hasSon
+rc:hasSon rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty ;
+          rdfs:domain rc:Person ;
+          rdfs:range rc:Person .
+
+
+###  http://richcanvas.io/ns#hasSpouse
+rc:hasSpouse rdf:type owl:ObjectProperty ;
+             rdfs:domain rc:Person ;
+             rdfs:range rc:Person .
+
+
 ###  http://richcanvas.io/ns#hasSubOrganization
 rc:hasSubOrganization rdf:type owl:ObjectProperty ;
                       rdfs:domain rc:Organization ;
                       rdfs:range rc:Organization .
+
+
+###  http://richcanvas.io/ns#hasUncle
+rc:hasUncle rdf:type owl:ObjectProperty ;
+            rdfs:domain rc:Person ;
+            rdfs:range rc:Person .
+
+
+###  http://richcanvas.io/ns#hasWife
+rc:hasWife rdf:type owl:ObjectProperty ;
+           rdfs:domain rc:Person ;
+           rdfs:range rc:Person .
 
 
 ###  http://richcanvas.io/ns#hasWorkAddress
@@ -173,10 +267,40 @@ rc:includes rdf:type owl:ObjectProperty ;
 rc:influenced rdf:type owl:ObjectProperty .
 
 
+###  http://richcanvas.io/ns#isAuntOf
+rc:isAuntOf rdf:type owl:ObjectProperty ;
+            rdfs:domain rc:Person ;
+            rdfs:range rc:Person .
+
+
 ###  http://richcanvas.io/ns#isBasedAt
 rc:isBasedAt rdf:type owl:ObjectProperty ;
              rdfs:domain rc:Organization ;
              rdfs:range rc:Site .
+
+
+###  http://richcanvas.io/ns#isBrotherOf
+rc:isBrotherOf rdf:type owl:ObjectProperty ;
+               rdfs:domain rc:Person ;
+               rdfs:range rc:Person .
+
+
+###  http://richcanvas.io/ns#isChildOf
+rc:isChildOf rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://richcanvas.io/ns#isCousinOf
+rc:isCousinOf rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdfs:domain rc:Person ;
+              rdfs:range rc:Person .
+
+
+###  http://richcanvas.io/ns#isDaughterOf
+rc:isDaughterOf rdf:type owl:ObjectProperty ;
+                rdfs:domain rc:Person ;
+                rdfs:range rc:Person .
 
 
 ###  http://richcanvas.io/ns#isFriendOf
@@ -197,16 +321,36 @@ rc:isHeldBy rdf:type owl:ObjectProperty ;
             rdfs:range rc:Person .
 
 
+###  http://richcanvas.io/ns#isHusbandOf
+rc:isHusbandOf rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               rdfs:domain rc:Person ;
+               rdfs:range rc:Person .
+
+
 ###  http://richcanvas.io/ns#isMemberOf
 rc:isMemberOf rdf:type owl:ObjectProperty ;
               rdfs:domain rc:Person ;
               rdfs:range rc:Organization .
 
 
+###  http://richcanvas.io/ns#isNiceOf
+rc:isNiceOf rdf:type owl:ObjectProperty ;
+            rdfs:domain rc:Person ;
+            rdfs:range rc:Person .
+
+
 ###  http://richcanvas.io/ns#isOrganizationClassification
 rc:isOrganizationClassification rdf:type owl:ObjectProperty ;
                                 rdfs:domain rc:Organization ;
                                 rdfs:range rc:OrganizationClassification .
+
+
+###  http://richcanvas.io/ns#isParentOf
+rc:isParentOf rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdfs:domain rc:Person ;
+              rdfs:range rc:Person .
 
 
 ###  http://richcanvas.io/ns#isPartOf
@@ -221,10 +365,48 @@ rc:isPostOf rdf:type owl:ObjectProperty ;
             rdfs:range rc:Organization .
 
 
+###  http://richcanvas.io/ns#isRelative
+rc:isRelative rdf:type owl:ObjectProperty ;
+              rdfs:domain rc:Person ;
+              rdfs:range rc:Person .
+
+
+###  http://richcanvas.io/ns#isSisterOf
+rc:isSisterOf rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdfs:domain rc:Person ;
+              rdfs:range rc:Person .
+
+
 ###  http://richcanvas.io/ns#isSiteOf
 rc:isSiteOf rdf:type owl:ObjectProperty ;
             rdfs:domain rc:Site ;
             rdfs:range rc:Organization .
+
+
+###  http://richcanvas.io/ns#isSonOf
+rc:isSonOf rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:domain rc:Person ;
+           rdfs:range rc:Person .
+
+
+###  http://richcanvas.io/ns#isSpouseOf
+rc:isSpouseOf rdf:type owl:ObjectProperty ;
+              rdfs:domain rc:Person ;
+              rdfs:range rc:Person .
+
+
+###  http://richcanvas.io/ns#isUncleOf
+rc:isUncleOf rdf:type owl:ObjectProperty ;
+             rdfs:domain rc:Person ;
+             rdfs:range rc:Person .
+
+
+###  http://richcanvas.io/ns#isWifeOf
+rc:isWifeOf rdf:type owl:ObjectProperty ;
+            rdfs:domain rc:Person ;
+            rdfs:range rc:Person .
 
 
 ###  http://richcanvas.io/ns#qualifiedAssociation
@@ -429,6 +611,11 @@ rc:Association rdf:type owl:Class ;
 rc:Behavior rdf:type owl:Class .
 
 
+###  http://richcanvas.io/ns#Child
+rc:Child rdf:type owl:Class ;
+         rdfs:subClassOf rc:FamilialRelationship .
+
+
 ###  http://richcanvas.io/ns#Classification
 rc:Classification rdf:type owl:Class .
 
@@ -446,6 +633,11 @@ rc:Contacts rdf:type owl:Class ;
 rc:Context rdf:type owl:Class .
 
 
+###  http://richcanvas.io/ns#Cousin
+rc:Cousin rdf:type owl:Class ;
+          rdfs:subClassOf rc:FamilialRelationship .
+
+
 ###  http://richcanvas.io/ns#Email
 rc:Email rdf:type owl:Class .
 
@@ -453,6 +645,21 @@ rc:Email rdf:type owl:Class .
 ###  http://richcanvas.io/ns#Entity
 rc:Entity rdf:type owl:Class ;
           rc:basedOn "W3 prov:Entity" .
+
+
+###  http://richcanvas.io/ns#FamilialRelationship
+rc:FamilialRelationship rdf:type owl:Class ;
+                        rdfs:subClassOf rc:Relationship .
+
+
+###  http://richcanvas.io/ns#Family
+rc:Family rdf:type owl:Class ;
+          rdfs:subClassOf rc:Organization .
+
+
+###  http://richcanvas.io/ns#FamilyMembers
+rc:FamilyMembers rdf:type owl:Class ;
+                 rdfs:subClassOf rc:Group .
 
 
 ###  http://richcanvas.io/ns#Friends
@@ -470,9 +677,24 @@ rc:FriendshipClassification rdf:type owl:Class ;
                             rdfs:subClassOf rc:Classification .
 
 
+###  http://richcanvas.io/ns#GrandChild
+rc:GrandChild rdf:type owl:Class ;
+              rdfs:subClassOf rc:FamilialRelationship .
+
+
+###  http://richcanvas.io/ns#GrandParent
+rc:GrandParent rdf:type owl:Class ;
+               rdfs:subClassOf rc:FamilialRelationship .
+
+
 ###  http://richcanvas.io/ns#Group
 rc:Group rdf:type owl:Class ;
          rdfs:subClassOf rc:Collection .
+
+
+###  http://richcanvas.io/ns#Household
+rc:Household rdf:type owl:Class ;
+             rdfs:subClassOf rc:Group .
 
 
 ###  http://richcanvas.io/ns#Members
@@ -492,6 +714,21 @@ rc:MembershipRole rdf:type owl:Class ;
                   rdfs:comment "Indicaes the Role the Agent plays in a Membership relationship with an Organzation" .
 
 
+###  http://richcanvas.io/ns#Mentorship
+rc:Mentorship rdf:type owl:Class ;
+              rdfs:subClassOf rc:Relationship .
+
+
+###  http://richcanvas.io/ns#Nephew
+rc:Nephew rdf:type owl:Class ;
+          rdfs:subClassOf rc:FamilialRelationship .
+
+
+###  http://richcanvas.io/ns#Nice
+rc:Nice rdf:type owl:Class ;
+        rdfs:subClassOf rc:FamilialRelationship .
+
+
 ###  http://richcanvas.io/ns#Organization
 rc:Organization rdf:type owl:Class ;
                 rdfs:subClassOf rc:Agent ;
@@ -504,6 +741,11 @@ rc:Organization rdf:type owl:Class ;
 ###  http://richcanvas.io/ns#OrganizationClassification
 rc:OrganizationClassification rdf:type owl:Class ;
                               rdfs:subClassOf rc:Classification .
+
+
+###  http://richcanvas.io/ns#Parent
+rc:Parent rdf:type owl:Class ;
+          rdfs:subClassOf rc:FamilialRelationship .
 
 
 ###  http://richcanvas.io/ns#Person
@@ -544,6 +786,11 @@ rc:Role rdf:type owl:Class ;
                    "skos:Concept" .
 
 
+###  http://richcanvas.io/ns#Sibling
+rc:Sibling rdf:type owl:Class ;
+           rdfs:subClassOf rc:FamilialRelationship .
+
+
 ###  http://richcanvas.io/ns#Site
 rc:Site rdf:type owl:Class ;
         rc:basedOn "W3 org:Site" ;
@@ -553,6 +800,11 @@ rc:Site rdf:type owl:Class ;
 ###  http://richcanvas.io/ns#SoftwareAgent
 rc:SoftwareAgent rdf:type owl:Class ;
                  rdfs:subClassOf rc:Agent .
+
+
+###  http://richcanvas.io/ns#Spouse
+rc:Spouse rdf:type owl:Class ;
+          rdfs:subClassOf rc:FamilialRelationship .
 
 
 #################################################################
