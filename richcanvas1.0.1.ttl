@@ -847,6 +847,11 @@ rc:GiveAdvice rdf:type owl:NamedIndividual ,
                        rc:Behavior .
 
 
+###  http://richcanvas.io/ns#GrandParent
+rc:GrandParent rdf:type owl:NamedIndividual ,
+                        rc:FamilyMembershipRole .
+
+
 ###  http://richcanvas.io/ns#Parent
 rc:Parent rdf:type owl:NamedIndividual ,
                    rc:FamilyMembershipRole .
@@ -865,6 +870,16 @@ rc:Professional rdf:type owl:NamedIndividual ,
 ###  http://richcanvas.io/ns#RequestAdvice
 rc:RequestAdvice rdf:type owl:NamedIndividual ,
                           rc:Behavior .
+
+
+###  http://richcanvas.io/ns#Sibling
+rc:Sibling rdf:type owl:NamedIndividual ,
+                    rc:FamilyMembershipRole .
+
+
+###  http://richcanvas.io/ns#Spouse
+rc:Spouse rdf:type owl:NamedIndividual ,
+                   rc:FamilyMembershipRole .
 
 
 ###  http://richcanvas.io/ns#TakeAdvice
