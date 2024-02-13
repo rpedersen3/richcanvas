@@ -93,6 +93,12 @@ rc:hasEmail rdf:type owl:ObjectProperty ;
             rdfs:range rc:Email .
 
 
+###  http://richcanvas.io/ns#hasFamily
+rc:hasFamily rdf:type owl:ObjectProperty ;
+             rdfs:domain rc:Person ;
+             rdfs:range rc:Family .
+
+
 ###  http://richcanvas.io/ns#hasFamilyMembers
 rc:hasFamilyMembers rdf:type owl:ObjectProperty ;
                     rdfs:domain rc:Family ;
@@ -108,7 +114,9 @@ rc:hasFamilyMembership rdf:type owl:ObjectProperty ;
 
 ###  http://richcanvas.io/ns#hasFamilyRole
 rc:hasFamilyRole rdf:type owl:ObjectProperty ;
-                 rdfs:subPropertyOf rc:hasMembershipRole .
+                 rdfs:subPropertyOf rc:hasMembershipRole ;
+                 rdfs:domain rc:FamilyMembership ;
+                 rdfs:range rc:FamilyRole .
 
 
 ###  http://richcanvas.io/ns#hasFriend
@@ -691,9 +699,9 @@ rc:FamilyMembership rdf:type owl:Class ;
                     rdfs:subClassOf rc:Membership .
 
 
-###  http://richcanvas.io/ns#FamilyMembershipRole
-rc:FamilyMembershipRole rdf:type owl:Class ;
-                        rdfs:subClassOf rc:MembershipRole .
+###  http://richcanvas.io/ns#FamilyRole
+rc:FamilyRole rdf:type owl:Class ;
+              rdfs:subClassOf rc:MembershipRole .
 
 
 ###  http://richcanvas.io/ns#Friends
@@ -852,7 +860,7 @@ rc:BestFriend rdf:type owl:NamedIndividual ,
 
 ###  http://richcanvas.io/ns#Child
 rc:Child rdf:type owl:NamedIndividual ,
-                  rc:FamilyMembershipRole .
+                  rc:FamilyRole .
 
 
 ###  http://richcanvas.io/ns#CloseFriend
@@ -867,12 +875,16 @@ rc:GiveAdvice rdf:type owl:NamedIndividual ,
 
 ###  http://richcanvas.io/ns#GrandParent
 rc:GrandParent rdf:type owl:NamedIndividual ,
-                        rc:FamilyMembershipRole .
+                        rc:FamilyRole .
+
+
+###  http://richcanvas.io/ns#Husband
+rc:Husband rdf:type owl:NamedIndividual .
 
 
 ###  http://richcanvas.io/ns#Parent
 rc:Parent rdf:type owl:NamedIndividual ,
-                   rc:FamilyMembershipRole .
+                   rc:FamilyRole .
 
 
 ###  http://richcanvas.io/ns#Private
@@ -892,12 +904,12 @@ rc:RequestAdvice rdf:type owl:NamedIndividual ,
 
 ###  http://richcanvas.io/ns#Sibling
 rc:Sibling rdf:type owl:NamedIndividual ,
-                    rc:FamilyMembershipRole .
+                    rc:FamilyRole .
 
 
 ###  http://richcanvas.io/ns#Spouse
 rc:Spouse rdf:type owl:NamedIndividual ,
-                   rc:FamilyMembershipRole .
+                   rc:FamilyRole .
 
 
 ###  http://richcanvas.io/ns#TakeAdvice
