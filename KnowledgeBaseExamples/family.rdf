@@ -50,6 +50,16 @@
     <owl:NamedIndividual rdf:about="http://richcanvas.io/family#JoeFamilyMembership">
         <rdf:type rdf:resource="http://richcanvas.io/ns#FamilyMembership"/>
         <ns:hasMembershipRole rdf:resource="http://richcanvas.io/ns#Spouse"/>
+        <ns:withFamily rdf:resource="http://richcanvas.io/family#JoeAndSueFamily"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/family#SueFamilyMembership -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/family#SueFamilyMembership">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#FamilyMembership"/>
+        <ns:withFamily rdf:resource="http://richcanvas.io/family#JoeAndSueFamily"/>
     </owl:NamedIndividual>
     
 
