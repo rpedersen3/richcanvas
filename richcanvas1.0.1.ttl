@@ -867,14 +867,8 @@ rc:BestFriend rdf:type owl:NamedIndividual ,
 
 ###  http://richcanvas.io/ns#Child
 rc:Child rdf:type owl:NamedIndividual ,
-                  rc:FamilyRole ;
-         owl:sameAs rc:Daughter ,
-                    rc:Son .
+                  rc:FamilyRole .
 
-
-###  http://richcanvas.io/ns#Daughter
-
-###  http://richcanvas.io/ns#Son
 
 ###  http://richcanvas.io/ns#CloseFriend
 rc:CloseFriend rdf:type owl:NamedIndividual ,
@@ -888,11 +882,8 @@ rc:Daughter rdf:type owl:NamedIndividual ,
 
 ###  http://richcanvas.io/ns#Female
 rc:Female rdf:type owl:NamedIndividual ,
-                   rc:GenderClassification ;
-          owl:sameAs rc:They .
+                   rc:GenderClassification .
 
-
-###  http://richcanvas.io/ns#They
 
 ###  http://richcanvas.io/ns#GiveAdvice
 rc:GiveAdvice rdf:type owl:NamedIndividual ,
@@ -906,27 +897,18 @@ rc:GrandParent rdf:type owl:NamedIndividual ,
 
 ###  http://richcanvas.io/ns#Husband
 rc:Husband rdf:type owl:NamedIndividual ,
-                    rc:FamilyRole ;
-           owl:sameAs rc:Spouse .
+                    rc:FamilyRole .
 
-
-###  http://richcanvas.io/ns#Spouse
 
 ###  http://richcanvas.io/ns#Male
 rc:Male rdf:type owl:NamedIndividual ,
-                 rc:GenderClassification ;
-        owl:sameAs rc:They .
+                 rc:GenderClassification .
 
-
-###  http://richcanvas.io/ns#They
 
 ###  http://richcanvas.io/ns#Matriarch
 rc:Matriarch rdf:type owl:NamedIndividual ,
-                      rc:FamilyRole ;
-             owl:sameAs rc:Parriarch .
+                      rc:FamilyRole .
 
-
-###  http://richcanvas.io/ns#Parriarch
 
 ###  http://richcanvas.io/ns#Parent
 rc:Parent rdf:type owl:NamedIndividual ,
@@ -935,11 +917,8 @@ rc:Parent rdf:type owl:NamedIndividual ,
 
 ###  http://richcanvas.io/ns#Parriarch
 rc:Parriarch rdf:type owl:NamedIndividual ,
-                      rc:FamilyRole ;
-             owl:sameAs rc:Patriarch .
+                      rc:FamilyRole .
 
-
-###  http://richcanvas.io/ns#Patriarch
 
 ###  http://richcanvas.io/ns#Patriarch
 rc:Patriarch rdf:type owl:NamedIndividual ,
@@ -973,11 +952,8 @@ rc:Son rdf:type owl:NamedIndividual ,
 
 ###  http://richcanvas.io/ns#Spouse
 rc:Spouse rdf:type owl:NamedIndividual ,
-                   rc:FamilyRole ;
-          owl:sameAs rc:Wife .
+                   rc:FamilyRole .
 
-
-###  http://richcanvas.io/ns#Wife
 
 ###  http://richcanvas.io/ns#TakeAdvice
 rc:TakeAdvice rdf:type owl:NamedIndividual ,
