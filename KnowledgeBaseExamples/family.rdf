@@ -49,6 +49,7 @@
 
     <owl:NamedIndividual rdf:about="http://richcanvas.io/family#JoeFamilyMembership">
         <rdf:type rdf:resource="http://richcanvas.io/ns#FamilyMembership"/>
+        <ns:hasMembershipRole rdf:resource="http://richcanvas.io/ns#Spouse"/>
     </owl:NamedIndividual>
     
 
