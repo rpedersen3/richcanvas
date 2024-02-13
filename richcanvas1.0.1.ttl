@@ -93,6 +93,12 @@ rc:hasEmail rdf:type owl:ObjectProperty ;
             rdfs:range rc:Email .
 
 
+###  http://richcanvas.io/ns#hasFamily
+rc:hasFamily rdf:type owl:ObjectProperty ;
+             rdfs:domain rc:Person ;
+             rdfs:range rc:Family .
+
+
 ###  http://richcanvas.io/ns#hasFamilyMembers
 rc:hasFamilyMembers rdf:type owl:ObjectProperty ;
                     rdfs:domain rc:Family ;
@@ -492,7 +498,7 @@ rc:withAgent rdf:type owl:ObjectProperty ;
 
 ###  http://richcanvas.io/ns#withFamily
 rc:withFamily rdf:type owl:ObjectProperty ;
-              rdfs:domain rc:Person ;
+              rdfs:domain rc:FamilyMembership ;
               rdfs:range rc:Family .
 
 

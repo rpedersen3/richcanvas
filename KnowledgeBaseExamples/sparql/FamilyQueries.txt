@@ -1,0 +1,7 @@
+PREFIX rc: <http://richcanvas.io/ns#>
+
+SELECT $subject
+WHERE {
+?subject rc:hasFamilyRole rc:Spouse .
+}
+
