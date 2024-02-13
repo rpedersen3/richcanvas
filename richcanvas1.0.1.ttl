@@ -93,12 +93,6 @@ rc:hasEmail rdf:type owl:ObjectProperty ;
             rdfs:range rc:Email .
 
 
-###  http://richcanvas.io/ns#hasFamily
-rc:hasFamily rdf:type owl:ObjectProperty ;
-             rdfs:domain rc:Person ;
-             rdfs:range rc:Family .
-
-
 ###  http://richcanvas.io/ns#hasFamilyMembers
 rc:hasFamilyMembers rdf:type owl:ObjectProperty ;
                     rdfs:domain rc:Family ;
@@ -135,6 +129,12 @@ rc:hasFriends rdf:type owl:ObjectProperty ;
 rc:hasFriendship rdf:type owl:ObjectProperty ;
                  rdfs:domain rc:Person ;
                  rdfs:range rc:Friendship .
+
+
+###  http://richcanvas.io/ns#hasGender
+rc:hasGender rdf:type owl:ObjectProperty ;
+             rdfs:domain rc:Person ;
+             rdfs:range rc:GenderClassification .
 
 
 ###  http://richcanvas.io/ns#hasHomeAddress
@@ -566,10 +566,6 @@ rc:firstName rdf:type owl:DatatypeProperty ;
              rdfs:range xsd:string .
 
 
-###  http://richcanvas.io/ns#gender
-rc:gender rdf:type owl:DatatypeProperty .
-
-
 ###  http://richcanvas.io/ns#lastName
 rc:lastName rdf:type owl:DatatypeProperty ;
             rdfs:domain rc:Person ;
@@ -717,6 +713,11 @@ rc:Friendship rdf:type owl:Class ;
 ###  http://richcanvas.io/ns#FriendshipClassification
 rc:FriendshipClassification rdf:type owl:Class ;
                             rdfs:subClassOf rc:Classification .
+
+
+###  http://richcanvas.io/ns#GenderClassification
+rc:GenderClassification rdf:type owl:Class ;
+                        rdfs:subClassOf rc:Classification .
 
 
 ###  http://richcanvas.io/ns#GrandChild
@@ -868,6 +869,16 @@ rc:CloseFriend rdf:type owl:NamedIndividual ,
                         rc:FriendshipClassification .
 
 
+###  http://richcanvas.io/ns#Daughter
+rc:Daughter rdf:type owl:NamedIndividual ,
+                     rc:FamilyRole .
+
+
+###  http://richcanvas.io/ns#Female
+rc:Female rdf:type owl:NamedIndividual ,
+                   rc:GenderClassification .
+
+
 ###  http://richcanvas.io/ns#GiveAdvice
 rc:GiveAdvice rdf:type owl:NamedIndividual ,
                        rc:Behavior .
@@ -881,6 +892,11 @@ rc:GrandParent rdf:type owl:NamedIndividual ,
 ###  http://richcanvas.io/ns#Husband
 rc:Husband rdf:type owl:NamedIndividual ,
                     rc:FamilyRole .
+
+
+###  http://richcanvas.io/ns#Male
+rc:Male rdf:type owl:NamedIndividual ,
+                 rc:GenderClassification .
 
 
 ###  http://richcanvas.io/ns#Parent
@@ -906,6 +922,11 @@ rc:RequestAdvice rdf:type owl:NamedIndividual ,
 ###  http://richcanvas.io/ns#Sibling
 rc:Sibling rdf:type owl:NamedIndividual ,
                     rc:FamilyRole .
+
+
+###  http://richcanvas.io/ns#Son
+rc:Son rdf:type owl:NamedIndividual ,
+                rc:FamilyRole .
 
 
 ###  http://richcanvas.io/ns#Spouse
