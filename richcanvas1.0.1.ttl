@@ -303,6 +303,11 @@ rc:isDaughterOf rdf:type owl:ObjectProperty ;
                 rdfs:range rc:Person .
 
 
+###  http://richcanvas.io/ns#isFamilyMemberOf
+rc:isFamilyMemberOf rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf rc:isMemberOf .
+
+
 ###  http://richcanvas.io/ns#isFriendOf
 rc:isFriendOf rdf:type owl:ObjectProperty ;
               rdfs:domain rc:Person ;
@@ -355,6 +360,7 @@ rc:isParentOf rdf:type owl:ObjectProperty ;
 
 ###  http://richcanvas.io/ns#isPartOf
 rc:isPartOf rdf:type owl:ObjectProperty ;
+            rdfs:domain rc:Person ;
             rdfs:range rc:Collection .
 
 
@@ -365,10 +371,10 @@ rc:isPostOf rdf:type owl:ObjectProperty ;
             rdfs:range rc:Organization .
 
 
-###  http://richcanvas.io/ns#isRelative
-rc:isRelative rdf:type owl:ObjectProperty ;
-              rdfs:domain rc:Person ;
-              rdfs:range rc:Person .
+###  http://richcanvas.io/ns#isRelativeOf
+rc:isRelativeOf rdf:type owl:ObjectProperty ;
+                rdfs:domain rc:Person ;
+                rdfs:range rc:Person .
 
 
 ###  http://richcanvas.io/ns#isSisterOf
@@ -662,6 +668,16 @@ rc:FamilyMembers rdf:type owl:Class ;
                  rdfs:subClassOf rc:Group .
 
 
+###  http://richcanvas.io/ns#FamilyMembership
+rc:FamilyMembership rdf:type owl:Class ;
+                    rdfs:subClassOf rc:Membership .
+
+
+###  http://richcanvas.io/ns#FamilyMembershipRole
+rc:FamilyMembershipRole rdf:type owl:Class ;
+                        rdfs:subClassOf rc:MembershipRole .
+
+
 ###  http://richcanvas.io/ns#Friends
 rc:Friends rdf:type owl:Class ;
            rdfs:subClassOf rc:Group .
@@ -816,6 +832,11 @@ rc:BestFriend rdf:type owl:NamedIndividual ,
                        rc:FriendshipClassification .
 
 
+###  http://richcanvas.io/ns#Child
+rc:Child rdf:type owl:NamedIndividual ,
+                  rc:FamilyMembershipRole .
+
+
 ###  http://richcanvas.io/ns#CloseFriend
 rc:CloseFriend rdf:type owl:NamedIndividual ,
                         rc:FriendshipClassification .
@@ -824,6 +845,11 @@ rc:CloseFriend rdf:type owl:NamedIndividual ,
 ###  http://richcanvas.io/ns#GiveAdvice
 rc:GiveAdvice rdf:type owl:NamedIndividual ,
                        rc:Behavior .
+
+
+###  http://richcanvas.io/ns#Parent
+rc:Parent rdf:type owl:NamedIndividual ,
+                   rc:FamilyMembershipRole .
 
 
 ###  http://richcanvas.io/ns#Private
