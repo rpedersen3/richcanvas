@@ -99,6 +99,13 @@ rc:hasFamily rdf:type owl:ObjectProperty ;
              rdfs:range rc:Family .
 
 
+###  http://richcanvas.io/ns#hasFamilyMembership
+rc:hasFamilyMembership rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf rc:hasMembership ;
+                       rdfs:domain rc:Person ;
+                       rdfs:range rc:FamilyMembership .
+
+
 ###  http://richcanvas.io/ns#hasFriend
 rc:hasFriend rdf:type owl:ObjectProperty ;
              rdfs:domain rc:Person ;

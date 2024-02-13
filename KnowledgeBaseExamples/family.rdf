@@ -42,6 +42,46 @@
         <ns:includes rdf:resource="http://richcanvas.io/per#SteveSmith"/>
         <ns:includes rdf:resource="http://richcanvas.io/per#SueSmith"/>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/family#JoeFamilyMembership -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/family#JoeFamilyMembership">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#FamilyMembership"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/per#JoeSmith -->
+
+    <rdf:Description rdf:about="http://richcanvas.io/per#JoeSmith">
+        <ns:isFamilyMemberOf rdf:resource="http://richcanvas.io/family#JoeAndSueFamily"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://richcanvas.io/per#SamSmith -->
+
+    <rdf:Description rdf:about="http://richcanvas.io/per#SamSmith">
+        <ns:isFamilyMemberOf rdf:resource="http://richcanvas.io/family#JoeAndSueFamily"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://richcanvas.io/per#SteveSmith -->
+
+    <rdf:Description rdf:about="http://richcanvas.io/per#SteveSmith">
+        <ns:isFamilyMemberOf rdf:resource="http://richcanvas.io/family#JoeAndSueFamily"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://richcanvas.io/per#SueSmith -->
+
+    <rdf:Description rdf:about="http://richcanvas.io/per#SueSmith">
+        <ns:isFamilyMemberOf rdf:resource="http://richcanvas.io/family#JoeAndSueFamily"/>
+    </rdf:Description>
 </rdf:RDF>
 
 
