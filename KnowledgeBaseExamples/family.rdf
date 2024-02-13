@@ -49,7 +49,7 @@
 
     <owl:NamedIndividual rdf:about="http://richcanvas.io/family#JoeFamilyMembership">
         <rdf:type rdf:resource="http://richcanvas.io/ns#FamilyMembership"/>
-        <ns:hasMembershipRole rdf:resource="http://richcanvas.io/ns#Spouse"/>
+        <ns:hasFamilyRole rdf:resource="http://richcanvas.io/ns#Spouse"/>
         <ns:withFamily rdf:resource="http://richcanvas.io/family#JoeAndSueFamily"/>
     </owl:NamedIndividual>
     
@@ -59,6 +59,7 @@
 
     <owl:NamedIndividual rdf:about="http://richcanvas.io/family#SueFamilyMembership">
         <rdf:type rdf:resource="http://richcanvas.io/ns#FamilyMembership"/>
+        <ns:hasFamilyRole rdf:resource="http://richcanvas.io/ns#Spouse"/>
         <ns:withFamily rdf:resource="http://richcanvas.io/family#JoeAndSueFamily"/>
     </owl:NamedIndividual>
     
@@ -67,6 +68,7 @@
     <!-- http://richcanvas.io/per#JoeSmith -->
 
     <rdf:Description rdf:about="http://richcanvas.io/per#JoeSmith">
+        <ns:hasFamily rdf:resource="http://richcanvas.io/family#JoeAndSueFamily"/>
         <ns:hasFamilyMembership rdf:resource="http://richcanvas.io/family#JoeFamilyMembership"/>
         <ns:isFamilyMemberOf rdf:resource="http://richcanvas.io/family#JoeAndSueFamily"/>
     </rdf:Description>
@@ -76,6 +78,7 @@
     <!-- http://richcanvas.io/per#SamSmith -->
 
     <rdf:Description rdf:about="http://richcanvas.io/per#SamSmith">
+        <ns:hasFamily rdf:resource="http://richcanvas.io/family#JoeAndSueFamily"/>
         <ns:isFamilyMemberOf rdf:resource="http://richcanvas.io/family#JoeAndSueFamily"/>
     </rdf:Description>
     
