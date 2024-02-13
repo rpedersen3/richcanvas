@@ -4,9 +4,9 @@
     <uri id="Imports Wizard Entry" name="http://richcanvas.io/ns" uri="https://raw.githubusercontent.com/rpedersen3/richcanvas/main/richcanvas1.0.1.ttl"/>
     <uri id="Imports Wizard Entry" name="http://richcanvas.io/ns" uri="https://raw.githubusercontent.com/rpedersen3/richcanvas/main/richcanvas1.0.1.ttl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1707788112831" name="http://richcanvas.io/act" uri="activity.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1707788112831" name="http://richcanvas.io/family" uri="family.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1707788112831" name="http://richcanvas.io/org" uri="organization.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1707788112831" name="http://richcanvas.io/per" uri="person.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1707789751170" name="http://richcanvas.io/act" uri="activity.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1707789751170" name="http://richcanvas.io/family" uri="family.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1707789751170" name="http://richcanvas.io/org" uri="organization.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1707789751170" name="http://richcanvas.io/per" uri="person.rdf"/>
     </group>
 </catalog>
