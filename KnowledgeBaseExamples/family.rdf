@@ -57,6 +57,7 @@
     <!-- http://richcanvas.io/per#JoeSmith -->
 
     <rdf:Description rdf:about="http://richcanvas.io/per#JoeSmith">
+        <ns:hasFamilyMembership rdf:resource="http://richcanvas.io/family#JoeFamilyMembership"/>
         <ns:isFamilyMemberOf rdf:resource="http://richcanvas.io/family#JoeAndSueFamily"/>
     </rdf:Description>
     
