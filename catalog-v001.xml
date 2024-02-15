@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://richcanvas.io/ns/1.0.2" uri="https://raw.githubusercontent.com/rpedersen3/richcanvas/main/richcanvas1.0.2.ttl"/>
     <uri id="Imports Wizard Entry" name="http://richcanvas.io/ns" uri="https://raw.githubusercontent.com/rpedersen3/richcanvas/main/richcanvas1.0.1.ttl"/>
     <uri id="Imports Wizard Entry" name="http://www.w3.org/ns/prov-o-20130430" uri="https://www.w3.org/ns/prov-o"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1707770369472" name="http://richcanvas.io/act" uri="KnowledgeBaseExamples/activity.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1707770369472" name="http://richcanvas.io/org" uri="KnowledgeBaseExamples/organization.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1707770369472" name="http://richcanvas.io/per" uri="KnowledgeBaseExamples/person.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1708035140406" name="http://richcanvas.io/act" uri="KnowledgeBaseExamples/activity.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1708035140406" name="http://richcanvas.io/family" uri="KnowledgeBaseExamples/family.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1708035140406" name="http://richcanvas.io/org" uri="KnowledgeBaseExamples/organization.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1708035140406" name="http://richcanvas.io/per" uri="KnowledgeBaseExamples/person.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1708035140406" name="http://richcanvas.io/strategy" uri="KnowledgeBaseExamples/strategy1.0.2.rdf"/>
     </group>
 </catalog>
