@@ -940,8 +940,7 @@ rc:OrganizationClassification rdf:type owl:Class ;
 
 
 ###  http://richcanvas.io/ns#Outcome
-rc:Outcome rdf:type owl:Class ;
-           rdfs:subClassOf rc:StateOfAffair .
+rc:Outcome rdf:type owl:Class .
 
 
 ###  http://richcanvas.io/ns#Person

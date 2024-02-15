@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://churchcore.io/ns/1.0.2" uri="https://raw.githubusercontent.com/rpedersen3/richcanvas/main/churchcore.1.0.2.rdf"/>
     <uri id="Imports Wizard Entry" name="http://richcanvas.io/ns/1.0.2" uri="https://raw.githubusercontent.com/rpedersen3/richcanvas/main/richcanvas1.0.2.ttl"/>
     <uri id="Imports Wizard Entry" name="http://richcanvas.io/per" uri="https://raw.githubusercontent.com/rpedersen3/richcanvas/main/KnowledgeBaseExamples/person.rdf"/>
     <uri id="Imports Wizard Entry" name="http://richcanvas.io/ns" uri="https://raw.githubusercontent.com/rpedersen3/richcanvas/main/richcanvas1.0.1.ttl"/>
