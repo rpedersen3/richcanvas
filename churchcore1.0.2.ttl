@@ -7,9 +7,9 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @base <http://churchcore.io/ns#> .
 
-<https:/churchcore.io/ns> rdf:type owl:Ontology ;
-                           owl:versionIRI <https://churchcore.io/ns/1.0.2> ;
-                           owl:imports <http://richcanvas.io/ns/1.0.2> .
+<http:/churchcore.io/ns> rdf:type owl:Ontology ;
+                          owl:versionIRI <http://churchcore.io/ns/1.0.2> ;
+                          owl:imports <http://richcanvas.io/ns/1.0.2> .
 
 #################################################################
 #    Object Properties
@@ -19,7 +19,7 @@
 <http://richcanvas.io/ns#hasMembers> rdf:type owl:ObjectProperty .
 
 
-###  https:/churchcore.io/ns#hasCongregation
+###  http:/churchcore.io/ns#hasCongregation
 :hasCongregation rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf <http://richcanvas.io/ns#hasMembers> .
 
@@ -49,12 +49,12 @@
 <http://richcanvas.io/ns#Site> rdf:type owl:Class .
 
 
-###  https:/churchcore.io/ns#Church
+###  http:/churchcore.io/ns#Church
 :Church rdf:type owl:Class ;
         rdfs:subClassOf <http://richcanvas.io/ns#Organization> .
 
 
-###  https:/churchcore.io/ns#Congregation
+###  http:/churchcore.io/ns#Congregation
 :Congregation rdf:type owl:Class ;
               rdfs:subClassOf <http://richcanvas.io/ns#Members> .
 
