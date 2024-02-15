@@ -1,0 +1,55 @@
+PREFIX rc: <http://richcanvas.io/ns#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT $subject
+WHERE {
+?subject rc:hasFamilyRole rc:Spouse .
+}
+
+
+PREFIX rc: <http://richcanvas.io/ns#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?individual ?object
+WHERE {
+  ?individual rdf:type rc:Person .
+}
+
+
+PREFIX rc: <http://richcanvas.io/ns#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?individual ?object
+WHERE {
+  ?individual rdf:type rc:FamilyMembership .
+  ?individual rc:hasFamilyRole rc:Wife .
+}
+
+
+
+PREFIX rc: <http://richcanvas.io/ns#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?person
+WHERE {
+  ?person rdf:type rc:Person .
+  ?person rc:hasFamilyMembership ?membership .
+  ?membership rdf:type rc:FamilyMembership .
+  ?membership rc:hasFamilyRole rc:Wife .
+}
+
+
+
+PREFIX rc: <http://richcanvas.io/ns#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?person ?locality
+WHERE {
+  ?person rdf:type rc:Person .
+  ?person rc:hasFamilyMembership ?membership .
+  ?membership rdf:type rc:FamilyMembership .
+  ?membership rc:hasFamilyRole rc:Wife .
+  ?person rc:hasHomeAddress ?address .
+  ?address rc:addressLocality "Erie"
+}
+
