@@ -50,9 +50,9 @@
     
 
 
-    <!-- http://churchcore.io/ns#Campus -->
+    <!-- http://churchcore.io/ns#CampusSite -->
 
-    <owl:Class rdf:about="http://churchcore.io/ns#Campus">
+    <owl:Class rdf:about="http://churchcore.io/ns#CampusSite">
         <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Site"/>
     </owl:Class>
     
@@ -95,6 +95,30 @@
     <!-- http://richcanvas.io/ns#Site -->
 
     <owl:Class rdf:about="http://richcanvas.io/ns#Site"/>
+    
+
+
+    <!-- http:/churchcore.io/ns#Campus -->
+
+    <owl:Class rdf:about="http:/churchcore.io/ns#Campus">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/churchcore.io/ns#Ministry -->
+
+    <owl:Class rdf:about="http:/churchcore.io/ns#Ministry">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/churchcore.io/ns#PrimaryPurpose -->
+
+    <owl:Class rdf:about="http:/churchcore.io/ns#PrimaryPurpose">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#StrategicPurpose"/>
+    </owl:Class>
 </rdf:RDF>
 
 

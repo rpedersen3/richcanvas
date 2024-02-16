@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://richcanvas.io/strategy"
+<rdf:RDF xmlns="http://richcanvas.io/strategy#"
      xml:base="http://richcanvas.io/strategy"
      xmlns:cc="http://churchcore.io/ns#"
      xmlns:rc="http://richcanvas.io/ns#"
@@ -12,6 +12,134 @@
         <owl:versionIRI rdf:resource="http://richcavnas.io/strategy/1.0.2"/>
         <owl:imports rdf:resource="http://churchcore.io/ns/1.0.2"/>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://richcanvas.io/ns#hasPlan -->
+
+    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#hasPlan"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://richcanvas.io/strategy#HaveReachedEveryoneInTheFrontRangeWithTheGospel -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/strategy#HaveReachedEveryoneInTheFrontRangeWithTheGospel">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#StateOfAffair"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/strategy#MHChurch -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/strategy#MHChurch">
+        <rdf:type rdf:resource="http://churchcore.io/ns#Church"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/strategy#MHMission -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/strategy#MHMission">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#Mission"/>
+        <rc:helpAchieve rdf:resource="http://richcanvas.io/strategy#MHVision"/>
+        <rc:helpAchieve rdf:resource="http://richcanvas.io/strategy#PeopleBecomingLikeJesusAndJoinHimOnMission"/>
+        <rdfs:comment>We help people become like Jesus and Join him on mission</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/strategy#MHStrategicPlan -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/strategy#MHStrategicPlan">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#StrategicPlan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/strategy#MHStrategicPurpose -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/strategy#MHStrategicPurpose">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#StrategicPurpose"/>
+        <rc:helpAchieve rdf:resource="http://richcanvas.io/strategy#PeopleInAllTheWorldKnowThatGodLovesThem"/>
+        <rdfs:comment>The church exists because God loves us and the world.
+Let the world know that God loves them</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/strategy#MHStrategy -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/strategy#MHStrategy">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#Strategy"/>
+        <rc:hasIntendedMission rdf:resource="http://richcanvas.io/strategy#MHMission"/>
+        <rc:hasIntendedStrategicPurpose rdf:resource="http://richcanvas.io/strategy#MHStrategicPurpose"/>
+        <rc:hasIntendedVision rdf:resource="http://richcanvas.io/strategy#MHVision"/>
+        <rc:hasPlan rdf:resource="http://richcanvas.io/strategy#MHStrategicPlan"/>
+        <rdfs:comment>... by unleashing missional followers of Jesus, fueled by local congregations</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/strategy#MHVision -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/strategy#MHVision">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#Vision"/>
+        <rc:helpAchieve rdf:resource="http://richcanvas.io/strategy#HaveReachedEveryoneInTheFrontRangeWithTheGospel"/>
+        <rc:helpAchieve rdf:resource="http://richcanvas.io/strategy#MHStrategicPurpose"/>
+        <rdfs:comment>We reach everyone in the Front Range with the Gospel</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/strategy#PeopleBecomingLikeJesusAndJoinHimOnMission -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/strategy#PeopleBecomingLikeJesusAndJoinHimOnMission">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#StateOfAffair"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/strategy#PeopleInAllTheWorldKnowThatGodLovesThem -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/strategy#PeopleInAllTheWorldKnowThatGodLovesThem">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#StateOfAffair"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/strategy#People_know_that_god_loves_them -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/strategy#People_know_that_god_loves_them"/>
+    
+
+
+    <!-- http://richcanvas.io/strategy#ReachEveryoneInTheFrontRangeWIthTheGospel -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/strategy#ReachEveryoneInTheFrontRangeWIthTheGospel">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#StateOfAffair"/>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
