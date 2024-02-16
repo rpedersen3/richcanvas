@@ -66,6 +66,12 @@ rc:hasAunt rdf:type owl:ObjectProperty ;
            rdfs:range rc:Person .
 
 
+###  http://richcanvas.io/ns#hasBelief
+rc:hasBelief rdf:type owl:ObjectProperty ;
+             rdfs:domain rc:Agent ;
+             rdfs:range rc:Belief .
+
+
 ###  http://richcanvas.io/ns#hasBrother
 rc:hasBrother rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf rc:hasRelative ;
@@ -88,6 +94,16 @@ rc:hasContacts rdf:type owl:ObjectProperty ;
 
 ###  http://richcanvas.io/ns#hasContext
 rc:hasContext rdf:type owl:ObjectProperty .
+
+
+###  http://richcanvas.io/ns#hasCoreBelief
+rc:hasCoreBelief rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf rc:hasBelief .
+
+
+###  http://richcanvas.io/ns#hasCoreValue
+rc:hasCoreValue rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf rc:hasValue .
 
 
 ###  http://richcanvas.io/ns#hasCousin
@@ -162,6 +178,13 @@ rc:hasFriendship rdf:type owl:ObjectProperty ;
 rc:hasGender rdf:type owl:ObjectProperty ;
              rdfs:domain rc:Person ;
              rdfs:range rc:GenderClassification .
+
+
+###  http://richcanvas.io/ns#hasHabit
+rc:hasHabit rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf rc:hadBehavior ;
+            rdfs:domain rc:Agent ;
+            rdfs:range rc:Habit .
 
 
 ###  http://richcanvas.io/ns#hasHeldPurpose
@@ -283,6 +306,18 @@ rc:hasPrimarySite rdf:type owl:ObjectProperty ;
                   rdfs:range rc:Site .
 
 
+###  http://richcanvas.io/ns#hasProcedure
+rc:hasProcedure rdf:type owl:ObjectProperty ;
+                rdfs:domain rc:Protocol ;
+                rdfs:range rc:Procedure .
+
+
+###  http://richcanvas.io/ns#hasProtocol
+rc:hasProtocol rdf:type owl:ObjectProperty ;
+               rdfs:domain rc:Organization ;
+               rdfs:range rc:Protocol .
+
+
 ###  http://richcanvas.io/ns#hasPurpose
 rc:hasPurpose rdf:type owl:ObjectProperty ;
               rdfs:domain rc:Agent ;
@@ -339,6 +374,13 @@ rc:hasSubOrganization rdf:type owl:ObjectProperty ;
                       rdfs:range rc:Organization .
 
 
+###  http://richcanvas.io/ns#hasTrait
+rc:hasTrait rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf rc:hadBehavior ;
+            rdfs:domain rc:Agent ;
+            rdfs:range rc:Trait .
+
+
 ###  http://richcanvas.io/ns#hasUncle
 rc:hasUncle rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf rc:hasRelative ;
@@ -350,6 +392,12 @@ rc:hasUncle rdf:type owl:ObjectProperty ;
 rc:hasUnit rdf:type owl:ObjectProperty ;
            rdfs:domain rc:Organization ;
            rdfs:range rc:OrganizationalUnit .
+
+
+###  http://richcanvas.io/ns#hasValue
+rc:hasValue rdf:type owl:ObjectProperty ;
+            rdfs:domain rc:Agent ;
+            rdfs:range rc:Value .
 
 
 ###  http://richcanvas.io/ns#hasWife
@@ -770,12 +818,15 @@ rc:title rdf:type owl:DatatypeProperty ;
 #################################################################
 
 ###  http://richcanvas.io/ns#Action
-rc:Action rdf:type owl:Class .
+rc:Action rdf:type owl:Class ;
+          rdfs:subClassOf rc:Activity ;
+          rdfs:comment "Refers to something that is done intentionally or deliberately by a person or organization" .
 
 
 ###  http://richcanvas.io/ns#Activity
 rc:Activity rdf:type owl:Class ;
-            rc:basedOn "W3 prov:Activity" .
+            rc:basedOn "W3 prov:Activity" ;
+            rdfs:comment "Encompasses any form of action, behavior, or process that occurs, whether intentional or unintentional" .
 
 
 ###  http://richcanvas.io/ns#ActivitySpec
@@ -830,6 +881,10 @@ rc:Behavior rdf:type owl:Class ;
             rdfs:comment "Refers to the actions, reactions, or conduct of a person or organization in response to internal or external stimuli" .
 
 
+###  http://richcanvas.io/ns#Belief
+rc:Belief rdf:type owl:Class .
+
+
 ###  http://richcanvas.io/ns#Capability
 rc:Capability rdf:type owl:Class .
 
@@ -849,14 +904,6 @@ rc:Contacts rdf:type owl:Class ;
 
 ###  http://richcanvas.io/ns#Context
 rc:Context rdf:type owl:Class .
-
-
-###  http://richcanvas.io/ns#CoreBelief
-rc:CoreBelief rdf:type owl:Class .
-
-
-###  http://richcanvas.io/ns#CoreValue
-rc:CoreValue rdf:type owl:Class .
 
 
 ###  http://richcanvas.io/ns#Email
@@ -1057,6 +1104,15 @@ rc:PostalAddress rdf:type owl:Class ;
                  rdfs:subClassOf rc:Address .
 
 
+###  http://richcanvas.io/ns#Procedure
+rc:Procedure rdf:type owl:Class .
+
+
+###  http://richcanvas.io/ns#Protocol
+rc:Protocol rdf:type owl:Class ;
+            rdfs:comment "refers to a set of rules, guidelines, or procedures that govern interactions, communication, and behavior within an organization" .
+
+
 ###  http://richcanvas.io/ns#Purpose
 rc:Purpose rdf:type owl:Class ;
            rdfs:comment "Why do we do what we do?  We believe ...." .
@@ -1117,6 +1173,10 @@ rc:Strategy rdf:type owl:Class ;
 ###  http://richcanvas.io/ns#Trait
 rc:Trait rdf:type owl:Class ;
          rdfs:subClassOf rc:Behavior .
+
+
+###  http://richcanvas.io/ns#Value
+rc:Value rdf:type owl:Class .
 
 
 ###  http://richcanvas.io/ns#Vision
