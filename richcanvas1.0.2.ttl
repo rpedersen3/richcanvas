@@ -22,12 +22,6 @@ rc:basedOn rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  http://richcanvas.io/ns#achieveStrategicPurpose
-rc:achieveStrategicPurpose rdf:type owl:ObjectProperty ;
-                           rdfs:domain rc:Strategy ;
-                           rdfs:range rc:StrategicPurpose .
-
-
 ###  http://richcanvas.io/ns#comprises
 rc:comprises rdf:type owl:ObjectProperty ;
              rdfs:domain rc:Mission ;
@@ -177,6 +171,13 @@ rc:hasGender rdf:type owl:ObjectProperty ;
              rdfs:range rc:GenderClassification .
 
 
+###  http://richcanvas.io/ns#hasHeldPurpose
+rc:hasHeldPurpose rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf owl:topObjectProperty ;
+                  rdfs:domain rc:Agent ;
+                  rdfs:range rc:Purpose .
+
+
 ###  http://richcanvas.io/ns#hasHomeAddress
 rc:hasHomeAddress rdf:type owl:ObjectProperty ;
                   rdfs:domain rc:Person ;
@@ -190,10 +191,29 @@ rc:hasHusband rdf:type owl:ObjectProperty ;
               rdfs:range rc:Person .
 
 
+###  http://richcanvas.io/ns#hasIntendedMission
+rc:hasIntendedMission rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf rc:hasIntendedPurpose ;
+                      rdfs:domain rc:Strategy ;
+                      rdfs:range rc:Mission .
+
+
 ###  http://richcanvas.io/ns#hasIntendedPurpose
 rc:hasIntendedPurpose rdf:type owl:ObjectProperty ;
-                      rdfs:domain rc:Plan ;
-                      rdfs:range rc:IntendedPurpose .
+                      rdfs:domain rc:Approach ;
+                      rdfs:range rc:Purpose .
+
+
+###  http://richcanvas.io/ns#hasIntendedStrategicPurpose
+rc:hasIntendedStrategicPurpose rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf rc:hasIntendedPurpose .
+
+
+###  http://richcanvas.io/ns#hasIntendedVision
+rc:hasIntendedVision rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf rc:hasIntendedPurpose ;
+                     rdfs:domain rc:Strategy ;
+                     rdfs:range rc:Vision .
 
 
 ###  http://richcanvas.io/ns#hasMember
@@ -326,12 +346,6 @@ rc:hasStrategicPlan rdf:type owl:ObjectProperty ;
                     rdfs:range rc:StrategicPlan .
 
 
-###  http://richcanvas.io/ns#hasStrategicPurpose
-rc:hasStrategicPurpose rdf:type owl:ObjectProperty ;
-                       rdfs:domain rc:Strategy ;
-                       rdfs:range rc:StrategicPurpose .
-
-
 ###  http://richcanvas.io/ns#hasSubOrganization
 rc:hasSubOrganization rdf:type owl:ObjectProperty ;
                       rdfs:domain rc:Organization ;
@@ -356,10 +370,11 @@ rc:hasWife rdf:type owl:ObjectProperty ;
 rc:hasWorkAddress rdf:type owl:ObjectProperty .
 
 
-###  http://richcanvas.io/ns#helpsAchieve
-rc:helpsAchieve rdf:type owl:ObjectProperty ;
-                rdfs:domain rc:Purpose ;
-                rdfs:range rc:Purpose .
+###  http://richcanvas.io/ns#helpAchieve
+rc:helpAchieve rdf:type owl:ObjectProperty ;
+               rdfs:domain rc:Purpose ;
+               rdfs:range rc:Purpose ,
+                          rc:StateOfAffair .
 
 
 ###  http://richcanvas.io/ns#holdsPost
@@ -766,6 +781,10 @@ rc:AgentInfluence rdf:type owl:Class ;
 rc:Aim rdf:type owl:Class .
 
 
+###  http://richcanvas.io/ns#Approach
+rc:Approach rdf:type owl:Class .
+
+
 ###  http://richcanvas.io/ns#Asset
 rc:Asset rdf:type owl:Class .
 
@@ -865,17 +884,12 @@ rc:GenderClassification rdf:type owl:Class ;
 
 ###  http://richcanvas.io/ns#Goal
 rc:Goal rdf:type owl:Class ;
-        rdfs:subClassOf rc:HeldPurpose .
+        rdfs:subClassOf rc:Purpose .
 
 
 ###  http://richcanvas.io/ns#Group
 rc:Group rdf:type owl:Class ;
          rdfs:subClassOf rc:Collection .
-
-
-###  http://richcanvas.io/ns#HeldPurpose
-rc:HeldPurpose rdf:type owl:Class ;
-               rdfs:subClassOf rc:Purpose .
 
 
 ###  http://richcanvas.io/ns#Household
@@ -885,11 +899,6 @@ rc:Household rdf:type owl:Class ;
 
 ###  http://richcanvas.io/ns#Influence
 rc:Influence rdf:type owl:Class .
-
-
-###  http://richcanvas.io/ns#IntendedPurpose
-rc:IntendedPurpose rdf:type owl:Class ;
-                   rdfs:subClassOf rc:Purpose .
 
 
 ###  http://richcanvas.io/ns#Members
@@ -916,13 +925,13 @@ rc:Mentorship rdf:type owl:Class ;
 
 ###  http://richcanvas.io/ns#Mission
 rc:Mission rdf:type owl:Class ;
-           rdfs:subClassOf rc:HeldPurpose ;
+           rdfs:subClassOf rc:Purpose ;
            rdfs:comment "How we get there" .
 
 
 ###  http://richcanvas.io/ns#Objective
 rc:Objective rdf:type owl:Class ;
-             rdfs:subClassOf rc:HeldPurpose .
+             rdfs:subClassOf rc:Purpose .
 
 
 ###  http://richcanvas.io/ns#Organization
@@ -1012,12 +1021,14 @@ rc:Specification rdf:type owl:Class .
 
 
 ###  http://richcanvas.io/ns#StateOfAffair
-rc:StateOfAffair rdf:type owl:Class .
+rc:StateOfAffair rdf:type owl:Class ;
+                 rdfs:comment "refers to the existing situation or condition of a particular matter or issue at a specific point in time (past, current or future time). It encapsulates the overall circumstances, events, or conditions that characterize a given situation or context." .
 
 
 ###  http://richcanvas.io/ns#StrategicPlan
 rc:StrategicPlan rdf:type owl:Class ;
-                 rdfs:subClassOf rc:Plan .
+                 rdfs:subClassOf rc:Plan ;
+                 rdfs:comment "Strategic plan outlines the specific steps, initiatives, and objectives necessary to implement a chosen strategy" .
 
 
 ###  http://richcanvas.io/ns#StrategicPlanning
@@ -1027,17 +1038,18 @@ rc:StrategicPlanning rdf:type owl:Class ;
 
 ###  http://richcanvas.io/ns#StrategicPurpose
 rc:StrategicPurpose rdf:type owl:Class ;
-                    rdfs:subClassOf rc:HeldPurpose .
+                    rdfs:subClassOf rc:Purpose .
 
 
 ###  http://richcanvas.io/ns#Strategy
 rc:Strategy rdf:type owl:Class ;
-            rdfs:comment "A PLAN to ACHIEVE a high-level PURPOSE" .
+            rdfs:subClassOf rc:Approach ;
+            rdfs:comment "Strategy refers to the overarching approach or direction chosen to achieve specific goals or objectives." .
 
 
 ###  http://richcanvas.io/ns#Vision
 rc:Vision rdf:type owl:Class ;
-          rdfs:subClassOf rc:HeldPurpose ;
+          rdfs:subClassOf rc:Purpose ;
           rdfs:comment "What your trying to achieve?" .
 
 
