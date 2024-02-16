@@ -271,6 +271,12 @@ rc:hasPost rdf:type owl:ObjectProperty ;
            rdfs:range rc:Post .
 
 
+###  http://richcanvas.io/ns#hasPostRole
+rc:hasPostRole rdf:type owl:ObjectProperty ;
+               rdfs:domain rc:Post ;
+               rdfs:range rc:PostRole .
+
+
 ###  http://richcanvas.io/ns#hasPrimarySite
 rc:hasPrimarySite rdf:type owl:ObjectProperty ;
                   rdfs:domain rc:Organization ;
@@ -338,6 +344,12 @@ rc:hasUncle rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf rc:hasRelative ;
             rdfs:domain rc:Person ;
             rdfs:range rc:Person .
+
+
+###  http://richcanvas.io/ns#hasUnit
+rc:hasUnit rdf:type owl:ObjectProperty ;
+           rdfs:domain rc:Organization ;
+           rdfs:range rc:OrganizationalUnit .
 
 
 ###  http://richcanvas.io/ns#hasWife
@@ -490,8 +502,8 @@ rc:isPartOf rdf:type owl:ObjectProperty ;
             rdfs:range rc:Collection .
 
 
-###  http://richcanvas.io/ns#isPostOf
-rc:isPostOf rdf:type owl:ObjectProperty ;
+###  http://richcanvas.io/ns#isPostIn
+rc:isPostIn rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf owl:topObjectProperty ;
             rdfs:domain rc:Post ;
             rdfs:range rc:Organization .
@@ -533,6 +545,12 @@ rc:isSpouseOf rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf rc:isRelativeOf ;
               rdfs:domain rc:Person ;
               rdfs:range rc:Person .
+
+
+###  http://richcanvas.io/ns#isSubOrganizationOf
+rc:isSubOrganizationOf rdf:type owl:ObjectProperty ;
+                       rdfs:domain rc:Organization ;
+                       rdfs:range rc:OrganizationalUnit .
 
 
 ###  http://richcanvas.io/ns#isUncleOf
@@ -808,7 +826,8 @@ rc:Association rdf:type owl:Class ;
 
 
 ###  http://richcanvas.io/ns#Behavior
-rc:Behavior rdf:type owl:Class .
+rc:Behavior rdf:type owl:Class ;
+            rdfs:comment "Refers to the actions, reactions, or conduct of a person or organization in response to internal or external stimuli" .
 
 
 ###  http://richcanvas.io/ns#Capability
@@ -904,6 +923,12 @@ rc:Group rdf:type owl:Class ;
          rdfs:subClassOf rc:Collection .
 
 
+###  http://richcanvas.io/ns#Habit
+rc:Habit rdf:type owl:Class ;
+         rdfs:subClassOf rc:Behavior ;
+         rdfs:comment "A specific type of behavior that is repeated regularly and tends to occur automatically in response to certain cues or triggers." .
+
+
 ###  http://richcanvas.io/ns#HierarchicalRelationship
 rc:HierarchicalRelationship rdf:type owl:Class ;
                             rdfs:subClassOf rc:OrganizationalRelationship .
@@ -970,6 +995,11 @@ rc:OrganizationalRelationship rdf:type owl:Class ;
                               rdfs:subClassOf rc:Relationship .
 
 
+###  http://richcanvas.io/ns#OrganizationalUnit
+rc:OrganizationalUnit rdf:type owl:Class ;
+                      rdfs:subClassOf rc:Organization .
+
+
 ###  http://richcanvas.io/ns#Outcome
 rc:Outcome rdf:type owl:Class .
 
@@ -1015,6 +1045,11 @@ rc:Planning rdf:type owl:Class ;
 rc:Post rdf:type owl:Class ;
         rc:basedOn "W3 org:Post" ;
         rdfs:comment "A Post represents some position within an organization that exists independently of the person or persons filling it. Posts may be used to represent situations where a person is a member of an organization ex officio (for example the Secretary of State for Scotland is part of UK Cabinet by virtue of being Secretary of State for Scotland, not as an individual person). A post can be held by multiple people and hence can be treated as a organization in its own right." .
+
+
+###  http://richcanvas.io/ns#PostRole
+rc:PostRole rdf:type owl:Class ;
+            rdfs:subClassOf rc:Role .
 
 
 ###  http://richcanvas.io/ns#PostalAddress
@@ -1077,6 +1112,11 @@ rc:StrategicPurpose rdf:type owl:Class ;
 rc:Strategy rdf:type owl:Class ;
             rdfs:subClassOf rc:Approach ;
             rdfs:comment "Strategy refers to the overarching approach or direction chosen to achieve specific goals or objectives." .
+
+
+###  http://richcanvas.io/ns#Trait
+rc:Trait rdf:type owl:Class ;
+         rdfs:subClassOf rc:Behavior .
 
 
 ###  http://richcanvas.io/ns#Vision
