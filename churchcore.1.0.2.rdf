@@ -74,12 +74,6 @@
     
 
 
-    <!-- http://churchcore.io/ns#Ministry -->
-
-    <owl:Class rdf:about="http://churchcore.io/ns#Ministry"/>
-    
-
-
     <!-- http://richcanvas.io/ns#Members -->
 
     <owl:Class rdf:about="http://richcanvas.io/ns#Members"/>
@@ -102,6 +96,14 @@
 
     <owl:Class rdf:about="http:/churchcore.io/ns#Campus">
         <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/churchcore.io/ns#ChurchMembership -->
+
+    <owl:Class rdf:about="http:/churchcore.io/ns#ChurchMembership">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Membership"/>
     </owl:Class>
     
 

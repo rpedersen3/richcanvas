@@ -35,6 +35,12 @@
     
 
 
+    <!-- http://churchcore.io/church#AliceMembership -->
+
+    <owl:NamedIndividual rdf:about="http://churchcore.io/church#AliceMembership"/>
+    
+
+
     <!-- http://churchcore.io/church#ChrisMember -->
 
     <owl:NamedIndividual rdf:about="http://churchcore.io/church#ChrisMember">
@@ -48,6 +54,7 @@
 
     <owl:NamedIndividual rdf:about="http://churchcore.io/church#EChurch">
         <rdf:type rdf:resource="http://churchcore.io/ns#Church"/>
+        <cc:hasCongregation rdf:resource="http://churchcore.io/church#EChurchCongregation"/>
         <rc:hasPost rdf:resource="http://churchcore.io/church#EChurchElder"/>
         <rc:hasPost rdf:resource="http://churchcore.io/church#EChurchLeadPastor"/>
     </owl:NamedIndividual>
@@ -71,6 +78,7 @@
 
     <owl:NamedIndividual rdf:about="http://churchcore.io/church#EChurchElder">
         <rdf:type rdf:resource="http:/churchcore.io/ns#Elder"/>
+        <rc:hasPostRole rdf:resource="http:/churchcore.io/ns#Elder"/>
     </owl:NamedIndividual>
     
 
@@ -79,6 +87,7 @@
 
     <owl:NamedIndividual rdf:about="http://churchcore.io/church#EChurchLeadPastor">
         <rdf:type rdf:resource="http:/churchcore.io/ns#LeadPastor"/>
+        <rc:hasPostRole rdf:resource="http:/churchcore.io/ns#LeadPastor"/>
     </owl:NamedIndividual>
     
 

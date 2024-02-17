@@ -5,11 +5,11 @@
     <uri id="Imports Wizard Entry" name="http://richcanvas.io/ns/1.0.2" uri="https://raw.githubusercontent.com/rpedersen3/richcanvas/main/richcanvas1.0.2.ttl"/>
     <uri id="Imports Wizard Entry" name="http://richcanvas.io/per" uri="https://raw.githubusercontent.com/rpedersen3/richcanvas/main/KnowledgeBaseExamples/person.rdf"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1708143179201" name="http://churchcore.io/church" uri="church1.0.2.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1708143179201" name="http://churchcore.io/strategy" uri="churchstrategy1.0.2.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1708143179201" name="http://richcanvas.io/act" uri="activity.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1708143179201" name="http://richcanvas.io/family" uri="family.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1708143179201" name="http://richcanvas.io/org" uri="organization.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1708143179201" name="http://richcanvas.io/per" uri="person.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1708145977221" name="http://churchcore.io/church" uri="church1.0.2.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1708145977221" name="http://churchcore.io/strategy" uri="churchstrategy1.0.2.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1708145977221" name="http://richcanvas.io/act" uri="activity.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1708145977221" name="http://richcanvas.io/family" uri="family.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1708145977221" name="http://richcanvas.io/org" uri="organization.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1708145977221" name="http://richcanvas.io/per" uri="person.rdf"/>
     </group>
 </catalog>
