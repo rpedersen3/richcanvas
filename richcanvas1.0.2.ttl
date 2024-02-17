@@ -31,7 +31,7 @@ rc:comprises rdf:type owl:ObjectProperty ;
 ###  http://richcanvas.io/ns#contains
 rc:contains rdf:type owl:ObjectProperty ;
             rdfs:domain rc:Collection ;
-            rdfs:range rc:Entity .
+            rdfs:range owl:Thing .
 
 
 ###  http://richcanvas.io/ns#generated
@@ -452,8 +452,8 @@ rc:holdsPost rdf:type owl:ObjectProperty ;
 
 ###  http://richcanvas.io/ns#includes
 rc:includes rdf:type owl:ObjectProperty ;
-            rdfs:domain rc:Group ;
-            rdfs:range rc:Person .
+            rdfs:domain rc:Collection ;
+            rdfs:range owl:Thing .
 
 
 ###  http://richcanvas.io/ns#influenced

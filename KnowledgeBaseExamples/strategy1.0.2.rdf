@@ -26,9 +26,33 @@
     
 
 
+    <!-- http://richcanvas.io/ns#hasIntendedMission -->
+
+    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#hasIntendedMission"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasIntendedStrategicPurpose -->
+
+    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#hasIntendedStrategicPurpose"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasIntendedVision -->
+
+    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#hasIntendedVision"/>
+    
+
+
     <!-- http://richcanvas.io/ns#hasPlan -->
 
     <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#hasPlan"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#helpAchieve -->
+
+    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#helpAchieve"/>
     
 
 
@@ -73,12 +97,21 @@
 
     <owl:NamedIndividual rdf:about="http://richcanvas.io/strategy#MHChurch">
         <rdf:type rdf:resource="http://churchcore.io/ns#Church"/>
-        <rc:hasCoreBelief rdf:resource="http://richcanvas.io/strategy#GodTheFather"/>
-        <rc:hasCoreBelief rdf:resource="http://richcanvas.io/strategy#JesusChrist"/>
-        <rc:hasCoreBelief rdf:resource="http://richcanvas.io/strategy#Regeneration"/>
-        <rc:hasCoreBelief rdf:resource="http://richcanvas.io/strategy#TheHolySpirit"/>
-        <rc:hasCoreBelief rdf:resource="http://richcanvas.io/strategy#TheTrinity"/>
-        <rc:hasCoreBelief rdf:resource="http://richcanvas.io/strategy#TheWordOfGod"/>
+        <rc:hasCoreBeliefs rdf:resource="http://richcanvas.io/strategy#MHCoreBeliefs"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/strategy#MHCoreBeliefs -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/strategy#MHCoreBeliefs">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#Beliefs"/>
+        <rc:hasBelief rdf:resource="http://richcanvas.io/strategy#GodTheFather"/>
+        <rc:hasBelief rdf:resource="http://richcanvas.io/strategy#JesusChrist"/>
+        <rc:hasBelief rdf:resource="http://richcanvas.io/strategy#Regeneration"/>
+        <rc:hasBelief rdf:resource="http://richcanvas.io/strategy#TheHolySpirit"/>
+        <rc:hasBelief rdf:resource="http://richcanvas.io/strategy#TheTrinity"/>
+        <rc:hasBelief rdf:resource="http://richcanvas.io/strategy#TheWordOfGod"/>
     </owl:NamedIndividual>
     
 
