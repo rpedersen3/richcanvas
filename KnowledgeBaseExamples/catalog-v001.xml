@@ -4,10 +4,11 @@
     <uri id="Imports Wizard Entry" name="http://richcanvas.io/ns/1.0.2" uri="https://raw.githubusercontent.com/rpedersen3/richcanvas/main/richcanvas1.0.2.ttl"/>
     <uri id="Imports Wizard Entry" name="http://richcanvas.io/per" uri="https://raw.githubusercontent.com/rpedersen3/richcanvas/main/KnowledgeBaseExamples/person.rdf"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1708127600048" name="http://richcanvas.io/act" uri="activity.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1708127600048" name="http://richcanvas.io/family" uri="family.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1708127600048" name="http://richcanvas.io/org" uri="organization.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1708127600048" name="http://richcanvas.io/per" uri="person.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1708127600048" name="http://richcanvas.io/strategy" uri="strategy1.0.2.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1708129574363" name="http://churchcore.io/ns" uri="strategy1.0.3.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1708129574363" name="http://richcanvas.io/act" uri="activity.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1708129574363" name="http://richcanvas.io/family" uri="family.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1708129574363" name="http://richcanvas.io/org" uri="organization.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1708129574363" name="http://richcanvas.io/per" uri="person.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1708129574363" name="http://richcanvas.io/strategy" uri="strategy1.0.2.rdf"/>
     </group>
 </catalog>
