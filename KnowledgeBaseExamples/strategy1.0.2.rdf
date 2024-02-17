@@ -131,6 +131,9 @@
         <rdf:type rdf:resource="http://churchcore.io/ns#Church"/>
         <rc:hasCoreBeliefs rdf:resource="http://richcanvas.io/strategy#MHCoreBeliefs"/>
         <rc:hasCoreHabits rdf:resource="http://richcanvas.io/strategy#MHCoreHabits"/>
+        <rc:hasMission rdf:resource="http://richcanvas.io/strategy#MHMission"/>
+        <rc:hasStrategicPurpose rdf:resource="http://richcanvas.io/strategy#MHStrategicPurpose"/>
+        <rc:hasVision rdf:resource="http://richcanvas.io/strategy#MHVision"/>
     </owl:NamedIndividual>
     
 

@@ -59,6 +59,12 @@ rc:hasActivitySpec rdf:type owl:ObjectProperty ;
                    rdfs:range rc:ActivitySpec .
 
 
+###  http://richcanvas.io/ns#hasApproach
+rc:hasApproach rdf:type owl:ObjectProperty ;
+               rdfs:domain rc:Agent ;
+               rdfs:range rc:Approach .
+
+
 ###  http://richcanvas.io/ns#hasAunt
 rc:hasAunt rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf rc:hasRelative ;
@@ -437,6 +443,13 @@ rc:hasStrategicPurpose rdf:type owl:ObjectProperty ;
                        rdfs:subPropertyOf rc:hasPurpose ;
                        rdfs:domain rc:Agent ;
                        rdfs:range rc:StrategicPurpose .
+
+
+###  http://richcanvas.io/ns#hasStrategy
+rc:hasStrategy rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf rc:hasApproach ;
+               rdfs:domain rc:Agent ;
+               rdfs:range rc:Strategy .
 
 
 ###  http://richcanvas.io/ns#hasSubOrganization
