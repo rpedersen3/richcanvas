@@ -1,0 +1,69 @@
+PREFIX rc: <http://richcanvas.io/ns#>
+PREFIX cc: <http://churchcore.io/ns#>
+PREFIX st: <http://churchcore.io/strategy#>
+
+SELECT $object
+WHERE {
+st:MHChurch rc:hasPurpose ?object .
+}
+
+
+
+PREFIX rc: <http://richcanvas.io/ns#>
+PREFIX cc: <http://churchcore.io/ns#>
+PREFIX st: <http://churchcore.io/strategy#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT $belief ?comment
+WHERE {
+st:MHChurch rc:hasCoreBeliefs ?beliefs .
+?beliefs  rc:includes ?belief .
+?belief  rdfs:comment ?comment .
+}
+
+
+PREFIX rc: <http://richcanvas.io/ns#>
+PREFIX cc: <http://churchcore.io/ns#>
+PREFIX st: <http://churchcore.io/strategy#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT $belief ?comment
+WHERE {
+st:MHChurch rc:hasCoreValues ?values .
+?values  rc:includes ?value .
+}
+
+
+PREFIX rc: <http://richcanvas.io/ns#>
+PREFIX cc: <http://churchcore.io/ns#>
+PREFIX st: <http://churchcore.io/strategy#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?strategy
+WHERE {
+st:MHChurch rc:hasStrategy ?strategy .
+}
+
+
+
+PREFIX rc: <http://richcanvas.io/ns#>
+PREFIX cc: <http://churchcore.io/ns#>
+PREFIX st: <http://churchcore.io/strategy#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT $habit 
+WHERE {
+st:MHChurch rc:hasCoreHabits ?habits .
+?habits  rc:includes ?habit .
+}
+
+
+
