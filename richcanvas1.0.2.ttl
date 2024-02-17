@@ -210,6 +210,20 @@ rc:hasGender rdf:type owl:ObjectProperty ;
              rdfs:range rc:GenderClassification .
 
 
+###  http://richcanvas.io/ns#hasGoal
+rc:hasGoal rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf rc:hasPurpose ;
+           rdfs:domain rc:Agent ;
+           rdfs:range rc:Goal .
+
+
+###  http://richcanvas.io/ns#hasGoals
+rc:hasGoals rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf rc:hasCollection ;
+            rdfs:domain rc:Agent ;
+            rdfs:range rc:Goals .
+
+
 ###  http://richcanvas.io/ns#hasHabit
 rc:hasHabit rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf rc:hadBehavior ;
@@ -286,6 +300,13 @@ rc:hasMembershipRole rdf:type owl:ObjectProperty ;
                      rdfs:range rc:MembershipRole .
 
 
+###  http://richcanvas.io/ns#hasMission
+rc:hasMission rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf rc:hasPurpose ;
+              rdfs:domain rc:Agent ;
+              rdfs:range rc:Mission .
+
+
 ###  http://richcanvas.io/ns#hasMotherInLaw
 rc:hasMotherInLaw rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf rc:hasRelative .
@@ -296,6 +317,13 @@ rc:hasNice rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf rc:hasRelative ;
            rdfs:domain rc:Person ;
            rdfs:range rc:Person .
+
+
+###  http://richcanvas.io/ns#hasObjectives
+rc:hasObjectives rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf rc:hasCollection ;
+                 rdfs:domain rc:Agent ;
+                 rdfs:range rc:Objectives .
 
 
 ###  http://richcanvas.io/ns#hasParent
@@ -404,6 +432,13 @@ rc:hasStrategicPlan rdf:type owl:ObjectProperty ;
                     rdfs:range rc:StrategicPlan .
 
 
+###  http://richcanvas.io/ns#hasStrategicPurpose
+rc:hasStrategicPurpose rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf rc:hasPurpose ;
+                       rdfs:domain rc:Agent ;
+                       rdfs:range rc:StrategicPurpose .
+
+
 ###  http://richcanvas.io/ns#hasSubOrganization
 rc:hasSubOrganization rdf:type owl:ObjectProperty ;
                       rdfs:domain rc:Organization ;
@@ -441,6 +476,13 @@ rc:hasValues rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf rc:hasCollection ;
              rdfs:domain rc:Agent ;
              rdfs:range rc:Values .
+
+
+###  http://richcanvas.io/ns#hasVision
+rc:hasVision rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf rc:hasPurpose ;
+             rdfs:domain rc:Agent ;
+             rdfs:range rc:Vision .
 
 
 ###  http://richcanvas.io/ns#hasWife
@@ -1013,6 +1055,11 @@ rc:Goal rdf:type owl:Class ;
         rdfs:subClassOf rc:Purpose .
 
 
+###  http://richcanvas.io/ns#Goals
+rc:Goals rdf:type owl:Class ;
+         rdfs:subClassOf rc:Collection .
+
+
 ###  http://richcanvas.io/ns#Group
 rc:Group rdf:type owl:Class ;
          rdfs:subClassOf rc:Collection .
@@ -1069,6 +1116,11 @@ rc:Mission rdf:type owl:Class ;
 ###  http://richcanvas.io/ns#Objective
 rc:Objective rdf:type owl:Class ;
              rdfs:subClassOf rc:Purpose .
+
+
+###  http://richcanvas.io/ns#Objectives
+rc:Objectives rdf:type owl:Class ;
+              rdfs:subClassOf rc:Collection .
 
 
 ###  http://richcanvas.io/ns#Organization
