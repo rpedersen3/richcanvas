@@ -74,6 +74,7 @@ rc:hasBelief rdf:type owl:ObjectProperty ;
 
 ###  http://richcanvas.io/ns#hasBeliefs
 rc:hasBeliefs rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf rc:hasCollection ;
               rdfs:domain rc:Agent ;
               rdfs:range rc:Beliefs .
 
@@ -90,6 +91,10 @@ rc:hasChild rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf rc:hasRelative ;
             rdfs:domain rc:Person ;
             rdfs:range rc:Person .
+
+
+###  http://richcanvas.io/ns#hasCollection
+rc:hasCollection rdf:type owl:ObjectProperty .
 
 
 ###  http://richcanvas.io/ns#hasContacts
@@ -260,6 +265,7 @@ rc:hasMember rdf:type owl:ObjectProperty ;
 
 ###  http://richcanvas.io/ns#hasMembers
 rc:hasMembers rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf rc:hasCollection ;
               rdfs:domain rc:Organization ;
               rdfs:range rc:Members .
 
@@ -422,6 +428,7 @@ rc:hasValue rdf:type owl:ObjectProperty ;
 
 ###  http://richcanvas.io/ns#hasValues
 rc:hasValues rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf rc:hasCollection ;
              rdfs:domain rc:Agent ;
              rdfs:range rc:Values .
 
