@@ -10,7 +10,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="http://churchcore.io/strategy">
         <owl:versionIRI rdf:resource="http://churchcore.io/strategy/1.0.2"/>
-        <owl:imports rdf:resource="http://churchcore.io/ns/1.0.2"/>
+        <owl:imports rdf:resource="http://churchcore.io/church/1.0.2"/>
     </owl:Ontology>
     
 

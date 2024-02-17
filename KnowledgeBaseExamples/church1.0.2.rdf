@@ -26,11 +26,21 @@
     
 
 
+    <!-- http://churchcore.io/church#AliceEChurchMembership -->
+
+    <owl:NamedIndividual rdf:about="http://churchcore.io/church#AliceEChurchMembership">
+        <rdf:type rdf:resource="http:/churchcore.io/ns#ChurchMembership"/>
+        <rc:withOrganization rdf:resource="http://churchcore.io/church#EChurch"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://churchcore.io/church#AliceMember -->
 
     <owl:NamedIndividual rdf:about="http://churchcore.io/church#AliceMember">
         <rdf:type rdf:resource="http://richcanvas.io/ns#Person"/>
         <rc:isMemberOf rdf:resource="http://churchcore.io/church#EChurch"/>
+        <rc:qualifiedMembership rdf:resource="http://churchcore.io/church#AliceEChurchMembership"/>
     </owl:NamedIndividual>
     
 

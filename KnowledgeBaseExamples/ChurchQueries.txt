@@ -1,0 +1,11 @@
+PREFIX rc: <http://richcanvas.io/ns#>
+PREFIX cc: <http://churchcore.io/ns#>
+PREFIX ch: <http://churchcore.io/church#>
+
+SELECT $congregation ?people
+WHERE {
+ch:EChurch cc:hasCongregation ?congregation
+?congregation rc:includes ?people
+}
+
+
