@@ -8,8 +8,8 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="http://richcanvas.io/strategy">
-        <owl:versionIRI rdf:resource="http://richcavnas.io/strategy/1.0.2"/>
+    <owl:Ontology rdf:about="http://churchcore.io/strategy">
+        <owl:versionIRI rdf:resource="http://churchcore.io/strategy/1.0.2"/>
         <owl:imports rdf:resource="http://churchcore.io/ns/1.0.2"/>
     </owl:Ontology>
     
