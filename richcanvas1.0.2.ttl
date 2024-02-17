@@ -119,6 +119,11 @@ rc:hasCoreBeliefs rdf:type owl:ObjectProperty ;
                   rdfs:range rc:Beliefs .
 
 
+###  http://richcanvas.io/ns#hasCoreHabits
+rc:hasCoreHabits rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf rc:hasHabits .
+
+
 ###  http://richcanvas.io/ns#hasCoreValue
 rc:hasCoreValue rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf rc:hasValue .
@@ -210,6 +215,11 @@ rc:hasHabit rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf rc:hadBehavior ;
             rdfs:domain rc:Agent ;
             rdfs:range rc:Habit .
+
+
+###  http://richcanvas.io/ns#hasHabits
+rc:hasHabits rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf rc:hasCollection .
 
 
 ###  http://richcanvas.io/ns#hasHeldPurpose

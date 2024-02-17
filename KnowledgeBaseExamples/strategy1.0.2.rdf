@@ -116,6 +116,12 @@
     
 
 
+    <!-- http://richcanvas.io/strategy#MHCoreHabits -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/strategy#MHCoreHabits"/>
+    
+
+
     <!-- http://richcanvas.io/strategy#MHMission -->
 
     <owl:NamedIndividual rdf:about="http://richcanvas.io/strategy#MHMission">
