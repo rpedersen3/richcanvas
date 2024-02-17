@@ -26,10 +26,89 @@
     
 
 
-    <!-- http://churchcore.io/church#MyChurch -->
+    <!-- http://churchcore.io/church#AliceMember -->
 
-    <owl:NamedIndividual rdf:about="http://churchcore.io/church#MyChurch">
+    <owl:NamedIndividual rdf:about="http://churchcore.io/church#AliceMember">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#Person"/>
+        <rc:isMemberOf rdf:resource="http://churchcore.io/church#EChurch"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://churchcore.io/church#ChrisMember -->
+
+    <owl:NamedIndividual rdf:about="http://churchcore.io/church#ChrisMember">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#Person"/>
+        <rc:isMemberOf rdf:resource="http://churchcore.io/church#EChurch"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://churchcore.io/church#EChurch -->
+
+    <owl:NamedIndividual rdf:about="http://churchcore.io/church#EChurch">
         <rdf:type rdf:resource="http://churchcore.io/ns#Church"/>
+        <rc:hasPost rdf:resource="http://churchcore.io/church#EChurchElder"/>
+        <rc:hasPost rdf:resource="http://churchcore.io/church#EChurchLeadPastor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://churchcore.io/church#EChurchCongregation -->
+
+    <owl:NamedIndividual rdf:about="http://churchcore.io/church#EChurchCongregation">
+        <rdf:type rdf:resource="http://churchcore.io/ns#Congregation"/>
+        <rc:includes rdf:resource="http://churchcore.io/church#AliceMember"/>
+        <rc:includes rdf:resource="http://churchcore.io/church#ChrisMember"/>
+        <rc:includes rdf:resource="http://churchcore.io/church#GeorgeElder"/>
+        <rc:includes rdf:resource="http://churchcore.io/church#JoeElder"/>
+        <rc:includes rdf:resource="http://churchcore.io/church#SamPastor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://churchcore.io/church#EChurchElder -->
+
+    <owl:NamedIndividual rdf:about="http://churchcore.io/church#EChurchElder">
+        <rdf:type rdf:resource="http:/churchcore.io/ns#Elder"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://churchcore.io/church#EChurchLeadPastor -->
+
+    <owl:NamedIndividual rdf:about="http://churchcore.io/church#EChurchLeadPastor">
+        <rdf:type rdf:resource="http:/churchcore.io/ns#LeadPastor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://churchcore.io/church#GeorgeElder -->
+
+    <owl:NamedIndividual rdf:about="http://churchcore.io/church#GeorgeElder">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#Person"/>
+        <rc:holdsPost rdf:resource="http://churchcore.io/church#EChurchElder"/>
+        <rc:isMemberOf rdf:resource="http://churchcore.io/church#EChurch"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://churchcore.io/church#JoeElder -->
+
+    <owl:NamedIndividual rdf:about="http://churchcore.io/church#JoeElder">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#Person"/>
+        <rc:holdsPost rdf:resource="http://churchcore.io/church#EChurchElder"/>
+        <rc:isMemberOf rdf:resource="http://churchcore.io/church#EChurch"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://churchcore.io/church#SamPastor -->
+
+    <owl:NamedIndividual rdf:about="http://churchcore.io/church#SamPastor">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#Person"/>
+        <rc:holdsPost rdf:resource="http://churchcore.io/church#EChurchLeadPastor"/>
+        <rc:isMemberOf rdf:resource="http://churchcore.io/church#EChurch"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 
