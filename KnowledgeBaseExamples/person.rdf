@@ -9,7 +9,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="http://richcanvas.io/per">
-        <owl:imports rdf:resource="http://richcanvas.io/ns"/>
+        <owl:imports rdf:resource="http://richcanvas.io/ns/1.0.2"/>
     </owl:Ontology>
     
 
@@ -25,15 +25,123 @@
     
 
 
+    <!-- http://richcanvas.io/ns#addressCountry -->
+
+    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#addressCountry"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#addressLocality -->
+
+    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#addressLocality"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#addressRegion -->
+
+    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#addressRegion"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#birthday -->
+
+    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#birthday"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#email -->
+
+    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#email"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#firstName -->
+
+    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#firstName"/>
+    
+
+
     <!-- http://richcanvas.io/ns#gender -->
 
     <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#gender"/>
     
 
 
+    <!-- http://richcanvas.io/ns#hasContacts -->
+
+    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#hasContacts"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasEmail -->
+
+    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#hasEmail"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasFriend -->
+
+    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#hasFriend"/>
+    
+
+
     <!-- http://richcanvas.io/ns#hasFriendType -->
 
     <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#hasFriendType"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasFriends -->
+
+    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#hasFriends"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasFriendship -->
+
+    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#hasFriendship"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasHomeAddress -->
+
+    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#hasHomeAddress"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasPersonalContext -->
+
+    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#hasPersonalContext"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#includes -->
+
+    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#includes"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#lastName -->
+
+    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#lastName"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#name -->
+
+    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#name"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#postalCode -->
+
+    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#postalCode"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#streetAddress -->
+
+    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#streetAddress"/>
     
 
 
@@ -82,6 +190,9 @@
 
     <owl:NamedIndividual rdf:about="http://richcanvas.io/per#JoeSmith">
         <rdf:type rdf:resource="http://richcanvas.io/ns#Person"/>
+        <ns:birthday rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1998-01-03T00:00:00</ns:birthday>
+        <ns:firstName>Joe</ns:firstName>
+        <ns:gender>male</ns:gender>
         <ns:hasContacts rdf:resource="http://richcanvas.io/per#JoeSmithsContacts"/>
         <ns:hasEmail rdf:resource="http://richcanvas.io/per#JoeSmithsPrivateEmail"/>
         <ns:hasEmail rdf:resource="http://richcanvas.io/per#JoeSmithsProfessionalEmail"/>
@@ -91,11 +202,8 @@
         <ns:hasFriendship rdf:resource="http://richcanvas.io/per#JoeSmithsFriendshipWithJaneAdams"/>
         <ns:hasFriendship rdf:resource="http://richcanvas.io/per#JoeSmithsFriendshipWithPeteJones"/>
         <ns:hasHomeAddress rdf:resource="http://richcanvas.io/per#JoeAndSuesHomeAddress"/>
-        <ns:birthday rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1998-01-03T00:00:00</ns:birthday>
-        <ns:firstName>Joe</ns:firstName>
         <ns:lastName>Smith</ns:lastName>
         <ns:name>Joe Smith</ns:name>
-        <ns:gender>male</ns:gender>
     </owl:NamedIndividual>
     
 
@@ -142,8 +250,8 @@
 
     <owl:NamedIndividual rdf:about="http://richcanvas.io/per#JoeSmithsPrivateEmail">
         <rdf:type rdf:resource="http://richcanvas.io/ns#Email"/>
-        <ns:hasPersonalContext rdf:resource="http://richcanvas.io/ns#Private"/>
         <ns:email>joesmith@gmail.com</ns:email>
+        <ns:hasPersonalContext rdf:resource="http://richcanvas.io/ns#Private"/>
     </owl:NamedIndividual>
     
 
@@ -152,8 +260,8 @@
 
     <owl:NamedIndividual rdf:about="http://richcanvas.io/per#JoeSmithsProfessionalEmail">
         <rdf:type rdf:resource="http://richcanvas.io/ns#Email"/>
-        <ns:hasPersonalContext rdf:resource="http://richcanvas.io/ns#Professional"/>
         <ns:email>joesmith@richcanvas.io</ns:email>
+        <ns:hasPersonalContext rdf:resource="http://richcanvas.io/ns#Professional"/>
     </owl:NamedIndividual>
     
 
