@@ -6,7 +6,10 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#">
     <owl:Ontology rdf:about="http://richcanvas.io/family">
         <owl:imports rdf:resource="http://richcanvas.io/per"/>
     </owl:Ontology>
@@ -27,6 +30,18 @@
     <!-- http://richcanvas.io/ns#hasFamily -->
 
     <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#hasFamily"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasFamilyMembership -->
+
+    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#hasFamilyMembership"/>
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
     
 
 
@@ -104,13 +119,24 @@
     
 
 
+    <!-- http://richcanvas.io/per#CarolSmith -->
+
+    <rdf:Description rdf:about="http://richcanvas.io/per#CarolSmith">
+        <ns:hasGender rdf:resource="http://richcanvas.io/ns#Female"/>
+    </rdf:Description>
+    
+
+
     <!-- http://richcanvas.io/per#JoeSmith -->
 
     <rdf:Description rdf:about="http://richcanvas.io/per#JoeSmith">
+        <ns:hasChild rdf:resource="http://richcanvas.io/per#CarolSmith"/>
+        <ns:hasChild rdf:resource="http://richcanvas.io/per#SamSmith"/>
+        <ns:hasChild rdf:resource="http://richcanvas.io/per#SteveSmith"/>
         <ns:hasFamily rdf:resource="http://richcanvas.io/family#JoeAndSueFamily"/>
-        <ns:hasFamilyMembership rdf:resource="http://richcanvas.io/family#JoeFamilyMembership"/>
         <ns:hasGender rdf:resource="http://richcanvas.io/ns#Male"/>
         <ns:isFamilyMemberOf rdf:resource="http://richcanvas.io/family#JoeAndSueFamily"/>
+        <ns:hasFamilyMembership rdf:resource="http://richcanvas.io/family#JoeFamilyMembership"/>
     </rdf:Description>
     
 
@@ -119,9 +145,9 @@
 
     <rdf:Description rdf:about="http://richcanvas.io/per#SamSmith">
         <ns:hasFamily rdf:resource="http://richcanvas.io/family#JoeAndSueFamily"/>
-        <ns:hasFamilyMembership rdf:resource="http://richcanvas.io/family#SamFamilyMembership"/>
-        <ns:hasGender rdf:resource="http://richcanvas.io/ns#Female"/>
+        <ns:hasGender rdf:resource="http://richcanvas.io/ns#Male"/>
         <ns:isFamilyMemberOf rdf:resource="http://richcanvas.io/family#JoeAndSueFamily"/>
+        <ns:hasFamilyMembership rdf:resource="http://richcanvas.io/family#SamFamilyMembership"/>
     </rdf:Description>
     
 
@@ -129,10 +155,10 @@
     <!-- http://richcanvas.io/per#SteveSmith -->
 
     <rdf:Description rdf:about="http://richcanvas.io/per#SteveSmith">
-        <ns:hasFamilyMembership rdf:resource="http://richcanvas.io/family#SteveFamilyMembership"/>
         <ns:hasGender rdf:resource="http://richcanvas.io/ns#Male"/>
         <ns:hasHomeAddress rdf:resource="http://richcanvas.io/per#JoeAndSuesHomeAddress"/>
         <ns:isFamilyMemberOf rdf:resource="http://richcanvas.io/family#JoeAndSueFamily"/>
+        <ns:hasFamilyMembership rdf:resource="http://richcanvas.io/family#SteveFamilyMembership"/>
     </rdf:Description>
     
 
@@ -140,9 +166,120 @@
     <!-- http://richcanvas.io/per#SueSmith -->
 
     <rdf:Description rdf:about="http://richcanvas.io/per#SueSmith">
-        <ns:hasFamilyMembership rdf:resource="http://richcanvas.io/family#SueFamilyMembership"/>
         <ns:hasGender rdf:resource="http://richcanvas.io/ns#Female"/>
         <ns:isFamilyMemberOf rdf:resource="http://richcanvas.io/family#JoeAndSueFamily"/>
+        <ns:hasFamilyMembership rdf:resource="http://richcanvas.io/family#SueFamilyMembership"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://richcanvas.io/family#x">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://richcanvas.io/family#y">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>test</rdfs:comment>
+        <rdfs:label>Def-hasDaughter</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://richcanvas.io/ns#hasChild"/>
+                        <swrl:argument1 rdf:resource="http://richcanvas.io/family#x"/>
+                        <swrl:argument2 rdf:resource="http://richcanvas.io/family#y"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://richcanvas.io/ns#hasGender"/>
+                                <swrl:argument1 rdf:resource="http://richcanvas.io/family#y"/>
+                                <swrl:argument2 rdf:resource="http://richcanvas.io/ns#Female"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://richcanvas.io/ns#hasDaughter"/>
+                        <swrl:argument1 rdf:resource="http://richcanvas.io/family#x"/>
+                        <swrl:argument2 rdf:resource="http://richcanvas.io/family#y"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>test</rdfs:comment>
+        <rdfs:label>Def-hasSon</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://richcanvas.io/ns#hasChild"/>
+                        <swrl:argument1 rdf:resource="http://richcanvas.io/family#x"/>
+                        <swrl:argument2 rdf:resource="http://richcanvas.io/family#y"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://richcanvas.io/ns#hasGender"/>
+                                <swrl:argument1 rdf:resource="http://richcanvas.io/family#y"/>
+                                <swrl:argument2 rdf:resource="http://richcanvas.io/ns#Male"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://richcanvas.io/ns#hasSon"/>
+                        <swrl:argument1 rdf:resource="http://richcanvas.io/family#x"/>
+                        <swrl:argument2 rdf:resource="http://richcanvas.io/family#y"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
     </rdf:Description>
 </rdf:RDF>
 
