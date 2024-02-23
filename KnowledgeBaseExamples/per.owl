@@ -14,134 +14,6 @@
     
 
 
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotation properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://richcanvas.io/ns#addressCountry -->
-
-    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#addressCountry"/>
-    
-
-
-    <!-- http://richcanvas.io/ns#addressLocality -->
-
-    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#addressLocality"/>
-    
-
-
-    <!-- http://richcanvas.io/ns#addressRegion -->
-
-    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#addressRegion"/>
-    
-
-
-    <!-- http://richcanvas.io/ns#birthday -->
-
-    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#birthday"/>
-    
-
-
-    <!-- http://richcanvas.io/ns#email -->
-
-    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#email"/>
-    
-
-
-    <!-- http://richcanvas.io/ns#firstName -->
-
-    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#firstName"/>
-    
-
-
-    <!-- http://richcanvas.io/ns#gender -->
-
-    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#gender"/>
-    
-
-
-    <!-- http://richcanvas.io/ns#hasContacts -->
-
-    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#hasContacts"/>
-    
-
-
-    <!-- http://richcanvas.io/ns#hasEmail -->
-
-    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#hasEmail"/>
-    
-
-
-    <!-- http://richcanvas.io/ns#hasFriend -->
-
-    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#hasFriend"/>
-    
-
-
-    <!-- http://richcanvas.io/ns#hasFriendType -->
-
-    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#hasFriendType"/>
-    
-
-
-    <!-- http://richcanvas.io/ns#hasFriends -->
-
-    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#hasFriends"/>
-    
-
-
-    <!-- http://richcanvas.io/ns#hasFriendship -->
-
-    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#hasFriendship"/>
-    
-
-
-    <!-- http://richcanvas.io/ns#hasHomeAddress -->
-
-    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#hasHomeAddress"/>
-    
-
-
-    <!-- http://richcanvas.io/ns#hasPersonalContext -->
-
-    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#hasPersonalContext"/>
-    
-
-
-    <!-- http://richcanvas.io/ns#includes -->
-
-    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#includes"/>
-    
-
-
-    <!-- http://richcanvas.io/ns#lastName -->
-
-    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#lastName"/>
-    
-
-
-    <!-- http://richcanvas.io/ns#name -->
-
-    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#name"/>
-    
-
-
-    <!-- http://richcanvas.io/ns#postalCode -->
-
-    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#postalCode"/>
-    
-
-
-    <!-- http://richcanvas.io/ns#streetAddress -->
-
-    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#streetAddress"/>
     
 
 
@@ -176,10 +48,10 @@
 
     <owl:NamedIndividual rdf:about="http://richcanvas.io/per#JoeAndSuesHomeAddress">
         <rdf:type rdf:resource="http://richcanvas.io/ns#PostalAddress"/>
-        <ns:addressRegion>CO</ns:addressRegion>
         <ns:phoneNumber>303-944-6565</ns:phoneNumber>
         <ns:addressCountry>USA</ns:addressCountry>
         <ns:addressLocality>Erie</ns:addressLocality>
+        <ns:addressRegion>CO</ns:addressRegion>
         <ns:name>Joe Smiths Home Address</ns:name>
         <ns:postalCode>12345</ns:postalCode>
         <ns:streetAddress>123 Main St.</ns:streetAddress>
@@ -295,6 +167,9 @@
     <owl:NamedIndividual rdf:about="http://richcanvas.io/per#SueSmith">
         <rdf:type rdf:resource="http://richcanvas.io/ns#Person"/>
         <ns:hasHomeAddress rdf:resource="http://richcanvas.io/per#JoeAndSuesHomeAddress"/>
+        <ns:firstName>Sue</ns:firstName>
+        <ns:lastName>Smith</ns:lastName>
+        <ns:name>Sue Smith</ns:name>
     </owl:NamedIndividual>
 </rdf:RDF>
 
