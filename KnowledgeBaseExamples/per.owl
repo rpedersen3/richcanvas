@@ -176,11 +176,10 @@
 
     <owl:NamedIndividual rdf:about="http://richcanvas.io/per#JoeAndSuesHomeAddress">
         <rdf:type rdf:resource="http://richcanvas.io/ns#PostalAddress"/>
+        <ns:addressRegion>CO</ns:addressRegion>
         <ns:phoneNumber>303-944-6565</ns:phoneNumber>
         <ns:addressCountry>USA</ns:addressCountry>
         <ns:addressLocality>Erie</ns:addressLocality>
-        <ns:addressRegion>CO</ns:addressRegion>
-        <ns:email>a@b.c</ns:email>
         <ns:name>Joe Smiths Home Address</ns:name>
         <ns:postalCode>12345</ns:postalCode>
         <ns:streetAddress>123 Main St.</ns:streetAddress>
