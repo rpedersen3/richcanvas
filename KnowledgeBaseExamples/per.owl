@@ -14,6 +14,26 @@
     
 
 
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://richcanvas.io/ns#gender -->
+
+    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#gender"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasFriendType -->
+
+    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#hasFriendType"/>
     
 
 
@@ -48,11 +68,11 @@
 
     <owl:NamedIndividual rdf:about="http://richcanvas.io/per#JoeAndSuesHomeAddress">
         <rdf:type rdf:resource="http://richcanvas.io/ns#PostalAddress"/>
-        <ns:phoneNumber>303-944-6565</ns:phoneNumber>
         <ns:addressCountry>USA</ns:addressCountry>
         <ns:addressLocality>Erie</ns:addressLocality>
         <ns:addressRegion>CO</ns:addressRegion>
         <ns:name>Joe Smiths Home Address</ns:name>
+        <ns:phoneNumber>303-944-6565</ns:phoneNumber>
         <ns:postalCode>12345</ns:postalCode>
         <ns:streetAddress>123 Main St.</ns:streetAddress>
     </owl:NamedIndividual>
@@ -74,9 +94,9 @@
         <ns:hasHomeAddress rdf:resource="http://richcanvas.io/per#JoeAndSuesHomeAddress"/>
         <ns:birthday rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1998-01-03T00:00:00</ns:birthday>
         <ns:firstName>Joe</ns:firstName>
-        <ns:gender>male</ns:gender>
         <ns:lastName>Smith</ns:lastName>
         <ns:name>Joe Smith</ns:name>
+        <ns:gender>male</ns:gender>
     </owl:NamedIndividual>
     
 
