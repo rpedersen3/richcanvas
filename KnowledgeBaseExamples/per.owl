@@ -21,19 +21,6 @@
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
-
-    
-
-
-    <!-- http://richcanvas.io/ns#gender -->
-
-    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#gender"/>
-    
-
-
-    <!-- http://richcanvas.io/ns#hasFriendType -->
-
-    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#hasFriendType"/>
     
 
 
@@ -96,7 +83,6 @@
         <ns:firstName>Joe</ns:firstName>
         <ns:lastName>Smith</ns:lastName>
         <ns:name>Joe Smith</ns:name>
-        <ns:gender>male</ns:gender>
     </owl:NamedIndividual>
     
 
@@ -125,7 +111,6 @@
 
     <owl:NamedIndividual rdf:about="http://richcanvas.io/per#JoeSmithsFriendshipWithJaneAdams">
         <rdf:type rdf:resource="http://richcanvas.io/ns#Friendship"/>
-        <ns:hasFriendType rdf:resource="http://richcanvas.io/ns#CloseFriend"/>
     </owl:NamedIndividual>
     
 
@@ -134,7 +119,6 @@
 
     <owl:NamedIndividual rdf:about="http://richcanvas.io/per#JoeSmithsFriendshipWithPeteJones">
         <rdf:type rdf:resource="http://richcanvas.io/ns#Friendship"/>
-        <ns:hasFriendType rdf:resource="http://richcanvas.io/ns#BestFriend"/>
     </owl:NamedIndividual>
     
 
@@ -163,7 +147,6 @@
 
     <owl:NamedIndividual rdf:about="http://richcanvas.io/per#PeteJones">
         <rdf:type rdf:resource="http://richcanvas.io/ns#Person"/>
-        <ns:hasFriendType rdf:resource="http://richcanvas.io/ns#BestFriend"/>
     </owl:NamedIndividual>
     
 
@@ -190,6 +173,7 @@
         <ns:firstName>Sue</ns:firstName>
         <ns:lastName>Smith</ns:lastName>
         <ns:name>Sue Smith</ns:name>
+        <ns:phoneNumber>303-999-1211</ns:phoneNumber>
     </owl:NamedIndividual>
 </rdf:RDF>
 

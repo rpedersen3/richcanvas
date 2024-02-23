@@ -24,49 +24,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://richcanvas.io/ns#hasFamily -->
-
-    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#hasFamily"/>
-    
-
-
-    <!-- http://richcanvas.io/ns#hasFamilyMembership -->
-
-    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#hasFamilyMembership"/>
-    
-
-
-    <!-- http://richcanvas.io/ns#hasFamilyRole -->
-
-    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#hasFamilyRole"/>
-    
-
-
-    <!-- http://richcanvas.io/ns#includes -->
-
-    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#includes"/>
-    
-
-
-    <!-- http://richcanvas.io/ns#isFamilyMemberOf -->
-
-    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#isFamilyMemberOf"/>
-    
-
-
-    <!-- http://richcanvas.io/ns#withFamily -->
-
-    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#withFamily"/>
-    
-
-
-    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
-
-    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
-    
 
 
     <!-- 
@@ -100,17 +57,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://richcanvas.io/family#postalId -->
-
-    <owl:DatatypeProperty rdf:about="http://richcanvas.io/family#postalId">
-        <rdfs:domain rdf:resource="http://richcanvas.io/ns#PostalAddress"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
+   
 
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
