@@ -34,10 +34,22 @@ rc:contains rdf:type owl:ObjectProperty ;
             rdfs:range owl:Thing .
 
 
+###  http://richcanvas.io/ns#correspondsTo
+rc:correspondsTo rdf:type owl:ObjectProperty .
+
+
 ###  http://richcanvas.io/ns#correspondsToStep
 rc:correspondsToStep rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf rc:correspondsTo ;
                      rdfs:domain rc:Activity ;
                      rdfs:range rc:Step .
+
+
+###  http://richcanvas.io/ns#correspondsToVariable
+rc:correspondsToVariable rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf rc:correspondsTo ;
+                         rdfs:domain rc:Entity ;
+                         rdfs:range rc:Variable .
 
 
 ###  http://richcanvas.io/ns#generated
@@ -275,6 +287,13 @@ rc:hasHusband rdf:type owl:ObjectProperty ;
               rdfs:range rc:Person .
 
 
+###  http://richcanvas.io/ns#hasInputVar
+rc:hasInputVar rdf:type owl:ObjectProperty ;
+               owl:inverseOf rc:isInputVarOf ;
+               rdfs:domain rc:Step ;
+               rdfs:range rc:Variable .
+
+
 ###  http://richcanvas.io/ns#hasIntendedAims
 rc:hasIntendedAims rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf rc:hasIntendedPurpose .
@@ -356,6 +375,12 @@ rc:hasObjectives rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf rc:hasCollection ;
                  rdfs:domain rc:Agent ;
                  rdfs:range rc:Objectives .
+
+
+###  http://richcanvas.io/ns#hasOutputVar
+rc:hasOutputVar rdf:type owl:ObjectProperty ;
+                rdfs:domain rc:Step ;
+                rdfs:range rc:Variable .
 
 
 ###  http://richcanvas.io/ns#hasParent
@@ -651,6 +676,12 @@ rc:isHusbandOf rdf:type owl:ObjectProperty ;
                rdfs:range rc:Person .
 
 
+###  http://richcanvas.io/ns#isInputVarOf
+rc:isInputVarOf rdf:type owl:ObjectProperty ;
+                rdfs:domain rc:Variable ;
+                rdfs:range rc:Step .
+
+
 ###  http://richcanvas.io/ns#isMemberOf
 rc:isMemberOf rdf:type owl:ObjectProperty ;
               rdfs:domain rc:Person ;
@@ -694,6 +725,12 @@ rc:isObjectiveOfPlan rdf:type owl:ObjectProperty ;
 rc:isOrganizationClassification rdf:type owl:ObjectProperty ;
                                 rdfs:domain rc:Organization ;
                                 rdfs:range rc:OrganizationClassification .
+
+
+###  http://richcanvas.io/ns#isOutputVarOf
+rc:isOutputVarOf rdf:type owl:ObjectProperty ;
+                 rdfs:domain rc:Variable ;
+                 rdfs:range rc:Step .
 
 
 ###  http://richcanvas.io/ns#isParentOf
@@ -1119,6 +1156,11 @@ rc:Context rdf:type owl:Class .
 rc:Email rdf:type owl:Class .
 
 
+###  http://richcanvas.io/ns#End
+rc:End rdf:type owl:Class ;
+       rdfs:subClassOf rc:InstantaneousEvent .
+
+
 ###  http://richcanvas.io/ns#Entity
 rc:Entity rdf:type owl:Class ;
           rc:basedOn "W3 prov:Entity" .
@@ -1169,6 +1211,11 @@ rc:GenderClassification rdf:type owl:Class ;
                         rdfs:subClassOf rc:Classification .
 
 
+###  http://richcanvas.io/ns#Generation
+rc:Generation rdf:type owl:Class ;
+              rdfs:subClassOf rc:InstantaneousEvent .
+
+
 ###  http://richcanvas.io/ns#Goal
 rc:Goal rdf:type owl:Class ;
         rdfs:subClassOf rc:Purpose .
@@ -1202,6 +1249,12 @@ rc:Household rdf:type owl:Class ;
 
 ###  http://richcanvas.io/ns#Influence
 rc:Influence rdf:type owl:Class .
+
+
+###  http://richcanvas.io/ns#InstantaneousEvent
+rc:InstantaneousEvent rdf:type owl:Class ;
+                      rc:basedOn "W3 prov:Activity" ;
+                      rdfs:comment "An instantaneous event, or event for short, happens in the world and marks a change in the world, in its activities and in its entities. The term 'event' is commonly used in process algebra with a similar meaning. Events represent communications or interactions; they are assumed to be atomic and instantaneous." .
 
 
 ###  http://richcanvas.io/ns#JoinedOrganization
@@ -1379,6 +1432,11 @@ rc:SoftwareAgent rdf:type owl:Class ;
 rc:Specification rdf:type owl:Class .
 
 
+###  http://richcanvas.io/ns#Start
+rc:Start rdf:type owl:Class ;
+         rdfs:subClassOf rc:InstantaneousEvent .
+
+
 ###  http://richcanvas.io/ns#StateOfAffair
 rc:StateOfAffair rdf:type owl:Class ;
                  rdfs:comment "refers to the existing situation or condition of a particular matter or issue at a specific point in time (past, current or future time). It encapsulates the overall circumstances, events, or conditions that characterize a given situation or context." .
@@ -1412,9 +1470,27 @@ rc:Strategy rdf:type owl:Class ;
             rdfs:comment "Strategy refers to the overarching approach or direction chosen to achieve specific goals or objectives." .
 
 
+###  http://richcanvas.io/ns#Task
+rc:Task rdf:type owl:Class ;
+        rc:basedOn "https://w3id.org/semanticarts/ontology/gistCore Task" ;
+        rdfs:comment "Something that could potentially be executed, which is merely described but not proposed in any specific way, such as a business process for onboarding a new employee, or the steps in a recipe for making polyethylene from ethylene, is not a task but rather a task specification." .
+
+
+###  http://richcanvas.io/ns#TaskSpec
+rc:TaskSpec rdf:type owl:Class ;
+            rdfs:subClassOf rc:Specification ;
+            rc:basedOn "https://w3id.org/semanticarts/ontology/gistCore Task Template" ;
+            rdfs:comment "A task specification may define a single activity or a series of activities; the level of granularity can be varied according to use case. For example, in a new employee onboarding process, signing up for benefits might be one activity, or it might be broken down into signing up for health insurance, signing up for dental insurance, etc." .
+
+
 ###  http://richcanvas.io/ns#Trait
 rc:Trait rdf:type owl:Class ;
          rdfs:subClassOf rc:Behavior .
+
+
+###  http://richcanvas.io/ns#Usage
+rc:Usage rdf:type owl:Class ;
+         rdfs:subClassOf rc:InstantaneousEvent .
 
 
 ###  http://richcanvas.io/ns#Value
@@ -1424,6 +1500,11 @@ rc:Value rdf:type owl:Class .
 ###  http://richcanvas.io/ns#Values
 rc:Values rdf:type owl:Class ;
           rdfs:subClassOf rc:Collection .
+
+
+###  http://richcanvas.io/ns#Variable
+rc:Variable rdf:type owl:Class ;
+            rc:basedOn "http://purl.org/net/p-plan" .
 
 
 ###  http://richcanvas.io/ns#Vision
