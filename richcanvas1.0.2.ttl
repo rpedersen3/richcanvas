@@ -1421,6 +1421,11 @@ rc:InstantaneousEvent rdf:type owl:Class ;
                       rdfs:comment "An instantaneous event, or event for short, happens in the world and marks a change in the world, in its activities and in its entities. The term 'event' is commonly used in process algebra with a similar meaning. Events represent communications or interactions; they are assumed to be atomic and instantaneous." .
 
 
+###  http://richcanvas.io/ns#Intent
+rc:Intent rdf:type owl:Class ;
+          rdfs:subClassOf rc:Purpose .
+
+
 ###  http://richcanvas.io/ns#JoinedOrganization
 rc:JoinedOrganization rdf:type owl:Class ;
                       rdfs:subClassOf rc:OrganizationActivity .
