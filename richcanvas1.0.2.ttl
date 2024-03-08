@@ -291,7 +291,7 @@ rc:hasGender rdf:type owl:ObjectProperty ;
 rc:hasGoal rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf rc:hasPurpose ;
            rdfs:domain rc:Agent ,
-                       rc:Plan ;
+                       rc:ProcessSpec ;
            rdfs:range rc:Goal .
 
 
@@ -419,9 +419,9 @@ rc:hasNice rdf:type owl:ObjectProperty ;
 ###  http://richcanvas.io/ns#hasObjective
 rc:hasObjective rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf rc:hasPurpose ;
-                rdfs:domain rc:Plan ,
-                            rc:Step ;
-                rdfs:range rc:Outcome .
+                rdfs:domain rc:ActivitySpec ,
+                            rc:ProcessSpec ;
+                rdfs:range rc:Purpose .
 
 
 ###  http://richcanvas.io/ns#hasObjectives
@@ -495,27 +495,25 @@ rc:hasPrimarySite rdf:type owl:ObjectProperty ;
 
 ###  http://richcanvas.io/ns#hasProcedure
 rc:hasProcedure rdf:type owl:ObjectProperty ;
-                rdfs:domain rc:Protocol ;
                 rdfs:range rc:Procedure .
 
 
 ###  http://richcanvas.io/ns#hasProtocol
 rc:hasProtocol rdf:type owl:ObjectProperty ;
-               rdfs:domain rc:Organization ;
-               rdfs:range rc:Protocol .
+               rdfs:domain rc:Organization .
 
 
 ###  http://richcanvas.io/ns#hasPurpose
 rc:hasPurpose rdf:type owl:ObjectProperty ;
               rdfs:domain rc:Agent ,
-                          rc:Plan ;
+                          rc:ProcessSpec ;
               rdfs:range rc:Purpose .
 
 
 ###  http://richcanvas.io/ns#hasRecipient
 rc:hasRecipient rdf:type owl:ObjectProperty ;
                 rdfs:domain rc:CommunicationSpec ;
-                rdfs:range rc:PlannedActivity .
+                rdfs:range rc:ActivitySpec .
 
 
 ###  http://richcanvas.io/ns#hasRelative
@@ -527,7 +525,7 @@ rc:hasRelative rdf:type owl:ObjectProperty ;
 ###  http://richcanvas.io/ns#hasSender
 rc:hasSender rdf:type owl:ObjectProperty ;
              rdfs:domain rc:CommunicationSpec ;
-             rdfs:range rc:PlannedActivity .
+             rdfs:range rc:ActivitySpec .
 
 
 ###  http://richcanvas.io/ns#hasSister
@@ -641,9 +639,9 @@ rc:hasWorkAddress rdf:type owl:ObjectProperty .
 
 ###  http://richcanvas.io/ns#helpAchieve
 rc:helpAchieve rdf:type owl:ObjectProperty ;
-               rdfs:domain rc:CommunicationSpec ,
-                           rc:Plan ,
-                           rc:PlannedActivity ,
+               rdfs:domain rc:ActivitySpec ,
+                           rc:CommunicationSpec ,
+                           rc:ProcessSpec ,
                            rc:Purpose ,
                            rc:ResponsibleAgent ;
                rdfs:range rc:Purpose ,
@@ -665,21 +663,22 @@ rc:includes rdf:type owl:ObjectProperty ;
 ###  http://richcanvas.io/ns#includesInstantaneousEvent
 rc:includesInstantaneousEvent rdf:type owl:ObjectProperty ;
                               rdfs:subPropertyOf rc:includes ;
-                              rdfs:domain rc:Plan ;
+                              rdfs:domain rc:ProcessSpec ;
                               rdfs:range rc:InstantaneousEvent .
 
 
 ###  http://richcanvas.io/ns#includesObjective
 rc:includesObjective rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf rc:includesPurpose ;
-                     rdfs:domain rc:Plan ;
+                     rdfs:domain rc:ProcessSpec ;
                      rdfs:range rc:Objective .
 
 
 ###  http://richcanvas.io/ns#includesPurpose
 rc:includesPurpose rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf rc:includes ;
-                   rdfs:domain rc:Plan .
+                   rdfs:domain rc:ProcessSpec ;
+                   rdfs:range rc:Purpose .
 
 
 ###  http://richcanvas.io/ns#includesStep
@@ -1245,6 +1244,19 @@ rc:title rdf:type owl:DatatypeProperty ;
 #    Classes
 #################################################################
 
+###  http://richcanvas.io/ns#Accomplishment
+rc:Accomplishment rdf:type owl:Class ;
+                  rdfs:subClassOf rc:ExecutedActivity ;
+                  rc:basedOn "DOLCE-Lite,  Accomplishment" .
+
+
+###  http://richcanvas.io/ns#Achievement
+rc:Achievement rdf:type owl:Class ;
+               rdfs:subClassOf rc:ExecutedActivity ;
+               rc:basedOn "DOLCE-Lite,  Achievement" ;
+               rdfs:comment "Executed Activities by an Agent are called achievements if they are atomic" .
+
+
 ###  http://richcanvas.io/ns#Action
 rc:Action rdf:type owl:Class ;
           rdfs:subClassOf rc:Activity ;
@@ -1260,9 +1272,15 @@ rc:ActivityInfluenceTrace rdf:type owl:Class ;
                           rdfs:subClassOf rc:InfluenceTrace .
 
 
+###  http://richcanvas.io/ns#ActivitySpec
+rc:ActivitySpec rdf:type owl:Class ;
+                rdfs:subClassOf rc:Specification .
+
+
 ###  http://richcanvas.io/ns#ActivityTrace
 rc:ActivityTrace rdf:type owl:Class ;
-                 rdfs:subClassOf rc:Activity ;
+                 rdfs:subClassOf rc:ExecutedActivity ;
+                 rc:basedOn "Prov-O,  Activity.  Used for Provenance.  Capturing What Happended" ;
                  rdfs:comment "A Completed Activity.  Used to capture What Happened." .
 
 
@@ -1341,7 +1359,7 @@ rc:Beliefs rdf:type owl:Class ;
 
 ###  http://richcanvas.io/ns#Campaign
 rc:Campaign rdf:type owl:Class ;
-            rdfs:subClassOf rc:Plan .
+            rdfs:subClassOf rc:ProcessSpec .
 
 
 ###  http://richcanvas.io/ns#Capability
@@ -1390,6 +1408,12 @@ rc:End rdf:type owl:Class ;
 ###  http://richcanvas.io/ns#Entity
 rc:Entity rdf:type owl:Class ;
           rc:basedOn "W3 prov:Entity" .
+
+
+###  http://richcanvas.io/ns#ExecutedActivity
+rc:ExecutedActivity rdf:type owl:Class ;
+                    rdfs:subClassOf rc:Activity ;
+                    rc:basedOn "Prov-O,  Activity.  Used for Provenance.  Capturing What Happended" .
 
 
 ###  http://richcanvas.io/ns#FamilialRelationship
@@ -1515,7 +1539,7 @@ rc:IntentClassification rdf:type owl:Class ;
 
 ###  http://richcanvas.io/ns#Itinerary
 rc:Itinerary rdf:type owl:Class ;
-             rdfs:subClassOf rc:Plan .
+             rdfs:subClassOf rc:ProcessSpec .
 
 
 ###  http://richcanvas.io/ns#Members
@@ -1630,7 +1654,7 @@ rc:PhoneNumber rdf:type owl:Class .
 
 ###  http://richcanvas.io/ns#Plan
 rc:Plan rdf:type owl:Class ;
-        rdfs:subClassOf rc:Specification ;
+        rdfs:subClassOf rc:ProcessSpec ;
         rc:basedOn "http://purl.org/net/p-plan" ,
                    "https://w3id.org/ep-plan Plan" .
 
@@ -1642,7 +1666,7 @@ rc:PlanExecution rdf:type owl:Class ;
 
 ###  http://richcanvas.io/ns#PlannedActivity
 rc:PlannedActivity rdf:type owl:Class ;
-                   rdfs:subClassOf rc:Specification .
+                   rdfs:subClassOf rc:ActivitySpec .
 
 
 ###  http://richcanvas.io/ns#Planning
@@ -1668,18 +1692,21 @@ rc:PostalAddress rdf:type owl:Class ;
 
 ###  http://richcanvas.io/ns#Procedure
 rc:Procedure rdf:type owl:Class ;
-             rdfs:subClassOf rc:Plan .
+             rdfs:subClassOf rc:ProcessSpec .
+
+
+###  http://richcanvas.io/ns#Process
+rc:Process rdf:type owl:Class .
+
+
+###  http://richcanvas.io/ns#ProcessSpec
+rc:ProcessSpec rdf:type owl:Class ;
+               rdfs:subClassOf rc:Specification .
 
 
 ###  http://richcanvas.io/ns#Project
 rc:Project rdf:type owl:Class ;
-           rdfs:subClassOf rc:Plan .
-
-
-###  http://richcanvas.io/ns#Protocol
-rc:Protocol rdf:type owl:Class ;
-            rdfs:subClassOf rc:Specification ;
-            rdfs:comment "refers to a set of rules, guidelines, or procedures that govern interactions, communication, and behavior within an organization" .
+           rdfs:subClassOf rc:ProcessSpec .
 
 
 ###  http://richcanvas.io/ns#Purpose
@@ -1689,7 +1716,7 @@ rc:Purpose rdf:type owl:Class ;
 
 ###  http://richcanvas.io/ns#Recipe
 rc:Recipe rdf:type owl:Class ;
-          rdfs:subClassOf rc:Plan .
+          rdfs:subClassOf rc:ProcessSpec .
 
 
 ###  http://richcanvas.io/ns#Relationship
@@ -1705,13 +1732,6 @@ rc:ResponsibleAgent rdf:type owl:Class ;
 rc:Role rdf:type owl:Class ;
         rc:basedOn "W3 prov:Role" ,
                    "skos:Concept" .
-
-
-###  http://richcanvas.io/ns#ScheduledTaskExecution
-rc:ScheduledTaskExecution rdf:type owl:Class ;
-                          rdfs:subClassOf rc:TaskExecution ;
-                          rc:basedOn "https://w3id.org/semanticarts/ontology/gistCore ScheduledTask" ;
-                          rdfs:comment "A task with a planned start datetime." .
 
 
 ###  http://richcanvas.io/ns#Site
@@ -1797,11 +1817,6 @@ rc:Task rdf:type owl:Class ;
         rdfs:comment "Something that could potentially be executed, which is merely described but not proposed in any specific way, such as a business process for onboarding a new employee, or the steps in a recipe for making polyethylene from ethylene, is not a task but rather a task specification." .
 
 
-###  http://richcanvas.io/ns#TaskExecution
-rc:TaskExecution rdf:type owl:Class ;
-                 rdfs:subClassOf rc:Action .
-
-
 ###  http://richcanvas.io/ns#Trait
 rc:Trait rdf:type owl:Class ;
          rdfs:subClassOf rc:Behavior .
@@ -1844,7 +1859,7 @@ rc:Vision rdf:type owl:Class ;
 
 ###  http://richcanvas.io/ns#Workflow
 rc:Workflow rdf:type owl:Class ;
-            rdfs:subClassOf rc:Plan .
+            rdfs:subClassOf rc:ProcessSpec .
 
 
 ###  http://richcanvas.io/ns#WorkflowExecution
