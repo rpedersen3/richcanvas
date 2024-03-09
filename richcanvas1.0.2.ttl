@@ -38,6 +38,14 @@ rc:contains rdf:type owl:ObjectProperty ;
 rc:correspondsTo rdf:type owl:ObjectProperty .
 
 
+###  http://richcanvas.io/ns#correspondsToActivitySpec
+rc:correspondsToActivitySpec rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf rc:correspondsTo ;
+                             rdfs:domain rc:Activity ,
+                                         rc:ActivityTrace ;
+                             rdfs:range rc:ActivitySpec .
+
+
 ###  http://richcanvas.io/ns#correspondsToCommunicationSpec
 rc:correspondsToCommunicationSpec rdf:type owl:ObjectProperty ;
                                   rdfs:subPropertyOf rc:correspondsTo ;
@@ -48,14 +56,6 @@ rc:correspondsToCommunicationSpec rdf:type owl:ObjectProperty ;
 ###  http://richcanvas.io/ns#correspondsToPlan
 rc:correspondsToPlan rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf rc:correspondsTo .
-
-
-###  http://richcanvas.io/ns#correspondsToPlannedActivity
-rc:correspondsToPlannedActivity rdf:type owl:ObjectProperty ;
-                                rdfs:subPropertyOf rc:correspondsTo ;
-                                rdfs:domain rc:Activity ,
-                                            rc:ActivityTrace ;
-                                rdfs:range rc:PlannedActivity .
 
 
 ###  http://richcanvas.io/ns#correspondsToVariable
@@ -93,6 +93,18 @@ rc:hadBehavior rdf:type owl:ObjectProperty ;
 rc:hadRole rdf:type owl:ObjectProperty ;
            rdfs:domain rc:AssociationTrace ;
            rdfs:range rc:Role .
+
+
+###  http://richcanvas.io/ns#hasActivity
+rc:hasActivity rdf:type owl:ObjectProperty ;
+               rdfs:domain rc:Process ;
+               rdfs:range rc:Activity .
+
+
+###  http://richcanvas.io/ns#hasActivitySpec
+rc:hasActivitySpec rdf:type owl:ObjectProperty ;
+                   rdfs:domain rc:ProcessSpec ;
+                   rdfs:range rc:ActivitySpec .
 
 
 ###  http://richcanvas.io/ns#hasApproach
@@ -560,6 +572,12 @@ rc:hasSpouse rdf:type owl:ObjectProperty ;
              rdfs:range rc:Person .
 
 
+###  http://richcanvas.io/ns#hasState
+rc:hasState rdf:type owl:ObjectProperty ;
+            rdfs:domain rc:NonTerminalState ;
+            rdfs:range rc:State .
+
+
 ###  http://richcanvas.io/ns#hasStrategicPlan
 rc:hasStrategicPlan rdf:type owl:ObjectProperty ;
                     rdfs:domain rc:Strategy ;
@@ -1001,6 +1019,10 @@ rc:isWifeOf rdf:type owl:ObjectProperty ;
             rdfs:range rc:Person .
 
 
+###  http://richcanvas.io/ns#manifestationOf
+rc:manifestationOf rdf:type owl:ObjectProperty .
+
+
 ###  http://richcanvas.io/ns#precedes
 rc:precedes rdf:type owl:ObjectProperty ;
             rdfs:domain rc:Step ;
@@ -1264,7 +1286,17 @@ rc:Action rdf:type owl:Class ;
 
 
 ###  http://richcanvas.io/ns#Activity
-rc:Activity rdf:type owl:Class .
+rc:Activity rdf:type owl:Class ;
+            rc:basedOn "Prov-O, Activity" ,
+                       "iCity, Activity" ;
+            rdfs:comment """An Activity describes something that occurs in the domain.
+An Activity may be further defined by (decomposed into) Subactivities.
+An Activity may have precondition and/or effect State.
+An Activity may be enabled by or cause some State. An enabling of causing state is a generalization of a precondition/effect; an Activity is enabled by or causes some State if it has a subactivity with a precondition or effect (respectively) of that State. 
+In other words, the state may not be required directly before, or cause directly after the activity, but by some more specialized sub-activity.
+An Activity occurs at some point in time and space.
+An Activity takes place during some interval, and so has some duration.
+An Activity may have some Manifestations that participate in it.""" .
 
 
 ###  http://richcanvas.io/ns#ActivityInfluenceTrace
@@ -1387,6 +1419,16 @@ rc:CommunicationTrace rdf:type owl:Class ;
                       rdfs:subClassOf rc:ActivityInfluenceTrace .
 
 
+###  http://richcanvas.io/ns#Conference
+rc:Conference rdf:type owl:Class ;
+              rdfs:subClassOf rc:OrganizedEvent .
+
+
+###  http://richcanvas.io/ns#ConjunctiveState
+rc:ConjunctiveState rdf:type owl:Class ;
+                    rdfs:subClassOf rc:NonTerminalState .
+
+
 ###  http://richcanvas.io/ns#Contacts
 rc:Contacts rdf:type owl:Class ;
             rdfs:subClassOf rc:Group .
@@ -1394,6 +1436,11 @@ rc:Contacts rdf:type owl:Class ;
 
 ###  http://richcanvas.io/ns#Context
 rc:Context rdf:type owl:Class .
+
+
+###  http://richcanvas.io/ns#DisjunctiveState
+rc:DisjunctiveState rdf:type owl:Class ;
+                    rdfs:subClassOf rc:NonTerminalState .
 
 
 ###  http://richcanvas.io/ns#Email
@@ -1539,7 +1586,11 @@ rc:IntentClassification rdf:type owl:Class ;
 
 ###  http://richcanvas.io/ns#Itinerary
 rc:Itinerary rdf:type owl:Class ;
-             rdfs:subClassOf rc:ProcessSpec .
+             rdfs:subClassOf rc:Process .
+
+
+###  http://richcanvas.io/ns#Manifestation
+rc:Manifestation rdf:type owl:Class .
 
 
 ###  http://richcanvas.io/ns#Members
@@ -1587,6 +1638,11 @@ rc:MultiVariable rdf:type owl:Class ;
                                  rc:Variable .
 
 
+###  http://richcanvas.io/ns#NonTerminalState
+rc:NonTerminalState rdf:type owl:Class ;
+                    rdfs:subClassOf rc:State .
+
+
 ###  http://richcanvas.io/ns#Objective
 rc:Objective rdf:type owl:Class ;
              rdfs:subClassOf rc:Purpose .
@@ -1621,6 +1677,11 @@ rc:OrganizationalUnit rdf:type owl:Class ;
                       rdfs:subClassOf rc:Organization .
 
 
+###  http://richcanvas.io/ns#OrganizedEvent
+rc:OrganizedEvent rdf:type owl:Class ;
+                  rdfs:subClassOf rc:Process .
+
+
 ###  http://richcanvas.io/ns#Outcome
 rc:Outcome rdf:type owl:Class .
 
@@ -1636,6 +1697,12 @@ rc:Person rdf:type owl:Class ;
           rc:basedOn "W3 org:Person" ,
                      "W3 prov:Person" ,
                      "foaf:Person" .
+
+
+###  http://richcanvas.io/ns#PersonPD
+rc:PersonPD rdf:type owl:Class ;
+            rdfs:subClassOf rc:Person ,
+                            rc:TimeVaryingConcept .
 
 
 ###  http://richcanvas.io/ns#PersonalContext
@@ -1659,14 +1726,14 @@ rc:Plan rdf:type owl:Class ;
                    "https://w3id.org/ep-plan Plan" .
 
 
-###  http://richcanvas.io/ns#PlanExecution
-rc:PlanExecution rdf:type owl:Class ;
-                 rdfs:subClassOf rc:Situation .
-
-
 ###  http://richcanvas.io/ns#PlannedActivity
 rc:PlannedActivity rdf:type owl:Class ;
                    rdfs:subClassOf rc:ActivitySpec .
+
+
+###  http://richcanvas.io/ns#PlannedProcess
+rc:PlannedProcess rdf:type owl:Class ;
+                  rdfs:subClassOf rc:Process .
 
 
 ###  http://richcanvas.io/ns#Planning
@@ -1696,12 +1763,21 @@ rc:Procedure rdf:type owl:Class ;
 
 
 ###  http://richcanvas.io/ns#Process
-rc:Process rdf:type owl:Class .
+rc:Process rdf:type owl:Class ;
+           rdfs:subClassOf rc:Activity ,
+                           owl:Thing ;
+           rc:basedOn "BFO:process" ;
+           rdfs:comment """A squence of Activities.
+An occurrent that has temporal proper parts and for some time t, p s-depends_on some material entity at t.
+For example, a PlanExecution is a context including some actions executed by agents according to certain parameters and expected tasks to be achieved from a Plan;""" .
 
 
 ###  http://richcanvas.io/ns#ProcessSpec
 rc:ProcessSpec rdf:type owl:Class ;
-               rdfs:subClassOf rc:Specification .
+               rdfs:subClassOf rc:ActivitySpec ,
+                               rc:Specification ;
+               rc:basedOn "Academic Event Ontology (AEON)" ;
+               rdfs:comment "Specification of Occurrent that has temporal proper parts" .
 
 
 ###  http://richcanvas.io/ns#Project
@@ -1734,17 +1810,15 @@ rc:Role rdf:type owl:Class ;
                    "skos:Concept" .
 
 
+###  http://richcanvas.io/ns#Series
+rc:Series rdf:type owl:Class ;
+          rdfs:subClassOf rc:Process .
+
+
 ###  http://richcanvas.io/ns#Site
 rc:Site rdf:type owl:Class ;
         rc:basedOn "W3 org:Site" ;
         rdfs:comment "An office or other premise at which the organization is located" .
-
-
-###  http://richcanvas.io/ns#Situation
-rc:Situation rdf:type owl:Class ;
-             rc:basedOn "DOLCE (simplification of DOLCE Lite Plus)" ;
-             rdfs:comment """A view, consistent with ('satisfying') a Description.
-For example, a PlanExecution is a context including some actions executed by agents according to certain parameters and expected tasks to be achieved from a Plan;""" .
 
 
 ###  http://richcanvas.io/ns#SoftwareAgent
@@ -1763,7 +1837,20 @@ rc:Start rdf:type owl:Class ;
 
 ###  http://richcanvas.io/ns#State
 rc:State rdf:type owl:Class ;
-         rdfs:comment "Current State of a person or thing." .
+         rdfs:subClassOf owl:Thing ;
+         rdfs:comment """A state refers to a class of manifestations. It may be a precondition or effect of some Activity, or more generally it may enabled or be caused by some Activity. If a state is complex, it may refer to some combination of classes of manifestations.
+
+A note on complex states:
+Say that a shopping activity, Activity-Shop, requires both the VehicleW30LGas state, but also some state wherein the mall is open, OpenMall. Each state would first be defined separately. Then, we can simply state:
+precondition(VehicleW30LGas,Activity-Shop) AND  precondition(OpenMall,Activity-Shop)
+were the preconditions required disjunctively, we could state:
+precondition(VehicleW30LGas,Activity-Shop) OR precondition(OpenMall,Activity-Shop)
+However, in large and complex domains, there will be cases in which the above approach is undesirable. In particular, due to the complexity of the description that results as the state being described becomes more detailed. In many cases it will be more natural and convenient to be able to refer to a single, aggregate state. We therefore extend the representation of States to capture aggregation, as approached in the concept of state trees introduced by TOVE as a construct for the activity cluster.
+
+A State may be either non-terminal or terminal. A terminal state has no child states, and therefore refers directly to a class of manifestations, whereas a non-terminal state has child states, which may define some classes of manifestations, or further define some other complex states.
+	NonTerminalState(x) v TerminalState(x) = State(x)
+A state  cannot be both non-terminal and terminal.
+	TerminalState disjointWith NonTerminalState""" .
 
 
 ###  http://richcanvas.io/ns#StateOfAffair
@@ -1771,16 +1858,16 @@ rc:StateOfAffair rdf:type owl:Class ;
                  rdfs:comment "refers to the existing situation or condition of a particular matter or issue at a specific point in time (past, current or future time). It encapsulates the overall circumstances, events, or conditions that characterize a given situation or context." .
 
 
+###  http://richcanvas.io/ns#StateSpec
+rc:StateSpec rdf:type owl:Class ;
+             rdfs:subClassOf rc:Specification .
+
+
 ###  http://richcanvas.io/ns#Step
 rc:Step rdf:type owl:Class ;
         rdfs:subClassOf rc:PlannedActivity ;
         rc:basedOn "http://purl.org/net/p-plan" ,
                    "https://w3id.org/ep-plan" .
-
-
-###  http://richcanvas.io/ns#StepExecution
-rc:StepExecution rdf:type owl:Class ;
-                 rdfs:subClassOf rc:Action .
 
 
 ###  http://richcanvas.io/ns#Steps
@@ -1817,6 +1904,16 @@ rc:Task rdf:type owl:Class ;
         rdfs:comment "Something that could potentially be executed, which is merely described but not proposed in any specific way, such as a business process for onboarding a new employee, or the steps in a recipe for making polyethylene from ethylene, is not a task but rather a task specification." .
 
 
+###  http://richcanvas.io/ns#TerminalState
+rc:TerminalState rdf:type owl:Class ;
+                 rdfs:subClassOf rc:Manifestation ,
+                                 rc:State .
+
+
+###  http://richcanvas.io/ns#TimeVaryingConcept
+rc:TimeVaryingConcept rdf:type owl:Class .
+
+
 ###  http://richcanvas.io/ns#Trait
 rc:Trait rdf:type owl:Class ;
          rdfs:subClassOf rc:Behavior .
@@ -1829,7 +1926,7 @@ rc:TraitClassification rdf:type owl:Class ;
 
 ###  http://richcanvas.io/ns#Transition
 rc:Transition rdf:type owl:Class ;
-              rdfs:subClassOf rc:Situation .
+              rdfs:subClassOf rc:Process .
 
 
 ###  http://richcanvas.io/ns#Usage
@@ -1862,9 +1959,9 @@ rc:Workflow rdf:type owl:Class ;
             rdfs:subClassOf rc:ProcessSpec .
 
 
-###  http://richcanvas.io/ns#WorkflowExecution
-rc:WorkflowExecution rdf:type owl:Class ;
-                     rdfs:subClassOf rc:Situation .
+###  http://richcanvas.io/ns#WorkflowProcess
+rc:WorkflowProcess rdf:type owl:Class ;
+                   rdfs:subClassOf rc:Process .
 
 
 #################################################################
