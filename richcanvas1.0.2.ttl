@@ -85,7 +85,7 @@ rc:generated rdf:type owl:ObjectProperty ;
 
 ###  http://richcanvas.io/ns#hadBehavior
 rc:hadBehavior rdf:type owl:ObjectProperty ;
-               rdfs:domain rc:AssociationTrace ;
+               rdfs:domain rc:Activity ;
                rdfs:range rc:Behavior .
 
 
@@ -302,8 +302,9 @@ rc:hasGender rdf:type owl:ObjectProperty ;
 ###  http://richcanvas.io/ns#hasGoal
 rc:hasGoal rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf rc:hasPurpose ;
-           rdfs:domain rc:Agent ,
-                       rc:ProcessSpec ;
+           rdfs:domain rc:Activity ,
+                       rc:ActivitySpec ,
+                       rc:Agent ;
            rdfs:range rc:Goal .
 
 
@@ -517,8 +518,9 @@ rc:hasProtocol rdf:type owl:ObjectProperty ;
 
 ###  http://richcanvas.io/ns#hasPurpose
 rc:hasPurpose rdf:type owl:ObjectProperty ;
-              rdfs:domain rc:Agent ,
-                          rc:ProcessSpec ;
+              rdfs:domain rc:Activity ,
+                          rc:ActivitySpec ,
+                          rc:Agent ;
               rdfs:range rc:Purpose .
 
 
@@ -1586,7 +1588,7 @@ rc:IntentClassification rdf:type owl:Class ;
 
 ###  http://richcanvas.io/ns#Itinerary
 rc:Itinerary rdf:type owl:Class ;
-             rdfs:subClassOf rc:Process .
+             rdfs:subClassOf rc:ProcessSpec .
 
 
 ###  http://richcanvas.io/ns#Manifestation
@@ -1927,6 +1929,11 @@ rc:TraitClassification rdf:type owl:Class ;
 ###  http://richcanvas.io/ns#Transition
 rc:Transition rdf:type owl:Class ;
               rdfs:subClassOf rc:Process .
+
+
+###  http://richcanvas.io/ns#Trip
+rc:Trip rdf:type owl:Class ;
+        rdfs:subClassOf rc:Process .
 
 
 ###  http://richcanvas.io/ns#Usage
