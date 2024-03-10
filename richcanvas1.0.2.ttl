@@ -120,6 +120,13 @@ rc:hasAunt rdf:type owl:ObjectProperty ;
            rdfs:range rc:Person .
 
 
+###  http://richcanvas.io/ns#hasBeginning
+rc:hasBeginning rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf rc:hasTime ;
+                rdfs:domain rc:TemporalEntity ;
+                rdfs:range rc:TimeInstant .
+
+
 ###  http://richcanvas.io/ns#hasBelief
 rc:hasBelief rdf:type owl:ObjectProperty ;
              rdfs:domain rc:Agent ;
@@ -244,10 +251,23 @@ rc:hasDaughterInLaw rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf rc:hasRelative .
 
 
+###  http://richcanvas.io/ns#hasDuration
+rc:hasDuration rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf rc:hasTemporalDuraction ;
+               rdfs:range rc:TemporalDuration .
+
+
 ###  http://richcanvas.io/ns#hasEmail
 rc:hasEmail rdf:type owl:ObjectProperty ;
             rdfs:domain rc:Person ;
             rdfs:range rc:Email .
+
+
+###  http://richcanvas.io/ns#hasEnd
+rc:hasEnd rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf rc:hasTime ;
+          rdfs:domain rc:TemporalEntity ;
+          rdfs:range rc:TimeInstant .
 
 
 ###  http://richcanvas.io/ns#hasFamily
@@ -389,6 +409,18 @@ rc:hasIntent rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf rc:hasPurpose ;
              rdfs:domain rc:Agent ;
              rdfs:range rc:Intent .
+
+
+###  http://richcanvas.io/ns#hasLocation
+rc:hasLocation rdf:type owl:ObjectProperty ;
+               rdfs:domain rc:PersonManifestation ;
+               rdfs:range rc:SpacialFeature .
+
+
+###  http://richcanvas.io/ns#hasManifestation
+rc:hasManifestation rdf:type owl:ObjectProperty ;
+                    rdfs:domain rc:TimeVaryingConcept ;
+                    rdfs:range rc:Manifestation .
 
 
 ###  http://richcanvas.io/ns#hasMember
@@ -604,6 +636,15 @@ rc:hasStrategy rdf:type owl:ObjectProperty ;
 rc:hasSubOrganization rdf:type owl:ObjectProperty ;
                       rdfs:domain rc:Organization ;
                       rdfs:range rc:Organization .
+
+
+###  http://richcanvas.io/ns#hasTemporalDuraction
+rc:hasTemporalDuraction rdf:type owl:ObjectProperty .
+
+
+###  http://richcanvas.io/ns#hasTime
+rc:hasTime rdf:type owl:ObjectProperty ;
+           rdfs:domain rc:TemporalEntity .
 
 
 ###  http://richcanvas.io/ns#hasTrait
@@ -835,6 +876,12 @@ rc:isIntentOf rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf rc:isPurposeOf ;
               rdfs:domain rc:Agent ;
               rdfs:range rc:Intent .
+
+
+###  http://richcanvas.io/ns#isManifestationOf
+rc:isManifestationOf rdf:type owl:ObjectProperty ;
+                     rdfs:domain rc:Manifestation ;
+                     rdfs:range rc:TimeVaryingConcept .
 
 
 ###  http://richcanvas.io/ns#isMemberOf
@@ -1490,6 +1537,10 @@ rc:FamilyRole rdf:type owl:Class ;
               rdfs:subClassOf rc:MembershipRole .
 
 
+###  http://richcanvas.io/ns#Feature
+rc:Feature rdf:type owl:Class .
+
+
 ###  http://richcanvas.io/ns#Friends
 rc:Friends rdf:type owl:Class ;
            rdfs:subClassOf rc:Group .
@@ -1701,6 +1752,12 @@ rc:Person rdf:type owl:Class ;
                      "foaf:Person" .
 
 
+###  http://richcanvas.io/ns#PersonManifestation
+rc:PersonManifestation rdf:type owl:Class ;
+                       rdfs:subClassOf rc:Manifestation ,
+                                       rc:TerminalState .
+
+
 ###  http://richcanvas.io/ns#PersonPD
 rc:PersonPD rdf:type owl:Class ;
             rdfs:subClassOf rc:Person ,
@@ -1828,6 +1885,11 @@ rc:SoftwareAgent rdf:type owl:Class ;
                  rdfs:subClassOf rc:Agent .
 
 
+###  http://richcanvas.io/ns#SpacialFeature
+rc:SpacialFeature rdf:type owl:Class ;
+                  rdfs:subClassOf rc:Feature .
+
+
 ###  http://richcanvas.io/ns#Specification
 rc:Specification rdf:type owl:Class .
 
@@ -1906,10 +1968,29 @@ rc:Task rdf:type owl:Class ;
         rdfs:comment "Something that could potentially be executed, which is merely described but not proposed in any specific way, such as a business process for onboarding a new employee, or the steps in a recipe for making polyethylene from ethylene, is not a task but rather a task specification." .
 
 
+###  http://richcanvas.io/ns#TemporalDuration
+rc:TemporalDuration rdf:type owl:Class .
+
+
+###  http://richcanvas.io/ns#TemporalEntity
+rc:TemporalEntity rdf:type owl:Class .
+
+
 ###  http://richcanvas.io/ns#TerminalState
 rc:TerminalState rdf:type owl:Class ;
-                 rdfs:subClassOf rc:Manifestation ,
-                                 rc:State .
+                 rdfs:subClassOf rc:State .
+
+
+###  http://richcanvas.io/ns#TimeInstant
+rc:TimeInstant rdf:type owl:Class ;
+               rdfs:subClassOf rc:TemporalEntity ;
+               rc:basedOn "w3.org/2006/time, Time instant" .
+
+
+###  http://richcanvas.io/ns#TimeInterval
+rc:TimeInterval rdf:type owl:Class ;
+                rdfs:subClassOf rc:TemporalEntity ;
+                rc:basedOn "w3.org/2006/time, Time interval" .
 
 
 ###  http://richcanvas.io/ns#TimeVaryingConcept
