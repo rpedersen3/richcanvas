@@ -367,6 +367,12 @@ rc:hasGender rdf:type owl:ObjectProperty ;
              rdfs:range rc:GenderClassification .
 
 
+###  http://richcanvas.io/ns#hasGeometry
+rc:hasGeometry rdf:type owl:ObjectProperty ;
+               rdfs:domain rc:SpacialFeature ;
+               rdfs:range rc:Geometry .
+
+
 ###  http://richcanvas.io/ns#hasGoal
 rc:hasGoal rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf rc:hasPurpose ;

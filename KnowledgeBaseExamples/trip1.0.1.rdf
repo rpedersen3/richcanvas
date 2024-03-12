@@ -6,7 +6,8 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:wgs84_pos="http://www.w3.org/2003/01/geo/wgs84_pos#">
     <owl:Ontology rdf:about="http://richcanvas.io/trip">
         <owl:imports rdf:resource="http://richcanvas.io/ns/1.0.2"/>
     </owl:Ontology>
@@ -39,6 +40,18 @@
     <!-- http://richcanvas.io/trip#end -->
 
     <owl:DatatypeProperty rdf:about="http://richcanvas.io/trip#end"/>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#lat -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#lat"/>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#lon -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#lon"/>
     
 
 
@@ -92,6 +105,17 @@
 
     <owl:NamedIndividual rdf:about="http://richcanvas.io/trip#Gate32A">
         <rdf:type rdf:resource="http://richcanvas.io/ns#SpacialFeature"/>
+        <rdfs:label>Gate 32A</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/trip#Gate32Location -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/trip#Gate32Location">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#Geometry"/>
+        <wgs84_pos:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">51.5074</wgs84_pos:lat>
+        <wgs84_pos:lon rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-0.1278</wgs84_pos:lon>
     </owl:NamedIndividual>
     
 
