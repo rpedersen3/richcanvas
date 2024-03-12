@@ -19,6 +19,22 @@ rc:basedOn rdf:type owl:AnnotationProperty .
 
 
 #################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#duration
+xsd:duration rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#asGeoJSON
+<http://www.w3.org/2003/01/geo/wgs84_pos#asGeoJSON> rdf:type rdfs:Datatype .
+
+
+#################################################################
 #    Object Properties
 #################################################################
 
@@ -425,7 +441,8 @@ rc:hasIntent rdf:type owl:ObjectProperty ;
 
 ###  http://richcanvas.io/ns#hasLocation
 rc:hasLocation rdf:type owl:ObjectProperty ;
-               rdfs:domain rc:PersonManifestation ;
+               rdfs:domain rc:ActivityOccurance ,
+                           rc:Manifestation ;
                rdfs:range rc:SpacialFeature .
 
 
@@ -505,6 +522,12 @@ rc:hasParent rdf:type owl:ObjectProperty ;
 rc:hasPart rdf:type owl:ObjectProperty ;
            rdfs:domain rc:Collection ;
            rdfs:range owl:Thing .
+
+
+###  http://richcanvas.io/ns#hasParticipant
+rc:hasParticipant rdf:type owl:ObjectProperty ;
+                  rdfs:domain rc:ActivityOccurance ;
+                  rdfs:range rc:Manifestation .
 
 
 ###  http://richcanvas.io/ns#hasPayload
@@ -1084,6 +1107,12 @@ rc:isWifeOf rdf:type owl:ObjectProperty ;
 rc:manifestationOf rdf:type owl:ObjectProperty .
 
 
+###  http://richcanvas.io/ns#occursAt
+rc:occursAt rdf:type owl:ObjectProperty ;
+            rdfs:domain rc:ActivityOccurance ;
+            rdfs:range rc:TemporalEntity .
+
+
 ###  http://richcanvas.io/ns#precedes
 rc:precedes rdf:type owl:ObjectProperty ;
             rdfs:domain rc:Step ;
@@ -1329,20 +1358,20 @@ rc:title rdf:type owl:DatatypeProperty ;
 
 ###  http://richcanvas.io/ns#Accomplishment
 rc:Accomplishment rdf:type owl:Class ;
-                  rdfs:subClassOf rc:ExecutedActivity ;
+                  rdfs:subClassOf rc:ActivityExecuted ;
                   rc:basedOn "DOLCE-Lite,  Accomplishment" .
 
 
 ###  http://richcanvas.io/ns#Achievement
 rc:Achievement rdf:type owl:Class ;
-               rdfs:subClassOf rc:ExecutedActivity ;
+               rdfs:subClassOf rc:ActivityExecuted ;
                rc:basedOn "DOLCE-Lite,  Achievement" ;
                rdfs:comment "Executed Activities by an Agent are called achievements if they are atomic" .
 
 
 ###  http://richcanvas.io/ns#Action
 rc:Action rdf:type owl:Class ;
-          rdfs:subClassOf rc:Activity ;
+          rdfs:subClassOf rc:ActivityOccurance ;
           rdfs:comment "An Activity with at least one Agent that isParticipantIn it, and that executes a Task that typically isDefinedIn a Plan, Workflow, Project, etc." .
 
 
@@ -1360,9 +1389,23 @@ An Activity takes place during some interval, and so has some duration.
 An Activity may have some Manifestations that participate in it.""" .
 
 
+###  http://richcanvas.io/ns#ActivityExecuted
+rc:ActivityExecuted rdf:type owl:Class ;
+                    rdfs:subClassOf rc:Activity ;
+                    rc:basedOn "Prov-O,  Activity.  Used for Provenance.  Capturing What Happended" .
+
+
 ###  http://richcanvas.io/ns#ActivityInfluenceTrace
 rc:ActivityInfluenceTrace rdf:type owl:Class ;
                           rdfs:subClassOf rc:InfluenceTrace .
+
+
+###  http://richcanvas.io/ns#ActivityOccurance
+rc:ActivityOccurance rdf:type owl:Class ;
+                     rdfs:subClassOf rc:Activity ;
+                     rc:basedOn "iCity, ActivityOccurance" ;
+                     rdfs:comment """An occurrence of some Activity that occurs at some point
+in time and space""" .
 
 
 ###  http://richcanvas.io/ns#ActivitySpec
@@ -1372,7 +1415,7 @@ rc:ActivitySpec rdf:type owl:Class ;
 
 ###  http://richcanvas.io/ns#ActivityTrace
 rc:ActivityTrace rdf:type owl:Class ;
-                 rdfs:subClassOf rc:ExecutedActivity ;
+                 rdfs:subClassOf rc:ActivityExecuted ;
                  rc:basedOn "Prov-O,  Activity.  Used for Provenance.  Capturing What Happended" ;
                  rdfs:comment "A Completed Activity.  Used to capture What Happened." .
 
@@ -1516,12 +1559,6 @@ rc:End rdf:type owl:Class ;
 ###  http://richcanvas.io/ns#Entity
 rc:Entity rdf:type owl:Class ;
           rc:basedOn "W3 prov:Entity" .
-
-
-###  http://richcanvas.io/ns#ExecutedActivity
-rc:ExecutedActivity rdf:type owl:Class ;
-                    rdfs:subClassOf rc:Activity ;
-                    rc:basedOn "Prov-O,  Activity.  Used for Provenance.  Capturing What Happended" .
 
 
 ###  http://richcanvas.io/ns#FamilialRelationship
@@ -1810,6 +1847,11 @@ rc:PlannedProcess rdf:type owl:Class ;
 ###  http://richcanvas.io/ns#Planning
 rc:Planning rdf:type owl:Class ;
             rdfs:comment "An ACTIVITY whose major EFFECT is to produce a Plan" .
+
+
+###  http://richcanvas.io/ns#Point
+rc:Point rdf:type owl:Class ;
+         rc:basedOn "wgs:Point" .
 
 
 ###  http://richcanvas.io/ns#Post

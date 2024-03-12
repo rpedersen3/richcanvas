@@ -101,26 +101,11 @@
     
 
 
-    <!-- http://richcanvas.io/trip#JoeAtGateTimeBegin -->
-
-    <owl:NamedIndividual rdf:about="http://richcanvas.io/trip#JoeAtGateTimeBegin">
-        <rdf:type rdf:resource="http://richcanvas.io/ns#TimeInstant"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://richcanvas.io/trip#JoeAtGateTimeEnd -->
-
-    <owl:NamedIndividual rdf:about="http://richcanvas.io/trip#JoeAtGateTimeEnd">
-        <rdf:type rdf:resource="http://richcanvas.io/ns#TimeInstant"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://richcanvas.io/trip#JoeTraveler -->
 
     <owl:NamedIndividual rdf:about="http://richcanvas.io/trip#JoeTraveler">
         <rdf:type rdf:resource="http://richcanvas.io/trip#TravelerPD"/>
+        <ns:hasManifestation rdf:resource="http://richcanvas.io/trip#JoeAtGate"/>
     </owl:NamedIndividual>
     
 
