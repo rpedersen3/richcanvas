@@ -16,6 +16,29 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://richcanvas.io/trip#begin -->
+
+    <owl:DatatypeProperty rdf:about="http://richcanvas.io/trip#begin"/>
+    
+
+
+    <!-- http://richcanvas.io/trip#end -->
+
+    <owl:DatatypeProperty rdf:about="http://richcanvas.io/trip#end"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -28,6 +51,14 @@
 
     <owl:Class rdf:about="http://richcanvas.io/trip#PlanePD">
         <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#TimeVaryingConcept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/trip#Traveler -->
+
+    <owl:Class rdf:about="http://richcanvas.io/trip#Traveler">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#PersonManifestation"/>
     </owl:Class>
     
 
@@ -48,6 +79,41 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://richcanvas.io/trip#JoeAtGate -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/trip#JoeAtGate">
+        <rdf:type rdf:resource="http://richcanvas.io/trip#Traveler"/>
+        <ns:existsAtInterval rdf:resource="http://richcanvas.io/trip#JoeAtGateTime"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/trip#JoeAtGateTime -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/trip#JoeAtGateTime">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#TimeInterval"/>
+        <begin>2024-03-12T10:00:00</begin>
+        <end>2024-03-12T10:30:00</end>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/trip#JoeAtGateTimeBegin -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/trip#JoeAtGateTimeBegin">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#TimeInstant"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/trip#JoeAtGateTimeEnd -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/trip#JoeAtGateTimeEnd">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#TimeInstant"/>
+    </owl:NamedIndividual>
     
 
 
