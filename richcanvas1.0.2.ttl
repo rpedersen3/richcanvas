@@ -106,6 +106,12 @@ rc:drives rdf:type owl:ObjectProperty ;
           rdfs:domain rc:Intent .
 
 
+###  http://richcanvas.io/ns#enable
+rc:enable rdf:type owl:ObjectProperty ;
+          rdfs:domain rc:State ;
+          rdfs:range rc:ActivityOccurance .
+
+
 ###  http://richcanvas.io/ns#exhibit
 rc:exhibit rdf:type owl:ObjectProperty ;
            rdfs:domain rc:Agent ;
@@ -303,6 +309,12 @@ rc:hasDaughterInLaw rdf:type owl:ObjectProperty ;
 rc:hasDuration rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf rc:hasTemporalDuraction ;
                rdfs:range rc:TemporalDuration .
+
+
+###  http://richcanvas.io/ns#hasEffect
+rc:hasEffect rdf:type owl:ObjectProperty ;
+             rdfs:domain rc:ActivityOccurance ;
+             rdfs:range rc:State .
 
 
 ###  http://richcanvas.io/ns#hasEmail
