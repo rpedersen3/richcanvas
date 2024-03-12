@@ -30,8 +30,28 @@ xsd:date rdf:type rdfs:Datatype .
 xsd:duration rdf:type rdfs:Datatype .
 
 
+###  http://www.w3.org/2003/01/geo/wgs84_pos#alt
+<http://www.w3.org/2003/01/geo/wgs84_pos#alt> rdf:type rdfs:Datatype .
+
+
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#asGeoJSON
 <http://www.w3.org/2003/01/geo/wgs84_pos#asGeoJSON> rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#lat
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#lat_long
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat_long> rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#location
+<http://www.w3.org/2003/01/geo/wgs84_pos#location> rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#lon
+<http://www.w3.org/2003/01/geo/wgs84_pos#lon> rdf:type rdfs:Datatype .
 
 
 #################################################################
@@ -1613,6 +1633,11 @@ rc:GenderClassification rdf:type owl:Class ;
 ###  http://richcanvas.io/ns#Generation
 rc:Generation rdf:type owl:Class ;
               rdfs:subClassOf rc:InstantaneousEvent .
+
+
+###  http://richcanvas.io/ns#Geometry
+rc:Geometry rdf:type owl:Class ;
+            rc:basedOn "geom:geometry" .
 
 
 ###  http://richcanvas.io/ns#Goal
