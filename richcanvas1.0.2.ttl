@@ -100,7 +100,6 @@ rc:correspondsToVariable rdf:type owl:ObjectProperty ;
                          rdfs:domain rc:Entity ;
                          rdfs:range rc:Variable .
 
-rc:hasName owl:equivalentProperty rdfs:label .
 
 ###  http://richcanvas.io/ns#drives
 rc:drives rdf:type owl:ObjectProperty ;
@@ -382,7 +381,7 @@ rc:hasGender rdf:type owl:ObjectProperty ;
 
 ###  http://richcanvas.io/ns#hasGeometry
 rc:hasGeometry rdf:type owl:ObjectProperty ;
-               rdfs:domain rc:SpacialFeature ;
+               rdfs:domain rc:SpatialFeature ;
                rdfs:range rc:Geometry .
 
 
@@ -482,7 +481,7 @@ rc:hasIntent rdf:type owl:ObjectProperty ;
 rc:hasLocation rdf:type owl:ObjectProperty ;
                rdfs:domain rc:ActivityOccurance ,
                            rc:Manifestation ;
-               rdfs:range rc:SpacialFeature .
+               rdfs:range rc:SpatialFeature .
 
 
 ###  http://richcanvas.io/ns#hasManifestation
@@ -1987,8 +1986,8 @@ rc:SoftwareAgent rdf:type owl:Class ;
                  rdfs:subClassOf rc:Agent .
 
 
-###  http://richcanvas.io/ns#SpacialFeature
-rc:SpacialFeature rdf:type owl:Class ;
+###  http://richcanvas.io/ns#SpatialFeature
+rc:SpatialFeature rdf:type owl:Class ;
                   rdfs:subClassOf rc:Feature .
 
 
