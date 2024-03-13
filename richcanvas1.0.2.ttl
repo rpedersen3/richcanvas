@@ -100,6 +100,7 @@ rc:correspondsToVariable rdf:type owl:ObjectProperty ;
                          rdfs:domain rc:Entity ;
                          rdfs:range rc:Variable .
 
+rc:hasName owl:equivalentProperty rdfs:label .
 
 ###  http://richcanvas.io/ns#drives
 rc:drives rdf:type owl:ObjectProperty ;
@@ -519,6 +520,10 @@ rc:hasMission rdf:type owl:ObjectProperty ;
 ###  http://richcanvas.io/ns#hasMotherInLaw
 rc:hasMotherInLaw rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf rc:hasRelative .
+
+
+###  http://richcanvas.io/ns#hasName
+rc:hasName rdf:type owl:ObjectProperty .
 
 
 ###  http://richcanvas.io/ns#hasNice
