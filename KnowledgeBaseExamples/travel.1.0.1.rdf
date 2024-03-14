@@ -600,7 +600,7 @@
                                                                                         <swrl:builtin rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/swrlx.owl#makeOWLThing"/>
                                                                                         <swrl:arguments rdf:parseType="Collection">
                                                                                             <rdf:Description rdf:about="http://richcanvas.io/travel#rideToAirport"/>
-                                                                                            <rdf:Description rdf:about="http://richcanvas.io/travel#travelerAtHome"/>
+                                                                                            <rdf:Description rdf:about="http://richcanvas.io/travel#traveler"/>
                                                                                         </swrl:arguments>
                                                                                     </rdf:Description>
                                                                                 </rdf:first>
@@ -774,7 +774,7 @@
                                                                                         <swrl:builtin rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/swrlx.owl#makeOWLThing"/>
                                                                                         <swrl:arguments rdf:parseType="Collection">
                                                                                             <rdf:Description rdf:about="http://richcanvas.io/travel#walkToGate"/>
-                                                                                            <rdf:Description rdf:about="http://richcanvas.io/travel#travelerAtTerminal"/>
+                                                                                            <rdf:Description rdf:about="http://richcanvas.io/travel#traveler"/>
                                                                                         </swrl:arguments>
                                                                                     </rdf:Description>
                                                                                 </rdf:first>
