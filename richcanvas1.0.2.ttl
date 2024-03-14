@@ -1970,6 +1970,11 @@ rc:Role rdf:type owl:Class ;
                    "skos:Concept" .
 
 
+###  http://richcanvas.io/ns#RuleExecution
+rc:RuleExecution rdf:type owl:Class ;
+                 rdfs:subClassOf rc:Activity .
+
+
 ###  http://richcanvas.io/ns#Series
 rc:Series rdf:type owl:Class ;
           rdfs:subClassOf rc:Process .

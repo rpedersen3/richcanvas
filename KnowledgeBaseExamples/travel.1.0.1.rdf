@@ -1,0 +1,529 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://richcanvas.io/travel#"
+     xml:base="http://richcanvas.io/travel"
+     xmlns:ns="http://richcanvas.io/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#">
+    <owl:Ontology rdf:about="http://richcanvas.io/travel">
+        <owl:imports rdf:resource="http://richcanvas.io/ns/1.0.2"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://richcanvas.io/travel#Aircraft -->
+
+    <owl:Class rdf:about="http://richcanvas.io/travel#Aircraft">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#TimeVaryingConcept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/travel#AircraftFlight -->
+
+    <owl:Class rdf:about="http://richcanvas.io/travel#AircraftFlight">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Manifestation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/travel#AircraftSpec -->
+
+    <owl:Class rdf:about="http://richcanvas.io/travel#AircraftSpec">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Specification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/travel#AirplaneSeat -->
+
+    <owl:Class rdf:about="http://richcanvas.io/travel#AirplaneSeat">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#SpatialFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/travel#Airport -->
+
+    <owl:Class rdf:about="http://richcanvas.io/travel#Airport">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#SpatialFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/travel#AirportGate -->
+
+    <owl:Class rdf:about="http://richcanvas.io/travel#AirportGate">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#SpatialFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/travel#AirportTerminalArrival -->
+
+    <owl:Class rdf:about="http://richcanvas.io/travel#AirportTerminalArrival">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#SpatialFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/travel#AirportTerminalDeparture -->
+
+    <owl:Class rdf:about="http://richcanvas.io/travel#AirportTerminalDeparture">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#SpatialFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/travel#Flight -->
+
+    <owl:Class rdf:about="http://richcanvas.io/travel#Flight">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#ActivityOccurance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/travel#FlightSpec -->
+
+    <owl:Class rdf:about="http://richcanvas.io/travel#FlightSpec">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#ActivitySpec"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/travel#Home -->
+
+    <owl:Class rdf:about="http://richcanvas.io/travel#Home">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#SpatialFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/travel#Hotel -->
+
+    <owl:Class rdf:about="http://richcanvas.io/travel#Hotel">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#SpatialFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/travel#Travel -->
+
+    <owl:Class rdf:about="http://richcanvas.io/travel#Travel">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#PersonManifestation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/travel#Traveler -->
+
+    <owl:Class rdf:about="http://richcanvas.io/travel#Traveler">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#PersonPD"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://richcanvas.io/travel#Boeing721 -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/travel#Boeing721">
+        <rdf:type rdf:resource="http://richcanvas.io/travel#AircraftSpec"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/travel#BoeingAircraftN127AB -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/travel#BoeingAircraftN127AB">
+        <rdf:type rdf:resource="http://richcanvas.io/travel#Aircraft"/>
+        <ns:name>N127AB</ns:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/travel#DIAAirport -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/travel#DIAAirport">
+        <ns:name>DIA</ns:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/travel#DIATerminalArrival -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/travel#DIATerminalArrival">
+        <rdf:type rdf:resource="http://richcanvas.io/travel#AirportTerminalArrival"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/travel#DIATerminalDeparture -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/travel#DIATerminalDeparture">
+        <rdf:type rdf:resource="http://richcanvas.io/travel#AirportTerminalDeparture"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://richcanvas.io/travel#departure">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://richcanvas.io/travel#travelerAtHome">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://richcanvas.io/travel#rideToAirport">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://richcanvas.io/travel#traveler">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://richcanvas.io/travel#travelerAtDeparture">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://richcanvas.io/travel#home">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://richcanvas.io/travel#personAtHome">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>TravelFromHomeToAirportEffect</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://richcanvas.io/ns#name"/>
+                        <swrl:argument1 rdf:resource="http://richcanvas.io/travel#departure"/>
+                        <swrl:argument2>Departure</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://richcanvas.io/ns#SpatialFeature"/>
+                                <swrl:argument1 rdf:resource="http://richcanvas.io/travel#departure"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://richcanvas.io/travel#Travel"/>
+                                        <swrl:argument1 rdf:resource="http://richcanvas.io/travel#travelerAtHome"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="http://richcanvas.io/ns#ActivityOccurance"/>
+                                                <swrl:argument1 rdf:resource="http://richcanvas.io/travel#rideToAirport"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://richcanvas.io/ns#enable"/>
+                                                        <swrl:argument1 rdf:resource="http://richcanvas.io/travel#travelerAtHome"/>
+                                                        <swrl:argument2 rdf:resource="http://richcanvas.io/travel#rideToAirport"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                <swrl:classPredicate rdf:resource="http://richcanvas.io/travel#Traveler"/>
+                                                                <swrl:argument1 rdf:resource="http://richcanvas.io/travel#traveler"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                        <swrl:propertyPredicate rdf:resource="http://richcanvas.io/ns#hasManifestation"/>
+                                                                        <swrl:argument1 rdf:resource="http://richcanvas.io/travel#traveler"/>
+                                                                        <swrl:argument2 rdf:resource="http://richcanvas.io/travel#travelerAtHome"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                        <rdf:first>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                                <swrl:builtin rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/swrlx.owl#makeOWLThing"/>
+                                                                                <swrl:arguments rdf:parseType="Collection">
+                                                                                    <rdf:Description rdf:about="http://richcanvas.io/travel#travelerAtDeparture"/>
+                                                                                    <rdf:Description rdf:about="http://richcanvas.io/travel#traveler"/>
+                                                                                </swrl:arguments>
+                                                                            </rdf:Description>
+                                                                        </rdf:first>
+                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://richcanvas.io/travel#Travel"/>
+                        <swrl:argument1 rdf:resource="http://richcanvas.io/travel#travelerAtDeparture"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://richcanvas.io/ns#hasEffect"/>
+                                <swrl:argument1 rdf:resource="http://richcanvas.io/travel#rideToAirport"/>
+                                <swrl:argument2 rdf:resource="http://richcanvas.io/travel#travelerAtDeparture"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://richcanvas.io/ns#hasManifestation"/>
+                                        <swrl:argument1 rdf:resource="http://richcanvas.io/travel#traveler"/>
+                                        <swrl:argument2 rdf:resource="http://richcanvas.io/travel#travelerAtDeparture"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://richcanvas.io/ns#hasLocation"/>
+                                                <swrl:argument1 rdf:resource="http://richcanvas.io/travel#travelerAtDeparture"/>
+                                                <swrl:argument2 rdf:resource="http://richcanvas.io/travel#departure"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>TravelFromHomeToAirport</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://richcanvas.io/ns#name"/>
+                        <swrl:argument1 rdf:resource="http://richcanvas.io/travel#home"/>
+                        <swrl:argument2>Home</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://richcanvas.io/ns#SpatialFeature"/>
+                                <swrl:argument1 rdf:resource="http://richcanvas.io/travel#home"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://richcanvas.io/travel#Travel"/>
+                                        <swrl:argument1 rdf:resource="http://richcanvas.io/travel#travelerAtHome"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://richcanvas.io/ns#hasLocation"/>
+                                                <swrl:argument1 rdf:resource="http://richcanvas.io/travel#personAtHome"/>
+                                                <swrl:argument2 rdf:resource="http://richcanvas.io/travel#home"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="http://richcanvas.io/travel#Traveler"/>
+                                                        <swrl:argument1 rdf:resource="http://richcanvas.io/travel#traveler"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://richcanvas.io/ns#hasManifestation"/>
+                                                                <swrl:argument1 rdf:resource="http://richcanvas.io/travel#traveler"/>
+                                                                <swrl:argument2 rdf:resource="http://richcanvas.io/travel#travelerAtHome"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                        <swrl:builtin rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/swrlx.owl#makeOWLThing"/>
+                                                                        <swrl:arguments rdf:parseType="Collection">
+                                                                            <rdf:Description rdf:about="http://richcanvas.io/travel#rideToAirport"/>
+                                                                            <rdf:Description rdf:about="http://richcanvas.io/travel#travelerAtHome"/>
+                                                                        </swrl:arguments>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://richcanvas.io/ns#ActivityOccurance"/>
+                        <swrl:argument1 rdf:resource="http://richcanvas.io/travel#rideToAirport"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://richcanvas.io/ns#enable"/>
+                                <swrl:argument1 rdf:resource="http://richcanvas.io/travel#travelerAtHome"/>
+                                <swrl:argument2 rdf:resource="http://richcanvas.io/travel#rideToAirport"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
