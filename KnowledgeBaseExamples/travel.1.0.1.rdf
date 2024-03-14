@@ -192,6 +192,15 @@
     
 
 
+    <!-- http://richcanvas.io/travel#DIAGate32A -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/travel#DIAGate32A">
+        <rdf:type rdf:resource="http://richcanvas.io/travel#AirportGate"/>
+        <ns:name>Gate</ns:name>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://richcanvas.io/travel#DIATerminalArrival -->
 
     <owl:NamedIndividual rdf:about="http://richcanvas.io/travel#DIATerminalArrival">
