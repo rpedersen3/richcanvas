@@ -278,13 +278,7 @@
     <rdf:Description rdf:about="http://richcanvas.io/travel#walkToGateSpec">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
-    <rdf:Description rdf:about="http://richcanvas.io/travel#gate">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
     <rdf:Description rdf:about="http://richcanvas.io/travel#travelerAtTerminal">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://richcanvas.io/travel#terminal">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://richcanvas.io/travel#walkToGate">
@@ -709,8 +703,8 @@
                                     <rdf:Description>
                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
                                         <swrl:propertyPredicate rdf:resource="http://richcanvas.io/ns#name"/>
-                                        <swrl:argument1 rdf:resource="http://richcanvas.io/travel#gate"/>
-                                        <swrl:argument2>Gate</swrl:argument2>
+                                        <swrl:argument1 rdf:resource="http://richcanvas.io/travel#departure"/>
+                                        <swrl:argument2>Departure</swrl:argument2>
                                     </rdf:Description>
                                 </rdf:first>
                                 <rdf:rest>
@@ -720,7 +714,7 @@
                                             <rdf:Description>
                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                                                 <swrl:classPredicate rdf:resource="http://richcanvas.io/ns#SpatialFeature"/>
-                                                <swrl:argument1 rdf:resource="http://richcanvas.io/travel#gate"/>
+                                                <swrl:argument1 rdf:resource="http://richcanvas.io/travel#departure"/>
                                             </rdf:Description>
                                         </rdf:first>
                                         <rdf:rest>
@@ -741,7 +735,7 @@
                                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                                                                 <swrl:propertyPredicate rdf:resource="http://richcanvas.io/ns#hasLocation"/>
                                                                 <swrl:argument1 rdf:resource="http://richcanvas.io/travel#travelerAtTerminal"/>
-                                                                <swrl:argument2 rdf:resource="http://richcanvas.io/travel#terminal"/>
+                                                                <swrl:argument2 rdf:resource="http://richcanvas.io/travel#departure"/>
                                                             </rdf:Description>
                                                         </rdf:first>
                                                         <rdf:rest>
