@@ -88,23 +88,6 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://richcanvas.io/ns#SpacialFeature -->
-
-    <owl:Class rdf:about="http://richcanvas.io/ns#SpacialFeature"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
     // Individuals
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -116,7 +99,7 @@
     <!-- http://richcanvas.io/trip#Gate32A -->
 
     <owl:NamedIndividual rdf:about="http://richcanvas.io/trip#Gate32A">
-        <rdf:type rdf:resource="http://richcanvas.io/ns#SpacialFeature"/>
+        <rdf:type rdf:resource="http://richcanvas.io/travel#AirportGate"/>
         <ns:hasGeometry rdf:resource="http://richcanvas.io/trip#Gate32Location"/>
         <rdfs:label>Gate 32A</rdfs:label>
     </owl:NamedIndividual>
@@ -161,6 +144,15 @@
         <rdf:type rdf:resource="http://richcanvas.io/ns#TimeInterval"/>
         <begin>2024-03-12T10:00:00</begin>
         <end>2024-03-12T10:30:00</end>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/trip#JoeAtHome -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/trip#JoeAtHome">
+        <rdf:type rdf:resource="http://richcanvas.io/travel#Travel"/>
+        <ns:hasLocation rdf:resource="http://richcanvas.io/travel#JoesHome"/>
     </owl:NamedIndividual>
     
 
