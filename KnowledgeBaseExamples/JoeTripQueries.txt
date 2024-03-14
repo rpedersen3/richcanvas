@@ -1,0 +1,12 @@
+PREFIX ns: <http://richcanvas.io/ns#>
+PREFIX trvl: <http://richcanvas.io/travel#>
+
+SELECT ?travel ?activity ?activitySpec ?activitySpecName ?travelName
+WHERE {
+?travel ns:enable ?activity .
+?activity ns:correspondsTo ?activitySpec .
+?activitySpec ns:name ?activitySpecName .
+?travel ns:name ?travelName
+}
+
+

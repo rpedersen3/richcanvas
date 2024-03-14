@@ -33,6 +33,7 @@
     <owl:NamedIndividual rdf:about="http://richcanvas.io/joetrip#JoeAtHome">
         <rdf:type rdf:resource="http://richcanvas.io/travel#Travel"/>
         <ns:hasLocation rdf:resource="http://richcanvas.io/travel#JoesHome"/>
+        <ns:name>travelerAtHome</ns:name>
     </owl:NamedIndividual>
     
 
