@@ -208,6 +208,15 @@
     
 
 
+    <!-- http://richcanvas.io/travel#JoesHome -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/travel#JoesHome">
+        <rdf:type rdf:resource="http://richcanvas.io/travel#Home"/>
+        <ns:name>Home</ns:name>
+    </owl:NamedIndividual>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -232,9 +241,6 @@
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://richcanvas.io/travel#home">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://richcanvas.io/travel#personAtHome">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
     <rdf:Description>
@@ -441,7 +447,7 @@
                                             <rdf:Description>
                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                                                 <swrl:propertyPredicate rdf:resource="http://richcanvas.io/ns#hasLocation"/>
-                                                <swrl:argument1 rdf:resource="http://richcanvas.io/travel#personAtHome"/>
+                                                <swrl:argument1 rdf:resource="http://richcanvas.io/travel#travelerAtHome"/>
                                                 <swrl:argument2 rdf:resource="http://richcanvas.io/travel#home"/>
                                             </rdf:Description>
                                         </rdf:first>
