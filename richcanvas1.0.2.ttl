@@ -258,7 +258,7 @@ rc:hasCorresponding rdf:type owl:ObjectProperty .
 ###  http://richcanvas.io/ns#hasCorrespondingActivity
 rc:hasCorrespondingActivity rdf:type owl:ObjectProperty ;
                             rdfs:subPropertyOf rc:hasCorresponding ;
-                            rdfs:domain rc:PlannedActivity ;
+                            rdfs:domain rc:ActivitySpec ;
                             rdfs:range rc:Activity .
 
 
@@ -1362,7 +1362,8 @@ rc:name rdf:type owl:DatatypeProperty ;
                     rc:Feature ,
                     rc:Organization ,
                     rc:Person ,
-                    rc:PhoneNumber ;
+                    rc:PhoneNumber ,
+                    rc:Specification ;
         rdfs:range xsd:string .
 
 

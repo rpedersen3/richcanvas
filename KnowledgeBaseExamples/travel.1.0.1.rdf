@@ -228,6 +228,24 @@
     
 
 
+    <!-- http://richcanvas.io/travel#RideToAirport -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/travel#RideToAirport">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#ActivitySpec"/>
+        <ns:name>RideToAirport</ns:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/travel#WalkToGate -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/travel#WalkToGate">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#ActivitySpec"/>
+        <ns:name>WalkToGate</ns:name>
+    </owl:NamedIndividual>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
