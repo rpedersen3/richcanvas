@@ -1358,6 +1358,7 @@ rc:lastName rdf:type owl:DatatypeProperty ;
 rc:name rdf:type owl:DatatypeProperty ;
         rdfs:domain rc:Address ,
                     rc:Email ,
+                    rc:Feature ,
                     rc:Organization ,
                     rc:Person ,
                     rc:PhoneNumber ;
