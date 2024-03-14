@@ -10,9 +10,10 @@
      xmlns:swrl="http://www.w3.org/2003/11/swrl#"
      xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:travel="http://richcanvas.io/travel#"
      xmlns:wgs84_pos="http://www.w3.org/2003/01/geo/wgs84_pos#">
     <owl:Ontology rdf:about="http://richcanvas.io/trip">
-        <owl:imports rdf:resource="http://richcanvas.io/ns/1.0.2"/>
+        <owl:imports rdf:resource="http://richcanvas.io/travel"/>
     </owl:Ontology>
     
 
@@ -95,27 +96,9 @@
     
 
 
-    <!-- http://richcanvas.io/trip#PlanePD -->
+    <!-- http://richcanvas.io/ns#SpacialFeature -->
 
-    <owl:Class rdf:about="http://richcanvas.io/trip#PlanePD">
-        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#TimeVaryingConcept"/>
-    </owl:Class>
-    
-
-
-    <!-- http://richcanvas.io/trip#Traveler -->
-
-    <owl:Class rdf:about="http://richcanvas.io/trip#Traveler">
-        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#PersonManifestation"/>
-    </owl:Class>
-    
-
-
-    <!-- http://richcanvas.io/trip#TravelerPD -->
-
-    <owl:Class rdf:about="http://richcanvas.io/trip#TravelerPD">
-        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#PersonPD"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://richcanvas.io/ns#SpacialFeature"/>
     
 
 
@@ -164,7 +147,6 @@
     <!-- http://richcanvas.io/trip#JoeAtGate32A -->
 
     <owl:NamedIndividual rdf:about="http://richcanvas.io/trip#JoeAtGate32A">
-        <rdf:type rdf:resource="http://richcanvas.io/trip#Traveler"/>
         <ns:existsAtInterval rdf:resource="http://richcanvas.io/trip#JoeAtGate32AInterval"/>
         <ns:hasLocation rdf:resource="http://richcanvas.io/trip#Gate32A"/>
         <featureName>Rich</featureName>
@@ -193,16 +175,13 @@
 
     <!-- http://richcanvas.io/trip#JoeTraveler -->
 
-    <owl:NamedIndividual rdf:about="http://richcanvas.io/trip#JoeTraveler">
-        <rdf:type rdf:resource="http://richcanvas.io/trip#TravelerPD"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/trip#JoeTraveler"/>
     
 
 
     <!-- http://richcanvas.io/trip#PlaneABC -->
 
     <owl:NamedIndividual rdf:about="http://richcanvas.io/trip#PlaneABC">
-        <rdf:type rdf:resource="http://richcanvas.io/trip#PlanePD"/>
         <ns:hasManifestation rdf:resource="http://richcanvas.io/trip#PlaneABCAtGate32A"/>
     </owl:NamedIndividual>
     
@@ -218,84 +197,7 @@
 
     <!-- http://richcanvas.io/trip#PlaneXYZ -->
 
-    <owl:NamedIndividual rdf:about="http://richcanvas.io/trip#PlaneXYZ">
-        <rdf:type rdf:resource="http://richcanvas.io/trip#PlanePD"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Rules
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    <rdf:Description rdf:about="http://richcanvas.io/trip#atGate">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://richcanvas.io/trip#person">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
-    <rdf:Description>
-        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment></rdfs:comment>
-        <rdfs:label>create manifest</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://richcanvas.io/trip#Traveler"/>
-                        <swrl:argument1 rdf:resource="http://richcanvas.io/trip#atGate"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://richcanvas.io/trip#TravelerPD"/>
-                                <swrl:argument1 rdf:resource="http://richcanvas.io/trip#person"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                                        <swrl:propertyPredicate rdf:resource="http://richcanvas.io/trip#featureName"/>
-                                        <swrl:argument1 rdf:resource="http://richcanvas.io/trip#atGate"/>
-                                        <swrl:argument2>Joe</swrl:argument2>
-                                    </rdf:Description>
-                                </rdf:first>
-                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://richcanvas.io/ns#isManifestationOf"/>
-                        <swrl:argument1 rdf:resource="http://richcanvas.io/trip#atGate"/>
-                        <swrl:argument2 rdf:resource="http://richcanvas.io/trip#person"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/trip#PlaneXYZ"/>
 </rdf:RDF>
 
 
