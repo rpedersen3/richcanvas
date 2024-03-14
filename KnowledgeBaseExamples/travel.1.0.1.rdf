@@ -196,6 +196,7 @@
 
     <owl:NamedIndividual rdf:about="http://richcanvas.io/travel#DIATerminalArrival">
         <rdf:type rdf:resource="http://richcanvas.io/travel#AirportTerminalArrival"/>
+        <ns:name>Arrival</ns:name>
     </owl:NamedIndividual>
     
 
@@ -204,6 +205,7 @@
 
     <owl:NamedIndividual rdf:about="http://richcanvas.io/travel#DIATerminalDeparture">
         <rdf:type rdf:resource="http://richcanvas.io/travel#AirportTerminalDeparture"/>
+        <ns:name>Departure</ns:name>
     </owl:NamedIndividual>
     
 
