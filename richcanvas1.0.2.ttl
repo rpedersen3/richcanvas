@@ -1356,7 +1356,8 @@ rc:lastName rdf:type owl:DatatypeProperty ;
 
 ###  http://richcanvas.io/ns#name
 rc:name rdf:type owl:DatatypeProperty ;
-        rdfs:domain rc:Address ,
+        rdfs:domain rc:Activity ,
+                    rc:Address ,
                     rc:Email ,
                     rc:Feature ,
                     rc:Organization ,
