@@ -20,6 +20,35 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://richcanvas.io/joetrip#JoeAtHome -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/joetrip#JoeAtHome">
+        <rdf:type rdf:resource="http://richcanvas.io/travel#Travel"/>
+        <ns:hasLocation rdf:resource="http://richcanvas.io/travel#JoesHome"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/joetrip#JoeTraveler -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/joetrip#JoeTraveler">
+        <rdf:type rdf:resource="http://richcanvas.io/travel#Traveler"/>
+        <ns:hasManifestation rdf:resource="http://richcanvas.io/joetrip#JoeAtHome"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Rules
     //
     ///////////////////////////////////////////////////////////////////////////////////////
