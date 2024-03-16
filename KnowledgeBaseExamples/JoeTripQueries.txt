@@ -1,7 +1,7 @@
 PREFIX ns: <http://richcanvas.io/ns#>
 PREFIX trvl: <http://richcanvas.io/travel#>
 
-SELECT ?travel ?activity ?activitySpec ?activitySpecName ?travelName
+SELECT ?travelName ?activitySpecName
 WHERE {
 ?travel ns:enable ?activity .
 ?activity ns:correspondsTo ?activitySpec .
@@ -9,4 +9,13 @@ WHERE {
 ?travel ns:name ?travelName
 }
 
+
+PREFIX ns: <http://richcanvas.io/ns#>
+PREFIX trvl: <http://richcanvas.io/travel#>
+
+SELECT ?traveler ?travelName
+WHERE {
+?traveler ns:hasManifestation ?travel 
+?travel ns:name ?travelName
+}
 
