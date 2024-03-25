@@ -147,10 +147,10 @@
     
 
 
-    <!-- http://richcanvas.io/family#ChildRelation -->
+    <!-- http://richcanvas.io/family#ChildRelative -->
 
-    <owl:NamedIndividual rdf:about="http://richcanvas.io/family#ChildRelation">
-        <rdf:type rdf:resource="http://richcanvas.io/ns#RelationRole"/>
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/family#ChildRelative">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#RelativeRole"/>
     </owl:NamedIndividual>
     
 
@@ -159,27 +159,33 @@
 
     <owl:NamedIndividual rdf:about="http://richcanvas.io/family#ChildRelationship">
         <rdf:type rdf:resource="http://richcanvas.io/ns#FamilialRelationshipSpec"/>
-        <rc:hasObjectRole rdf:resource="http://richcanvas.io/family#ParentRelation"/>
-        <rc:hasSubjectRole rdf:resource="http://richcanvas.io/family#ChildRelation"/>
+        <rc:hasObjectRole rdf:resource="http://richcanvas.io/family#ParentRelative"/>
+        <rc:hasSubjectRole rdf:resource="http://richcanvas.io/family#ChildRelative"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://richcanvas.io/family#FamilyChild -->
 
-    <owl:NamedIndividual rdf:about="http://richcanvas.io/family#FamilyChild"/>
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/family#FamilyChild">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#FamilyRole"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://richcanvas.io/family#FamilyGrandchild -->
 
-    <owl:NamedIndividual rdf:about="http://richcanvas.io/family#FamilyGrandchild"/>
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/family#FamilyGrandchild">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#FamilyRole"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://richcanvas.io/family#FamilyParent -->
 
-    <owl:NamedIndividual rdf:about="http://richcanvas.io/family#FamilyParent"/>
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/family#FamilyParent">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#FamilyRole"/>
+    </owl:NamedIndividual>
     
 
 
@@ -245,10 +251,10 @@
     
 
 
-    <!-- http://richcanvas.io/family#ParentRelation -->
+    <!-- http://richcanvas.io/family#ParentRelative -->
 
-    <owl:NamedIndividual rdf:about="http://richcanvas.io/family#ParentRelation">
-        <rdf:type rdf:resource="http://richcanvas.io/ns#RelationRole"/>
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/family#ParentRelative">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#RelativeRole"/>
     </owl:NamedIndividual>
     
 
@@ -257,8 +263,8 @@
 
     <owl:NamedIndividual rdf:about="http://richcanvas.io/family#ParentRelationship">
         <rdf:type rdf:resource="http://richcanvas.io/ns#FamilialRelationshipSpec"/>
-        <rc:hasObjectRole rdf:resource="http://richcanvas.io/family#ChildRelation"/>
-        <rc:hasSubjectRole rdf:resource="http://richcanvas.io/family#ParentRelation"/>
+        <rc:hasObjectRole rdf:resource="http://richcanvas.io/family#ChildRelative"/>
+        <rc:hasSubjectRole rdf:resource="http://richcanvas.io/family#ParentRelative"/>
     </owl:NamedIndividual>
     
 
@@ -298,10 +304,10 @@
     
 
 
-    <!-- http://richcanvas.io/family#SpouseRelation -->
+    <!-- http://richcanvas.io/family#SpouseRelative -->
 
-    <owl:NamedIndividual rdf:about="http://richcanvas.io/family#SpouseRelation">
-        <rdf:type rdf:resource="http://richcanvas.io/ns#RelationRole"/>
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/family#SpouseRelative">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#RelativeRole"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 
