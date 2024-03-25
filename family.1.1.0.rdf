@@ -165,6 +165,12 @@
     
 
 
+    <!-- http://richcanvas.io/family#ExtendedFamily -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/family#ExtendedFamily"/>
+    
+
+
     <!-- http://richcanvas.io/family#FamilyChild -->
 
     <owl:NamedIndividual rdf:about="http://richcanvas.io/family#FamilyChild">
@@ -235,7 +241,6 @@
     <!-- http://richcanvas.io/family#NuclearFamilyChild -->
 
     <owl:NamedIndividual rdf:about="http://richcanvas.io/family#NuclearFamilyChild">
-        <rc:hasObjectRole rdf:resource="http://richcanvas.io/family#NuclearFamily"/>
         <rc:hasSubjectRole rdf:resource="http://richcanvas.io/family#FamilyChild"/>
     </owl:NamedIndividual>
     
@@ -245,7 +250,6 @@
 
     <owl:NamedIndividual rdf:about="http://richcanvas.io/family#NuclearFamilyParent">
         <rdf:type rdf:resource="http://richcanvas.io/ns#FamilialMembershipSpec"/>
-        <rc:hasObjectRole rdf:resource="http://richcanvas.io/family#NuclearFamily"/>
         <rc:hasSubjectRole rdf:resource="http://richcanvas.io/family#FamilyParent"/>
     </owl:NamedIndividual>
     
@@ -292,14 +296,18 @@
 
     <!-- http://richcanvas.io/family#SmithExtendedFamily -->
 
-    <owl:NamedIndividual rdf:about="http://richcanvas.io/family#SmithExtendedFamily"/>
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/family#SmithExtendedFamily">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#Family"/>
+        <rc:playsRole rdf:resource="http://richcanvas.io/family#ExtendedFamily"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://richcanvas.io/family#SmithFamily -->
 
     <owl:NamedIndividual rdf:about="http://richcanvas.io/family#SmithFamily">
-        <rdf:type rdf:resource="http://richcanvas.io/ns#NuclearFamily"/>
+        <rdf:type rdf:resource="http://richcanvas.io/ns#Family"/>
+        <rc:playsRole rdf:resource="http://richcanvas.io/family#NuclearFamily"/>
     </owl:NamedIndividual>
     
 

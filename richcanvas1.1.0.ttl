@@ -1476,12 +1476,6 @@ rc:Entity rdf:type owl:Class ;
           rc:adaptedFrom "W3 prov:Entity" .
 
 
-###  http://richcanvas.io/ns#ExtendedFamily
-rc:ExtendedFamily rdf:type owl:Class ;
-                  rdfs:subClassOf rc:Family ;
-                  rc:comment "A family that extends beyond the nuclear family, including grandparents, aunts, uncles, and other relatives, who all live nearby or in one household." .
-
-
 ###  http://richcanvas.io/ns#FamilialMembership
 rc:FamilialMembership rdf:type owl:Class ;
                       rdfs:subClassOf rc:Membership .
@@ -1734,12 +1728,6 @@ rc:MultiVariable rdf:type owl:Class ;
 ###  http://richcanvas.io/ns#NonTerminalState
 rc:NonTerminalState rdf:type owl:Class ;
                     rdfs:subClassOf rc:State .
-
-
-###  http://richcanvas.io/ns#NuclearFamily
-rc:NuclearFamily rdf:type owl:Class ;
-                 rdfs:subClassOf rc:Family ;
-                 rc:comment "A couple and their dependent children, regarded as a basic social unit." .
 
 
 ###  http://richcanvas.io/ns#Objective
