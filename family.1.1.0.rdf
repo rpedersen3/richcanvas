@@ -16,6 +16,129 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://richcanvas.io/family#isAuntOf -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/family#isAuntOf">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#isRelativeOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/family#isBrotherOf -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/family#isBrotherOf">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#isRelativeOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/family#isChildOf -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/family#isChildOf">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#isRelativeOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/family#isCousinOf -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/family#isCousinOf">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#isRelativeOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/family#isDaughterInLawOf -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/family#isDaughterInLawOf">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#isRelativeOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/family#isDaughterOf -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/family#isDaughterOf">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#isRelativeOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/family#isFatherInLawOf -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/family#isFatherInLawOf">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#isRelativeOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/family#isNiceOf -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/family#isNiceOf">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#isRelativeOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/family#isParentOf -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/family#isParentOf">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#isRelativeOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/family#isSisterOf -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/family#isSisterOf">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#isRelativeOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/family#isSonInLawOf -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/family#isSonInLawOf">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#isRelativeOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/family#isSpouseOf -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/family#isSpouseOf">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#isRelativeOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/family#isUncleOf -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/family#isUncleOf">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#isRelativeOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/family#isWifeOf -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/family#isWifeOf">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#isRelativeOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Individuals
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -28,6 +151,16 @@
 
     <owl:NamedIndividual rdf:about="http://richcanvas.io/family#ChildRelation">
         <rdf:type rdf:resource="http://richcanvas.io/ns#RelationRole"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/family#ChildRelationship -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/family#ChildRelationship">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#FamilialRelationshipSpec"/>
+        <rc:hasObjectRole rdf:resource="http://richcanvas.io/family#ParentRelation"/>
+        <rc:hasSubjectRole rdf:resource="http://richcanvas.io/family#ChildRelation"/>
     </owl:NamedIndividual>
     
 
@@ -50,11 +183,37 @@
     
 
 
+    <!-- http://richcanvas.io/family#JoeNuclearFamilyParent -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/family#JoeNuclearFamilyParent">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#FamilialMembership"/>
+        <rc:correspondsToSituationalSpec rdf:resource="http://richcanvas.io/family#NuclearFamilyParent"/>
+        <rc:hasObject rdf:resource="http://richcanvas.io/family#SmithFamily"/>
+        <rc:hasSubject rdf:resource="http://richcanvas.io/family#JoeParent"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://richcanvas.io/family#JoeParent -->
 
     <owl:NamedIndividual rdf:about="http://richcanvas.io/family#JoeParent">
         <rdf:type rdf:resource="http://richcanvas.io/ns#Person"/>
+        <isParentOf rdf:resource="http://richcanvas.io/family#SamChild"/>
+        <rc:familialMembership rdf:resource="http://richcanvas.io/family#JoeNuclearFamilyParent"/>
+        <rc:familialRelationship rdf:resource="http://richcanvas.io/family#JoeParentOfSam"/>
+        <rc:isMemberOfFamily rdf:resource="http://richcanvas.io/family#SmithFamily"/>
         <rc:playsRole rdf:resource="http://richcanvas.io/family#FamilyParent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/family#JoeParentOfSam -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/family#JoeParentOfSam">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#FamilialRelationship"/>
+        <rc:correspondsToSituationalSpec rdf:resource="http://richcanvas.io/family#ParentRelationship"/>
+        <rc:hasObject rdf:resource="http://richcanvas.io/family#SamChild"/>
+        <rc:hasSubject rdf:resource="http://richcanvas.io/family#JoeParent"/>
     </owl:NamedIndividual>
     
 
@@ -63,6 +222,15 @@
 
     <owl:NamedIndividual rdf:about="http://richcanvas.io/family#NuclearFamily">
         <rdf:type rdf:resource="http://richcanvas.io/ns#FamilyBearingOrgRole"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/family#NuclearFamilyChild -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/family#NuclearFamilyChild">
+        <rc:hasObjectRole rdf:resource="http://richcanvas.io/family#NuclearFamily"/>
+        <rc:hasSubjectRole rdf:resource="http://richcanvas.io/family#FamilyChild"/>
     </owl:NamedIndividual>
     
 
@@ -82,6 +250,43 @@
     <owl:NamedIndividual rdf:about="http://richcanvas.io/family#ParentRelation">
         <rdf:type rdf:resource="http://richcanvas.io/ns#RelationRole"/>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/family#ParentRelationship -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/family#ParentRelationship">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#FamilialRelationshipSpec"/>
+        <rc:hasObjectRole rdf:resource="http://richcanvas.io/family#ChildRelation"/>
+        <rc:hasSubjectRole rdf:resource="http://richcanvas.io/family#ParentRelation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/family#SamChild -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/family#SamChild">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#Person"/>
+        <isChildOf rdf:resource="http://richcanvas.io/family#JoeParent"/>
+        <rc:playsRole rdf:resource="http://richcanvas.io/family#FamilyChild"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/family#SamChildOfJoe -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/family#SamChildOfJoe">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#FamilialRelationship"/>
+        <rc:correspondsToSituationalSpec rdf:resource="http://richcanvas.io/family#ChildRelationship"/>
+        <rc:hasObject rdf:resource="http://richcanvas.io/family#JoeParent"/>
+        <rc:hasSubject rdf:resource="http://richcanvas.io/family#SamChild"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/family#SmithExtendedFamily -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/family#SmithExtendedFamily"/>
     
 
 
