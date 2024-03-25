@@ -1898,11 +1898,6 @@ rc:Recipe rdf:type owl:Class ;
           rdfs:subClassOf rc:ProcessSpec .
 
 
-###  http://richcanvas.io/ns#RelationRole
-rc:RelationRole rdf:type owl:Class ;
-                rdfs:subClassOf rc:RelationshipRole .
-
-
 ###  http://richcanvas.io/ns#Relationship
 rc:Relationship rdf:type owl:Class ;
                 rdfs:subClassOf rc:Situation ,
@@ -1917,6 +1912,11 @@ rc:RelationshipRole rdf:type owl:Class ;
 ###  http://richcanvas.io/ns#RelationshipSpec
 rc:RelationshipSpec rdf:type owl:Class ;
                     rdfs:subClassOf rc:SituationSpec .
+
+
+###  http://richcanvas.io/ns#RelativeRole
+rc:RelativeRole rdf:type owl:Class ;
+                rdfs:subClassOf rc:RelationshipRole .
 
 
 ###  http://richcanvas.io/ns#ResponsibleAgent
