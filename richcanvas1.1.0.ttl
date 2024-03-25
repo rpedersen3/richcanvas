@@ -1581,6 +1581,11 @@ rc:AudienceMembership rdf:type owl:Class ;
                       rdfs:subClassOf rc:Membership .
 
 
+###  http://richcanvas.io/ns#AudienceMembershipSpec
+rc:AudienceMembershipSpec rdf:type owl:Class ;
+                          rdfs:subClassOf rc:MembershipSpec .
+
+
 ###  http://richcanvas.io/ns#Behavior
 rc:Behavior rdf:type owl:Class ;
             rc:comment "Refers to the actions, reactions, or conduct of a person or organization in response to internal or external stimuli" .
@@ -1681,9 +1686,19 @@ rc:FamilialMembership rdf:type owl:Class ;
                       rdfs:subClassOf rc:Membership .
 
 
+###  http://richcanvas.io/ns#FamilialMembershipSpec
+rc:FamilialMembershipSpec rdf:type owl:Class ;
+                          rdfs:subClassOf rc:MembershipSpec .
+
+
 ###  http://richcanvas.io/ns#FamilialRelationship
 rc:FamilialRelationship rdf:type owl:Class ;
                         rdfs:subClassOf rc:PersonalRelationship .
+
+
+###  http://richcanvas.io/ns#FamilialRelationshipSpec
+rc:FamilialRelationshipSpec rdf:type owl:Class ;
+                            rdfs:subClassOf rc:PersonalRelationshipSpec .
 
 
 ###  http://richcanvas.io/ns#Family
@@ -1725,6 +1740,11 @@ rc:FriendsMembership rdf:type owl:Class ;
                      rdfs:subClassOf rc:Membership .
 
 
+###  http://richcanvas.io/ns#FriendsMembershipSpec
+rc:FriendsMembershipSpec rdf:type owl:Class ;
+                         rdfs:subClassOf rc:MembershipSpec .
+
+
 ###  http://richcanvas.io/ns#Friendship
 rc:Friendship rdf:type owl:Class ;
               rdfs:subClassOf rc:PersonalRelationship .
@@ -1733,6 +1753,11 @@ rc:Friendship rdf:type owl:Class ;
 ###  http://richcanvas.io/ns#FriendshipClassification
 rc:FriendshipClassification rdf:type owl:Class ;
                             rdfs:subClassOf rc:Classification .
+
+
+###  http://richcanvas.io/ns#FriendshipSpec
+rc:FriendshipSpec rdf:type owl:Class ;
+                  rdfs:subClassOf rc:PersonalRelationshipSpec .
 
 
 ###  http://richcanvas.io/ns#GenderClassification
@@ -1867,6 +1892,11 @@ rc:Mentorship rdf:type owl:Class ;
               rdfs:subClassOf rc:PersonalRelationship .
 
 
+###  http://richcanvas.io/ns#MentorshipSpec
+rc:MentorshipSpec rdf:type owl:Class ;
+                  rdfs:subClassOf rc:PersonalRelationshipSpec .
+
+
 ###  http://richcanvas.io/ns#Mission
 rc:Mission rdf:type owl:Class ;
            rdfs:subClassOf rc:Purpose ;
@@ -1925,6 +1955,11 @@ rc:OrganizationClassification rdf:type owl:Class ;
                               rdfs:subClassOf rc:Classification .
 
 
+###  http://richcanvas.io/ns#OrganizationalMembershipSpec
+rc:OrganizationalMembershipSpec rdf:type owl:Class ;
+                                rdfs:subClassOf rc:RelationshipSpec .
+
+
 ###  http://richcanvas.io/ns#OrganizationalRelationship
 rc:OrganizationalRelationship rdf:type owl:Class ;
                               rdfs:subClassOf rc:Relationship .
@@ -1977,6 +2012,11 @@ rc:PersonalContext rdf:type owl:Class ;
 ###  http://richcanvas.io/ns#PersonalRelationship
 rc:PersonalRelationship rdf:type owl:Class ;
                         rdfs:subClassOf rc:Relationship .
+
+
+###  http://richcanvas.io/ns#PersonalRelationshipSpec
+rc:PersonalRelationshipSpec rdf:type owl:Class ;
+                            rdfs:subClassOf rc:RelationshipSpec .
 
 
 ###  http://richcanvas.io/ns#PhoneNumber
