@@ -153,6 +153,13 @@ rc:familialRelationship rdf:type owl:ObjectProperty ;
                         rdfs:range rc:FamilialRelationship .
 
 
+###  http://richcanvas.io/ns#friendship
+rc:friendship rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf rc:relationship ;
+              rdfs:domain rc:Person ;
+              rdfs:range rc:Friendship .
+
+
 ###  http://richcanvas.io/ns#generated
 rc:generated rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf rc:influenced ;
@@ -2141,16 +2148,6 @@ rc:WorkflowProcess rdf:type owl:Class ;
 #################################################################
 #    Individuals
 #################################################################
-
-###  http://richcanvas.io/ns#BestFriend
-rc:BestFriend rdf:type owl:NamedIndividual ,
-                       rc:FriendshipClassification .
-
-
-###  http://richcanvas.io/ns#CloseFriend
-rc:CloseFriend rdf:type owl:NamedIndividual ,
-                        rc:FriendshipClassification .
-
 
 ###  http://richcanvas.io/ns#Female
 rc:Female rdf:type owl:NamedIndividual ,
