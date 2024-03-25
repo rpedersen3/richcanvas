@@ -40,6 +40,21 @@
     
 
 
+    <!-- http://richcanvas.io/friends#FriendsMember -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/friends#FriendsMember"/>
+    
+
+
+    <!-- http://richcanvas.io/friends#FriendsMembership -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/friends#FriendsMembership">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#FriendsMembershipSpec"/>
+        <rc:hasObjectRole rdf:resource="http://richcanvas.io/friends#FriendsBearingOrg"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://richcanvas.io/friends#Friendship -->
 
     <owl:NamedIndividual rdf:about="http://richcanvas.io/friends#Friendship">
@@ -50,20 +65,20 @@
     
 
 
-    <!-- http://richcanvas.io/friends#JaneFriend -->
+    <!-- http://richcanvas.io/friends#Jane -->
 
-    <owl:NamedIndividual rdf:about="http://richcanvas.io/friends#JaneFriend">
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/friends#Jane">
         <rdf:type rdf:resource="http://richcanvas.io/ns#Person"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://richcanvas.io/friends#JoeFriend -->
+    <!-- http://richcanvas.io/friends#Joe -->
 
-    <owl:NamedIndividual rdf:about="http://richcanvas.io/friends#JoeFriend">
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/friends#Joe">
         <rdf:type rdf:resource="http://richcanvas.io/ns#Person"/>
         <rc:friendship rdf:resource="http://richcanvas.io/friends#JoeJaneFriendship"/>
-        <rc:isFriendOf rdf:resource="http://richcanvas.io/friends#JaneFriend"/>
+        <rc:isFriendOf rdf:resource="http://richcanvas.io/friends#Jane"/>
         <rc:playsRole rdf:resource="http://richcanvas.io/friends#Friend"/>
     </owl:NamedIndividual>
     
@@ -74,8 +89,8 @@
     <owl:NamedIndividual rdf:about="http://richcanvas.io/friends#JoeJaneFriendship">
         <rdf:type rdf:resource="http://richcanvas.io/ns#Friendship"/>
         <rc:correspondsToSpec rdf:resource="http://richcanvas.io/friends#Friendship"/>
-        <rc:objectOf rdf:resource="http://richcanvas.io/friends#JaneFriend"/>
-        <rc:subjectOf rdf:resource="http://richcanvas.io/friends#JoeFriend"/>
+        <rc:objectOf rdf:resource="http://richcanvas.io/friends#Jane"/>
+        <rc:subjectOf rdf:resource="http://richcanvas.io/friends#Joe"/>
     </owl:NamedIndividual>
     
 
