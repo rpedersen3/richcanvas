@@ -860,6 +860,11 @@ rc:isMemberOfFamily rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf rc:isMemberOf .
 
 
+###  http://richcanvas.io/ns#isMemberOfFriends
+rc:isMemberOfFriends rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf rc:isMemberOf .
+
+
 ###  http://richcanvas.io/ns#isNotMemberOf
 rc:isNotMemberOf rdf:type owl:ObjectProperty .
 

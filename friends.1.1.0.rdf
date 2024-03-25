@@ -42,7 +42,9 @@
 
     <!-- http://richcanvas.io/friends#FriendsMember -->
 
-    <owl:NamedIndividual rdf:about="http://richcanvas.io/friends#FriendsMember"/>
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/friends#FriendsMember">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#FriendsMemberRole"/>
+    </owl:NamedIndividual>
     
 
 
@@ -51,6 +53,7 @@
     <owl:NamedIndividual rdf:about="http://richcanvas.io/friends#FriendsMembership">
         <rdf:type rdf:resource="http://richcanvas.io/ns#FriendsMembershipSpec"/>
         <rc:hasObjectRole rdf:resource="http://richcanvas.io/friends#FriendsBearingOrg"/>
+        <rc:hasSubjectRole rdf:resource="http://richcanvas.io/friends#FriendsMember"/>
     </owl:NamedIndividual>
     
 
@@ -90,6 +93,17 @@
         <rdf:type rdf:resource="http://richcanvas.io/ns#Friendship"/>
         <rc:correspondsToSpec rdf:resource="http://richcanvas.io/friends#Friendship"/>
         <rc:objectOf rdf:resource="http://richcanvas.io/friends#Jane"/>
+        <rc:subjectOf rdf:resource="http://richcanvas.io/friends#Joe"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/friends#JoeMembershipInLunchBunch -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/friends#JoeMembershipInLunchBunch">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#FriendsMembership"/>
+        <rc:correspondsToSituationalSpec rdf:resource="http://richcanvas.io/friends#FriendsMembership"/>
+        <rc:objectOf rdf:resource="http://richcanvas.io/friends#LunchBunchFriends"/>
         <rc:subjectOf rdf:resource="http://richcanvas.io/friends#Joe"/>
     </owl:NamedIndividual>
     

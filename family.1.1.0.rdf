@@ -173,21 +173,25 @@
 
     <!-- http://richcanvas.io/family#FamilyChild -->
 
-    <owl:NamedIndividual rdf:about="http://richcanvas.io/family#FamilyChild"/>
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/family#FamilyChild">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#FamilyMemberRole"/>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://richcanvas.io/family#FamilyGrandchild -->
 
     <owl:NamedIndividual rdf:about="http://richcanvas.io/family#FamilyGrandchild">
-        <rdf:type rdf:resource="http://richcanvas.io/ns#FamilyRole"/>
+        <rdf:type rdf:resource="http://richcanvas.io/ns#FamilyMemberRole"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://richcanvas.io/family#FamilyParent -->
 
-    <owl:NamedIndividual rdf:about="http://richcanvas.io/family#FamilyParent"/>
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/family#FamilyParent">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#FamilyMemberRole"/>
+    </owl:NamedIndividual>
     
 
 
