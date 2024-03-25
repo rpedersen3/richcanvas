@@ -280,6 +280,8 @@
     <owl:NamedIndividual rdf:about="http://richcanvas.io/family#Sammy">
         <rdf:type rdf:resource="http://richcanvas.io/ns#Person"/>
         <isChildOf rdf:resource="http://richcanvas.io/family#Joe"/>
+        <rc:familialRelationship rdf:resource="http://richcanvas.io/family#SammyNuclearFamilyChild"/>
+        <rc:isMemberOfFamily rdf:resource="http://richcanvas.io/family#SmithFamily"/>
         <rc:playsRole rdf:resource="http://richcanvas.io/family#FamilyChild"/>
     </owl:NamedIndividual>
     
@@ -291,6 +293,16 @@
         <rdf:type rdf:resource="http://richcanvas.io/ns#FamilialRelationship"/>
         <rc:correspondsToSituationalSpec rdf:resource="http://richcanvas.io/family#ChildRelationship"/>
         <rc:hasObject rdf:resource="http://richcanvas.io/family#Joe"/>
+        <rc:hasSubject rdf:resource="http://richcanvas.io/family#Sammy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/family#SammyNuclearFamilyChild -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/family#SammyNuclearFamilyChild">
+        <rc:correspondsToSituationalSpec rdf:resource="http://richcanvas.io/family#FamilyChild"/>
+        <rc:hasObject rdf:resource="http://richcanvas.io/family#SmithFamily"/>
         <rc:hasSubject rdf:resource="http://richcanvas.io/family#Sammy"/>
     </owl:NamedIndividual>
     
