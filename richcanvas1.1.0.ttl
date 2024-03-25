@@ -78,17 +78,9 @@ rc:contains rdf:type owl:ObjectProperty ;
 rc:correspondsTo rdf:type owl:ObjectProperty .
 
 
-###  http://richcanvas.io/ns#correspondsToActivitySpec
-rc:correspondsToActivitySpec rdf:type owl:ObjectProperty ;
-                             rdfs:subPropertyOf rc:correspondsTo ;
-                             rdfs:domain rc:Activity ,
-                                         rc:ActivityTrace ;
-                             rdfs:range rc:ActivitySpec .
-
-
 ###  http://richcanvas.io/ns#correspondsToCommunicationSpec
 rc:correspondsToCommunicationSpec rdf:type owl:ObjectProperty ;
-                                  rdfs:subPropertyOf rc:correspondsTo ;
+                                  rdfs:subPropertyOf rc:correspondsToSituationalSpec ;
                                   rdfs:domain rc:Communication ;
                                   rdfs:range rc:CommunicationSpec .
 
@@ -96,6 +88,19 @@ rc:correspondsToCommunicationSpec rdf:type owl:ObjectProperty ;
 ###  http://richcanvas.io/ns#correspondsToPlan
 rc:correspondsToPlan rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf rc:correspondsTo .
+
+
+###  http://richcanvas.io/ns#correspondsToSituationalSpec
+rc:correspondsToSituationalSpec rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf rc:correspondsToSpec ;
+                                rdfs:domain rc:Situation ;
+                                rdfs:range rc:SituationSpec .
+
+
+###  http://richcanvas.io/ns#correspondsToSpec
+rc:correspondsToSpec rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf rc:correspondsTo ;
+                     rdfs:range rc:Specification .
 
 
 ###  http://richcanvas.io/ns#correspondsToVariable
@@ -132,6 +137,20 @@ rc:existAtInstant rdf:type owl:ObjectProperty ;
 rc:existsAtInterval rdf:type owl:ObjectProperty ;
                     rdfs:domain rc:Manifestation ;
                     rdfs:range rc:TimeInterval .
+
+
+###  http://richcanvas.io/ns#familialMembership
+rc:familialMembership rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf rc:membership ;
+                      rdfs:domain rc:Person ;
+                      rdfs:range rc:FamilialMembership .
+
+
+###  http://richcanvas.io/ns#familialRelationship
+rc:familialRelationship rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf rc:relationship ;
+                        rdfs:domain rc:Person ;
+                        rdfs:range rc:FamilialRelationship .
 
 
 ###  http://richcanvas.io/ns#generated
@@ -346,14 +365,6 @@ rc:hasFamilyMembers rdf:type owl:ObjectProperty ;
                     rdfs:range rc:FamilyMembers .
 
 
-###  http://richcanvas.io/ns#hasFamilyRole
-rc:hasFamilyRole rdf:type owl:ObjectProperty ;
-                 rdfs:subPropertyOf rc:hasMembershipRole ;
-                 rdfs:domain rc:FamilialMembership ,
-                             rc:FamilialRelationship ;
-                 rdfs:range rc:FamilyRole .
-
-
 ###  http://richcanvas.io/ns#hasFatherInLaw
 rc:hasFatherInLaw rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf rc:hasRelative .
@@ -511,12 +522,6 @@ rc:hasMembers rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf rc:hasCollection ;
               rdfs:domain rc:Organization ;
               rdfs:range rc:Members .
-
-
-###  http://richcanvas.io/ns#hasMembershipRole
-rc:hasMembershipRole rdf:type owl:ObjectProperty ;
-                     rdfs:domain rc:Membership ;
-                     rdfs:range rc:MembershipRole .
 
 
 ###  http://richcanvas.io/ns#hasMission
@@ -741,10 +746,7 @@ rc:hasSubOrganization rdf:type owl:ObjectProperty ;
 
 ###  http://richcanvas.io/ns#hasSubject
 rc:hasSubject rdf:type owl:ObjectProperty ;
-              rdfs:domain rc:Situation ;
-              rdfs:range rc:Activity ,
-                         rc:Agent ,
-                         rc:Entity .
+              rdfs:domain rc:Situation .
 
 
 ###  http://richcanvas.io/ns#hasSubjectRole
@@ -1187,6 +1189,12 @@ rc:isWifeOf rdf:type owl:ObjectProperty ;
 rc:manifestationOf rdf:type owl:ObjectProperty .
 
 
+###  http://richcanvas.io/ns#membership
+rc:membership rdf:type owl:ObjectProperty ;
+              rdfs:domain rc:Person ;
+              rdfs:range rc:Membership .
+
+
 ###  http://richcanvas.io/ns#objectOf
 rc:objectOf rdf:type owl:ObjectProperty ;
             rdfs:domain rc:Situation ;
@@ -1268,6 +1276,12 @@ rc:qualifiedRelationship rdf:type owl:ObjectProperty ;
                          rdfs:subPropertyOf rc:qualifiedInfluenceTrace ;
                          rdfs:domain rc:Agent ;
                          rdfs:range rc:Relationship .
+
+
+###  http://richcanvas.io/ns#relationship
+rc:relationship rdf:type owl:ObjectProperty ;
+                rdfs:domain rc:Person ;
+                rdfs:range rc:Relationship .
 
 
 ###  http://richcanvas.io/ns#relationshipWith

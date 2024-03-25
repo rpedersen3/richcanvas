@@ -61,7 +61,7 @@
     <!-- http://richcanvas.io/family#NuclearFamilyParent -->
 
     <owl:NamedIndividual rdf:about="http://richcanvas.io/family#NuclearFamilyParent">
-        <rdf:type rdf:resource="http://richcanvas.io/ns#FamilialMembership"/>
+        <rc:hasSubjectRole rdf:resource="http://richcanvas.io/family#NuclearFamily"/>
     </owl:NamedIndividual>
     
 
