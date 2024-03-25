@@ -1663,6 +1663,11 @@ rc:Family rdf:type owl:Class ;
           rdfs:subClassOf rc:Organization .
 
 
+###  http://richcanvas.io/ns#FamilyBearingOrgRole
+rc:FamilyBearingOrgRole rdf:type owl:Class ;
+                        rdfs:subClassOf rc:MemberBearingOrgRole .
+
+
 ###  http://richcanvas.io/ns#FamilyMembers
 rc:FamilyMembers rdf:type owl:Class ;
                  rdfs:subClassOf rc:Group .
@@ -1670,7 +1675,7 @@ rc:FamilyMembers rdf:type owl:Class ;
 
 ###  http://richcanvas.io/ns#FamilyRole
 rc:FamilyRole rdf:type owl:Class ;
-              rdfs:subClassOf rc:MembershipRole .
+              rdfs:subClassOf rc:MemberRole .
 
 
 ###  http://richcanvas.io/ns#Feature
@@ -1793,6 +1798,16 @@ rc:Itinerary rdf:type owl:Class ;
 
 ###  http://richcanvas.io/ns#Manifestation
 rc:Manifestation rdf:type owl:Class .
+
+
+###  http://richcanvas.io/ns#MemberBearingOrgRole
+rc:MemberBearingOrgRole rdf:type owl:Class ;
+                        rdfs:subClassOf rc:MembershipRole .
+
+
+###  http://richcanvas.io/ns#MemberRole
+rc:MemberRole rdf:type owl:Class ;
+              rdfs:subClassOf rc:MembershipRole .
 
 
 ###  http://richcanvas.io/ns#Members

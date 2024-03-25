@@ -10,6 +10,65 @@
     <owl:Ontology rdf:about="http://richcanvas.io/family">
         <owl:imports rdf:resource="http://richcanvas.io/ns/1.1.0"/>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://richcanvas.io/family#ChildRelation -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/family#ChildRelation">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#RelationRole"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/family#FamilyChild -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/family#FamilyChild"/>
+    
+
+
+    <!-- http://richcanvas.io/family#FamilyGrandchild -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/family#FamilyGrandchild"/>
+    
+
+
+    <!-- http://richcanvas.io/family#FamilyParent -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/family#FamilyParent"/>
+    
+
+
+    <!-- http://richcanvas.io/family#NuclearFamily -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/family#NuclearFamily"/>
+    
+
+
+    <!-- http://richcanvas.io/family#ParentRelation -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/family#ParentRelation">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#RelationRole"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/family#SpouseRelation -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/family#SpouseRelation">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#RelationRole"/>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
