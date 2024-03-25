@@ -72,6 +72,19 @@
 
     <owl:NamedIndividual rdf:about="http://richcanvas.io/friends#Jane">
         <rdf:type rdf:resource="http://richcanvas.io/ns#Person"/>
+        <rc:isMemberOfFriends rdf:resource="http://richcanvas.io/friends#LunchBunchFriends"/>
+        <rc:playsRole rdf:resource="http://richcanvas.io/friends#FriendsMember"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/friends#JaneMembershipInLunchBunch -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/friends#JaneMembershipInLunchBunch">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#FriendsMembership"/>
+        <rc:correspondsToSituationalSpec rdf:resource="http://richcanvas.io/friends#FriendsMembership"/>
+        <rc:objectOf rdf:resource="http://richcanvas.io/friends#LunchBunchFriends"/>
+        <rc:subjectOf rdf:resource="http://richcanvas.io/friends#Jane"/>
     </owl:NamedIndividual>
     
 
@@ -82,7 +95,9 @@
         <rdf:type rdf:resource="http://richcanvas.io/ns#Person"/>
         <rc:friendship rdf:resource="http://richcanvas.io/friends#JoeJaneFriendship"/>
         <rc:isFriendOf rdf:resource="http://richcanvas.io/friends#Jane"/>
+        <rc:isMemberOfFriends rdf:resource="http://richcanvas.io/friends#LunchBunchFriends"/>
         <rc:playsRole rdf:resource="http://richcanvas.io/friends#Friend"/>
+        <rc:playsRole rdf:resource="http://richcanvas.io/friends#FriendsMember"/>
     </owl:NamedIndividual>
     
 
@@ -118,10 +133,23 @@
     
 
 
-    <!-- http://richcanvas.io/friends#SteveFriend -->
+    <!-- http://richcanvas.io/friends#Steve -->
 
-    <owl:NamedIndividual rdf:about="http://richcanvas.io/friends#SteveFriend">
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/friends#Steve">
         <rdf:type rdf:resource="http://richcanvas.io/ns#Person"/>
+        <rc:isMemberOfFriends rdf:resource="http://richcanvas.io/friends#LunchBunchFriends"/>
+        <rc:playsRole rdf:resource="http://richcanvas.io/friends#FriendsMember"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/friends#SteveMembershipInLunchBunch -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/friends#SteveMembershipInLunchBunch">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#FriendsMembership"/>
+        <rc:correspondsToSituationalSpec rdf:resource="http://richcanvas.io/friends#FriendsMembership"/>
+        <rc:objectOf rdf:resource="http://richcanvas.io/friends#LunchBunchFriends"/>
+        <rc:subjectOf rdf:resource="http://richcanvas.io/friends#Steve"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 

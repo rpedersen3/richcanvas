@@ -650,7 +650,10 @@ rc:hasSubOrganization rdf:type owl:ObjectProperty ;
 
 ###  http://richcanvas.io/ns#hasSubject
 rc:hasSubject rdf:type owl:ObjectProperty ;
-              rdfs:domain rc:Situation .
+              rdfs:domain rc:Situation ;
+              rdfs:range rc:Activity ,
+                         rc:Agent ,
+                         rc:Entity .
 
 
 ###  http://richcanvas.io/ns#hasSubjectRole
@@ -869,6 +872,14 @@ rc:isMemberOfFriends rdf:type owl:ObjectProperty ;
 rc:isNotMemberOf rdf:type owl:ObjectProperty .
 
 
+###  http://richcanvas.io/ns#isObjectOf
+rc:isObjectOf rdf:type owl:ObjectProperty ;
+              rdfs:domain rc:Activity ,
+                          rc:Agent ,
+                          rc:Entity ;
+              rdfs:range rc:Situation .
+
+
 ###  http://richcanvas.io/ns#isObjectiveOfPlan
 rc:isObjectiveOfPlan rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf rc:isPurposeOfPlan .
@@ -971,6 +982,14 @@ rc:isSubOrganizationOf rdf:type owl:ObjectProperty ;
                        rdfs:range rc:OrganizationalUnit .
 
 
+###  http://richcanvas.io/ns#isSubjectOf
+rc:isSubjectOf rdf:type owl:ObjectProperty ;
+               rdfs:domain rc:Activity ,
+                           rc:Agent ,
+                           rc:Entity ;
+               rdfs:range rc:Situation .
+
+
 ###  http://richcanvas.io/ns#isVarOfPlan
 rc:isVarOfPlan rdf:type owl:ObjectProperty ;
                rdfs:domain rc:Variable ;
@@ -985,14 +1004,6 @@ rc:manifestationOf rdf:type owl:ObjectProperty .
 rc:membership rdf:type owl:ObjectProperty ;
               rdfs:domain rc:Person ;
               rdfs:range rc:Membership .
-
-
-###  http://richcanvas.io/ns#objectOf
-rc:objectOf rdf:type owl:ObjectProperty ;
-            rdfs:domain rc:Situation ;
-            rdfs:range rc:Activity ,
-                       rc:Agent ,
-                       rc:Entity .
 
 
 ###  http://richcanvas.io/ns#occursAt
@@ -1080,14 +1091,6 @@ rc:relationship rdf:type owl:ObjectProperty ;
 rc:relationshipWith rdf:type owl:ObjectProperty ;
                     rdfs:domain rc:Relationship ;
                     rdfs:range rc:Agent .
-
-
-###  http://richcanvas.io/ns#subjectOf
-rc:subjectOf rdf:type owl:ObjectProperty ;
-             rdfs:domain rc:Situation ;
-             rdfs:range rc:Activity ,
-                        rc:Agent ,
-                        rc:Entity .
 
 
 ###  http://richcanvas.io/ns#used

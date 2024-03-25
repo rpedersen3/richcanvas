@@ -1,0 +1,17 @@
+PREFIX ns: <http://richcanvas.io/ns#>
+
+SELECT ?org ?member WHERE {
+?org rdf:type ns:Organization .
+?membership ns:objectOf ?org .
+?membership ns:subjectOf ?member
+}
+
+
+PREFIX ns: <http://richcanvas.io/ns#>
+PREFIX trvl: <http://richcanvas.io/travel#>
+
+SELECT ?traveler ?travelName
+WHERE {
+?traveler ns:hasManifestation ?travel 
+?travel ns:name ?travelName
+}
