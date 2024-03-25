@@ -50,6 +50,15 @@
     
 
 
+    <!-- http://richcanvas.io/family#JoeParent -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/family#JoeParent">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#Person"/>
+        <rc:playsRole rdf:resource="http://richcanvas.io/family#FamilyParent"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://richcanvas.io/family#NuclearFamily -->
 
     <owl:NamedIndividual rdf:about="http://richcanvas.io/family#NuclearFamily">
@@ -61,7 +70,9 @@
     <!-- http://richcanvas.io/family#NuclearFamilyParent -->
 
     <owl:NamedIndividual rdf:about="http://richcanvas.io/family#NuclearFamilyParent">
-        <rc:hasSubjectRole rdf:resource="http://richcanvas.io/family#NuclearFamily"/>
+        <rdf:type rdf:resource="http://richcanvas.io/ns#FamilialMembershipSpec"/>
+        <rc:hasObjectRole rdf:resource="http://richcanvas.io/family#NuclearFamily"/>
+        <rc:hasSubjectRole rdf:resource="http://richcanvas.io/family#FamilyParent"/>
     </owl:NamedIndividual>
     
 
@@ -70,6 +81,14 @@
 
     <owl:NamedIndividual rdf:about="http://richcanvas.io/family#ParentRelation">
         <rdf:type rdf:resource="http://richcanvas.io/ns#RelationRole"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/family#SmithFamily -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/family#SmithFamily">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#NuclearFamily"/>
     </owl:NamedIndividual>
     
 
