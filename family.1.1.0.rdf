@@ -52,7 +52,17 @@
 
     <!-- http://richcanvas.io/family#NuclearFamily -->
 
-    <owl:NamedIndividual rdf:about="http://richcanvas.io/family#NuclearFamily"/>
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/family#NuclearFamily">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#FamilyBearingOrgRole"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/family#NuclearFamilyParent -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/family#NuclearFamilyParent">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#FamilialMembership"/>
+    </owl:NamedIndividual>
     
 
 
