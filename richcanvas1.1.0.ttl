@@ -328,7 +328,7 @@ rc:hasDuration rdf:type owl:ObjectProperty ;
 
 ###  http://richcanvas.io/ns#hasEffect
 rc:hasEffect rdf:type owl:ObjectProperty ;
-             rdfs:domain rc:ActivityOccurence ;
+             rdfs:domain rc:ActivityRole ;
              rdfs:range rc:State .
 
 
@@ -588,6 +588,12 @@ rc:hasPost rdf:type owl:ObjectProperty ;
 ###  http://richcanvas.io/ns#hasPostRole
 rc:hasPostRole rdf:type owl:ObjectProperty ;
                rdfs:domain rc:Post .
+
+
+###  http://richcanvas.io/ns#hasPrecondition
+rc:hasPrecondition rdf:type owl:ObjectProperty ;
+                   rdfs:domain rc:State ;
+                   rdfs:range rc:ActivityRole .
 
 
 ###  http://richcanvas.io/ns#hasPrimarySite
@@ -1825,8 +1831,7 @@ rc:Person rdf:type owl:Class ;
 
 ###  http://richcanvas.io/ns#PersonManifestation
 rc:PersonManifestation rdf:type owl:Class ;
-                       rdfs:subClassOf rc:Manifestation ,
-                                       rc:TerminalState .
+                       rdfs:subClassOf rc:Manifestation .
 
 
 ###  http://richcanvas.io/ns#PersonPD
