@@ -198,12 +198,6 @@ rc:generation rdf:type owl:ObjectProperty ;
               rdfs:range rc:Generation .
 
 
-###  http://richcanvas.io/ns#hasBehavior
-rc:hasBehavior rdf:type owl:ObjectProperty ;
-               rdfs:domain rc:Activity ;
-               rdfs:range rc:Behavior .
-
-
 ###  http://richcanvas.io/ns#hasActivity
 rc:hasActivity rdf:type owl:ObjectProperty ;
                rdfs:domain rc:Process ;
@@ -221,6 +215,12 @@ rc:hasBeginning rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf rc:hasTime ;
                 rdfs:domain rc:TemporalEntity ;
                 rdfs:range rc:TimeInstant .
+
+
+###  http://richcanvas.io/ns#hasBehavior
+rc:hasBehavior rdf:type owl:ObjectProperty ;
+               rdfs:domain rc:Activity ;
+               rdfs:range rc:Behavior .
 
 
 ###  http://richcanvas.io/ns#hasBelief
@@ -672,7 +672,9 @@ rc:hasSubjectRole rdf:type owl:ObjectProperty ;
 
 ###  http://richcanvas.io/ns#hasTask
 rc:hasTask rdf:type owl:ObjectProperty ;
-           rdfs:subPropertyOf rc:hasActivity .
+           rdfs:subPropertyOf rc:hasActivity ;
+           rdfs:domain rc:Process ;
+           rdfs:range rc:Task .
 
 
 ###  http://richcanvas.io/ns#hasTemporalDuraction
