@@ -129,6 +129,13 @@ rc:correspondsToSpec rdf:type owl:ObjectProperty ;
                      rdfs:range rc:Specification .
 
 
+###  http://richcanvas.io/ns#correspondsToState
+rc:correspondsToState rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf rc:correspondsTo ;
+                      rdfs:domain rc:Manifestation ;
+                      rdfs:range rc:State .
+
+
 ###  http://richcanvas.io/ns#drives
 rc:drives rdf:type owl:ObjectProperty ;
           rdfs:domain rc:Intent .
@@ -136,8 +143,8 @@ rc:drives rdf:type owl:ObjectProperty ;
 
 ###  http://richcanvas.io/ns#enabledBy
 rc:enabledBy rdf:type owl:ObjectProperty ;
-           rdfs:domain rc:Manifestation ;
-           rdfs:range rc:ActivityOccurence .
+             rdfs:domain rc:Manifestation ;
+             rdfs:range rc:ActivityOccurence .
 
 
 ###  http://richcanvas.io/ns#entity
