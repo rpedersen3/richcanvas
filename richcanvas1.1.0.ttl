@@ -134,8 +134,8 @@ rc:drives rdf:type owl:ObjectProperty ;
           rdfs:domain rc:Intent .
 
 
-###  http://richcanvas.io/ns#enables
-rc:enables rdf:type owl:ObjectProperty ;
+###  http://richcanvas.io/ns#enabledBy
+rc:enabledBy rdf:type owl:ObjectProperty ;
            rdfs:domain rc:Manifestation ;
            rdfs:range rc:ActivityOccurence .
 

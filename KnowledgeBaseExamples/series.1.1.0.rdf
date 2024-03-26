@@ -33,10 +33,33 @@
     
 
 
+    <!-- http://richcanvas.io/series#JoeListenToSermon1 -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/series#JoeListenToSermon1">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#Task"/>
+        <ns:causes rdf:resource="http://richcanvas.io/series#JoeSermon1Completed"/>
+        <ns:hasParticipant rdf:resource="http://richcanvas.io/series#Joe"/>
+        <ns:playsRole rdf:resource="http://richcanvas.io/series#Sermon1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/series#JoeListenToSermon2 -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/series#JoeListenToSermon2">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#Task"/>
+        <ns:causes rdf:resource="http://richcanvas.io/series#JoeSermon2Completed"/>
+        <ns:hasParticipant rdf:resource="http://richcanvas.io/series#Joe"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://richcanvas.io/series#JoeSeries -->
 
     <owl:NamedIndividual rdf:about="http://richcanvas.io/series#JoeSeries">
         <rdf:type rdf:resource="http://richcanvas.io/ns#Series"/>
+        <ns:hasTask rdf:resource="http://richcanvas.io/series#JoeListenToSermon1"/>
+        <ns:hasTask rdf:resource="http://richcanvas.io/series#JoeListenToSermon2"/>
     </owl:NamedIndividual>
     
 
@@ -49,10 +72,10 @@
     
 
 
-    <!-- http://richcanvas.io/series#ListenToSermon1 -->
+    <!-- http://richcanvas.io/series#JoeSermon2Completed -->
 
-    <owl:NamedIndividual rdf:about="http://richcanvas.io/series#ListenToSermon1">
-        <rdf:type rdf:resource="http://richcanvas.io/ns#Task"/>
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/series#JoeSermon2Completed">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#Manifestation"/>
     </owl:NamedIndividual>
     
 
@@ -67,9 +90,9 @@
     
 
 
-    <!-- http://richcanvas.io/series#Sermon1 -->
+    <!-- http://richcanvas.io/series#ListenToSermon1 -->
 
-    <owl:NamedIndividual rdf:about="http://richcanvas.io/series#Sermon1">
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/series#ListenToSermon1">
         <rdf:type rdf:resource="http://richcanvas.io/ns#StepRole"/>
         <ns:hasEffect rdf:resource="http://richcanvas.io/series#Sermon1Completed"/>
     </owl:NamedIndividual>
@@ -84,12 +107,19 @@
     
 
 
-    <!-- http://richcanvas.io/series#Sermon2 -->
+    <!-- http://richcanvas.io/series#ListenToSermon2 -->
 
-    <owl:NamedIndividual rdf:about="http://richcanvas.io/series#Sermon2">
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/series#ListenToSermon2">
         <rdf:type rdf:resource="http://richcanvas.io/ns#StepRole"/>
+        <ns:hasEffect rdf:resource="http://richcanvas.io/series#Sermon2Completed"/>
         <ns:hasPrecondition rdf:resource="http://richcanvas.io/series#Sermon1Completed"/>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/series#Sermon2Completed -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/series#Sermon2Completed"/>
 </rdf:RDF>
 
 
