@@ -27,7 +27,35 @@
 
     <!-- http://richcanvas.io/series#Series -->
 
-    <owl:NamedIndividual rdf:about="http://richcanvas.io/series#Series"/>
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/series#Series">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#ProcessRole"/>
+        <ns:includesStep rdf:resource="http://richcanvas.io/series#Sermon1"/>
+        <ns:includesStep rdf:resource="http://richcanvas.io/series#Sermon2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/series#Sermon1 -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/series#Sermon1">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#StepRole"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/series#Sermon1Completed -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/series#Sermon1Completed">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#TerminalState"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/series#Sermon2 -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/series#Sermon2">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#StepRole"/>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 

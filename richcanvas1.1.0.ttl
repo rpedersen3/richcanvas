@@ -1801,8 +1801,7 @@ rc:OrganizationalUnit rdf:type owl:Class ;
 
 
 ###  http://richcanvas.io/ns#OrganizedEvent
-rc:OrganizedEvent rdf:type owl:Class ;
-                  rdfs:subClassOf rc:Process .
+rc:OrganizedEvent rdf:type owl:Class .
 
 
 ###  http://richcanvas.io/ns#Outcome
@@ -1869,11 +1868,6 @@ rc:Plan rdf:type owl:Class ;
         rdfs:subClassOf rc:ProcessRole ;
         rc:adaptedFrom "http://purl.org/net/p-plan" ,
                        "https://w3id.org/ep-plan Plan" .
-
-
-###  http://richcanvas.io/ns#PlannedProcess
-rc:PlannedProcess rdf:type owl:Class ;
-                  rdfs:subClassOf rc:Process .
 
 
 ###  http://richcanvas.io/ns#Planning
@@ -2067,6 +2061,11 @@ rc:Strategy rdf:type owl:Class ;
             rc:comment "Strategy refers to the overarching approach or direction chosen to achieve specific goals or objectives." .
 
 
+###  http://richcanvas.io/ns#Task
+rc:Task rdf:type owl:Class ;
+        rdfs:subClassOf rc:ActivityOccurence .
+
+
 ###  http://richcanvas.io/ns#TemporalDuration
 rc:TemporalDuration rdf:type owl:Class .
 
@@ -2106,16 +2105,6 @@ rc:TraitClassification rdf:type owl:Class ;
                        rdfs:subClassOf rc:Classification .
 
 
-###  http://richcanvas.io/ns#Transition
-rc:Transition rdf:type owl:Class ;
-              rdfs:subClassOf rc:Process .
-
-
-###  http://richcanvas.io/ns#Trip
-rc:Trip rdf:type owl:Class ;
-        rdfs:subClassOf rc:Process .
-
-
 ###  http://richcanvas.io/ns#Usage
 rc:Usage rdf:type owl:Class ;
          rdfs:subClassOf rc:InstantaneousEvent ,
@@ -2145,12 +2134,8 @@ rc:Vision rdf:type owl:Class ;
 
 ###  http://richcanvas.io/ns#Workflow
 rc:Workflow rdf:type owl:Class ;
-            rdfs:subClassOf rc:ProcessRole .
-
-
-###  http://richcanvas.io/ns#WorkflowProcess
-rc:WorkflowProcess rdf:type owl:Class ;
-                   rdfs:subClassOf rc:Process .
+            rdfs:subClassOf rc:Process ,
+                            rc:ProcessRole .
 
 
 #################################################################
