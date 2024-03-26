@@ -62,6 +62,35 @@ xsd:duration rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
+###  http://richcanvas.io/ns#activity
+rc:activity rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf rc:situationSubject ;
+            rdfs:domain rc:Participation ;
+            rdfs:range rc:Activity .
+
+
+###  http://richcanvas.io/ns#agent
+rc:agent rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf rc:situationSubject ;
+         rdfs:domain rc:Participation ;
+         rdfs:range rc:Agent ;
+         owl:propertyChainAxiom ( rc:qualifiedParticipation
+                                  rc:agent
+                                ) .
+
+
+###  http://richcanvas.io/ns#causation
+rc:causation rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf rc:situation ;
+             rdfs:domain rc:Activity ;
+             rdfs:range rc:Manifestation .
+
+
+###  http://richcanvas.io/ns#causes
+rc:causes rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf rc:situationSubjectRelation .
+
+
 ###  http://richcanvas.io/ns#comprises
 rc:comprises rdf:type owl:ObjectProperty ;
              rdfs:domain rc:Mission ;
@@ -85,11 +114,6 @@ rc:correspondsToCommunicationSpec rdf:type owl:ObjectProperty ;
                                   rdfs:range rc:CommunicationSpec .
 
 
-###  http://richcanvas.io/ns#correspondsToPlan
-rc:correspondsToPlan rdf:type owl:ObjectProperty ;
-                     rdfs:subPropertyOf rc:correspondsTo .
-
-
 ###  http://richcanvas.io/ns#correspondsToSituationalSpec
 rc:correspondsToSituationalSpec rdf:type owl:ObjectProperty ;
                                 rdfs:subPropertyOf rc:correspondsToSpec ;
@@ -103,13 +127,6 @@ rc:correspondsToSpec rdf:type owl:ObjectProperty ;
                      rdfs:range rc:Specification .
 
 
-###  http://richcanvas.io/ns#correspondsToVariable
-rc:correspondsToVariable rdf:type owl:ObjectProperty ;
-                         rdfs:subPropertyOf rc:correspondsTo ;
-                         rdfs:domain rc:Entity ;
-                         rdfs:range rc:Variable .
-
-
 ###  http://richcanvas.io/ns#drives
 rc:drives rdf:type owl:ObjectProperty ;
           rdfs:domain rc:Intent .
@@ -119,6 +136,11 @@ rc:drives rdf:type owl:ObjectProperty ;
 rc:enable rdf:type owl:ObjectProperty ;
           rdfs:domain rc:State ;
           rdfs:range rc:ActivityOccurence .
+
+
+###  http://richcanvas.io/ns#entity
+rc:entity rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf rc:situationSubject .
 
 
 ###  http://richcanvas.io/ns#exhibit
@@ -160,11 +182,16 @@ rc:friendship rdf:type owl:ObjectProperty ;
               rdfs:range rc:Friendship .
 
 
-###  http://richcanvas.io/ns#generated
-rc:generated rdf:type owl:ObjectProperty ;
-             rdfs:subPropertyOf rc:influenced ;
-             rdfs:domain rc:Activity ;
-             rdfs:range rc:Entity .
+###  http://richcanvas.io/ns#generates
+rc:generates rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf rc:situationSubjectRelation .
+
+
+###  http://richcanvas.io/ns#generation
+rc:generation rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf rc:situation ;
+              rdfs:domain rc:Activity ;
+              rdfs:range rc:Generation .
 
 
 ###  http://richcanvas.io/ns#hadBehavior
@@ -175,7 +202,7 @@ rc:hadBehavior rdf:type owl:ObjectProperty ;
 
 ###  http://richcanvas.io/ns#hadRole
 rc:hadRole rdf:type owl:ObjectProperty ;
-           rdfs:domain rc:Association ;
+           rdfs:domain rc:Participation ;
            rdfs:range rc:Role .
 
 
@@ -183,12 +210,6 @@ rc:hadRole rdf:type owl:ObjectProperty ;
 rc:hasActivity rdf:type owl:ObjectProperty ;
                rdfs:domain rc:Process ;
                rdfs:range rc:Activity .
-
-
-###  http://richcanvas.io/ns#hasActivitySpec
-rc:hasActivitySpec rdf:type owl:ObjectProperty ;
-                   rdfs:domain rc:ProcessSpec ;
-                   rdfs:range rc:ActivitySpec .
 
 
 ###  http://richcanvas.io/ns#hasApproach
@@ -267,7 +288,7 @@ rc:hasCorresponding rdf:type owl:ObjectProperty .
 ###  http://richcanvas.io/ns#hasCorrespondingActivity
 rc:hasCorrespondingActivity rdf:type owl:ObjectProperty ;
                             rdfs:subPropertyOf rc:hasCorresponding ;
-                            rdfs:domain rc:ActivitySpec ;
+                            rdfs:domain rc:ActivityRole ;
                             rdfs:range rc:Activity .
 
 
@@ -366,7 +387,7 @@ rc:hasGeometry rdf:type owl:ObjectProperty ;
 rc:hasGoal rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf rc:hasPurpose ;
            rdfs:domain rc:Activity ,
-                       rc:ActivitySpec ,
+                       rc:ActivityRole ,
                        rc:Agent ;
            rdfs:range rc:Goal .
 
@@ -406,7 +427,7 @@ rc:hasHomeAddress rdf:type owl:ObjectProperty ;
 ###  http://richcanvas.io/ns#hasInputVar
 rc:hasInputVar rdf:type owl:ObjectProperty ;
                owl:inverseOf rc:isInputVarOf ;
-               rdfs:domain rc:Step ;
+               rdfs:domain rc:StepRole ;
                rdfs:range rc:Variable .
 
 
@@ -490,14 +511,6 @@ rc:hasMission rdf:type owl:ObjectProperty ;
 rc:hasName rdf:type owl:ObjectProperty .
 
 
-###  http://richcanvas.io/ns#hasObject
-rc:hasObject rdf:type owl:ObjectProperty ;
-             rdfs:domain rc:Situation ;
-             rdfs:range rc:Activity ,
-                        rc:Agent ,
-                        rc:Entity .
-
-
 ###  http://richcanvas.io/ns#hasObjectRole
 rc:hasObjectRole rdf:type owl:ObjectProperty ;
                  rdfs:domain rc:SituationSpec ;
@@ -507,8 +520,8 @@ rc:hasObjectRole rdf:type owl:ObjectProperty ;
 ###  http://richcanvas.io/ns#hasObjective
 rc:hasObjective rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf rc:hasPurpose ;
-                rdfs:domain rc:ActivitySpec ,
-                            rc:ProcessSpec ;
+                rdfs:domain rc:ActivityRole ,
+                            rc:ProcessRole ;
                 rdfs:range rc:Purpose .
 
 
@@ -521,7 +534,7 @@ rc:hasObjectives rdf:type owl:ObjectProperty ;
 
 ###  http://richcanvas.io/ns#hasOutputVar
 rc:hasOutputVar rdf:type owl:ObjectProperty ;
-                rdfs:domain rc:Step ;
+                rdfs:domain rc:StepRole ;
                 rdfs:range rc:Variable .
 
 
@@ -570,8 +583,7 @@ rc:hasPost rdf:type owl:ObjectProperty ;
 
 ###  http://richcanvas.io/ns#hasPostRole
 rc:hasPostRole rdf:type owl:ObjectProperty ;
-               rdfs:domain rc:Post ;
-               rdfs:range rc:PostRole .
+               rdfs:domain rc:Post .
 
 
 ###  http://richcanvas.io/ns#hasPrimarySite
@@ -593,7 +605,7 @@ rc:hasProtocol rdf:type owl:ObjectProperty ;
 ###  http://richcanvas.io/ns#hasPurpose
 rc:hasPurpose rdf:type owl:ObjectProperty ;
               rdfs:domain rc:Activity ,
-                          rc:ActivitySpec ,
+                          rc:ActivityRole ,
                           rc:Agent ;
               rdfs:range rc:Purpose .
 
@@ -601,13 +613,13 @@ rc:hasPurpose rdf:type owl:ObjectProperty ;
 ###  http://richcanvas.io/ns#hasRecipient
 rc:hasRecipient rdf:type owl:ObjectProperty ;
                 rdfs:domain rc:CommunicationSpec ;
-                rdfs:range rc:ActivitySpec .
+                rdfs:range rc:ActivityRole .
 
 
 ###  http://richcanvas.io/ns#hasSender
 rc:hasSender rdf:type owl:ObjectProperty ;
              rdfs:domain rc:CommunicationSpec ;
-             rdfs:range rc:ActivitySpec .
+             rdfs:range rc:ActivityRole .
 
 
 ###  http://richcanvas.io/ns#hasSiteAddress
@@ -646,14 +658,6 @@ rc:hasStrategy rdf:type owl:ObjectProperty ;
 rc:hasSubOrganization rdf:type owl:ObjectProperty ;
                       rdfs:domain rc:Organization ;
                       rdfs:range rc:Organization .
-
-
-###  http://richcanvas.io/ns#hasSubject
-rc:hasSubject rdf:type owl:ObjectProperty ;
-              rdfs:domain rc:Situation ;
-              rdfs:range rc:Activity ,
-                         rc:Agent ,
-                         rc:Entity .
 
 
 ###  http://richcanvas.io/ns#hasSubjectRole
@@ -710,9 +714,9 @@ rc:hasWorkAddress rdf:type owl:ObjectProperty .
 
 ###  http://richcanvas.io/ns#helpAchieve
 rc:helpAchieve rdf:type owl:ObjectProperty ;
-               rdfs:domain rc:ActivitySpec ,
+               rdfs:domain rc:ActivityRole ,
                            rc:CommunicationSpec ,
-                           rc:ProcessSpec ,
+                           rc:ProcessRole ,
                            rc:Purpose ,
                            rc:ResponsibleAgent ;
                rdfs:range rc:Purpose ,
@@ -734,21 +738,21 @@ rc:includes rdf:type owl:ObjectProperty ;
 ###  http://richcanvas.io/ns#includesInstantaneousEvent
 rc:includesInstantaneousEvent rdf:type owl:ObjectProperty ;
                               rdfs:subPropertyOf rc:includes ;
-                              rdfs:domain rc:ProcessSpec ;
+                              rdfs:domain rc:ProcessRole ;
                               rdfs:range rc:InstantaneousEvent .
 
 
 ###  http://richcanvas.io/ns#includesObjective
 rc:includesObjective rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf rc:includesPurpose ;
-                     rdfs:domain rc:ProcessSpec ;
+                     rdfs:domain rc:ProcessRole ;
                      rdfs:range rc:Objective .
 
 
 ###  http://richcanvas.io/ns#includesPurpose
 rc:includesPurpose rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf rc:includes ;
-                   rdfs:domain rc:ProcessSpec ;
+                   rdfs:domain rc:ProcessRole ;
                    rdfs:range rc:Purpose .
 
 
@@ -756,7 +760,7 @@ rc:includesPurpose rdf:type owl:ObjectProperty ;
 rc:includesStep rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf rc:includes ;
                 rdfs:domain rc:Plan ;
-                rdfs:range rc:Step .
+                rdfs:range rc:StepRole .
 
 
 ###  http://richcanvas.io/ns#includesSubPlan
@@ -773,8 +777,9 @@ rc:includesVariable rdf:type owl:ObjectProperty ;
                     rdfs:range rc:Variable .
 
 
-###  http://richcanvas.io/ns#influenced
-rc:influenced rdf:type owl:ObjectProperty .
+###  http://richcanvas.io/ns#informs
+rc:informs rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf rc:situationSubjectRelation .
 
 
 ###  http://richcanvas.io/ns#isBasedAt
@@ -792,7 +797,6 @@ rc:isBehaviorClassification rdf:type owl:ObjectProperty ;
 
 ###  http://richcanvas.io/ns#isCharacterizedAs
 rc:isCharacterizedAs rdf:type owl:ObjectProperty ;
-                     rdfs:domain rc:ActivityTrace ;
                      rdfs:range rc:BehaviorClassification .
 
 
@@ -829,7 +833,7 @@ rc:isHeldBy rdf:type owl:ObjectProperty ;
 ###  http://richcanvas.io/ns#isInputVarOf
 rc:isInputVarOf rdf:type owl:ObjectProperty ;
                 rdfs:domain rc:Variable ;
-                rdfs:range rc:Step .
+                rdfs:range rc:StepRole .
 
 
 ###  http://richcanvas.io/ns#isIntentOf
@@ -895,7 +899,7 @@ rc:isOrganizationClassification rdf:type owl:ObjectProperty ;
 ###  http://richcanvas.io/ns#isOutputVarOf
 rc:isOutputVarOf rdf:type owl:ObjectProperty ;
                  rdfs:domain rc:Variable ;
-                 rdfs:range rc:Step .
+                 rdfs:range rc:StepRole .
 
 
 ###  http://richcanvas.io/ns#isPartOf
@@ -914,7 +918,7 @@ rc:isPayloadIn rdf:type owl:ObjectProperty ;
 rc:isPermittedAgentFor rdf:type owl:ObjectProperty ;
                        rdfs:domain rc:ResponsibleAgent ;
                        rdfs:range rc:Plan ,
-                                  rc:Step .
+                                  rc:StepRole .
 
 
 ###  http://richcanvas.io/ns#isPostIn
@@ -926,9 +930,7 @@ rc:isPostIn rdf:type owl:ObjectProperty ;
 
 ###  http://richcanvas.io/ns#isPreceededBy
 rc:isPreceededBy rdf:type owl:ObjectProperty ;
-                 owl:inverseOf rc:precedes ;
-                 rdfs:domain rc:PlannedActivity ;
-                 rdfs:range rc:PlannedActivity .
+                 owl:inverseOf rc:precedes .
 
 
 ###  http://richcanvas.io/ns#isPurposeOf
@@ -943,7 +945,7 @@ rc:isPurposeOfPlan rdf:type owl:ObjectProperty .
 
 ###  http://richcanvas.io/ns#isRecipientStepIn
 rc:isRecipientStepIn rdf:type owl:ObjectProperty ;
-                     rdfs:domain rc:Step ;
+                     rdfs:domain rc:StepRole ;
                      rdfs:range rc:CommunicationSpec .
 
 
@@ -960,7 +962,7 @@ rc:isRelativeOf rdf:type owl:ObjectProperty ;
 
 ###  http://richcanvas.io/ns#isSenderStepIn
 rc:isSenderStepIn rdf:type owl:ObjectProperty ;
-                  rdfs:domain rc:Step ;
+                  rdfs:domain rc:StepRole ;
                   rdfs:range rc:CommunicationSpec .
 
 
@@ -972,7 +974,7 @@ rc:isSiteOf rdf:type owl:ObjectProperty ;
 
 ###  http://richcanvas.io/ns#isStepOfPlan
 rc:isStepOfPlan rdf:type owl:ObjectProperty ;
-                rdfs:domain rc:Step ;
+                rdfs:domain rc:StepRole ;
                 rdfs:range rc:Plan .
 
 
@@ -1002,6 +1004,7 @@ rc:manifestationOf rdf:type owl:ObjectProperty .
 
 ###  http://richcanvas.io/ns#membership
 rc:membership rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf rc:situation ;
               rdfs:domain rc:Person ;
               rdfs:range rc:Membership .
 
@@ -1010,6 +1013,23 @@ rc:membership rdf:type owl:ObjectProperty ;
 rc:occursAt rdf:type owl:ObjectProperty ;
             rdfs:domain rc:ActivityOccurence ;
             rdfs:range rc:TemporalEntity .
+
+
+###  http://richcanvas.io/ns#participatesIn
+rc:participatesIn rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf rc:situationSubjectRelation ;
+                  rdfs:domain rc:Agent ;
+                  rdfs:range rc:Activity ;
+                  owl:propertyChainAxiom ( rc:participation
+                                           rc:activity
+                                         ) .
+
+
+###  http://richcanvas.io/ns#participation
+rc:participation rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf rc:situation ;
+                 rdfs:domain rc:Agent ;
+                 rdfs:range rc:Participation .
 
 
 ###  http://richcanvas.io/ns#playedBy
@@ -1031,149 +1051,128 @@ rc:playsRole rdf:type owl:ObjectProperty ;
 
 ###  http://richcanvas.io/ns#precedes
 rc:precedes rdf:type owl:ObjectProperty ;
-            rdfs:domain rc:Step ;
-            rdfs:range rc:Step .
+            rdfs:domain rc:StepRole ;
+            rdfs:range rc:StepRole .
 
 
-###  http://richcanvas.io/ns#qualifiedAssociationTrace
-rc:qualifiedAssociationTrace rdf:type owl:ObjectProperty ;
-                             rdfs:subPropertyOf rc:qualifiedInfluenceTrace ;
-                             rdfs:domain rc:ActivityTrace ;
-                             rdfs:range rc:Association .
+###  http://richcanvas.io/ns#qualifiedCausation
+rc:qualifiedCausation rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf rc:qualifiedSituation ;
+                      rdfs:domain rc:Manifestation ;
+                      rdfs:range rc:Causation .
 
 
-###  http://richcanvas.io/ns#qualifiedAudienceMembership
-rc:qualifiedAudienceMembership rdf:type owl:ObjectProperty ;
-                               rdfs:subPropertyOf rc:qualifiedMembership ;
-                               rdfs:domain rc:Person ;
-                               rdfs:range rc:AudienceMembership .
+###  http://richcanvas.io/ns#qualifiedCommunication
+rc:qualifiedCommunication rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf rc:qualifiedSituation ;
+                          rdfs:domain rc:Activity ;
+                          rdfs:range rc:Communication .
 
 
-###  http://richcanvas.io/ns#qualifiedCommunicationTrace
-rc:qualifiedCommunicationTrace rdf:type owl:ObjectProperty ;
-                               rdfs:subPropertyOf rc:qualifiedInfluenceTrace ;
-                               rdfs:domain rc:ActivityTrace ;
-                               rdfs:range rc:Communication .
-
-
-###  http://richcanvas.io/ns#qualifiedFamilyMembership
-rc:qualifiedFamilyMembership rdf:type owl:ObjectProperty ;
-                             rdfs:subPropertyOf rc:qualifiedMembership ;
-                             rdfs:domain rc:Person ;
-                             rdfs:range rc:FamilialMembership .
-
-
-###  http://richcanvas.io/ns#qualifiedInfluenceTrace
-rc:qualifiedInfluenceTrace rdf:type owl:ObjectProperty .
+###  http://richcanvas.io/ns#qualifiedGeneration
+rc:qualifiedGeneration rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf rc:qualifiedSituation ;
+                       rdfs:domain rc:Entity ;
+                       rdfs:range rc:Generation .
 
 
 ###  http://richcanvas.io/ns#qualifiedMembership
 rc:qualifiedMembership rdf:type owl:ObjectProperty ;
-                       rdfs:subPropertyOf rc:qualifiedInfluenceTrace ;
-                       rdfs:domain rc:Person ;
+                       rdfs:subPropertyOf rc:qualifiedSituation ;
+                       rdfs:domain rc:Organization ;
                        rdfs:range rc:Membership .
+
+
+###  http://richcanvas.io/ns#qualifiedParticipation
+rc:qualifiedParticipation rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf rc:qualifiedSituation ;
+                          rdfs:domain rc:Activity ;
+                          rdfs:range rc:Participation .
 
 
 ###  http://richcanvas.io/ns#qualifiedRelationship
 rc:qualifiedRelationship rdf:type owl:ObjectProperty ;
-                         rdfs:subPropertyOf rc:qualifiedInfluenceTrace ;
-                         rdfs:domain rc:Agent ;
+                         rdfs:subPropertyOf rc:qualifiedSituation ;
+                         rdfs:domain rc:Person ;
                          rdfs:range rc:Relationship .
+
+
+###  http://richcanvas.io/ns#qualifiedSituation
+rc:qualifiedSituation rdf:type owl:ObjectProperty .
 
 
 ###  http://richcanvas.io/ns#relationship
 rc:relationship rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf rc:situation ;
                 rdfs:domain rc:Person ;
                 rdfs:range rc:Relationship .
 
 
-###  http://richcanvas.io/ns#relationshipWith
-rc:relationshipWith rdf:type owl:ObjectProperty ;
-                    rdfs:domain rc:Relationship ;
-                    rdfs:range rc:Agent .
+###  http://richcanvas.io/ns#situation
+rc:situation rdf:type owl:ObjectProperty .
+
+
+###  http://richcanvas.io/ns#situationObject
+rc:situationObject rdf:type owl:ObjectProperty ;
+                   rdfs:domain rc:Situation ;
+                   rdfs:range rc:Activity ,
+                              rc:Agent ,
+                              rc:Entity .
+
+
+###  http://richcanvas.io/ns#situationObjectRelation
+rc:situationObjectRelation rdf:type owl:ObjectProperty .
+
+
+###  http://richcanvas.io/ns#situationSubject
+rc:situationSubject rdf:type owl:ObjectProperty ;
+                    rdfs:domain rc:Situation ;
+                    rdfs:range rc:Activity ,
+                               rc:Agent ,
+                               rc:Entity .
+
+
+###  http://richcanvas.io/ns#situationSubjectRelation
+rc:situationSubjectRelation rdf:type owl:ObjectProperty .
 
 
 ###  http://richcanvas.io/ns#used
 rc:used rdf:type owl:ObjectProperty ;
-        rdfs:subPropertyOf rc:wasInfluencedBy ;
+        rdfs:subPropertyOf rc:situationObjectRelation ;
         rdfs:domain rc:Activity ;
         rdfs:range rc:Entity .
 
 
 ###  http://richcanvas.io/ns#wasAssociatedWith
 rc:wasAssociatedWith rdf:type owl:ObjectProperty ;
-                     rdfs:subPropertyOf rc:wasInfluencedBy ;
+                     rdfs:subPropertyOf rc:situationObjectRelation ;
                      rdfs:domain rc:Activity ;
                      rdfs:range rc:Agent .
 
 
 ###  http://richcanvas.io/ns#wasGeneratedBy
 rc:wasGeneratedBy rdf:type owl:ObjectProperty ;
-                  rdfs:subPropertyOf rc:wasInfluencedBy ;
+                  rdfs:subPropertyOf rc:situationObjectRelation ;
                   rdfs:domain rc:Entity ;
                   rdfs:range rc:Activity .
 
 
-###  http://richcanvas.io/ns#wasInfluencedBy
-rc:wasInfluencedBy rdf:type owl:ObjectProperty .
-
-
 ###  http://richcanvas.io/ns#wasInformedBy
 rc:wasInformedBy rdf:type owl:ObjectProperty ;
-                 rdfs:subPropertyOf rc:wasInfluencedBy ;
+                 rdfs:subPropertyOf rc:situationObjectRelation ;
                  rdfs:domain rc:Activity ;
                  rdfs:range rc:Activity .
-
-
-###  http://richcanvas.io/ns#withActivityTrace
-rc:withActivityTrace rdf:type owl:ObjectProperty ;
-                     rdfs:domain rc:Communication ;
-                     rdfs:range rc:ActivityTrace .
-
-
-###  http://richcanvas.io/ns#withAgent
-rc:withAgent rdf:type owl:ObjectProperty ;
-             rdfs:domain rc:Relationship ;
-             rdfs:range rc:Agent .
-
-
-###  http://richcanvas.io/ns#withFamily
-rc:withFamily rdf:type owl:ObjectProperty ;
-              rdfs:domain rc:FamilialMembership ;
-              rdfs:range rc:FamilialMembership .
-
-
-###  http://richcanvas.io/ns#withFriend
-rc:withFriend rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf rc:withPerson .
 
 
 ###  http://richcanvas.io/ns#withIntent
 rc:withIntent rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf rc:withPurpose ;
-              rdfs:domain rc:ActivityTrace ;
               rdfs:range rc:Intent .
-
-
-###  http://richcanvas.io/ns#withOrganization
-rc:withOrganization rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf rc:withAgent ;
-                    rdfs:domain rc:Membership ;
-                    rdfs:range rc:Organization .
-
-
-###  http://richcanvas.io/ns#withPerson
-rc:withPerson rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf rc:withAgent ;
-              rdfs:domain rc:Friendship ;
-              rdfs:range rc:Person .
 
 
 ###  http://richcanvas.io/ns#withPurpose
 rc:withPurpose rdf:type owl:ObjectProperty ;
-               rdfs:domain rc:Activity ,
-                           rc:ActivityTrace ,
-                           rc:PlannedActivity ;
+               rdfs:domain rc:Activity ;
                rdfs:range rc:Purpose .
 
 
@@ -1283,13 +1282,13 @@ rc:title rdf:type owl:DatatypeProperty ;
 
 ###  http://richcanvas.io/ns#Accomplishment
 rc:Accomplishment rdf:type owl:Class ;
-                  rdfs:subClassOf rc:ActivityExecuted ;
+                  rdfs:subClassOf rc:ActivityOccurence ;
                   rc:adaptedFrom "DOLCE-Lite,  Accomplishment" .
 
 
 ###  http://richcanvas.io/ns#Achievement
 rc:Achievement rdf:type owl:Class ;
-               rdfs:subClassOf rc:ActivityExecuted ;
+               rdfs:subClassOf rc:ActivityOccurence ;
                rc:adaptedFrom "DOLCE-Lite,  Achievement" ;
                rc:comment "Executed Activities by an Agent are called achievements if they are atomic" .
 
@@ -1314,12 +1313,6 @@ An Activity takes place during some interval, and so has some duration.
 An Activity may have some Manifestations that participate in it.""" .
 
 
-###  http://richcanvas.io/ns#ActivityExecuted
-rc:ActivityExecuted rdf:type owl:Class ;
-                    rdfs:subClassOf rc:Activity ;
-                    rc:adaptedFrom "Prov-O,  Activity.  Used for Provenance.  Capturing What Happended" .
-
-
 ###  http://richcanvas.io/ns#ActivityOccurence
 rc:ActivityOccurence rdf:type owl:Class ;
                      rdfs:subClassOf rc:Activity ;
@@ -1328,16 +1321,15 @@ rc:ActivityOccurence rdf:type owl:Class ;
 in time and space""" .
 
 
-###  http://richcanvas.io/ns#ActivitySpec
-rc:ActivitySpec rdf:type owl:Class ;
-                rdfs:subClassOf rc:Specification .
+###  http://richcanvas.io/ns#ActivityRole
+rc:ActivityRole rdf:type owl:Class ;
+                rdfs:subClassOf rc:Role .
 
 
 ###  http://richcanvas.io/ns#ActivityTrace
 rc:ActivityTrace rdf:type owl:Class ;
-                 rdfs:subClassOf rc:ActivityExecuted ;
-                 rc:adaptedFrom "Prov-O,  Activity.  Used for Provenance.  Capturing What Happended" ;
-                 rc:comment "A Completed Activity.  Used to capture What Happened." .
+                 rdfs:subClassOf rc:ActivityOccurence ;
+                 rc:adaptedFrom "Prov-O,  Activity.  Used for Provenance.  Capturing What Happended" .
 
 
 ###  http://richcanvas.io/ns#Address
@@ -1371,13 +1363,6 @@ rc:Approach rdf:type owl:Class .
 
 ###  http://richcanvas.io/ns#Asset
 rc:Asset rdf:type owl:Class .
-
-
-###  http://richcanvas.io/ns#Association
-rc:Association rdf:type owl:Class ;
-               rdfs:subClassOf rc:Situation ;
-               rc:adaptedFrom "W3 prov:Association" ;
-               rc:comment "An activity association is an assignment of responsibility to an agent for an activity, indicating that the agent had a role in the activity. It further allows for a plan to be specified, which is the plan intended by the agent to achieve some goals in the context of this activity." .
 
 
 ###  http://richcanvas.io/ns#Audiance
@@ -1416,11 +1401,16 @@ rc:Beliefs rdf:type owl:Class ;
 
 ###  http://richcanvas.io/ns#Campaign
 rc:Campaign rdf:type owl:Class ;
-            rdfs:subClassOf rc:ProcessSpec .
+            rdfs:subClassOf rc:ProcessRole .
 
 
 ###  http://richcanvas.io/ns#Capability
 rc:Capability rdf:type owl:Class .
+
+
+###  http://richcanvas.io/ns#Causation
+rc:Causation rdf:type owl:Class ;
+             rdfs:subClassOf rc:Situation .
 
 
 ###  http://richcanvas.io/ns#Classification
@@ -1482,6 +1472,11 @@ rc:End rdf:type owl:Class ;
 ###  http://richcanvas.io/ns#Entity
 rc:Entity rdf:type owl:Class ;
           rc:adaptedFrom "W3 prov:Entity" .
+
+
+###  http://richcanvas.io/ns#EntityRole
+rc:EntityRole rdf:type owl:Class ;
+              rdfs:subClassOf rc:Role .
 
 
 ###  http://richcanvas.io/ns#FamilialMembership
@@ -1659,11 +1654,13 @@ rc:IntentClassification rdf:type owl:Class ;
 
 ###  http://richcanvas.io/ns#Itinerary
 rc:Itinerary rdf:type owl:Class ;
-             rdfs:subClassOf rc:ProcessSpec .
+             rdfs:subClassOf rc:ProcessRole .
 
 
 ###  http://richcanvas.io/ns#Manifestation
-rc:Manifestation rdf:type owl:Class .
+rc:Manifestation rdf:type owl:Class ;
+                 rdfs:subClassOf rc:Entity ,
+                                 owl:Thing .
 
 
 ###  http://richcanvas.io/ns#MemberBearingOrgRole
@@ -1716,15 +1713,10 @@ rc:Mission rdf:type owl:Class ;
            rc:comment "How we get there" .
 
 
-###  http://richcanvas.io/ns#MultiStep
-rc:MultiStep rdf:type owl:Class ;
-             rdfs:subClassOf rc:Collection ,
-                             rc:Step .
-
-
-###  http://richcanvas.io/ns#MultiTask
-rc:MultiTask rdf:type owl:Class ;
-             rdfs:subClassOf rc:Task .
+###  http://richcanvas.io/ns#MultiStepRole
+rc:MultiStepRole rdf:type owl:Class ;
+                 rdfs:subClassOf rc:Collection ,
+                                 rc:StepRole .
 
 
 ###  http://richcanvas.io/ns#MultiVariable
@@ -1786,6 +1778,13 @@ rc:OrganizedEvent rdf:type owl:Class ;
 rc:Outcome rdf:type owl:Class .
 
 
+###  http://richcanvas.io/ns#Participation
+rc:Participation rdf:type owl:Class ;
+                 rdfs:subClassOf rc:Situation ;
+                 rc:adaptedFrom "W3 prov:Association" ;
+                 rc:comment "An activity association is an assignment of responsibility to an agent for an activity, indicating that the agent had a role in the activity. It further allows for a plan to be specified, which is the plan intended by the agent to achieve some goals in the context of this activity." .
+
+
 ###  http://richcanvas.io/ns#Partnership
 rc:Partnership rdf:type owl:Class ;
                rdfs:subClassOf rc:OrganizationalRelationship .
@@ -1832,14 +1831,9 @@ rc:PhoneNumber rdf:type owl:Class .
 
 ###  http://richcanvas.io/ns#Plan
 rc:Plan rdf:type owl:Class ;
-        rdfs:subClassOf rc:ProcessSpec ;
+        rdfs:subClassOf rc:ProcessRole ;
         rc:adaptedFrom "http://purl.org/net/p-plan" ,
                        "https://w3id.org/ep-plan Plan" .
-
-
-###  http://richcanvas.io/ns#PlannedActivity
-rc:PlannedActivity rdf:type owl:Class ;
-                   rdfs:subClassOf rc:ActivitySpec .
 
 
 ###  http://richcanvas.io/ns#PlannedProcess
@@ -1863,11 +1857,6 @@ rc:Post rdf:type owl:Class ;
         rc:comment "A Post represents some position within an organization that exists independently of the person or persons filling it. Posts may be used to represent situations where a person is a member of an organization ex officio (for example the Secretary of State for Scotland is part of UK Cabinet by virtue of being Secretary of State for Scotland, not as an individual person). A post can be held by multiple people and hence can be treated as a organization in its own right." .
 
 
-###  http://richcanvas.io/ns#PostRole
-rc:PostRole rdf:type owl:Class ;
-            rdfs:subClassOf rc:Role .
-
-
 ###  http://richcanvas.io/ns#PostalAddress
 rc:PostalAddress rdf:type owl:Class ;
                  rdfs:subClassOf rc:Address .
@@ -1875,7 +1864,7 @@ rc:PostalAddress rdf:type owl:Class ;
 
 ###  http://richcanvas.io/ns#Procedure
 rc:Procedure rdf:type owl:Class ;
-             rdfs:subClassOf rc:ProcessSpec .
+             rdfs:subClassOf rc:ProcessRole .
 
 
 ###  http://richcanvas.io/ns#Process
@@ -1888,17 +1877,17 @@ An occurrent that has temporal proper parts and for some time t, p s-depends_on 
 For example, a PlanExecution is a context including some actions executed by agents according to certain parameters and expected tasks to be achieved from a Plan;""" .
 
 
-###  http://richcanvas.io/ns#ProcessSpec
-rc:ProcessSpec rdf:type owl:Class ;
-               rdfs:subClassOf rc:ActivitySpec ,
-                               rc:Specification ;
+###  http://richcanvas.io/ns#ProcessRole
+rc:ProcessRole rdf:type owl:Class ;
+               rdfs:subClassOf rc:ActivityRole ,
+                               rc:Role ;
                rc:adaptedFrom "Academic Event Ontology (AEON)" ;
                rc:comment "Specification of Occurrent that has temporal proper parts" .
 
 
 ###  http://richcanvas.io/ns#Project
 rc:Project rdf:type owl:Class ;
-           rdfs:subClassOf rc:ProcessSpec .
+           rdfs:subClassOf rc:ProcessRole .
 
 
 ###  http://richcanvas.io/ns#Purpose
@@ -1908,7 +1897,7 @@ rc:Purpose rdf:type owl:Class ;
 
 ###  http://richcanvas.io/ns#Recipe
 rc:Recipe rdf:type owl:Class ;
-          rdfs:subClassOf rc:ProcessSpec .
+          rdfs:subClassOf rc:ProcessRole .
 
 
 ###  http://richcanvas.io/ns#Relationship
@@ -2015,11 +2004,11 @@ rc:StateSpec rdf:type owl:Class ;
              rdfs:subClassOf rc:Specification .
 
 
-###  http://richcanvas.io/ns#Step
-rc:Step rdf:type owl:Class ;
-        rdfs:subClassOf rc:PlannedActivity ;
-        rc:adaptedFrom "http://purl.org/net/p-plan" ,
-                       "https://w3id.org/ep-plan" .
+###  http://richcanvas.io/ns#StepRole
+rc:StepRole rdf:type owl:Class ;
+            rdfs:subClassOf rc:ActivityRole ;
+            rc:adaptedFrom "http://purl.org/net/p-plan" ,
+                           "https://w3id.org/ep-plan" .
 
 
 ###  http://richcanvas.io/ns#Steps
@@ -2047,13 +2036,6 @@ rc:StrategicPurpose rdf:type owl:Class ;
 rc:Strategy rdf:type owl:Class ;
             rdfs:subClassOf rc:Approach ;
             rc:comment "Strategy refers to the overarching approach or direction chosen to achieve specific goals or objectives." .
-
-
-###  http://richcanvas.io/ns#Task
-rc:Task rdf:type owl:Class ;
-        rdfs:subClassOf rc:PlannedActivity ;
-        rc:adaptedFrom "https://w3id.org/semanticarts/ontology/gistCore Task" ;
-        rc:comment "Something that could potentially be executed, which is merely described but not proposed in any specific way, such as a business process for onboarding a new employee, or the steps in a recipe for making polyethylene from ethylene, is not a task but rather a task specification." .
 
 
 ###  http://richcanvas.io/ns#TemporalDuration
@@ -2133,7 +2115,7 @@ rc:Vision rdf:type owl:Class ;
 
 ###  http://richcanvas.io/ns#Workflow
 rc:Workflow rdf:type owl:Class ;
-            rdfs:subClassOf rc:ProcessSpec .
+            rdfs:subClassOf rc:ProcessRole .
 
 
 ###  http://richcanvas.io/ns#WorkflowProcess
