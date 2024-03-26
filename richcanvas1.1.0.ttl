@@ -83,12 +83,14 @@ rc:agent rdf:type owl:ObjectProperty ;
 rc:causation rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf rc:situation ;
              rdfs:domain rc:Activity ;
-             rdfs:range rc:Manifestation .
+             rdfs:range rc:Causation .
 
 
 ###  http://richcanvas.io/ns#causes
 rc:causes rdf:type owl:ObjectProperty ;
-          rdfs:subPropertyOf rc:situationSubjectRelation .
+          rdfs:subPropertyOf rc:situationSubjectRelation ;
+          rdfs:domain rc:Activity ;
+          rdfs:range rc:Manifestation .
 
 
 ###  http://richcanvas.io/ns#comprises
@@ -184,7 +186,9 @@ rc:friendship rdf:type owl:ObjectProperty ;
 
 ###  http://richcanvas.io/ns#generates
 rc:generates rdf:type owl:ObjectProperty ;
-             rdfs:subPropertyOf rc:situationSubjectRelation .
+             rdfs:subPropertyOf rc:situationSubjectRelation ;
+             rdfs:domain rc:Activity ;
+             rdfs:range rc:Entity .
 
 
 ###  http://richcanvas.io/ns#generation
@@ -779,7 +783,14 @@ rc:includesVariable rdf:type owl:ObjectProperty ;
 
 ###  http://richcanvas.io/ns#informs
 rc:informs rdf:type owl:ObjectProperty ;
-           rdfs:subPropertyOf rc:situationSubjectRelation .
+           rdfs:subPropertyOf rc:situationSubjectRelation ;
+           rdfs:domain rc:Activity ;
+           rdfs:range rc:Activity .
+
+
+###  http://richcanvas.io/ns#isAssociatedWith
+rc:isAssociatedWith rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf rc:situationObjectRelation .
 
 
 ###  http://richcanvas.io/ns#isBasedAt
@@ -1136,11 +1147,21 @@ rc:situationSubject rdf:type owl:ObjectProperty ;
 rc:situationSubjectRelation rdf:type owl:ObjectProperty .
 
 
+###  http://richcanvas.io/ns#usage
+rc:usage rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf rc:situation .
+
+
 ###  http://richcanvas.io/ns#used
 rc:used rdf:type owl:ObjectProperty ;
         rdfs:subPropertyOf rc:situationObjectRelation ;
         rdfs:domain rc:Activity ;
         rdfs:range rc:Entity .
+
+
+###  http://richcanvas.io/ns#usedBy
+rc:usedBy rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf rc:situationSubjectRelation .
 
 
 ###  http://richcanvas.io/ns#wasAssociatedWith
@@ -1346,6 +1367,11 @@ rc:Agent rdf:type owl:Class ;
          rc:adaptedFrom "W3 prov:Agent" .
 
 
+###  http://richcanvas.io/ns#AgentRole
+rc:AgentRole rdf:type owl:Class ;
+             rdfs:subClassOf rc:Role .
+
+
 ###  http://richcanvas.io/ns#Aims
 rc:Aims rdf:type owl:Class ;
         rdfs:subClassOf rc:Purpose ;
@@ -1431,7 +1457,7 @@ rc:Communication rdf:type owl:Class ;
 
 ###  http://richcanvas.io/ns#CommunicationSpec
 rc:CommunicationSpec rdf:type owl:Class ;
-                     rdfs:subClassOf rc:Specification ;
+                     rdfs:subClassOf rc:SituationSpec ;
                      rc:adaptedFrom "https://w3id.org/ep-plan CommunicationSpec" ;
                      rc:comment "A specification of how communication/exchange of variables between two steps should be performed." .
 
@@ -1525,7 +1551,7 @@ rc:Feature rdf:type owl:Class .
 
 ###  http://richcanvas.io/ns#FriendRole
 rc:FriendRole rdf:type owl:Class ;
-              rdfs:subClassOf rc:RelationshipRole .
+              rdfs:subClassOf rc:PersonRole .
 
 
 ###  http://richcanvas.io/ns#Friends
@@ -1665,12 +1691,12 @@ rc:Manifestation rdf:type owl:Class ;
 
 ###  http://richcanvas.io/ns#MemberBearingOrgRole
 rc:MemberBearingOrgRole rdf:type owl:Class ;
-                        rdfs:subClassOf rc:MembershipRole .
+                        rdfs:subClassOf rc:OrganizationRole .
 
 
 ###  http://richcanvas.io/ns#MemberRole
 rc:MemberRole rdf:type owl:Class ;
-              rdfs:subClassOf rc:MembershipRole .
+              rdfs:subClassOf rc:PersonRole .
 
 
 ###  http://richcanvas.io/ns#Members
@@ -1684,12 +1710,6 @@ rc:Membership rdf:type owl:Class ;
                               owl:Thing ;
               rc:adaptedFrom "W3 org:Membership" ;
               rc:comment "Relation between an Agent, an Organization and  Role" .
-
-
-###  http://richcanvas.io/ns#MembershipRole
-rc:MembershipRole rdf:type owl:Class ;
-                  rdfs:subClassOf rc:Role ;
-                  rc:comment "Indicaes the Role the Agent plays in a Membership relationship with an Organzation" .
 
 
 ###  http://richcanvas.io/ns#MembershipSpec
@@ -1754,6 +1774,11 @@ rc:OrganizationClassification rdf:type owl:Class ;
                               rdfs:subClassOf rc:Classification .
 
 
+###  http://richcanvas.io/ns#OrganizationRole
+rc:OrganizationRole rdf:type owl:Class ;
+                    rdfs:subClassOf rc:AgentRole .
+
+
 ###  http://richcanvas.io/ns#OrganizationalMembershipSpec
 rc:OrganizationalMembershipSpec rdf:type owl:Class ;
                                 rdfs:subClassOf rc:RelationshipSpec .
@@ -1808,6 +1833,11 @@ rc:PersonManifestation rdf:type owl:Class ;
 rc:PersonPD rdf:type owl:Class ;
             rdfs:subClassOf rc:Person ,
                             rc:TimeVaryingConcept .
+
+
+###  http://richcanvas.io/ns#PersonRole
+rc:PersonRole rdf:type owl:Class ;
+              rdfs:subClassOf rc:AgentRole .
 
 
 ###  http://richcanvas.io/ns#PersonalContext
@@ -1879,8 +1909,7 @@ For example, a PlanExecution is a context including some actions executed by age
 
 ###  http://richcanvas.io/ns#ProcessRole
 rc:ProcessRole rdf:type owl:Class ;
-               rdfs:subClassOf rc:ActivityRole ,
-                               rc:Role ;
+               rdfs:subClassOf rc:ActivityRole ;
                rc:adaptedFrom "Academic Event Ontology (AEON)" ;
                rc:comment "Specification of Occurrent that has temporal proper parts" .
 
@@ -1906,11 +1935,6 @@ rc:Relationship rdf:type owl:Class ;
                                 owl:Thing .
 
 
-###  http://richcanvas.io/ns#RelationshipRole
-rc:RelationshipRole rdf:type owl:Class ;
-                    rdfs:subClassOf rc:Role .
-
-
 ###  http://richcanvas.io/ns#RelationshipSpec
 rc:RelationshipSpec rdf:type owl:Class ;
                     rdfs:subClassOf rc:SituationSpec .
@@ -1918,7 +1942,7 @@ rc:RelationshipSpec rdf:type owl:Class ;
 
 ###  http://richcanvas.io/ns#RelativeRole
 rc:RelativeRole rdf:type owl:Class ;
-                rdfs:subClassOf rc:RelationshipRole .
+                rdfs:subClassOf rc:PersonRole .
 
 
 ###  http://richcanvas.io/ns#ResponsibleAgent
@@ -2089,7 +2113,8 @@ rc:Trip rdf:type owl:Class ;
 
 ###  http://richcanvas.io/ns#Usage
 rc:Usage rdf:type owl:Class ;
-         rdfs:subClassOf rc:InstantaneousEvent .
+         rdfs:subClassOf rc:InstantaneousEvent ,
+                         rc:Situation .
 
 
 ###  http://richcanvas.io/ns#Value

@@ -213,8 +213,8 @@
     <owl:NamedIndividual rdf:about="http://richcanvas.io/family#JoeNuclearFamilyParent">
         <rdf:type rdf:resource="http://richcanvas.io/ns#FamilialMembership"/>
         <rc:correspondsToSituationalSpec rdf:resource="http://richcanvas.io/family#NuclearFamilyParent"/>
-        <rc:hasObject rdf:resource="http://richcanvas.io/family#SmithFamily"/>
-        <rc:hasSubject rdf:resource="http://richcanvas.io/family#Joe"/>
+        <rc:situationObject rdf:resource="http://richcanvas.io/family#SmithFamily"/>
+        <rc:situationSubject rdf:resource="http://richcanvas.io/family#Joe"/>
     </owl:NamedIndividual>
     
 
@@ -224,8 +224,8 @@
     <owl:NamedIndividual rdf:about="http://richcanvas.io/family#JoeParentOfSam">
         <rdf:type rdf:resource="http://richcanvas.io/ns#FamilialRelationship"/>
         <rc:correspondsToSituationalSpec rdf:resource="http://richcanvas.io/family#ParentRelationship"/>
-        <rc:hasObject rdf:resource="http://richcanvas.io/family#Sammy"/>
-        <rc:hasSubject rdf:resource="http://richcanvas.io/family#Joe"/>
+        <rc:situationObject rdf:resource="http://richcanvas.io/family#Sammy"/>
+        <rc:situationSubject rdf:resource="http://richcanvas.io/family#Joe"/>
     </owl:NamedIndividual>
     
 
@@ -292,8 +292,8 @@
     <owl:NamedIndividual rdf:about="http://richcanvas.io/family#SammyChildOfJoe">
         <rdf:type rdf:resource="http://richcanvas.io/ns#FamilialRelationship"/>
         <rc:correspondsToSituationalSpec rdf:resource="http://richcanvas.io/family#ChildRelationship"/>
-        <rc:hasObject rdf:resource="http://richcanvas.io/family#Joe"/>
-        <rc:hasSubject rdf:resource="http://richcanvas.io/family#Sammy"/>
+        <rc:situationObject rdf:resource="http://richcanvas.io/family#Joe"/>
+        <rc:situationSubject rdf:resource="http://richcanvas.io/family#Sammy"/>
     </owl:NamedIndividual>
     
 
@@ -302,8 +302,8 @@
 
     <owl:NamedIndividual rdf:about="http://richcanvas.io/family#SammyNuclearFamilyChild">
         <rc:correspondsToSituationalSpec rdf:resource="http://richcanvas.io/family#FamilyChild"/>
-        <rc:hasObject rdf:resource="http://richcanvas.io/family#SmithFamily"/>
-        <rc:hasSubject rdf:resource="http://richcanvas.io/family#Sammy"/>
+        <rc:situationObject rdf:resource="http://richcanvas.io/family#SmithFamily"/>
+        <rc:situationSubject rdf:resource="http://richcanvas.io/family#Sammy"/>
     </owl:NamedIndividual>
     
 

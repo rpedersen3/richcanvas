@@ -11,6 +11,23 @@
     <owl:Ontology rdf:about="http://richcanvas.io/series">
         <owl:imports rdf:resource="http://richcanvas.io/ns/1.1.0"/>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://richcanvas.io/series#Series -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/series#Series"/>
 </rdf:RDF>
 
 
