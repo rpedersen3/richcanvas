@@ -134,10 +134,10 @@ rc:drives rdf:type owl:ObjectProperty ;
           rdfs:domain rc:Intent .
 
 
-###  http://richcanvas.io/ns#enable
-rc:enable rdf:type owl:ObjectProperty ;
-          rdfs:domain rc:State ;
-          rdfs:range rc:ActivityOccurence .
+###  http://richcanvas.io/ns#enables
+rc:enables rdf:type owl:ObjectProperty ;
+           rdfs:domain rc:Manifestation ;
+           rdfs:range rc:ActivityOccurence .
 
 
 ###  http://richcanvas.io/ns#entity
@@ -544,8 +544,9 @@ rc:hasPart rdf:type owl:ObjectProperty ;
 
 ###  http://richcanvas.io/ns#hasParticipant
 rc:hasParticipant rdf:type owl:ObjectProperty ;
-                  rdfs:domain rc:ActivityOccurence ;
-                  rdfs:range rc:Manifestation .
+                  rdfs:subPropertyOf rc:situationObjectRelation ;
+                  rdfs:domain rc:Activity ;
+                  rdfs:range rc:Agent .
 
 
 ###  http://richcanvas.io/ns#hasPayload
@@ -793,11 +794,6 @@ rc:informs rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf rc:situationSubjectRelation ;
            rdfs:domain rc:Activity ;
            rdfs:range rc:Activity .
-
-
-###  http://richcanvas.io/ns#isAssociatedWith
-rc:isAssociatedWith rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf rc:situationObjectRelation .
 
 
 ###  http://richcanvas.io/ns#isBasedAt
