@@ -100,6 +100,15 @@
     
 
 
+    <!-- http://richcanvas.io/series#JoeSeriesEnd -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/series#JoeSeriesEnd">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#Task"/>
+        <ns:playsRole rdf:resource="http://richcanvas.io/series#SeriesEnd"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://richcanvas.io/series#JoeSeriesEnded -->
 
     <owl:NamedIndividual rdf:about="http://richcanvas.io/series#JoeSeriesEnded">
