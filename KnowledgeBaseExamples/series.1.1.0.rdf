@@ -101,7 +101,7 @@
         <ns:includesTask rdf:resource="http://richcanvas.io/series#JoeListenToSermon1"/>
         <ns:includesTask rdf:resource="http://richcanvas.io/series#JoeListenToSermon2"/>
         <ns:includesTask rdf:resource="http://richcanvas.io/series#JoeSeriesEnd"/>
-        <ns:playsProcessRole rdf:resource="http://richcanvas.io/series#Series"/>
+        <ns:playsPlan rdf:resource="http://richcanvas.io/series#Series"/>
     </owl:NamedIndividual>
     
 
