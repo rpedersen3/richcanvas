@@ -1444,7 +1444,7 @@ rc:Beliefs rdf:type owl:Class ;
 
 ###  http://richcanvas.io/ns#Campaign
 rc:Campaign rdf:type owl:Class ;
-            rdfs:subClassOf rc:ProcessRole .
+            rdfs:subClassOf rc:Undertaking .
 
 
 ###  http://richcanvas.io/ns#Capability
@@ -1702,7 +1702,7 @@ rc:IntentClassification rdf:type owl:Class ;
 
 ###  http://richcanvas.io/ns#Itinerary
 rc:Itinerary rdf:type owl:Class ;
-             rdfs:subClassOf rc:ProcessRole .
+             rdfs:subClassOf rc:Process .
 
 
 ###  http://richcanvas.io/ns#Manifestation
@@ -1925,7 +1925,7 @@ rc:ProcessRole rdf:type owl:Class ;
 
 ###  http://richcanvas.io/ns#Project
 rc:Project rdf:type owl:Class ;
-           rdfs:subClassOf rc:ProcessRole .
+           rdfs:subClassOf rc:Undertaking .
 
 
 ###  http://richcanvas.io/ns#Purpose
@@ -2121,9 +2121,19 @@ rc:TransientState rdf:type owl:Class ;
                   rdfs:subClassOf rc:NonTerminalState .
 
 
+###  http://richcanvas.io/ns#Trip
+rc:Trip rdf:type owl:Class ;
+        rdfs:subClassOf rc:Undertaking .
+
+
 ###  http://richcanvas.io/ns#Undertaking
 rc:Undertaking rdf:type owl:Class ;
                rdfs:subClassOf rc:TimeVaryingConcept .
+
+
+###  http://richcanvas.io/ns#UndertakingSpec
+rc:UndertakingSpec rdf:type owl:Class ;
+                   rdfs:subClassOf rc:Specification .
 
 
 ###  http://richcanvas.io/ns#Usage
@@ -2155,8 +2165,7 @@ rc:Vision rdf:type owl:Class ;
 
 ###  http://richcanvas.io/ns#Workflow
 rc:Workflow rdf:type owl:Class ;
-            rdfs:subClassOf rc:Process ,
-                            rc:ProcessRole .
+            rdfs:subClassOf rc:ProcessRole .
 
 
 #################################################################
