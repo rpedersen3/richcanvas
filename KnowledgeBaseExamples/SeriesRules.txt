@@ -1,0 +1,15 @@
+
+
+ns:NonTerminalState(?preConditionState) ^
+ns:State(?effectState) ^
+ns:Manifestation(?preManifestation) ^
+ns:Step(?step) ^
+ns:Task(?task) ^
+ns:correspondsToState(?preManifestation, ?preConditionState) ^
+ns:playsRole(?task, ?step) ^ 
+ns:hasPrecondition(?step, ?preConditionState) ^
+ns:hasEffect(?step, ?effectState) ^
+swrlx:makeOWLThing(?effectManifestation, ?step) 
+->
+ns:Manifestation(?effectManifestation) ^ 
+ns:causes(?task, ?effectManifestation)

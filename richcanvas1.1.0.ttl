@@ -769,6 +769,11 @@ rc:includes rdf:type owl:ObjectProperty ;
             rdfs:range owl:Thing .
 
 
+###  http://richcanvas.io/ns#includesActivity
+rc:includesActivity rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf rc:includes .
+
+
 ###  http://richcanvas.io/ns#includesInstantaneousEvent
 rc:includesInstantaneousEvent rdf:type owl:ObjectProperty ;
                               rdfs:subPropertyOf rc:includes ;
@@ -781,6 +786,11 @@ rc:includesObjective rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf rc:includesPurpose ;
                      rdfs:domain rc:ProcessRole ;
                      rdfs:range rc:Objective .
+
+
+###  http://richcanvas.io/ns#includesProcess
+rc:includesProcess rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf rc:includesActivity .
 
 
 ###  http://richcanvas.io/ns#includesPurpose
@@ -802,6 +812,13 @@ rc:includesSubPlan rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf rc:includes ;
                    rdfs:domain rc:Plan ;
                    rdfs:range rc:Plan .
+
+
+###  http://richcanvas.io/ns#includesTask
+rc:includesTask rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf rc:includesActivity ;
+                rdfs:domain rc:Process ;
+                rdfs:range rc:Task .
 
 
 ###  http://richcanvas.io/ns#includesVariable
