@@ -129,18 +129,32 @@
     
 
 
-    <!-- http://richcanvas.io/series#SeriesSubscribedTo -->
+    <!-- http://richcanvas.io/series#SeriesEnded -->
 
-    <owl:NamedIndividual rdf:about="http://richcanvas.io/series#SeriesSubscribedTo">
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/series#SeriesEnded">
         <rdf:type rdf:resource="http://richcanvas.io/ns#TerminalState"/>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/series#SeriesStarted -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/series#SeriesStarted">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#InitialState"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/series#SeriesSubscribedTo -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/series#SeriesSubscribedTo"/>
     
 
 
     <!-- http://richcanvas.io/series#Sermon1Completed -->
 
     <owl:NamedIndividual rdf:about="http://richcanvas.io/series#Sermon1Completed">
-        <rdf:type rdf:resource="http://richcanvas.io/ns#TerminalState"/>
+        <rdf:type rdf:resource="http://richcanvas.io/ns#TransientState"/>
     </owl:NamedIndividual>
     
 
@@ -148,14 +162,8 @@
     <!-- http://richcanvas.io/series#Sermon2Completed -->
 
     <owl:NamedIndividual rdf:about="http://richcanvas.io/series#Sermon2Completed">
-        <rdf:type rdf:resource="http://richcanvas.io/ns#TerminalState"/>
+        <rdf:type rdf:resource="http://richcanvas.io/ns#TransientState"/>
     </owl:NamedIndividual>
-    
-
-
-    <!-- http://richcanvas.io/series#Start -->
-
-    <owl:NamedIndividual rdf:about="http://richcanvas.io/series#Start"/>
 </rdf:RDF>
 
 
