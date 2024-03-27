@@ -437,7 +437,7 @@ rc:hasHomeAddress rdf:type owl:ObjectProperty ;
 ###  http://richcanvas.io/ns#hasInputVar
 rc:hasInputVar rdf:type owl:ObjectProperty ;
                owl:inverseOf rc:isInputVarOf ;
-               rdfs:domain rc:StepRole ;
+               rdfs:domain rc:Step ;
                rdfs:range rc:Variable .
 
 
@@ -544,7 +544,7 @@ rc:hasObjectives rdf:type owl:ObjectProperty ;
 
 ###  http://richcanvas.io/ns#hasOutputVar
 rc:hasOutputVar rdf:type owl:ObjectProperty ;
-                rdfs:domain rc:StepRole ;
+                rdfs:domain rc:Step ;
                 rdfs:range rc:Variable .
 
 
@@ -797,7 +797,7 @@ rc:includesPurpose rdf:type owl:ObjectProperty ;
 rc:includesStep rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf rc:includes ;
                 rdfs:domain rc:Plan ;
-                rdfs:range rc:StepRole .
+                rdfs:range rc:Step .
 
 
 ###  http://richcanvas.io/ns#includesSubPlan
@@ -872,7 +872,7 @@ rc:isHeldBy rdf:type owl:ObjectProperty ;
 ###  http://richcanvas.io/ns#isInputVarOf
 rc:isInputVarOf rdf:type owl:ObjectProperty ;
                 rdfs:domain rc:Variable ;
-                rdfs:range rc:StepRole .
+                rdfs:range rc:Step .
 
 
 ###  http://richcanvas.io/ns#isIntentOf
@@ -938,7 +938,7 @@ rc:isOrganizationClassification rdf:type owl:ObjectProperty ;
 ###  http://richcanvas.io/ns#isOutputVarOf
 rc:isOutputVarOf rdf:type owl:ObjectProperty ;
                  rdfs:domain rc:Variable ;
-                 rdfs:range rc:StepRole .
+                 rdfs:range rc:Step .
 
 
 ###  http://richcanvas.io/ns#isPartOf
@@ -957,7 +957,7 @@ rc:isPayloadIn rdf:type owl:ObjectProperty ;
 rc:isPermittedAgentFor rdf:type owl:ObjectProperty ;
                        rdfs:domain rc:ResponsibleAgent ;
                        rdfs:range rc:Plan ,
-                                  rc:StepRole .
+                                  rc:Step .
 
 
 ###  http://richcanvas.io/ns#isPostIn
@@ -984,7 +984,7 @@ rc:isPurposeOfPlan rdf:type owl:ObjectProperty .
 
 ###  http://richcanvas.io/ns#isRecipientStepIn
 rc:isRecipientStepIn rdf:type owl:ObjectProperty ;
-                     rdfs:domain rc:StepRole ;
+                     rdfs:domain rc:Step ;
                      rdfs:range rc:CommunicationSpec .
 
 
@@ -1001,7 +1001,7 @@ rc:isRelativeOf rdf:type owl:ObjectProperty ;
 
 ###  http://richcanvas.io/ns#isSenderStepIn
 rc:isSenderStepIn rdf:type owl:ObjectProperty ;
-                  rdfs:domain rc:StepRole ;
+                  rdfs:domain rc:Step ;
                   rdfs:range rc:CommunicationSpec .
 
 
@@ -1013,7 +1013,7 @@ rc:isSiteOf rdf:type owl:ObjectProperty ;
 
 ###  http://richcanvas.io/ns#isStepOfPlan
 rc:isStepOfPlan rdf:type owl:ObjectProperty ;
-                rdfs:domain rc:StepRole ;
+                rdfs:domain rc:Step ;
                 rdfs:range rc:Plan .
 
 
@@ -1090,8 +1090,8 @@ rc:playsRole rdf:type owl:ObjectProperty ;
 
 ###  http://richcanvas.io/ns#precedes
 rc:precedes rdf:type owl:ObjectProperty ;
-            rdfs:domain rc:StepRole ;
-            rdfs:range rc:StepRole .
+            rdfs:domain rc:Step ;
+            rdfs:range rc:Step .
 
 
 ###  http://richcanvas.io/ns#qualifiedCausation
@@ -1766,10 +1766,10 @@ rc:Mission rdf:type owl:Class ;
            rc:comment "How we get there" .
 
 
-###  http://richcanvas.io/ns#MultiStepRole
-rc:MultiStepRole rdf:type owl:Class ;
-                 rdfs:subClassOf rc:Collection ,
-                                 rc:StepRole .
+###  http://richcanvas.io/ns#MultiStep
+rc:MultiStep rdf:type owl:Class ;
+             rdfs:subClassOf rc:Collection ,
+                             rc:Step .
 
 
 ###  http://richcanvas.io/ns#MultiVariable
@@ -2049,11 +2049,11 @@ rc:StateSpec rdf:type owl:Class ;
              rdfs:subClassOf rc:Specification .
 
 
-###  http://richcanvas.io/ns#StepRole
-rc:StepRole rdf:type owl:Class ;
-            rdfs:subClassOf rc:ActivityRole ;
-            rc:adaptedFrom "http://purl.org/net/p-plan" ,
-                           "https://w3id.org/ep-plan" .
+###  http://richcanvas.io/ns#Step
+rc:Step rdf:type owl:Class ;
+        rdfs:subClassOf rc:ActivityRole ;
+        rc:adaptedFrom "http://purl.org/net/p-plan" ,
+                       "https://w3id.org/ep-plan" .
 
 
 ###  http://richcanvas.io/ns#Steps
