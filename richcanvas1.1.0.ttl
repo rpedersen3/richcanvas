@@ -609,6 +609,13 @@ rc:hasProcedure rdf:type owl:ObjectProperty ;
                 rdfs:range rc:Procedure .
 
 
+###  http://richcanvas.io/ns#hasProcess
+rc:hasProcess rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf rc:hasActivity ;
+              rdfs:domain rc:Undertaking ;
+              rdfs:range rc:Process .
+
+
 ###  http://richcanvas.io/ns#hasProtocol
 rc:hasProtocol rdf:type owl:ObjectProperty ;
                rdfs:domain rc:Organization .
@@ -1842,12 +1849,6 @@ rc:PersonManifestation rdf:type owl:Class ;
                        rdfs:subClassOf rc:Manifestation .
 
 
-###  http://richcanvas.io/ns#PersonPD
-rc:PersonPD rdf:type owl:Class ;
-            rdfs:subClassOf rc:Person ,
-                            rc:TimeVaryingConcept .
-
-
 ###  http://richcanvas.io/ns#PersonRole
 rc:PersonRole rdf:type owl:Class ;
               rdfs:subClassOf rc:AgentRole .
@@ -2118,6 +2119,11 @@ rc:TraitClassification rdf:type owl:Class ;
 ###  http://richcanvas.io/ns#TransientState
 rc:TransientState rdf:type owl:Class ;
                   rdfs:subClassOf rc:NonTerminalState .
+
+
+###  http://richcanvas.io/ns#Undertaking
+rc:Undertaking rdf:type owl:Class ;
+               rdfs:subClassOf rc:TimeVaryingConcept .
 
 
 ###  http://richcanvas.io/ns#Usage
