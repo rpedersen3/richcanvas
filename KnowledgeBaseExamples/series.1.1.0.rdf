@@ -37,23 +37,6 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://richcanvas.io/ns#PersonPD -->
-
-    <owl:Class rdf:about="http://richcanvas.io/ns#PersonPD"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
     // Individuals
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -65,7 +48,8 @@
     <!-- http://richcanvas.io/series#Joe -->
 
     <owl:NamedIndividual rdf:about="http://richcanvas.io/series#Joe">
-        <rdf:type rdf:resource="http://richcanvas.io/ns#PersonPD"/>
+        <rdf:type rdf:resource="http://richcanvas.io/ns#Person"/>
+        <ns:hasUndertaking rdf:resource="http://richcanvas.io/series#JoeReadyForEasterSeries"/>
         <ns:hasUndertaking rdf:resource="http://richcanvas.io/series#ReadyForEasterSeries"/>
         <ns:participatesIn rdf:resource="http://richcanvas.io/series#JoeListenToSermon1"/>
         <ns:participatesIn rdf:resource="http://richcanvas.io/series#JoeListenToSermon2"/>
