@@ -1079,12 +1079,30 @@ rc:playedBy rdf:type owl:ObjectProperty ;
                        rc:Entity .
 
 
+###  http://richcanvas.io/ns#playsActivityRole
+rc:playsActivityRole rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf rc:playsRole ;
+                     rdfs:domain rc:Activity ;
+                     rdfs:range rc:ActivityRole .
+
+
+###  http://richcanvas.io/ns#playsAgentRole
+rc:playsAgentRole rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf rc:playsRole ;
+                  rdfs:domain rc:Agent ;
+                  rdfs:range rc:AgentRole .
+
+
+###  http://richcanvas.io/ns#playsEntityRole
+rc:playsEntityRole rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf rc:playsRole ;
+                   rdfs:domain rc:Entity ;
+                   rdfs:range rc:EntityRole .
+
+
 ###  http://richcanvas.io/ns#playsRole
 rc:playsRole rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf owl:topObjectProperty ;
-             rdfs:domain rc:Activity ,
-                         rc:Agent ,
-                         rc:Entity ;
              rdfs:range rc:Role .
 
 
