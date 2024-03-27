@@ -599,8 +599,8 @@ rc:hasPostRole rdf:type owl:ObjectProperty ;
 
 ###  http://richcanvas.io/ns#hasPrecondition
 rc:hasPrecondition rdf:type owl:ObjectProperty ;
-                   rdfs:domain rc:State ;
-                   rdfs:range rc:ActivityRole .
+                   rdfs:domain rc:ActivityRole ;
+                   rdfs:range rc:NonTerminalState .
 
 
 ###  http://richcanvas.io/ns#hasPrimarySite
