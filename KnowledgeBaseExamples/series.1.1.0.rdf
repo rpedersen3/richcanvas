@@ -64,7 +64,7 @@
         <ns:causes rdf:resource="http://richcanvas.io/series#JoeSermon1Completed"/>
         <ns:enabledBy rdf:resource="http://richcanvas.io/series#JoeSeriesSubscription"/>
         <ns:hasParticipant rdf:resource="http://richcanvas.io/series#Joe"/>
-        <ns:playsActivityRole rdf:resource="http://richcanvas.io/series#ListenToSermon1"/>
+        <ns:playsStep rdf:resource="http://richcanvas.io/series#ListenToSermon1"/>
     </owl:NamedIndividual>
     
 
@@ -76,7 +76,7 @@
         <ns:causes rdf:resource="http://richcanvas.io/series#JoeSermon2Completed"/>
         <ns:enabledBy rdf:resource="http://richcanvas.io/series#JoeSermon1Completed"/>
         <ns:hasParticipant rdf:resource="http://richcanvas.io/series#Joe"/>
-        <ns:playsActivityRole rdf:resource="http://richcanvas.io/series#ListenToSermon2"/>
+        <ns:playsStep rdf:resource="http://richcanvas.io/series#ListenToSermon2"/>
     </owl:NamedIndividual>
     
 
@@ -89,7 +89,7 @@
         <ns:hasManifestation rdf:resource="http://richcanvas.io/series#JoeSeriesStarted"/>
         <ns:hasManifestation rdf:resource="http://richcanvas.io/series#JoeSermon1Completed"/>
         <ns:hasManifestation rdf:resource="http://richcanvas.io/series#JoeSermon2Completed"/>
-        <ns:hasProcess rdf:resource="http://richcanvas.io/series#JoeSeries"/>
+        <ns:includesProcess rdf:resource="http://richcanvas.io/series#JoeSeries"/>
     </owl:NamedIndividual>
     
 
@@ -101,6 +101,7 @@
         <ns:includesTask rdf:resource="http://richcanvas.io/series#JoeListenToSermon1"/>
         <ns:includesTask rdf:resource="http://richcanvas.io/series#JoeListenToSermon2"/>
         <ns:includesTask rdf:resource="http://richcanvas.io/series#JoeSeriesEnd"/>
+        <ns:playsProcessRole rdf:resource="http://richcanvas.io/series#Series"/>
     </owl:NamedIndividual>
     
 
@@ -109,7 +110,7 @@
 
     <owl:NamedIndividual rdf:about="http://richcanvas.io/series#JoeSeriesEnd">
         <rdf:type rdf:resource="http://richcanvas.io/ns#Task"/>
-        <ns:playsActivityRole rdf:resource="http://richcanvas.io/series#SeriesEnd"/>
+        <ns:playsStep rdf:resource="http://richcanvas.io/series#SeriesEnd"/>
     </owl:NamedIndividual>
     
 

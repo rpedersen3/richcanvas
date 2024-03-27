@@ -1120,6 +1120,11 @@ rc:playsEntityRole rdf:type owl:ObjectProperty ;
                    rdfs:range rc:EntityRole .
 
 
+###  http://richcanvas.io/ns#playsPlan
+rc:playsPlan rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf rc:playsProcessRole .
+
+
 ###  http://richcanvas.io/ns#playsProcessRole
 rc:playsProcessRole rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf rc:playsActivityRole .
