@@ -46,6 +46,7 @@
 
     <owl:NamedIndividual rdf:about="http://richcanvas.io/series#Joe">
         <rdf:type rdf:resource="http://richcanvas.io/ns#PersonPD"/>
+        <ns:hasUndertaking rdf:resource="http://richcanvas.io/series#ReadyForEasterSeries"/>
         <ns:participatesIn rdf:resource="http://richcanvas.io/series#JoeListenToSermon1"/>
         <ns:participatesIn rdf:resource="http://richcanvas.io/series#JoeListenToSermon2"/>
     </owl:NamedIndividual>
