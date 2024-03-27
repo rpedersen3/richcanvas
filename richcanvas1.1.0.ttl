@@ -656,6 +656,12 @@ rc:hasState rdf:type owl:ObjectProperty ;
             rdfs:range rc:State .
 
 
+###  http://richcanvas.io/ns#hasStep
+rc:hasStep rdf:type owl:ObjectProperty ;
+           rdfs:domain rc:Plan ;
+           rdfs:range rc:Step .
+
+
 ###  http://richcanvas.io/ns#hasStrategicPlan
 rc:hasStrategicPlan rdf:type owl:ObjectProperty ;
                     rdfs:domain rc:Strategy ;
