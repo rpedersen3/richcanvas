@@ -708,6 +708,12 @@ rc:hasTrait rdf:type owl:ObjectProperty ;
             rdfs:range rc:Trait .
 
 
+###  http://richcanvas.io/ns#hasUndertaking
+rc:hasUndertaking rdf:type owl:ObjectProperty ;
+                  rdfs:domain rc:Agent ;
+                  rdfs:range rc:Undertaking .
+
+
 ###  http://richcanvas.io/ns#hasUnit
 rc:hasUnit rdf:type owl:ObjectProperty ;
            rdfs:domain rc:Organization ;
@@ -2103,7 +2109,8 @@ rc:TimeInterval rdf:type owl:Class ;
 
 
 ###  http://richcanvas.io/ns#TimeVaryingConcept
-rc:TimeVaryingConcept rdf:type owl:Class .
+rc:TimeVaryingConcept rdf:type owl:Class ;
+                      rdfs:subClassOf owl:Thing .
 
 
 ###  http://richcanvas.io/ns#Trait
