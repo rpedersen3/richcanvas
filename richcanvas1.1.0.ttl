@@ -212,7 +212,6 @@ rc:generation rdf:type owl:ObjectProperty ;
 
 ###  http://richcanvas.io/ns#hasActivity
 rc:hasActivity rdf:type owl:ObjectProperty ;
-               rdfs:domain rc:Process ;
                rdfs:range rc:Activity .
 
 
@@ -617,7 +616,6 @@ rc:hasProcedure rdf:type owl:ObjectProperty ;
 ###  http://richcanvas.io/ns#hasProcess
 rc:hasProcess rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf rc:hasActivity ;
-              rdfs:domain rc:Undertaking ;
               rdfs:range rc:Process .
 
 
@@ -693,7 +691,6 @@ rc:hasSubjectRole rdf:type owl:ObjectProperty ;
 ###  http://richcanvas.io/ns#hasTask
 rc:hasTask rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf rc:hasActivity ;
-           rdfs:domain rc:Process ;
            rdfs:range rc:Task .
 
 
