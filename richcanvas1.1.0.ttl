@@ -1479,7 +1479,7 @@ rc:Conference rdf:type owl:Class ;
 
 ###  http://richcanvas.io/ns#ConjunctiveState
 rc:ConjunctiveState rdf:type owl:Class ;
-                    rdfs:subClassOf rc:NonTerminalState .
+                    rdfs:subClassOf rc:TransientState .
 
 
 ###  http://richcanvas.io/ns#Contacts
@@ -1493,7 +1493,7 @@ rc:Context rdf:type owl:Class .
 
 ###  http://richcanvas.io/ns#DisjunctiveState
 rc:DisjunctiveState rdf:type owl:Class ;
-                    rdfs:subClassOf rc:NonTerminalState .
+                    rdfs:subClassOf rc:TransientState .
 
 
 ###  http://richcanvas.io/ns#Email
@@ -1666,6 +1666,11 @@ rc:InferredIntent rdf:type owl:Class ;
 ###  http://richcanvas.io/ns#InferredState
 rc:InferredState rdf:type owl:Class ;
                  rdfs:subClassOf rc:Insight .
+
+
+###  http://richcanvas.io/ns#InitialState
+rc:InitialState rdf:type owl:Class ;
+                rdfs:subClassOf rc:NonTerminalState .
 
 
 ###  http://richcanvas.io/ns#Insight
@@ -2005,7 +2010,8 @@ rc:Start rdf:type owl:Class ;
 
 ###  http://richcanvas.io/ns#State
 rc:State rdf:type owl:Class ;
-         rdfs:subClassOf owl:Thing ;
+         rdfs:subClassOf rc:EntityRole ,
+                         owl:Thing ;
          rc:comment """A state refers to a class of manifestations. It may be a precondition or effect of some Activity, or more generally it may enabled or be caused by some Activity. If a state is complex, it may refer to some combination of classes of manifestations.
 
 A note on complex states:
@@ -2107,6 +2113,11 @@ rc:Trait rdf:type owl:Class ;
 ###  http://richcanvas.io/ns#TraitClassification
 rc:TraitClassification rdf:type owl:Class ;
                        rdfs:subClassOf rc:Classification .
+
+
+###  http://richcanvas.io/ns#TransientState
+rc:TransientState rdf:type owl:Class ;
+                  rdfs:subClassOf rc:NonTerminalState .
 
 
 ###  http://richcanvas.io/ns#Usage
