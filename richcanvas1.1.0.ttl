@@ -644,6 +644,12 @@ rc:hasSender rdf:type owl:ObjectProperty ;
              rdfs:range rc:ActivityRole .
 
 
+###  http://richcanvas.io/ns#hasSite
+rc:hasSite rdf:type owl:ObjectProperty ;
+           rdfs:domain rc:Organization ;
+           rdfs:range rc:Site .
+
+
 ###  http://richcanvas.io/ns#hasSiteAddress
 rc:hasSiteAddress rdf:type owl:ObjectProperty ;
                   rdfs:domain rc:Site ;

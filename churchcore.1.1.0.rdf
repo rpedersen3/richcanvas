@@ -1,0 +1,270 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://churchcore.io/ns#"
+     xml:base="http://churchcore.io/ns"
+     xmlns:rc="http://richcanvas.io/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http:/churchcore.io/ns">
+        <owl:versionIRI rdf:resource="http://churchcore.io/ns/1.1.0"/>
+        <owl:imports rdf:resource="http://richcanvas.io/ns/1.1.0"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://churchcore.io/ns#hasCongregation -->
+
+    <owl:ObjectProperty rdf:about="http://churchcore.io/ns#hasCongregation">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#hasMembers"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasMembers -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasMembers"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://churchcore.io/ns#Congregation -->
+
+    <owl:Class rdf:about="http://churchcore.io/ns#Congregation">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Members"/>
+    </owl:Class>
+    
+
+
+    <!-- http://churchcore.io/ns#ReligiousOrganization -->
+
+    <owl:Class rdf:about="http://churchcore.io/ns#ReligiousOrganization">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Belief -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Belief"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#Members -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Members"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#Membership -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Membership"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#Organization -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Organization"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#Post -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Post"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#PostRole -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#PostRole"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#StrategicPurpose -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#StrategicPurpose"/>
+    
+
+
+    <!-- http:/churchcore.io/ns#CampusOrganization -->
+
+    <owl:Class rdf:about="http:/churchcore.io/ns#CampusOrganization">
+        <rdfs:subClassOf rdf:resource="http://churchcore.io/ns#ReligiousOrganization"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/churchcore.io/ns#Church -->
+
+    <owl:Class rdf:about="http:/churchcore.io/ns#Church">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Site"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/churchcore.io/ns#ChurchCampus -->
+
+    <owl:Class rdf:about="http:/churchcore.io/ns#ChurchCampus">
+        <rdfs:subClassOf rdf:resource="http:/churchcore.io/ns#Church"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/churchcore.io/ns#ChurchMembership -->
+
+    <owl:Class rdf:about="http:/churchcore.io/ns#ChurchMembership">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Membership"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/churchcore.io/ns#Elder -->
+
+    <owl:Class rdf:about="http:/churchcore.io/ns#Elder">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Post"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/churchcore.io/ns#LeadPastor -->
+
+    <owl:Class rdf:about="http:/churchcore.io/ns#LeadPastor">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Post"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/churchcore.io/ns#MinistryOrganization -->
+
+    <owl:Class rdf:about="http:/churchcore.io/ns#MinistryOrganization">
+        <rdfs:subClassOf rdf:resource="http://churchcore.io/ns#ReligiousOrganization"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/churchcore.io/ns#PrimaryPurpose -->
+
+    <owl:Class rdf:about="http:/churchcore.io/ns#PrimaryPurpose">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#StrategicPurpose"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http:/churchcore.io/ns#Elder -->
+
+    <owl:NamedIndividual rdf:about="http:/churchcore.io/ns#Elder">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#PostRole"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http:/churchcore.io/ns#GodTheFather -->
+
+    <owl:NamedIndividual rdf:about="http:/churchcore.io/ns#GodTheFather">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#Belief"/>
+        <rdfs:comment>Believe in God the Father, an infinite, personal spirit, perfect in holiness, wisdom, power and love. We believe that He concerns Himself mercifully in the affairs of men, that He hears and answers prayers, and that He saves from sin and death all who come to Him through Jesus Christ.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http:/churchcore.io/ns#JesusChrist -->
+
+    <owl:NamedIndividual rdf:about="http:/churchcore.io/ns#JesusChrist">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#Belief"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http:/churchcore.io/ns#LeadPastor -->
+
+    <owl:NamedIndividual rdf:about="http:/churchcore.io/ns#LeadPastor">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#PostRole"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http:/churchcore.io/ns#Regeneration -->
+
+    <owl:NamedIndividual rdf:about="http:/churchcore.io/ns#Regeneration">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#Belief"/>
+        <rdfs:comment>Believe all people are sinners by nature and by choice, and that they are, therefore, under condemnation. We believe that those who repent of their sins and trust in Jesus Christ as Savior are regenerated by the Holy Spirit.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http:/churchcore.io/ns#TheHolySpirit -->
+
+    <owl:NamedIndividual rdf:about="http:/churchcore.io/ns#TheHolySpirit">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#Belief"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http:/churchcore.io/ns#TheTrinity -->
+
+    <owl:NamedIndividual rdf:about="http:/churchcore.io/ns#TheTrinity">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#Belief"/>
+        <rdfs:comment>Believe there is one living and true God, eternally existing in three persons, that these are equal in every divine perfection, and that they execute distinct but harmonious offices in the work of creation, providence and redemption.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http:/churchcore.io/ns#TheWordOfGod -->
+
+    <owl:NamedIndividual rdf:about="http:/churchcore.io/ns#TheWordOfGod">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#Belief"/>
+        <rdfs:comment>Believe that the Bible is the Word of God, fully inspired and without error in the original manuscripts, written under the inspiration of the Holy Spirit, and that it has authority in all matters of faith and conduct.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://richcanvas.io/ns#TakeAdvice">
+        <rdfs:comment>Believe in the Holy Spirit who came forth from the Father and Son to convict the world of sin, righteousness, and judgment, and to regenerate, sanctify and empower all who believe in Jesus Christ. We believe the Holy Spirit indwells every believer in Christ, and that He is an abiding helper, teacher, and guide.</rdfs:comment>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
