@@ -124,6 +124,14 @@
     
 
 
+    <!-- http:/churchcore.io/ns#ChurchManagementSystem -->
+
+    <owl:Class rdf:about="http:/churchcore.io/ns#ChurchManagementSystem">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#BusinessSystem"/>
+    </owl:Class>
+    
+
+
     <!-- http:/churchcore.io/ns#ChurchMembership -->
 
     <owl:Class rdf:about="http:/churchcore.io/ns#ChurchMembership">

@@ -247,6 +247,12 @@ rc:hasBeliefs rdf:type owl:ObjectProperty ;
               rdfs:range rc:Beliefs .
 
 
+###  http://richcanvas.io/ns#hasBusinessSystem
+rc:hasBusinessSystem rdf:type owl:ObjectProperty ;
+                     rdfs:domain rc:Organization ;
+                     rdfs:range rc:BusinessSystem .
+
+
 ###  http://richcanvas.io/ns#hasCollection
 rc:hasCollection rdf:type owl:ObjectProperty .
 
@@ -763,6 +769,12 @@ rc:hasVision rdf:type owl:ObjectProperty ;
 
 ###  http://richcanvas.io/ns#hasWorkAddress
 rc:hasWorkAddress rdf:type owl:ObjectProperty .
+
+
+###  http://richcanvas.io/ns#heldBy
+rc:heldBy rdf:type owl:ObjectProperty ;
+          rdfs:domain rc:Post ;
+          rdfs:range rc:Person .
 
 
 ###  http://richcanvas.io/ns#helpAchieve
