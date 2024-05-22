@@ -973,6 +973,12 @@ rc:isPartOf rdf:type owl:ObjectProperty ;
             rdfs:range rc:Collection .
 
 
+###  http://richcanvas.io/ns#isPartnerOf
+rc:isPartnerOf rdf:type owl:ObjectProperty ;
+               rdfs:domain rc:Organization ;
+               rdfs:range rc:Organization .
+
+
 ###  http://richcanvas.io/ns#isPayloadIn
 rc:isPayloadIn rdf:type owl:ObjectProperty ;
                rdfs:domain rc:Variable ;

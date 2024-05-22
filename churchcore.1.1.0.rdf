@@ -108,26 +108,18 @@
     
 
 
-    <!-- http:/churchcore.io/ns#CampusOrganization -->
+    <!-- http://richcanvas.io/ns#TemporalDuration -->
 
-    <owl:Class rdf:about="http:/churchcore.io/ns#CampusOrganization">
-        <rdfs:subClassOf rdf:resource="http://churchcore.io/ns#ReligiousOrganization"/>
-    </owl:Class>
-    
-
-
-    <!-- http:/churchcore.io/ns#Church -->
-
-    <owl:Class rdf:about="http:/churchcore.io/ns#Church">
-        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Site"/>
-    </owl:Class>
+    <rdf:Description rdf:about="http://richcanvas.io/ns#TemporalDuration">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Situation"/>
+    </rdf:Description>
     
 
 
     <!-- http:/churchcore.io/ns#ChurchCampus -->
 
     <owl:Class rdf:about="http:/churchcore.io/ns#ChurchCampus">
-        <rdfs:subClassOf rdf:resource="http:/churchcore.io/ns#Church"/>
+        <rdfs:subClassOf rdf:resource="http:/churchcore.io/ns#ChurchSite"/>
     </owl:Class>
     
 
@@ -136,6 +128,22 @@
 
     <owl:Class rdf:about="http:/churchcore.io/ns#ChurchMembership">
         <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Membership"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/churchcore.io/ns#ChurchOrganization -->
+
+    <owl:Class rdf:about="http:/churchcore.io/ns#ChurchOrganization">
+        <rdfs:subClassOf rdf:resource="http:/churchcore.io/ns#MinistryOrganization"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/churchcore.io/ns#ChurchSite -->
+
+    <owl:Class rdf:about="http:/churchcore.io/ns#ChurchSite">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Site"/>
     </owl:Class>
     
 
