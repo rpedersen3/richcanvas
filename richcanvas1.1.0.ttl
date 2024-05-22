@@ -656,6 +656,13 @@ rc:hasSiteAddress rdf:type owl:ObjectProperty ;
                   rdfs:range rc:PostalAddress .
 
 
+###  http://richcanvas.io/ns#hasSoftware
+rc:hasSoftware rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               rdfs:domain rc:Organization ;
+               rdfs:range rc:Software .
+
+
 ###  http://richcanvas.io/ns#hasState
 rc:hasState rdf:type owl:ObjectProperty ;
             rdfs:domain rc:NonTerminalState ;
@@ -2064,6 +2071,10 @@ rc:Situation rdf:type owl:Class .
 ###  http://richcanvas.io/ns#SituationSpec
 rc:SituationSpec rdf:type owl:Class ;
                  rdfs:subClassOf rc:Specification .
+
+
+###  http://richcanvas.io/ns#Software
+rc:Software rdf:type owl:Class .
 
 
 ###  http://richcanvas.io/ns#SoftwareAgent
