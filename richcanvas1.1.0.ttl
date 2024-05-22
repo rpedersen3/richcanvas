@@ -660,7 +660,7 @@ rc:hasSiteAddress rdf:type owl:ObjectProperty ;
 rc:hasSoftware rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf owl:topObjectProperty ;
                rdfs:domain rc:Organization ;
-               rdfs:range rc:Software .
+               rdfs:range rc:BusinessSystem .
 
 
 ###  http://richcanvas.io/ns#hasState
@@ -1525,6 +1525,10 @@ rc:Beliefs rdf:type owl:Class ;
            rdfs:subClassOf rc:Collection .
 
 
+###  http://richcanvas.io/ns#BusinessSystem
+rc:BusinessSystem rdf:type owl:Class .
+
+
 ###  http://richcanvas.io/ns#Campaign
 rc:Campaign rdf:type owl:Class ;
             rdfs:subClassOf rc:Undertaking .
@@ -2071,10 +2075,6 @@ rc:Situation rdf:type owl:Class .
 ###  http://richcanvas.io/ns#SituationSpec
 rc:SituationSpec rdf:type owl:Class ;
                  rdfs:subClassOf rc:Specification .
-
-
-###  http://richcanvas.io/ns#Software
-rc:Software rdf:type owl:Class .
 
 
 ###  http://richcanvas.io/ns#SoftwareAgent
