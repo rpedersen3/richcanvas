@@ -61,7 +61,7 @@
 
     <owl:NamedIndividual rdf:about="http://churchcore.io/frontrange#MissionHillsChurchSite">
         <rdf:type rdf:resource="http://richcanvas.io/ns#Site"/>
-        <siteLatitutde rdf:datatype="http://www.w3.org/2003/01/geo/wgs84_pos#lon">12.0</siteLatitutde>
+        <siteLatitude rdf:datatype="http://www.w3.org/2003/01/geo/wgs84_pos#lon">12.0</siteLatitude>
         <siteLongitude rdf:datatype="http://www.w3.org/2003/01/geo/wgs84_pos#lat">32.0</siteLongitude>
     </owl:NamedIndividual>
 </rdf:RDF>
