@@ -1,0 +1,3757 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://richcanvas.io/ns#"
+     xml:base="http://richcanvas.io/ns"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rc="http://richcanvas.io/ns#"
+     xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+     xmlns:org="http://www.w3.org/ns/org#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:vcard="http://www.w3.org/2006/vcard/ns#">
+    <owl:Ontology rdf:about="http://richcanvas.io/ns">
+        <owl:versionIRI rdf:resource="http://richcanvas.io/ns/1.1.0"/>
+        <owl:imports rdf:resource="http://www.w3.org/2006/vcard/ns"/>
+        <owl:imports rdf:resource="http://www.w3.org/ns/org#"/>
+        <owl:imports rdf:resource="http://www.w3.org/ns/prov#"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#adaptedFrom -->
+
+    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#adaptedFrom"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#comment -->
+
+    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#comment"/>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#alt -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#alt">
+        <rdfs:domain rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#lat -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#lat">
+        <rdfs:domain rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#location -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#location">
+        <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/based_near"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#long -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#long">
+        <rdfs:comment>The WGS84 longitude of a SpatialThing (decimal degrees).</rdfs:comment>
+        <rdfs:label>longitude</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/based_near -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/based_near"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#duration -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#duration"/>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#alt -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#alt"/>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#asGeoJSON -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#asGeoJSON"/>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#lat -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#lat"/>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#lat_long -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#lat_long">
+        <rdfs:comment>A comma-separated representation of a latitude, longitude coordinate.</rdfs:comment>
+        <rdfs:label>lat/long</rdfs:label>
+    </rdfs:Datatype>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#location -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#location"/>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#lon -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#lon"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://richcanvas.io/ns#activity -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#activity">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#situationSubject"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Participation"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Activity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#agent -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#agent">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#situationSubject"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Participation"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Agent"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://richcanvas.io/ns#qualifiedParticipation"/>
+            <rdf:Description rdf:about="http://richcanvas.io/ns#agent"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#causation -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#causation">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#situation"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Activity"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Causation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#causes -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#causes">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#situationSubjectRelation"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Activity"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Manifestation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#comprises -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#comprises">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Mission"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Objective"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#contains -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#contains">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Collection"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#correspondsTo -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#correspondsTo"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#correspondsToCommunicationSpec -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#correspondsToCommunicationSpec">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#correspondsToSituationalSpec"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Communication"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#CommunicationSpec"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#correspondsToSituationalSpec -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#correspondsToSituationalSpec">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#correspondsToSpec"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Situation"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#SituationSpec"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#correspondsToSpec -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#correspondsToSpec">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#correspondsTo"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Specification"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#correspondsToState -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#correspondsToState">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#correspondsTo"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Manifestation"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#State"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#correspondsToUndertakingSpec -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#correspondsToUndertakingSpec">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#correspondsToSpec"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#drives -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#drives">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Intent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#enabledBy -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#enabledBy">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#ActivityOccurence"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Manifestation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#entity -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#entity">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#situationSubject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#exhibit -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#exhibit">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Agent"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Behavior"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#existAtInstant -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#existAtInstant">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Manifestation"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#TimeInstant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#existsAtInterval -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#existsAtInterval">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Manifestation"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#TimeInterval"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#familialMembership -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#familialMembership">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#membership"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Person"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#FamilialMembership"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#familialRelationship -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#familialRelationship">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#relationship"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Person"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#FamilialRelationship"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#friendship -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#friendship">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#relationship"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Person"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Friendship"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#generates -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#generates">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#situationSubjectRelation"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Activity"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#generation -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#generation">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#situation"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Activity"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Generation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasActivity -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasActivity">
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Activity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasApproach -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasApproach">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Agent"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Approach"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasBeginning -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasBeginning">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#hasTime"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#TemporalEntity"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#TimeInstant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasBehavior -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasBehavior">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Activity"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Behavior"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasBelief -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasBelief">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Agent"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Belief"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasBeliefs -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasBeliefs">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#hasCollection"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Agent"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Beliefs"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasBusinessSystem -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasBusinessSystem">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Organization"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#BusinessSystem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasCollection -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasCollection"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasContacts -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasContacts">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Person"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Contacts"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasContext -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasContext"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasCoreBelief -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasCoreBelief">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#hasBelief"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasCoreBeliefs -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasCoreBeliefs">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#hasBeliefs"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Agent"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Beliefs"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasCoreHabits -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasCoreHabits">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#hasHabits"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasCoreValue -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasCoreValue">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#hasValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasCoreValues -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasCoreValues">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#hasValues"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Agent"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Values"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasCorresponding -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasCorresponding"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasCorrespondingActivity -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasCorrespondingActivity">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#hasCorresponding"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#ActivityRole"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Activity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasCorrespondingCommunication -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasCorrespondingCommunication">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#hasCorresponding"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#CommunicationSpec"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Communication"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasCorrespondingEntity -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasCorrespondingEntity">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#hasCorresponding"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Variable"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasCorrespondingPlanExecution -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasCorrespondingPlanExecution">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#hasCorresponding"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasCorrespondingWorkflowExecution -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasCorrespondingWorkflowExecution">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#hasCorresponding"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasDuration -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasDuration">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#hasTemporalDuraction"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#TemporalDuration"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasEffect -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasEffect">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#ActivityRole"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#State"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasEmail -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasEmail">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Person"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Email"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasEnd -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasEnd">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#hasTime"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#TemporalEntity"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#TimeInstant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasFamily -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasFamily">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Person"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#FamilialMembership"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasFamilyMembers -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasFamilyMembers">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#FamilialMembership"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#FamilyMembers"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasFriend -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasFriend">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Person"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasFriends -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasFriends">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Person"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Friends"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasFriendship -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasFriendship">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Person"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Friendship"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasGender -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasGender">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Person"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#GenderClassification"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasGeo -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasGeo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/vcard/ns#hasGeo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasGeometry -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasGeometry">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#SpatialFeature"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Geometry"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasGoal -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasGoal">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#hasPurpose"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Activity"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#ActivityRole"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Agent"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Goal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasGoals -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasGoals">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#hasCollection"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Agent"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Goals"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasHabit -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasHabit">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#hasBehavior"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Agent"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Habit"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasHabits -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasHabits">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#hasCollection"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasHeldPurpose -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasHeldPurpose">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Agent"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Purpose"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasHomeAddress -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasHomeAddress">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Person"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#PostalAddress"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasInputVar -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasInputVar">
+        <owl:inverseOf rdf:resource="http://richcanvas.io/ns#isInputVarOf"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Step"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Variable"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasIntendedAims -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasIntendedAims">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#hasIntendedPurpose"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasIntendedMission -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasIntendedMission">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#hasIntendedPurpose"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Strategy"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Mission"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasIntendedPurpose -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasIntendedPurpose">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Approach"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Purpose"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasIntendedStrategicPurpose -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasIntendedStrategicPurpose">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#hasIntendedPurpose"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasIntendedVision -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasIntendedVision">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#hasIntendedPurpose"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Strategy"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Vision"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasIntent -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasIntent">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#hasPurpose"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Agent"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Intent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasInterval -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasInterval">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Situation"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#TimeInterval"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasLocation -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasLocation">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#ActivityOccurence"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Manifestation"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#SpatialFeature"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasManifestation -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasManifestation">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#TimeVaryingConcept"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Manifestation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasMember -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasMember">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Organization"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasMembers -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasMembers">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#hasCollection"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Organization"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Members"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasMission -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasMission">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#hasPurpose"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Agent"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Mission"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasObjectRole -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasObjectRole">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#SituationSpec"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Role"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasObjective -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasObjective">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#hasPurpose"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#ActivityRole"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#ProcessRole"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Purpose"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasObjectives -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasObjectives">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#hasCollection"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Agent"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Objectives"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasOutputVar -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasOutputVar">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Step"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Variable"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasPart -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasPart">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Collection"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasParticipant -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasParticipant">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#situationObjectRelation"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Activity"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Agent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasPayload -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasPayload">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#CommunicationSpec"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Variable"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasPersonalContext -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasPersonalContext">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Email"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#PhoneNumber"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasPhoneNumber -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasPhoneNumber">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Person"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#PhoneNumber"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasPlan -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasPlan">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Strategy"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Plan"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasPost -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasPost">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Organization"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Post"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasPostRole -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasPostRole">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Post"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasPrecondition -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasPrecondition">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#ActivityRole"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#NonTerminalState"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasPrimarySite -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasPrimarySite">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Organization"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Site"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasProcedure -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasProcedure">
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Procedure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasProcess -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasProcess">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#hasActivity"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Process"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasProtocol -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasProtocol">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasPurpose -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasPurpose">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Activity"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#ActivityRole"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Agent"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Purpose"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasRecipient -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasRecipient">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#CommunicationSpec"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#ActivityRole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasSender -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasSender">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#CommunicationSpec"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#ActivityRole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasSite -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasSite">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Organization"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Site"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasSiteAddress -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasSiteAddress">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Site"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#PostalAddress"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasSoftware -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasSoftware">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Organization"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#BusinessSystem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasState -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasState">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#NonTerminalState"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#State"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasStep -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasStep">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Plan"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Step"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasStrategicPlan -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasStrategicPlan">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Strategy"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#StrategicPlan"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasStrategicPurpose -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasStrategicPurpose">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#hasPurpose"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Agent"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#StrategicPurpose"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasStrategy -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasStrategy">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#hasApproach"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Agent"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Strategy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasSubOrganization -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasSubOrganization">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Organization"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasSubjectRole -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasSubjectRole">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#SituationSpec"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Role"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasTask -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasTask">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#hasActivity"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Task"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasTemporalDuraction -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasTemporalDuraction"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasTime -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasTime">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#TemporalEntity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasTrait -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasTrait">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#hasBehavior"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Agent"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Trait"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasUndertaking -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasUndertaking">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Agent"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Undertaking"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasUnit -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasUnit">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Organization"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#OrganizationalUnit"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasValue -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasValue">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Agent"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Value"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasValues -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasValues">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#hasCollection"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Agent"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Values"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasVision -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasVision">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#hasPurpose"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Agent"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Vision"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#hasWorkAddress -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasWorkAddress"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#heldBy -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#heldBy">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Post"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#helpAchieve -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#helpAchieve">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#ActivityRole"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#CommunicationSpec"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#ProcessRole"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Purpose"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#ResponsibleAgent"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Purpose"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#StateOfAffair"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#holdsPost -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#holdsPost">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Person"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Post"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#includes -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#includes">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Collection"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#includesActivity -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#includesActivity">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#includes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#includesInstantaneousEvent -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#includesInstantaneousEvent">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#includes"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#ProcessRole"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#InstantaneousEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#includesObjective -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#includesObjective">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#includesPurpose"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#ProcessRole"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Objective"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#includesProcess -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#includesProcess">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#includesActivity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#includesPurpose -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#includesPurpose">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#includes"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#ProcessRole"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Purpose"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#includesStep -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#includesStep">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#includes"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Plan"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Step"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#includesSubPlan -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#includesSubPlan">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#includes"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Plan"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Plan"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#includesTask -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#includesTask">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#includesActivity"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Process"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Task"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#includesVariable -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#includesVariable">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#includes"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Plan"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Variable"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#informs -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#informs">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#situationSubjectRelation"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Activity"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Activity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#isBasedAt -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#isBasedAt">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Organization"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Site"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#isBehaviorClassification -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#isBehaviorClassification">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#isClassification"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Behavior"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#BehaviorClassification"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#isCharacterizedAs -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#isCharacterizedAs">
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#BehaviorClassification"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#isClassification -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#isClassification">
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#BehaviorClassification"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#isFriendOf -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#isFriendOf">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#isRelationOf"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Person"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#isFriendshipClassification -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#isFriendshipClassification">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#isClassification"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Friendship"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#FriendshipClassification"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#isGoalOfPlan -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#isGoalOfPlan">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#isPurposeOfPlan"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#isHeldBy -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#isHeldBy">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Post"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#isInputVarOf -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#isInputVarOf">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Variable"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Step"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#isIntentOf -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#isIntentOf">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#isPurposeOf"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Agent"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Intent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#isManifestationOf -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#isManifestationOf">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Manifestation"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#TimeVaryingConcept"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#isMemberOf -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#isMemberOf">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Person"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#isMemberOfAudience -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#isMemberOfAudience">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#isMemberOf"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Person"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Audiance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#isMemberOfFamily -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#isMemberOfFamily">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#isMemberOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#isMemberOfFriends -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#isMemberOfFriends">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#isMemberOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#isNotMemberOf -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#isNotMemberOf"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#isObjectOf -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#isObjectOf">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Activity"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Agent"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Entity"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Situation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#isObjectiveOfPlan -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#isObjectiveOfPlan">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#isPurposeOfPlan"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#isOrganizationClassification -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#isOrganizationClassification">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#isClassification"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Organization"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#OrganizationClassification"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#isOutputVarOf -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#isOutputVarOf">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Variable"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Step"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#isPartOf">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Collection"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#isPartnerOf -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#isPartnerOf">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Organization"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#isPayloadIn -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#isPayloadIn">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Variable"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#CommunicationSpec"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#isPermittedAgentFor -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#isPermittedAgentFor">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#ResponsibleAgent"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Plan"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Step"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#isPostIn -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#isPostIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Post"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#isPreceededBy -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#isPreceededBy">
+        <owl:inverseOf rdf:resource="http://richcanvas.io/ns#precedes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#isPurposeOf -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#isPurposeOf">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Purpose"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Agent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#isPurposeOfPlan -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#isPurposeOfPlan"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#isRecipientStepIn -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#isRecipientStepIn">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Step"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#CommunicationSpec"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#isRelationOf -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#isRelationOf"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#isRelativeOf -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#isRelativeOf">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#isRelationOf"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Person"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#isSenderStepIn -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#isSenderStepIn">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Step"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#CommunicationSpec"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#isSiteOf -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#isSiteOf">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Site"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#isStepOfPlan -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#isStepOfPlan">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Step"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Plan"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#isSubOrganizationOf -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#isSubOrganizationOf">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Organization"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#OrganizationalUnit"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#isSubjectOf -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#isSubjectOf">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Activity"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Agent"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Entity"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Situation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#isVarOfPlan -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#isVarOfPlan">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Variable"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Plan"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#manifestationOf -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#manifestationOf"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#membership -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#membership">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#situation"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Person"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Membership"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#occursAt -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#occursAt">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#ActivityOccurence"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#TemporalEntity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#participatesIn -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#participatesIn">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#situationSubjectRelation"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Agent"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Activity"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://richcanvas.io/ns#participation"/>
+            <rdf:Description rdf:about="http://richcanvas.io/ns#activity"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#participation -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#participation">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#situation"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Agent"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Participation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#playedBy -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#playedBy">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Role"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Activity"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Agent"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#playsActivityRole -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#playsActivityRole">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#playsRole"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Activity"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#ActivityRole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#playsAgentRole -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#playsAgentRole">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#playsRole"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Agent"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#AgentRole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#playsEntityRole -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#playsEntityRole">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#playsRole"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Entity"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#EntityRole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#playsPlan -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#playsPlan">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#playsProcessRole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#playsProcessRole -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#playsProcessRole">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#playsActivityRole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#playsRole -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#playsRole">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Role"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#playsStep -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#playsStep">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#playsActivityRole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#precedes -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#precedes">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Step"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Step"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#qualifiedCausation -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#qualifiedCausation">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#qualifiedSituation"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Manifestation"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Causation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#qualifiedCommunication -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#qualifiedCommunication">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#qualifiedSituation"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Activity"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Communication"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#qualifiedGeneration -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#qualifiedGeneration">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#qualifiedSituation"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Entity"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Generation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#qualifiedMembership -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#qualifiedMembership">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#qualifiedSituation"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Organization"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Membership"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#qualifiedParticipation -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#qualifiedParticipation">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#qualifiedSituation"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Activity"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Participation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#qualifiedRelationship -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#qualifiedRelationship">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#qualifiedSituation"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Person"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Relationship"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#qualifiedSituation -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#qualifiedSituation"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#relationship -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#relationship">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#situation"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Person"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Relationship"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#situation -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#situation"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#situationObject -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#situationObject">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Situation"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Activity"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Agent"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#situationObjectRelation -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#situationObjectRelation"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#situationSubject -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#situationSubject">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Situation"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Activity"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Agent"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#situationSubjectRelation -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#situationSubjectRelation"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#usage -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#usage">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#situation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#used -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#used">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#situationObjectRelation"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Activity"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#usedBy -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#usedBy">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#situationSubjectRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#wasAssociatedWith -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#wasAssociatedWith">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#situationObjectRelation"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Activity"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Agent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#wasGeneratedBy -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#wasGeneratedBy">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#situationObjectRelation"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Entity"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Activity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#wasInformedBy -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#wasInformedBy">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#situationObjectRelation"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Activity"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Activity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#withIntent -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#withIntent">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#withPurpose"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Intent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#withPurpose -->
+
+    <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#withPurpose">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Activity"/>
+        <rdfs:range rdf:resource="http://richcanvas.io/ns#Purpose"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#location -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#location">
+        <rdfs:range rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://richcanvas.io/ns#addressCountry -->
+
+    <owl:DatatypeProperty rdf:about="http://richcanvas.io/ns#addressCountry">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#PostalAddress"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#addressLocality -->
+
+    <owl:DatatypeProperty rdf:about="http://richcanvas.io/ns#addressLocality">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#PostalAddress"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#addressRegion -->
+
+    <owl:DatatypeProperty rdf:about="http://richcanvas.io/ns#addressRegion">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#PostalAddress"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#atDateTime -->
+
+    <owl:DatatypeProperty rdf:about="http://richcanvas.io/ns#atDateTime"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#birthday -->
+
+    <owl:DatatypeProperty rdf:about="http://richcanvas.io/ns#birthday">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#email -->
+
+    <owl:DatatypeProperty rdf:about="http://richcanvas.io/ns#email">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Email"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#endedAtDateTime -->
+
+    <owl:DatatypeProperty rdf:about="http://richcanvas.io/ns#endedAtDateTime">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#atDateTime"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#firstName -->
+
+    <owl:DatatypeProperty rdf:about="http://richcanvas.io/ns#firstName">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#lastName -->
+
+    <owl:DatatypeProperty rdf:about="http://richcanvas.io/ns#lastName">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#name -->
+
+    <owl:DatatypeProperty rdf:about="http://richcanvas.io/ns#name">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/vcard/ns#fn"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Activity"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Address"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Email"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Feature"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Organization"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Person"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#PhoneNumber"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Specification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#phoneNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://richcanvas.io/ns#phoneNumber">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Person"/>
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#PhoneNumber"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#postalCode -->
+
+    <owl:DatatypeProperty rdf:about="http://richcanvas.io/ns#postalCode">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#PostalAddress"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#startedAtDateTime -->
+
+    <owl:DatatypeProperty rdf:about="http://richcanvas.io/ns#startedAtDateTime">
+        <rdfs:subPropertyOf rdf:resource="http://richcanvas.io/ns#atDateTime"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#streetAddress -->
+
+    <owl:DatatypeProperty rdf:about="http://richcanvas.io/ns#streetAddress">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#PostalAddress"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#title -->
+
+    <owl:DatatypeProperty rdf:about="http://richcanvas.io/ns#title">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://richcanvas.io/ns#Accomplishment -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Accomplishment">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#ActivityOccurence"/>
+        <adaptedFrom>DOLCE-Lite,  Accomplishment</adaptedFrom>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Achievement -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Achievement">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#ActivityOccurence"/>
+        <adaptedFrom>DOLCE-Lite,  Achievement</adaptedFrom>
+        <comment>Executed Activities by an Agent are called achievements if they are atomic</comment>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Action -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Action">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#ActivityOccurence"/>
+        <comment>An Activity with at least one Agent that isParticipantIn it, and that executes a Task that typically isDefinedIn a Plan, Workflow, Project, etc.</comment>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Activity -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Activity">
+        <adaptedFrom>Prov-O, Activity</adaptedFrom>
+        <adaptedFrom>iCity, Activity</adaptedFrom>
+        <comment>An Activity describes something that occurs in the domain.
+An Activity may be further defined by (decomposed into) Subactivities.
+An Activity may have precondition and/or effect State.
+An Activity may be enabled by or cause some State. An enabling of causing state is a generalization of a precondition/effect; an Activity is enabled by or causes some State if it has a subactivity with a precondition or effect (respectively) of that State. 
+In other words, the state may not be required directly before, or cause directly after the activity, but by some more specialized sub-activity.
+An Activity occurs at some point in time and space.
+An Activity takes place during some interval, and so has some duration.
+An Activity may have some Manifestations that participate in it.</comment>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#ActivityOccurence -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#ActivityOccurence">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Activity"/>
+        <adaptedFrom>iCity, ActivityOccurence</adaptedFrom>
+        <comment>An occurrence of some Activity that occurs at some point
+in time and space</comment>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#ActivityRole -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#ActivityRole">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#ActivityTrace -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#ActivityTrace">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#ActivityOccurence"/>
+        <adaptedFrom>Prov-O,  Activity.  Used for Provenance.  Capturing What Happended</adaptedFrom>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Address -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Address"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#Affiliation -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Affiliation">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#OrganizationalRelationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Agent -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Agent">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <adaptedFrom>W3 prov:Agent</adaptedFrom>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#AgentRole -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#AgentRole">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Aims -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Aims">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Purpose"/>
+        <comment>Broad statements of intent or overarching aspirations. Targets and Milestones.    Realization, Detailed and Concrete.  Measurable.</comment>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Alliance -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Alliance">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#OrganizationalRelationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Approach -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Approach"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#Asset -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Asset"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#Audiance -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Audiance">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#AudienceMembership -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#AudienceMembership">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Membership"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#AudienceMembershipSpec -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#AudienceMembershipSpec">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#MembershipSpec"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Behavior -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Behavior">
+        <comment>Refers to the actions, reactions, or conduct of a person or organization in response to internal or external stimuli</comment>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#BehaviorClassification -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#BehaviorClassification">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Classification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Belief -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Belief"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#Beliefs -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Beliefs">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Collection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#BusinessSystem -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#BusinessSystem"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#Campaign -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Campaign">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Undertaking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Capability -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Capability"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#Causation -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Causation">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Situation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#City -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#City"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#Classification -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Classification"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#Collection -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Collection">
+        <adaptedFrom>W3 prov:Activity</adaptedFrom>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Communication -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Communication">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Situation"/>
+        <comment>Communication is the exchange of an entity by two activities, one activity using the entity generated by the other.</comment>
+        <rdfs:comment>Communication is the exchange of an entity by two activities, one activity using the entity generated by the other.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#CommunicationSpec -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#CommunicationSpec">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#SituationSpec"/>
+        <adaptedFrom>https://w3id.org/ep-plan CommunicationSpec</adaptedFrom>
+        <comment>A specification of how communication/exchange of variables between two steps should be performed.</comment>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Conference -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Conference">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#OrganizedEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#ConjunctiveState -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#ConjunctiveState">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#TransientState"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Contacts -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Contacts">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Context -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Context"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#DisjunctiveState -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#DisjunctiveState">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#TransientState"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Email -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Email"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#End -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#End">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#InstantaneousEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Entity -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Entity">
+        <adaptedFrom>W3 prov:Entity</adaptedFrom>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#EntityRole -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#EntityRole">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#FamilialMembership -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#FamilialMembership">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Membership"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#FamilialMembershipSpec -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#FamilialMembershipSpec">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#MembershipSpec"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#FamilialRelationship -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#FamilialRelationship">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#PersonalRelationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#FamilialRelationshipSpec -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#FamilialRelationshipSpec">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#PersonalRelationshipSpec"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Family -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Family">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#FamilyBearingOrgRole -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#FamilyBearingOrgRole">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#MemberBearingOrgRole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#FamilyMemberRole -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#FamilyMemberRole">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#MemberRole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#FamilyMembers -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#FamilyMembers">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Feature -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Feature"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#FriendRole -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#FriendRole">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#PersonRole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Friends -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Friends">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#FriendsBearingOrgRole -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#FriendsBearingOrgRole">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#MemberBearingOrgRole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#FriendsMemberRole -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#FriendsMemberRole">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#MemberRole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#FriendsMembership -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#FriendsMembership">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Membership"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#FriendsMembershipSpec -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#FriendsMembershipSpec">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#MembershipSpec"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Friendship -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Friendship">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#PersonalRelationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#FriendshipClassification -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#FriendshipClassification">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Classification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#FriendshipSpec -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#FriendshipSpec">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#PersonalRelationshipSpec"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#GenderClassification -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#GenderClassification">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Classification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Generation -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Generation">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#InstantaneousEvent"/>
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Situation"/>
+        <comment>abc</comment>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Geometry -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Geometry">
+        <adaptedFrom>geom:geometry</adaptedFrom>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Goal -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Goal">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Purpose"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Goals -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Goals">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Collection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Group -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Group">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Collection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Habit -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Habit">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Behavior"/>
+        <comment>A specific type of behavior that is repeated regularly and tends to occur automatically in response to certain cues or triggers.</comment>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#HierarchicalRelationship -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#HierarchicalRelationship">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#OrganizationalRelationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Household -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Household">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#InferredGoal -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#InferredGoal">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Insight"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#InferredIntent -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#InferredIntent">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Insight"/>
+        <comment>determination or estimation of the underlying purpose or goal behind a particular action, behavior, or communication</comment>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#InferredState -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#InferredState">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Insight"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#InitialState -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#InitialState">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#NonTerminalState"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Insight -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Insight"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#InstantaneousEvent -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#InstantaneousEvent">
+        <adaptedFrom>W3 prov:Activity</adaptedFrom>
+        <comment>An instantaneous event, or event for short, happens in the world and marks a change in the world, in its activities and in its entities. The term &apos;event&apos; is commonly used in process algebra with a similar meaning. Events represent communications or interactions; they are assumed to be atomic and instantaneous.</comment>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Intent -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Intent">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Purpose"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#IntentClassification -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#IntentClassification">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Classification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Itinerary -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Itinerary">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Process"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Manifestation -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Manifestation">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Entity"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#MemberBearingOrgRole -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#MemberBearingOrgRole">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#OrganizationRole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#MemberRole -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#MemberRole">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#PersonRole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Members -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Members">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Membership -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Membership">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Situation"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/org#Membership"/>
+        <adaptedFrom>W3 org:Membership</adaptedFrom>
+        <comment>Relation between an Agent, an Organization and  Role</comment>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#MembershipSpec -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#MembershipSpec">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#SituationSpec"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Mentorship -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Mentorship">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#PersonalRelationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#MentorshipSpec -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#MentorshipSpec">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#PersonalRelationshipSpec"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Mission -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Mission">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Purpose"/>
+        <comment>How we get there</comment>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#MultiStep -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#MultiStep">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Collection"/>
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Step"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#MultiVariable -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#MultiVariable">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Collection"/>
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Variable"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#NonTerminalState -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#NonTerminalState">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#State"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Objective -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Objective">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Purpose"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Objectives -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Objectives">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Collection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Organization -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Organization">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Agent"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/vcard/ns#Organization"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Organization"/>
+        <adaptedFrom>W3 org:Organization</adaptedFrom>
+        <adaptedFrom>W3 prov:Organization</adaptedFrom>
+        <adaptedFrom>foaf:Organization</adaptedFrom>
+        <comment>Has identity and definining purpose</comment>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#OrganizationClassification -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#OrganizationClassification">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Classification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#OrganizationRole -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#OrganizationRole">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#AgentRole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#OrganizationalMembershipSpec -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#OrganizationalMembershipSpec">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#RelationshipSpec"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#OrganizationalRelationship -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#OrganizationalRelationship">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Relationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#OrganizationalUnit -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#OrganizationalUnit">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#OrganizedEvent -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#OrganizedEvent"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#Outcome -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Outcome"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#Participation -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Participation">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Situation"/>
+        <adaptedFrom>W3 prov:Association</adaptedFrom>
+        <comment>An activity association is an assignment of responsibility to an agent for an activity, indicating that the agent had a role in the activity. It further allows for a plan to be specified, which is the plan intended by the agent to achieve some goals in the context of this activity.</comment>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Partnership -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Partnership">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#OrganizationalRelationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Person -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Person">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Agent"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/vcard/ns#Individual"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Person"/>
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <adaptedFrom>W3 org:Person</adaptedFrom>
+        <adaptedFrom>W3 prov:Person</adaptedFrom>
+        <adaptedFrom>foaf:Person</adaptedFrom>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#PersonManifestation -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#PersonManifestation">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Manifestation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#PersonRole -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#PersonRole">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#AgentRole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#PersonalContext -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#PersonalContext">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Context"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#PersonalRelationship -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#PersonalRelationship">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Relationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#PersonalRelationshipSpec -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#PersonalRelationshipSpec">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#RelationshipSpec"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#PhoneNumber -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#PhoneNumber"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#Plan -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Plan">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#ProcessRole"/>
+        <adaptedFrom>http://purl.org/net/p-plan</adaptedFrom>
+        <adaptedFrom>https://w3id.org/ep-plan Plan</adaptedFrom>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Planning -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Planning">
+        <comment>An ACTIVITY whose major EFFECT is to produce a Plan</comment>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Point -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Point">
+        <adaptedFrom>wgs:Point</adaptedFrom>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Post -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Post">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/org#Post"/>
+        <adaptedFrom>W3 org:Post</adaptedFrom>
+        <comment>A Post represents some position within an organization that exists independently of the person or persons filling it. Posts may be used to represent situations where a person is a member of an organization ex officio (for example the Secretary of State for Scotland is part of UK Cabinet by virtue of being Secretary of State for Scotland, not as an individual person). A post can be held by multiple people and hence can be treated as a organization in its own right.</comment>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#PostalAddress -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#PostalAddress">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Address"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Procedure -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Procedure">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#ProcessRole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Process -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Process">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Activity"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <adaptedFrom>BFO:process</adaptedFrom>
+        <comment>A squence of Activities.
+An occurrent that has temporal proper parts and for some time t, p s-depends_on some material entity at t.
+For example, a PlanExecution is a context including some actions executed by agents according to certain parameters and expected tasks to be achieved from a Plan;</comment>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#ProcessRole -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#ProcessRole">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#ActivityRole"/>
+        <adaptedFrom>Academic Event Ontology (AEON)</adaptedFrom>
+        <comment>Specification of Occurrent that has temporal proper parts</comment>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Project -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Project">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Undertaking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Purpose -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Purpose">
+        <comment>Why do we do what we do?  We believe ....</comment>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Recipe -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Recipe">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#ProcessRole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Relationship -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Relationship">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Situation"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#RelationshipSpec -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#RelationshipSpec">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#SituationSpec"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#RelativeRole -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#RelativeRole">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#PersonRole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#ResponsibleAgent -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#ResponsibleAgent">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Role -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Role">
+        <adaptedFrom>W3 prov:Role</adaptedFrom>
+        <adaptedFrom>skos:Concept</adaptedFrom>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#RuleExecution -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#RuleExecution">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Series -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Series">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Process"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Site -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Site">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/org#Site"/>
+        <adaptedFrom>W3 org:Site</adaptedFrom>
+        <comment>An office or other premise at which the organization is located</comment>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Situation -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Situation"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#SituationSpec -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#SituationSpec">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Specification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#SoftwareAgent -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#SoftwareAgent">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Agent"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#SoftwareAgent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#SpatialFeature -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#SpatialFeature">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Specification -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Specification"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#Start -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Start">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#InstantaneousEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#State -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#State">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#EntityRole"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <comment>A state refers to a class of manifestations. It may be a precondition or effect of some Activity, or more generally it may enabled or be caused by some Activity. If a state is complex, it may refer to some combination of classes of manifestations.
+
+A note on complex states:
+Say that a shopping activity, Activity-Shop, requires both the VehicleW30LGas state, but also some state wherein the mall is open, OpenMall. Each state would first be defined separately. Then, we can simply state:
+precondition(VehicleW30LGas,Activity-Shop) AND  precondition(OpenMall,Activity-Shop)
+were the preconditions required disjunctively, we could state:
+precondition(VehicleW30LGas,Activity-Shop) OR precondition(OpenMall,Activity-Shop)
+However, in large and complex domains, there will be cases in which the above approach is undesirable. In particular, due to the complexity of the description that results as the state being described becomes more detailed. In many cases it will be more natural and convenient to be able to refer to a single, aggregate state. We therefore extend the representation of States to capture aggregation, as approached in the concept of state trees introduced by TOVE as a construct for the activity cluster.
+
+A State may be either non-terminal or terminal. A terminal state has no child states, and therefore refers directly to a class of manifestations, whereas a non-terminal state has child states, which may define some classes of manifestations, or further define some other complex states.
+	NonTerminalState(x) v TerminalState(x) = State(x)
+A state  cannot be both non-terminal and terminal.
+	TerminalState disjointWith NonTerminalState</comment>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#StateOfAffair -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#StateOfAffair">
+        <comment>refers to the existing situation or condition of a particular matter or issue at a specific point in time (past, current or future time). It encapsulates the overall circumstances, events, or conditions that characterize a given situation or context.</comment>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#StateSpec -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#StateSpec">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Specification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Step -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Step">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#ActivityRole"/>
+        <adaptedFrom>http://purl.org/net/p-plan</adaptedFrom>
+        <adaptedFrom>https://w3id.org/ep-plan</adaptedFrom>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Steps -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Steps">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Collection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#StrategicPlan -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#StrategicPlan">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Plan"/>
+        <comment>Strategic plan outlines the specific steps, initiatives, and objectives necessary to implement a chosen strategy</comment>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#StrategicPlanning -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#StrategicPlanning">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Planning"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#StrategicPurpose -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#StrategicPurpose">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Purpose"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Strategy -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Strategy">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Approach"/>
+        <comment>Strategy refers to the overarching approach or direction chosen to achieve specific goals or objectives.</comment>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Task -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Task">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#ActivityOccurence"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#TemporalDuration -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#TemporalDuration"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#TemporalEntity -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#TemporalEntity"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#TerminalState -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#TerminalState">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#State"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#TimeInstant -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#TimeInstant">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#TemporalEntity"/>
+        <adaptedFrom>w3.org/2006/time, Time instant</adaptedFrom>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#TimeInterval -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#TimeInterval">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#TemporalEntity"/>
+        <adaptedFrom>w3.org/2006/time, Time interval</adaptedFrom>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#TimeVaryingConcept -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#TimeVaryingConcept">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Trait -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Trait">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Behavior"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#TraitClassification -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#TraitClassification">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Classification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#TransientState -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#TransientState">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#NonTerminalState"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Trip -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Trip">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Undertaking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Undertaking -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Undertaking">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#TimeVaryingConcept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#UndertakingSpec -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#UndertakingSpec">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Specification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Usage -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Usage">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#InstantaneousEvent"/>
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Situation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Value -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Value"/>
+    
+
+
+    <!-- http://richcanvas.io/ns#Values -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Values">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Collection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Variable -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Variable">
+        <adaptedFrom>http://purl.org/net/p-plan</adaptedFrom>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Vision -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Vision">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Purpose"/>
+        <adaptedFrom>abc</adaptedFrom>
+        <comment>What your trying to achieve?</comment>
+    </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Workflow -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Workflow">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#ProcessRole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#Point -->
+
+    <owl:Class rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#Point">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+        <rdfs:comment> 
+Uniquely identified by lat/long/alt. i.e.
+
+spaciallyIntersects(P1, P2) :- lat(P1, LAT), long(P1, LONG), alt(P1, ALT),
+  lat(P2, LAT), long(P2, LONG), alt(P2, ALT).
+
+sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P2).
+  </rdfs:comment>
+        <rdfs:comment>A point, typically described using a coordinate system relative to Earth, such as WGS84.
+  </rdfs:comment>
+        <rdfs:label>point</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing -->
+
+    <owl:Class rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">
+        <rdfs:comment>Anything with spatial extent, i.e. size, shape, or position.
+ e.g. people, places, bowling balls, as well as abstract areas like cubes.
+</rdfs:comment>
+        <rdfs:label>SpatialThing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://richcanvas.io/ns#Female -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/ns#Female">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#GenderClassification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/ns#GiveAdvice -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/ns#GiveAdvice">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#Behavior"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/ns#Male -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/ns#Male">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#GenderClassification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/ns#Private -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/ns#Private">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#PersonalContext"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/ns#Professional -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/ns#Professional">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#PersonalContext"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/ns#RequestAdvice -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/ns#RequestAdvice">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#Behavior"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/ns#TakeAdvice -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/ns#TakeAdvice">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#Behavior"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/ns#They -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/ns#They">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#GenderClassification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#">
+        <dc:date>$Date: 2009/04/20 15:00:30 $</dc:date>
+        <dc:description>A vocabulary for representing latitude, longitude and 
+ altitude information in the WGS84 geodetic reference datum. 
+ Version $Id: wgs84_pos.rdf,v 1.22 2009/04/20 15:00:30 timbl Exp $. See http://www.w3.org/2003/01/geo/ for more details.</dc:description>
+        <dc:title>WGS84 Geo Positioning: an RDF vocabulary</dc:title>
+        <rdfs:comment>
+Recent changes to this namespace:
+$Log: wgs84_pos.rdf,v $
+Revision 1.22  2009/04/20 15:00:30  timbl
+Remove the time bits which have been deal with elsewhere eg in iCal.
+
+Revision 1.21  2009/04/20 12:52:47  timbl
+try again
+
+Revision 1.20  2009/04/20 12:42:11  timbl
+Add Event (edited ages ago and never checked in), and location (following discussion http://chatlogs.planetrdf.com/swig/2009-04-20#T12-36-09)
+
+Revision 1.19  2009/04/20 12:36:31  timbl
+Add Event (edited ages ago and never checked in), and location (following discussion http://chatlogs.planetrdf.com/swig/2009-04-20#T12-36-09)
+
+Revision 1.18  2006/02/01 22:01:04  danbri
+Clarified that lat and long are decimal degrees, and that alt is decimal metres about local reference ellipsoid
+
+Revision 1.17  2004/02/06 17:38:12  danbri
+Fixed a bad commit screwup
+
+Revision 1.15  2003/04/19 11:24:08  danbri
+Fixed the typo even more.
+
+Revision 1.14  2003/04/19 11:16:56  danbri
+fixed a typo
+
+Revision 1.13  2003/02/19 22:27:27  connolly
+relaxed domain constraints on lat/long/alt from Point to SpatialThing
+
+Revision 1.12  2003/01/12 01:41:41  danbri
+Trying local copy of XSLT doc.
+
+Revision 1.11  2003/01/12 01:20:18  danbri
+added a link to morten&apos;s xslt rdfs viewer.
+
+Revision 1.10  2003/01/11 18:56:49  danbri
+Removed datatype range from lat and long properties, since they would
+have required each occurance of the property to mention the datatype.
+
+Revision 1.9  2003/01/11 11:41:31  danbri
+Another typo; repaired rdfs:Property to rdf:Property x4
+
+Revision 1.8  2003/01/11 11:05:02  danbri
+Added an rdfs:range for each lat/long/alt property,
+http://www.w3.org/2001/XMLSchema#float
+
+Revision 1.7  2003/01/10 20:25:16  danbri
+Longer rdfs:comment for Point, trying to be Earth-centric and neutral about
+coordinate system(s) at the same time. Feedback welcomed.
+
+Revision 1.6  2003/01/10 20:18:30  danbri
+Added CVS log comments into the RDF/XML as an rdfs:comment property of the
+vocabulary. Note that this is not common practice (but seems both harmless
+and potentially useful).
+
+
+revision 1.5
+date: 2003/01/10 20:14:31;  author: danbri;  state: Exp;  lines: +16 -5
+Updated schema:
+Added a dc:date, added url for more info. Changed the rdfs:label of the
+namespace from gp to geo. Added a class Point, set as the rdfs:domain of
+each property. Added XML comment on the lat_long property suggesting that
+we might not need it (based on #rdfig commentary from implementors).
+
+revision 1.4
+date: 2003/01/10 20:01:07;  author: danbri;  state: Exp;  lines: +6 -5
+Fixed typo; several rdfs:about attributes are now rdf:about. Thanks to MortenF in
+#rdfig for catching this error.
+
+revision 1.3
+date: 2003/01/10 11:59:03;  author: danbri;  state: Exp;  lines: +4 -3
+fixed buglet in vocab, added more wgs links
+
+revision 1.2
+date: 2003/01/10 11:01:11;  author: danbri;  state: Exp;  lines: +4 -4
+Removed alt from the as-a-flat-string property, and switched from
+space separated to comma separated.
+
+revision 1.1
+date: 2003/01/10 10:53:23;  author: danbri;  state: Exp;
+basic geo vocab
+
+</rdfs:comment>
+        <rdfs:label>geo</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#alt">
+        <rdfs:comment>The WGS84 altitude of a SpatialThing (decimal meters 
+above the local reference ellipsoid).</rdfs:comment>
+        <rdfs:label>altitude</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#lat">
+        <rdfs:comment>The WGS84 latitude of a SpatialThing (decimal degrees).</rdfs:comment>
+        <rdfs:label>latitude</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#location">
+        <rdfs:comment>The relation between something and the point, 
+ or other geometrical thing in space, where it is.  For example, the realtionship between
+ a radio tower and a Point with a given lat and long.
+ Or a relationship between a park and its outline as a closed arc of points, or a road and
+ its location as a arc (a sequence of points).
+ Clearly in practice there will be limit to the accuracy of any such statement, but one would expect
+ an accuracy appropriate for the size of the object and uses such as mapping .
+ </rdfs:comment>
+        <rdfs:label>location</rdfs:label>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
