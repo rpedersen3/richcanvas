@@ -1,14 +1,20 @@
 @prefix : <http://richcanvas.io/ns#> .
 @prefix rc: <http://richcanvas.io/ns#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @base <http://richcanvas.io/ns#> .
 
 <http://richcanvas.io/ns> rdf:type owl:Ontology ;
-                           owl:versionIRI <http://richcanvas.io/ns/1.1.0> .
+                           owl:versionIRI <http://richcanvas.io/ns/1.1.0> ;
+                           owl:imports geo: ,
+                                       <http://www.w3.org/2006/vcard/ns> ,
+                                       <http://www.w3.org/ns/org#> ,
+                                       <http://www.w3.org/ns/prov#> .
 
 #################################################################
 #    Annotation properties
@@ -35,27 +41,27 @@ xsd:duration rdf:type rdfs:Datatype .
 
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#alt
-<http://www.w3.org/2003/01/geo/wgs84_pos#alt> rdf:type rdfs:Datatype .
+geo:alt rdf:type rdfs:Datatype .
 
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#asGeoJSON
-<http://www.w3.org/2003/01/geo/wgs84_pos#asGeoJSON> rdf:type rdfs:Datatype .
+geo:asGeoJSON rdf:type rdfs:Datatype .
 
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#lat
-<http://www.w3.org/2003/01/geo/wgs84_pos#lat> rdf:type rdfs:Datatype .
+geo:lat rdf:type rdfs:Datatype .
 
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#lat_long
-<http://www.w3.org/2003/01/geo/wgs84_pos#lat_long> rdf:type rdfs:Datatype .
+geo:lat_long rdf:type rdfs:Datatype .
 
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#location
-<http://www.w3.org/2003/01/geo/wgs84_pos#location> rdf:type rdfs:Datatype .
+geo:location rdf:type rdfs:Datatype .
 
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#lon
-<http://www.w3.org/2003/01/geo/wgs84_pos#lon> rdf:type rdfs:Datatype .
+geo:lon rdf:type rdfs:Datatype .
 
 
 #################################################################
@@ -392,6 +398,13 @@ rc:hasGender rdf:type owl:ObjectProperty ;
              rdfs:range rc:GenderClassification .
 
 
+###  http://richcanvas.io/ns#hasGeo
+rc:hasGeo rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty ,
+                             vcard:hasGeo ;
+          rdfs:range geo:SpatialThing .
+
+
 ###  http://richcanvas.io/ns#hasGeometry
 rc:hasGeometry rdf:type owl:ObjectProperty ;
                rdfs:domain rc:SpatialFeature ;
@@ -520,10 +533,6 @@ rc:hasMission rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf rc:hasPurpose ;
               rdfs:domain rc:Agent ;
               rdfs:range rc:Mission .
-
-
-###  http://richcanvas.io/ns#hasName
-rc:hasName rdf:type owl:ObjectProperty .
 
 
 ###  http://richcanvas.io/ns#hasObjectRole
@@ -1368,6 +1377,8 @@ rc:lastName rdf:type owl:DatatypeProperty ;
 
 ###  http://richcanvas.io/ns#name
 rc:name rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf owl:topDataProperty ,
+                           vcard:fn ;
         rdfs:domain rc:Activity ,
                     rc:Address ,
                     rc:Email ,
@@ -1476,6 +1487,9 @@ rc:Affiliation rdf:type owl:Class ;
 
 ###  http://richcanvas.io/ns#Agent
 rc:Agent rdf:type owl:Class ;
+         rdfs:subClassOf owl:Thing ,
+                         <http://www.w3.org/ns/prov#Agent> ,
+                         <http://xmlns.com/foaf/0.1/Agent> ;
          rc:adaptedFrom "W3 prov:Agent" .
 
 
@@ -1553,6 +1567,10 @@ rc:Capability rdf:type owl:Class .
 ###  http://richcanvas.io/ns#Causation
 rc:Causation rdf:type owl:Class ;
              rdfs:subClassOf rc:Situation .
+
+
+###  http://richcanvas.io/ns#City
+rc:City rdf:type owl:Class .
 
 
 ###  http://richcanvas.io/ns#Classification
@@ -1828,7 +1846,8 @@ rc:Members rdf:type owl:Class ;
 ###  http://richcanvas.io/ns#Membership
 rc:Membership rdf:type owl:Class ;
               rdfs:subClassOf rc:Situation ,
-                              owl:Thing ;
+                              owl:Thing ,
+                              <http://www.w3.org/ns/org#Membership> ;
               rc:adaptedFrom "W3 org:Membership" ;
               rc:comment "Relation between an Agent, an Organization and  Role" .
 
@@ -1883,7 +1902,9 @@ rc:Objectives rdf:type owl:Class ;
 
 ###  http://richcanvas.io/ns#Organization
 rc:Organization rdf:type owl:Class ;
-                rdfs:subClassOf rc:Agent ;
+                rdfs:subClassOf rc:Agent ,
+                                vcard:Organization ,
+                                <http://www.w3.org/ns/prov#Organization> ;
                 rc:adaptedFrom "W3 org:Organization" ,
                                "W3 prov:Organization" ,
                                "foaf:Organization" ;
@@ -1937,7 +1958,10 @@ rc:Partnership rdf:type owl:Class ;
 
 ###  http://richcanvas.io/ns#Person
 rc:Person rdf:type owl:Class ;
-          rdfs:subClassOf rc:Agent ;
+          rdfs:subClassOf rc:Agent ,
+                          vcard:Individual ,
+                          <http://www.w3.org/ns/prov#Person> ,
+                          <http://xmlns.com/foaf/0.1/Person> ;
           rc:adaptedFrom "W3 org:Person" ,
                          "W3 prov:Person" ,
                          "foaf:Person" .
@@ -1991,6 +2015,8 @@ rc:Point rdf:type owl:Class ;
 
 ###  http://richcanvas.io/ns#Post
 rc:Post rdf:type owl:Class ;
+        rdfs:subClassOf owl:Thing ,
+                        <http://www.w3.org/ns/org#Post> ;
         rc:adaptedFrom "W3 org:Post" ;
         rc:comment "A Post represents some position within an organization that exists independently of the person or persons filling it. Posts may be used to represent situations where a person is a member of an organization ex officio (for example the Secretary of State for Scotland is part of UK Cabinet by virtue of being Secretary of State for Scotland, not as an individual person). A post can be held by multiple people and hence can be treated as a organization in its own right." .
 
@@ -2076,6 +2102,8 @@ rc:Series rdf:type owl:Class ;
 
 ###  http://richcanvas.io/ns#Site
 rc:Site rdf:type owl:Class ;
+        rdfs:subClassOf owl:Thing ,
+                        <http://www.w3.org/ns/org#Site> ;
         rc:adaptedFrom "W3 org:Site" ;
         rc:comment "An office or other premise at which the organization is located" .
 
@@ -2091,7 +2119,8 @@ rc:SituationSpec rdf:type owl:Class ;
 
 ###  http://richcanvas.io/ns#SoftwareAgent
 rc:SoftwareAgent rdf:type owl:Class ;
-                 rdfs:subClassOf rc:Agent .
+                 rdfs:subClassOf rc:Agent ,
+                                 <http://www.w3.org/ns/prov#SoftwareAgent> .
 
 
 ###  http://richcanvas.io/ns#SpatialFeature
