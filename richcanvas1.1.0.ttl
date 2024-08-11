@@ -39,6 +39,10 @@ rc:adaptedFrom rdf:type owl:AnnotationProperty .
 rc:comment rdf:type owl:AnnotationProperty .
 
 
+###  http://richcanvas.io/ns#label
+rc:label rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#alt
 geo:alt rdf:type owl:AnnotationProperty ;
         rdfs:domain geo:SpatialThing .
@@ -51,13 +55,14 @@ geo:lat rdf:type owl:AnnotationProperty ;
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#location
 geo:location rdf:type owl:AnnotationProperty ;
-             rdfs:subPropertyOf <http://xmlns.com/foaf/0.1/based_near> .
+             rdfs:subPropertyOf <http://xmlns.com/foaf/0.1/based_near> ;
+             rdfs:range geo:SpatialThing .
 
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#long
-geo:long rdfs:comment "The WGS84 longitude of a SpatialThing (decimal degrees)." ;
+geo:long rdf:type owl:AnnotationProperty ;
+         rdfs:comment "The WGS84 longitude of a SpatialThing (decimal degrees)." ;
          rdfs:label "longitude" ;
-         rdf:type owl:AnnotationProperty ;
          rdfs:domain geo:SpatialThing .
 
 
@@ -1358,8 +1363,7 @@ rc:withPurpose rdf:type owl:ObjectProperty ;
 
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#location
-geo:location rdf:type owl:ObjectProperty ;
-             rdfs:range geo:SpatialThing .
+geo:location rdf:type owl:ObjectProperty .
 
 
 #################################################################
@@ -1784,7 +1788,10 @@ rc:FriendshipSpec rdf:type owl:Class ;
 
 ###  http://richcanvas.io/ns#GenderClassification
 rc:GenderClassification rdf:type owl:Class ;
-                        rdfs:subClassOf rc:Classification .
+                        rdfs:subClassOf rc:Classification ;
+                        rdfs:comment "abccccc" ,
+                                     "test" ;
+                        rdfs:label "abc" .
 
 
 ###  http://richcanvas.io/ns#Generation
@@ -2381,7 +2388,8 @@ geo:SpatialThing rdf:type owl:Class ;
 
 ###  http://richcanvas.io/ns#Female
 rc:Female rdf:type owl:NamedIndividual ,
-                   rc:GenderClassification .
+                   rc:GenderClassification ;
+          rc:title "female" .
 
 
 ###  http://richcanvas.io/ns#GiveAdvice
@@ -2391,7 +2399,8 @@ rc:GiveAdvice rdf:type owl:NamedIndividual ,
 
 ###  http://richcanvas.io/ns#Male
 rc:Male rdf:type owl:NamedIndividual ,
-                 rc:GenderClassification .
+                 rc:GenderClassification ;
+        rc:title "male" .
 
 
 ###  http://richcanvas.io/ns#Private
@@ -2412,11 +2421,6 @@ rc:RequestAdvice rdf:type owl:NamedIndividual ,
 ###  http://richcanvas.io/ns#TakeAdvice
 rc:TakeAdvice rdf:type owl:NamedIndividual ,
                        rc:Behavior .
-
-
-###  http://richcanvas.io/ns#They
-rc:They rdf:type owl:NamedIndividual ,
-                 rc:GenderClassification .
 
 
 #################################################################

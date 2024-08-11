@@ -121,6 +121,14 @@
     
 
 
+    <!-- http://churchcore.io/ns#MinistryEventLocation -->
+
+    <owl:Class rdf:about="http://churchcore.io/ns#MinistryEventLocation">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Classification"/>
+    </owl:Class>
+    
+
+
     <!-- http://churchcore.io/ns#MinistryOrganization -->
 
     <owl:Class rdf:about="http://churchcore.io/ns#MinistryOrganization">
@@ -270,6 +278,38 @@
     <owl:NamedIndividual rdf:about="http://churchcore.io/ns#TheWordOfGod">
         <rdf:type rdf:resource="http://richcanvas.io/ns#Belief"/>
         <rdfs:comment>Believe that the Bible is the Word of God, fully inspired and without error in the original manuscripts, written under the inspiration of the Holy Spirit, and that it has authority in all matters of faith and conduct.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://churchcore.io/ns#home -->
+
+    <owl:NamedIndividual rdf:about="http://churchcore.io/ns#home">
+        <rdf:type rdf:resource="http://churchcore.io/ns#MinistryEventLocation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://churchcore.io/ns#offCampus -->
+
+    <owl:NamedIndividual rdf:about="http://churchcore.io/ns#offCampus">
+        <rdf:type rdf:resource="http://churchcore.io/ns#MinistryEventLocation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://churchcore.io/ns#onCampus -->
+
+    <owl:NamedIndividual rdf:about="http://churchcore.io/ns#onCampus">
+        <rdf:type rdf:resource="http://churchcore.io/ns#MinistryEventLocation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://churchcore.io/ns#online -->
+
+    <owl:NamedIndividual rdf:about="http://churchcore.io/ns#online">
+        <rdf:type rdf:resource="http://churchcore.io/ns#MinistryEventLocation"/>
     </owl:NamedIndividual>
     
 
