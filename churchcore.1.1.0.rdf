@@ -57,14 +57,6 @@
     
 
 
-    <!-- http://churchcore.io/ns#AgeClassification -->
-
-    <owl:Class rdf:about="http://churchcore.io/ns#AgeClassification">
-        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Classification"/>
-    </owl:Class>
-    
-
-
     <!-- http://churchcore.io/ns#ChurchCampus -->
 
     <owl:Class rdf:about="http://churchcore.io/ns#ChurchCampus">
@@ -113,14 +105,6 @@
     
 
 
-    <!-- http://churchcore.io/ns#EducationClassification -->
-
-    <owl:Class rdf:about="http://churchcore.io/ns#EducationClassification">
-        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Classification"/>
-    </owl:Class>
-    
-
-
     <!-- http://churchcore.io/ns#Elder -->
 
     <owl:Class rdf:about="http://churchcore.io/ns#Elder">
@@ -137,17 +121,9 @@
     
 
 
-    <!-- http://churchcore.io/ns#MarriageClassification -->
+    <!-- http://churchcore.io/ns#MinistryEventLocation -->
 
-    <owl:Class rdf:about="http://churchcore.io/ns#MarriageClassification">
-        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Classification"/>
-    </owl:Class>
-    
-
-
-    <!-- http://churchcore.io/ns#MinistryEventLocationClassification -->
-
-    <owl:Class rdf:about="http://churchcore.io/ns#MinistryEventLocationClassification">
+    <owl:Class rdf:about="http://churchcore.io/ns#MinistryEventLocation">
         <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Classification"/>
     </owl:Class>
     
@@ -306,90 +282,10 @@
     
 
 
-    <!-- http://churchcore.io/ns#adult -->
-
-    <owl:NamedIndividual rdf:about="http://churchcore.io/ns#adult">
-        <rdf:type rdf:resource="http://churchcore.io/ns#AgeClassification"/>
-        <rc:title>adult</rc:title>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://churchcore.io/ns#child -->
-
-    <owl:NamedIndividual rdf:about="http://churchcore.io/ns#child">
-        <rdf:type rdf:resource="http://churchcore.io/ns#AgeClassification"/>
-        <rc:title>child</rc:title>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://churchcore.io/ns#college -->
-
-    <owl:NamedIndividual rdf:about="http://churchcore.io/ns#college">
-        <rdf:type rdf:resource="http://churchcore.io/ns#EducationClassification"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://churchcore.io/ns#divorced -->
-
-    <owl:NamedIndividual rdf:about="http://churchcore.io/ns#divorced">
-        <rdf:type rdf:resource="http://churchcore.io/ns#MarriageClassification"/>
-        <rc:title>divorced</rc:title>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://churchcore.io/ns#elementary -->
-
-    <owl:NamedIndividual rdf:about="http://churchcore.io/ns#elementary">
-        <rdf:type rdf:resource="http://churchcore.io/ns#EducationClassification"/>
-        <rc:title>elementary school</rc:title>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://churchcore.io/ns#high -->
-
-    <owl:NamedIndividual rdf:about="http://churchcore.io/ns#high">
-        <rdf:type rdf:resource="http://churchcore.io/ns#EducationClassification"/>
-        <rc:title>high school</rc:title>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://churchcore.io/ns#home -->
 
     <owl:NamedIndividual rdf:about="http://churchcore.io/ns#home">
-        <rdf:type rdf:resource="http://churchcore.io/ns#MinistryEventLocationClassification"/>
-        <rc:title>home</rc:title>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://churchcore.io/ns#married -->
-
-    <owl:NamedIndividual rdf:about="http://churchcore.io/ns#married">
-        <rdf:type rdf:resource="http://churchcore.io/ns#MarriageClassification"/>
-        <rc:title>married</rc:title>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://churchcore.io/ns#middle -->
-
-    <owl:NamedIndividual rdf:about="http://churchcore.io/ns#middle">
-        <rdf:type rdf:resource="http://churchcore.io/ns#EducationClassification"/>
-        <rc:title>middle school</rc:title>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://churchcore.io/ns#newlywed -->
-
-    <owl:NamedIndividual rdf:about="http://churchcore.io/ns#newlywed">
-        <rdf:type rdf:resource="http://churchcore.io/ns#MarriageClassification"/>
+        <rdf:type rdf:resource="http://churchcore.io/ns#MinistryEventLocation"/>
     </owl:NamedIndividual>
     
 
@@ -397,8 +293,7 @@
     <!-- http://churchcore.io/ns#offCampus -->
 
     <owl:NamedIndividual rdf:about="http://churchcore.io/ns#offCampus">
-        <rdf:type rdf:resource="http://churchcore.io/ns#MinistryEventLocationClassification"/>
-        <rc:title>off campus</rc:title>
+        <rdf:type rdf:resource="http://churchcore.io/ns#MinistryEventLocation"/>
     </owl:NamedIndividual>
     
 
@@ -406,8 +301,7 @@
     <!-- http://churchcore.io/ns#onCampus -->
 
     <owl:NamedIndividual rdf:about="http://churchcore.io/ns#onCampus">
-        <rdf:type rdf:resource="http://churchcore.io/ns#MinistryEventLocationClassification"/>
-        <rc:title>on campus</rc:title>
+        <rdf:type rdf:resource="http://churchcore.io/ns#MinistryEventLocation"/>
     </owl:NamedIndividual>
     
 
@@ -415,50 +309,7 @@
     <!-- http://churchcore.io/ns#online -->
 
     <owl:NamedIndividual rdf:about="http://churchcore.io/ns#online">
-        <rdf:type rdf:resource="http://churchcore.io/ns#MinistryEventLocationClassification"/>
-        <rc:title>online</rc:title>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://churchcore.io/ns#senior -->
-
-    <owl:NamedIndividual rdf:about="http://churchcore.io/ns#senior">
-        <rdf:type rdf:resource="http://churchcore.io/ns#AgeClassification"/>
-        <rc:title></rc:title>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://churchcore.io/ns#separated -->
-
-    <owl:NamedIndividual rdf:about="http://churchcore.io/ns#separated">
-        <rdf:type rdf:resource="http://churchcore.io/ns#MarriageClassification"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://churchcore.io/ns#single -->
-
-    <owl:NamedIndividual rdf:about="http://churchcore.io/ns#single">
-        <rdf:type rdf:resource="http://churchcore.io/ns#MarriageClassification"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://churchcore.io/ns#teen -->
-
-    <owl:NamedIndividual rdf:about="http://churchcore.io/ns#teen">
-        <rdf:type rdf:resource="http://churchcore.io/ns#AgeClassification"/>
-        <rc:title>teen</rc:title>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://churchcore.io/ns#widowed -->
-
-    <owl:NamedIndividual rdf:about="http://churchcore.io/ns#widowed">
-        <rdf:type rdf:resource="http://churchcore.io/ns#MarriageClassification"/>
+        <rdf:type rdf:resource="http://churchcore.io/ns#MinistryEventLocation"/>
     </owl:NamedIndividual>
     
 

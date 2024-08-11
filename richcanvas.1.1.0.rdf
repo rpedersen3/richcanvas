@@ -65,6 +65,12 @@
     
 
 
+    <!-- http://richcanvas.io/ns#label -->
+
+    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#label"/>
+    
+
+
     <!-- http://www.w3.org/2003/01/geo/wgs84_pos#alt -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#alt">
@@ -85,6 +91,7 @@
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#location">
         <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/based_near"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
     </owl:AnnotationProperty>
     
 
@@ -2021,9 +2028,7 @@
 
     <!-- http://www.w3.org/2003/01/geo/wgs84_pos#location -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#location">
-        <rdfs:range rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
-    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#location"/>
     
 
 
@@ -2400,6 +2405,14 @@ in time and space</comment>
     
 
 
+    <!-- http://richcanvas.io/ns#Category -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Category">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Concept"/>
+    </owl:Class>
+    
+
+
     <!-- http://richcanvas.io/ns#Causation -->
 
     <owl:Class rdf:about="http://richcanvas.io/ns#Causation">
@@ -2416,7 +2429,9 @@ in time and space</comment>
 
     <!-- http://richcanvas.io/ns#Classification -->
 
-    <owl:Class rdf:about="http://richcanvas.io/ns#Classification"/>
+    <owl:Class rdf:about="http://richcanvas.io/ns#Classification">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Concept"/>
+    </owl:Class>
     
 
 
@@ -2445,6 +2460,12 @@ in time and space</comment>
         <adaptedFrom>https://w3id.org/ep-plan CommunicationSpec</adaptedFrom>
         <comment>A specification of how communication/exchange of variables between two steps should be performed.</comment>
     </owl:Class>
+    
+
+
+    <!-- http://richcanvas.io/ns#Concept -->
+
+    <owl:Class rdf:about="http://richcanvas.io/ns#Concept"/>
     
 
 
@@ -2662,6 +2683,9 @@ in time and space</comment>
 
     <owl:Class rdf:about="http://richcanvas.io/ns#GenderClassification">
         <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Classification"/>
+        <rdfs:comment>abccccc</rdfs:comment>
+        <rdfs:comment>test</rdfs:comment>
+        <rdfs:label>abc</rdfs:label>
     </owl:Class>
     
 
@@ -3569,6 +3593,7 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 
     <owl:NamedIndividual rdf:about="http://richcanvas.io/ns#Female">
         <rdf:type rdf:resource="http://richcanvas.io/ns#GenderClassification"/>
+        <title>female</title>
     </owl:NamedIndividual>
     
 
@@ -3585,6 +3610,7 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 
     <owl:NamedIndividual rdf:about="http://richcanvas.io/ns#Male">
         <rdf:type rdf:resource="http://richcanvas.io/ns#GenderClassification"/>
+        <title>male</title>
     </owl:NamedIndividual>
     
 
@@ -3617,14 +3643,6 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 
     <owl:NamedIndividual rdf:about="http://richcanvas.io/ns#TakeAdvice">
         <rdf:type rdf:resource="http://richcanvas.io/ns#Behavior"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://richcanvas.io/ns#They -->
-
-    <owl:NamedIndividual rdf:about="http://richcanvas.io/ns#They">
-        <rdf:type rdf:resource="http://richcanvas.io/ns#GenderClassification"/>
     </owl:NamedIndividual>
     
 
