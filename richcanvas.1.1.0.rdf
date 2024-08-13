@@ -2158,6 +2158,12 @@
     
 
 
+    <!-- http://richcanvas.io/ns#primarySource -->
+
+    <owl:DatatypeProperty rdf:about="http://richcanvas.io/ns#primarySource"/>
+    
+
+
     <!-- http://richcanvas.io/ns#startedAtDateTime -->
 
     <owl:DatatypeProperty rdf:about="http://richcanvas.io/ns#startedAtDateTime">
