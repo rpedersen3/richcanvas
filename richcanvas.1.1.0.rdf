@@ -2160,7 +2160,9 @@
 
     <!-- http://richcanvas.io/ns#primarySource -->
 
-    <owl:DatatypeProperty rdf:about="http://richcanvas.io/ns#primarySource"/>
+    <owl:DatatypeProperty rdf:about="http://richcanvas.io/ns#primarySource">
+        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Agent"/>
+    </owl:DatatypeProperty>
     
 
 
