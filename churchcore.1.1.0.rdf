@@ -286,6 +286,7 @@
 
     <owl:NamedIndividual rdf:about="http://churchcore.io/ns#home">
         <rdf:type rdf:resource="http://churchcore.io/ns#MinistryEventLocation"/>
+        <rc:title>home</rc:title>
     </owl:NamedIndividual>
     
 
@@ -294,6 +295,7 @@
 
     <owl:NamedIndividual rdf:about="http://churchcore.io/ns#offCampus">
         <rdf:type rdf:resource="http://churchcore.io/ns#MinistryEventLocation"/>
+        <rc:title>off-campus</rc:title>
     </owl:NamedIndividual>
     
 
@@ -302,6 +304,7 @@
 
     <owl:NamedIndividual rdf:about="http://churchcore.io/ns#onCampus">
         <rdf:type rdf:resource="http://churchcore.io/ns#MinistryEventLocation"/>
+        <rc:title>on-campus</rc:title>
     </owl:NamedIndividual>
     
 
@@ -310,6 +313,7 @@
 
     <owl:NamedIndividual rdf:about="http://churchcore.io/ns#online">
         <rdf:type rdf:resource="http://churchcore.io/ns#MinistryEventLocation"/>
+        <rc:title>online</rc:title>
     </owl:NamedIndividual>
     
 
