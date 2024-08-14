@@ -255,6 +255,16 @@
     
 
 
+    <!-- http://churchcore.io/ns#TestPerson -->
+
+    <owl:NamedIndividual rdf:about="http://churchcore.io/ns#TestPerson">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#Person"/>
+        <rc:name>Test Person</rc:name>
+        <rc:title>Dr. Test Person</rc:title>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://churchcore.io/ns#TheHolySpirit -->
 
     <owl:NamedIndividual rdf:about="http://churchcore.io/ns#TheHolySpirit">

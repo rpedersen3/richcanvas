@@ -2112,6 +2112,12 @@
     
 
 
+    <!-- http://richcanvas.io/ns#label -->
+
+    <owl:DatatypeProperty rdf:about="http://richcanvas.io/ns#label"/>
+    
+
+
     <!-- http://richcanvas.io/ns#lastName -->
 
     <owl:DatatypeProperty rdf:about="http://richcanvas.io/ns#lastName">
@@ -2124,16 +2130,7 @@
     <!-- http://richcanvas.io/ns#name -->
 
     <owl:DatatypeProperty rdf:about="http://richcanvas.io/ns#name">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/vcard/ns#fn"/>
-        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Activity"/>
-        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Address"/>
-        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Email"/>
-        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Feature"/>
-        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Organization"/>
-        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Person"/>
-        <rdfs:domain rdf:resource="http://richcanvas.io/ns#PhoneNumber"/>
-        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Specification"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -2186,7 +2183,6 @@
     <!-- http://richcanvas.io/ns#title -->
 
     <owl:DatatypeProperty rdf:about="http://richcanvas.io/ns#title">
-        <rdfs:domain rdf:resource="http://richcanvas.io/ns#Person"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -2293,9 +2289,6 @@ in time and space</comment>
     <!-- http://richcanvas.io/ns#Agent -->
 
     <owl:Class rdf:about="http://richcanvas.io/ns#Agent">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
-        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
         <adaptedFrom>W3 prov:Agent</adaptedFrom>
     </owl:Class>
     
@@ -3044,7 +3037,6 @@ in time and space</comment>
 
     <owl:Class rdf:about="http://richcanvas.io/ns#Person">
         <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Agent"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/vcard/ns#Individual"/>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Person"/>
         <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
         <adaptedFrom>W3 org:Person</adaptedFrom>
@@ -3650,6 +3642,15 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 
     <owl:NamedIndividual rdf:about="http://richcanvas.io/ns#TakeAdvice">
         <rdf:type rdf:resource="http://richcanvas.io/ns#Behavior"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://richcanvas.io/ns#TestPerson -->
+
+    <owl:NamedIndividual rdf:about="http://richcanvas.io/ns#TestPerson">
+        <rdf:type rdf:resource="http://richcanvas.io/ns#Person"/>
+        <name>Test Person</name>
     </owl:NamedIndividual>
     
 
