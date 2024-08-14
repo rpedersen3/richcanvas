@@ -3607,8 +3607,8 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
     <owl:NamedIndividual rdf:about="http://richcanvas.io/ns#Female">
         <rdf:type rdf:resource="http://richcanvas.io/ns#GenderClassification"/>
         <category rdf:resource="http://richcanvas.io/ns#Gender"/>
+        <lbl>female</lbl>
         <tag>women</tag>
-        <title>female</title>
     </owl:NamedIndividual>
     
 
@@ -3635,9 +3635,9 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
     <owl:NamedIndividual rdf:about="http://richcanvas.io/ns#Male">
         <rdf:type rdf:resource="http://richcanvas.io/ns#GenderClassification"/>
         <category rdf:resource="http://richcanvas.io/ns#Gender"/>
+        <lbl>male</lbl>
         <tag>man</tag>
         <tag>men</tag>
-        <title>male</title>
     </owl:NamedIndividual>
     
 
