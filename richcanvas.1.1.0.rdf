@@ -16,7 +16,6 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:vcard="http://www.w3.org/2006/vcard/ns#">
     <owl:Ontology rdf:about="http://richcanvas.io/ns">
-        <owl:versionIRI rdf:resource="http://richcanvas.io/ns/1.1.0"/>
         <owl:imports rdf:resource="http://www.w3.org/2006/vcard/ns"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/org#"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/prov#"/>
