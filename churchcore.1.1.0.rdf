@@ -295,7 +295,6 @@
 
     <owl:NamedIndividual rdf:about="http://churchcore.io/ns#home">
         <rdf:type rdf:resource="http://churchcore.io/ns#MinistryEventLocation"/>
-        <rc:label>home</rc:label>
     </owl:NamedIndividual>
     
 

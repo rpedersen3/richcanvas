@@ -64,9 +64,9 @@
     
 
 
-    <!-- http://richcanvas.io/ns#label -->
+    <!-- http://richcanvas.io/ns#lbl -->
 
-    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#label"/>
+    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#lbl"/>
     
 
 
@@ -2112,18 +2112,18 @@
     
 
 
-    <!-- http://richcanvas.io/ns#label -->
-
-    <owl:DatatypeProperty rdf:about="http://richcanvas.io/ns#label"/>
-    
-
-
     <!-- http://richcanvas.io/ns#lastName -->
 
     <owl:DatatypeProperty rdf:about="http://richcanvas.io/ns#lastName">
         <rdfs:domain rdf:resource="http://richcanvas.io/ns#Person"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#lbl -->
+
+    <owl:DatatypeProperty rdf:about="http://richcanvas.io/ns#lbl"/>
     
 
 
@@ -2141,6 +2141,12 @@
         <rdfs:domain rdf:resource="http://richcanvas.io/ns#Person"/>
         <rdfs:domain rdf:resource="http://richcanvas.io/ns#PhoneNumber"/>
     </owl:DatatypeProperty>
+    
+
+
+    <!-- http://richcanvas.io/ns#photo -->
+
+    <owl:DatatypeProperty rdf:about="http://richcanvas.io/ns#photo"/>
     
 
 
@@ -3649,7 +3655,7 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 
     <owl:NamedIndividual rdf:about="http://richcanvas.io/ns#TestOrg">
         <rdf:type rdf:resource="http://richcanvas.io/ns#Organization"/>
-        <label>Test Organization</label>
+        <lbl>Test Organization</lbl>
     </owl:NamedIndividual>
     
 
@@ -3658,9 +3664,9 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 
     <owl:NamedIndividual rdf:about="http://richcanvas.io/ns#TestPerson">
         <rdf:type rdf:resource="http://richcanvas.io/ns#Person"/>
-        <label>Test Person1</label>
         <name>Test Person</name>
         <title>Dr. Person</title>
+        <lbl>Test Person1</lbl>
     </owl:NamedIndividual>
     
 
