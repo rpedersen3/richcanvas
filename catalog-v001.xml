@@ -7,22 +7,22 @@
     <uri id="Imports Wizard Entry" name="http://richcanvas.io/ns/1.0.2" uri="https://raw.githubusercontent.com/rpedersen3/richcanvas/main/richcanvas1.0.2.ttl"/>
     <uri id="Imports Wizard Entry" name="http://www.w3.org/ns/prov-o-20130430" uri="https://www.w3.org/ns/prov-o"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1723605837779" name="http://churchcore.io/church" uri="KnowledgeBaseExamples/church1.0.2.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1723605837779" name="http://churchcore.io/frontrange" uri="KnowledgeBaseExamples/frontrange.1.1.0.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1723605837779" name="duplicate:http://churchcore.io/ns" uri="churchcore.1.0.2.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1723605837779" name="duplicate:http://churchcore.io/ns" uri="churchcore.1.1.0.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1723605837779" name="http://churchcore.io/strategy" uri="KnowledgeBaseExamples/churchstrategy1.0.2.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1723605837779" name="http://richcanvas.io/act" uri="KnowledgeBaseExamples/activity.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1723605837779" name="duplicate:http://richcanvas.io/family" uri="family.1.0.2.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1723605837779" name="duplicate:http://richcanvas.io/family" uri="family.1.1.0.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1723605837779" name="http://richcanvas.io/friends" uri="friends.1.1.0.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1723605837779" name="http://richcanvas.io/joetrip" uri="KnowledgeBaseExamples/joetrip.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1723605837779" name="http://richcanvas.io/ns" uri="richcanvas.1.1.0.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1723605837779" name="http://richcanvas.io/org" uri="KnowledgeBaseExamples/org.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1723605837779" name="http://richcanvas.io/per" uri="KnowledgeBaseExamples/per.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1723605837779" name="http://richcanvas.io/series" uri="KnowledgeBaseExamples/series.1.1.0.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1723605837779" name="http://richcanvas.io/travel" uri="KnowledgeBaseExamples/travel.1.0.1.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1723605837779" name="http://richcanvas.io/trip" uri="KnowledgeBaseExamples/trip1.0.1.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1723605837779" name="shadowed:http://richcanvas.io/family" uri="KnowledgeBaseExamples/family.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1723606585715" name="http://churchcore.io/church" uri="KnowledgeBaseExamples/church1.0.2.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1723606585715" name="http://churchcore.io/frontrange" uri="KnowledgeBaseExamples/frontrange.1.1.0.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1723606585715" name="duplicate:http://churchcore.io/ns" uri="churchcore.1.0.2.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1723606585715" name="duplicate:http://churchcore.io/ns" uri="churchcore.1.1.0.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1723606585715" name="http://churchcore.io/strategy" uri="KnowledgeBaseExamples/churchstrategy1.0.2.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1723606585715" name="http://richcanvas.io/act" uri="KnowledgeBaseExamples/activity.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1723606585715" name="duplicate:http://richcanvas.io/family" uri="family.1.0.2.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1723606585715" name="duplicate:http://richcanvas.io/family" uri="family.1.1.0.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1723606585715" name="http://richcanvas.io/friends" uri="friends.1.1.0.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1723606585715" name="http://richcanvas.io/joetrip" uri="KnowledgeBaseExamples/joetrip.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1723606585715" name="http://richcanvas.io/ns" uri="richcanvas.1.1.0.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1723606585715" name="http://richcanvas.io/org" uri="KnowledgeBaseExamples/org.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1723606585715" name="http://richcanvas.io/per" uri="KnowledgeBaseExamples/per.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1723606585715" name="http://richcanvas.io/series" uri="KnowledgeBaseExamples/series.1.1.0.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1723606585715" name="http://richcanvas.io/travel" uri="KnowledgeBaseExamples/travel.1.0.1.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1723606585715" name="http://richcanvas.io/trip" uri="KnowledgeBaseExamples/trip1.0.1.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1723606585715" name="shadowed:http://richcanvas.io/family" uri="KnowledgeBaseExamples/family.owl"/>
     </group>
 </catalog>

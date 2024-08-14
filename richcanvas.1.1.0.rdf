@@ -2179,6 +2179,12 @@
     
 
 
+    <!-- http://richcanvas.io/ns#tag -->
+
+    <owl:DatatypeProperty rdf:about="http://richcanvas.io/ns#tag"/>
+    
+
+
     <!-- http://richcanvas.io/ns#title -->
 
     <owl:DatatypeProperty rdf:about="http://richcanvas.io/ns#title">
