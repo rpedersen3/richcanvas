@@ -64,12 +64,6 @@
     
 
 
-    <!-- http://richcanvas.io/ns#lbl -->
-
-    <owl:AnnotationProperty rdf:about="http://richcanvas.io/ns#lbl"/>
-    
-
-
     <!-- http://www.w3.org/2003/01/geo/wgs84_pos#alt -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#alt">
@@ -3655,7 +3649,6 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 
     <owl:NamedIndividual rdf:about="http://richcanvas.io/ns#TestOrg">
         <rdf:type rdf:resource="http://richcanvas.io/ns#Organization"/>
-        <lbl>Test Organization</lbl>
     </owl:NamedIndividual>
     
 
@@ -3666,7 +3659,6 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
         <rdf:type rdf:resource="http://richcanvas.io/ns#Person"/>
         <name>Test Person</name>
         <title>Dr. Person</title>
-        <lbl>Test Person1</lbl>
     </owl:NamedIndividual>
     
 
