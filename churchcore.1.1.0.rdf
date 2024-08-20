@@ -39,6 +39,14 @@
     
 
 
+    <!-- http://churchcore.io/ns#hasMinistry -->
+
+    <owl:ObjectProperty rdf:about="http://churchcore.io/ns#hasMinistry">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/org#hasSubOrganization"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://richcanvas.io/ns#hasMembers -->
 
     <owl:ObjectProperty rdf:about="http://richcanvas.io/ns#hasMembers"/>
@@ -84,6 +92,14 @@
 
     <owl:Class rdf:about="http://churchcore.io/ns#ChurchMembership">
         <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Membership"/>
+    </owl:Class>
+    
+
+
+    <!-- http://churchcore.io/ns#ChurchMinistry -->
+
+    <owl:Class rdf:about="http://churchcore.io/ns#ChurchMinistry">
+        <rdfs:subClassOf rdf:resource="http://churchcore.io/ns#MinistryOrganization"/>
     </owl:Class>
     
 
@@ -144,6 +160,14 @@
     
 
 
+    <!-- http://churchcore.io/ns#MinistryAgent -->
+
+    <owl:Class rdf:about="http://churchcore.io/ns#MinistryAgent">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Agent"/>
+    </owl:Class>
+    
+
+
     <!-- http://churchcore.io/ns#MinistryEventLocationClassification -->
 
     <owl:Class rdf:about="http://churchcore.io/ns#MinistryEventLocationClassification">
@@ -155,7 +179,17 @@
     <!-- http://churchcore.io/ns#MinistryOrganization -->
 
     <owl:Class rdf:about="http://churchcore.io/ns#MinistryOrganization">
+        <rdfs:subClassOf rdf:resource="http://churchcore.io/ns#MinistryAgent"/>
         <rdfs:subClassOf rdf:resource="http://churchcore.io/ns#ReligiousOrganization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://churchcore.io/ns#MinistryPerson -->
+
+    <owl:Class rdf:about="http://churchcore.io/ns#MinistryPerson">
+        <rdfs:subClassOf rdf:resource="http://churchcore.io/ns#MinistryAgent"/>
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Person"/>
     </owl:Class>
     
 
