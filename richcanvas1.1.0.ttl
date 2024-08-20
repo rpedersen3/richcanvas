@@ -1001,7 +1001,7 @@ rc:isMemberOf rdf:type owl:ObjectProperty ;
 rc:isMemberOfAudience rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf rc:isMemberOf ;
                       rdfs:domain rc:Person ;
-                      rdfs:range rc:Audiance .
+                      rdfs:range rc:Audience .
 
 
 ###  http://richcanvas.io/ns#isMemberOfFamily
@@ -1570,13 +1570,9 @@ rc:Approach rdf:type owl:Class .
 rc:Asset rdf:type owl:Class .
 
 
-###  http://richcanvas.io/ns#Audiance
-rc:Audiance rdf:type owl:Class ;
-            rdfs:subClassOf rc:Organization .
-
-
 ###  http://richcanvas.io/ns#Audience
-rc:Audience rdf:type owl:Class .
+rc:Audience rdf:type owl:Class ;
+            rdfs:subClassOf rc:Organization .
 
 
 ###  http://richcanvas.io/ns#AudienceMembership
