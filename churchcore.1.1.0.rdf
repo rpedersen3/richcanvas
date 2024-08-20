@@ -168,6 +168,14 @@
     
 
 
+    <!-- http://churchcore.io/ns#MinistryAudience -->
+
+    <owl:Class rdf:about="http://churchcore.io/ns#MinistryAudience">
+        <rdfs:subClassOf rdf:resource="http://richcanvas.io/ns#Audience"/>
+    </owl:Class>
+    
+
+
     <!-- http://churchcore.io/ns#MinistryEventLocationClassification -->
 
     <owl:Class rdf:about="http://churchcore.io/ns#MinistryEventLocationClassification">
