@@ -293,6 +293,7 @@
 
     <owl:NamedIndividual rdf:about="http://churchcore.io/ns#Age">
         <rdf:type rdf:resource="http://richcanvas.io/ns#Category"/>
+        <rc:lbl>age</rc:lbl>
     </owl:NamedIndividual>
     
 
@@ -321,6 +322,7 @@
 
     <owl:NamedIndividual rdf:about="http://churchcore.io/ns#Education">
         <rdf:type rdf:resource="http://richcanvas.io/ns#Category"/>
+        <rc:lbl>education</rc:lbl>
     </owl:NamedIndividual>
     
 
@@ -414,6 +416,7 @@
 
     <owl:NamedIndividual rdf:about="http://churchcore.io/ns#Marriage">
         <rdf:type rdf:resource="http://richcanvas.io/ns#Category"/>
+        <rc:lbl>marriage</rc:lbl>
     </owl:NamedIndividual>
     
 
@@ -444,6 +447,7 @@
 
     <owl:NamedIndividual rdf:about="http://churchcore.io/ns#MinistryEventLocation">
         <rdf:type rdf:resource="http://richcanvas.io/ns#Category"/>
+        <rc:lbl>ministry-event-location</rc:lbl>
     </owl:NamedIndividual>
     
 
@@ -452,6 +456,7 @@
 
     <owl:NamedIndividual rdf:about="http://churchcore.io/ns#Parent">
         <rdf:type rdf:resource="http://richcanvas.io/ns#Category"/>
+        <rc:lbl>parent</rc:lbl>
     </owl:NamedIndividual>
     
 
